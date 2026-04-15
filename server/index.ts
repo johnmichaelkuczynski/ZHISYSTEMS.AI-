@@ -1,6 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
+import { serveStatic, log } from "./server-utils";
 
 const app = express();
 app.use(express.json());
@@ -78,6 +78,7 @@ app.post("/api/ai/generate-audio", async (req, res) => {
         }
       }
     }));
+    const { setupVite } = await import("./vite");
     await setupVite(app, server);
   } else {
     serveStatic(app);

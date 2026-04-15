@@ -1,0 +1,45 @@
+#12 3.941 
+#12 3.941 21 vulnerabilities (6 low, 4 moderate, 9 high, 2 critical)
+#12 3.941 
+#12 3.941 To address issues that do not require attention, run:
+#12 3.941   npm audit fix
+#12 3.941 
+#12 3.941 To address all issues (including breaking changes), run:
+#12 3.941   npm audit fix --force
+#12 3.941 
+#12 3.941 Run `npm audit` for details.
+#12 DONE 4.0s
+#13 exporting to docker image format
+#13 exporting layers
+#13 exporting layers 26.6s done
+#13 exporting manifest sha256:4cfe7f98d5aef1bb5450474c930e7b133c6e551de2d6d7fe45f9196e6267a9b5 done
+#13 exporting config sha256:24d62389c783eef25ee5df460ed8125acc3a4d91e18a7a7e0c4bfdbc251294fa done
+#13 DONE 30.7s
+Menu
+#14 exporting cache to client directory
+#14 preparing build cache for export
+#14 writing cache image manifest sha256:0632713612132da2b583752361ddc8d47d1913f68572c8086fd0f90f83760b6c done
+#14 DONE 5.2s
+Pushing image to registry...
+Upload succeeded
+==> Deploying...
+==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+node:internal/modules/esm/resolve:873
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+    at packageResolve (node:internal/modules/esm/resolve:873:9)
+    at moduleResolve (node:internal/modules/esm/resolve:946:18)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+Node.js v20.20.2
+==> Exited with status 1
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
