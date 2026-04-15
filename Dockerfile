@@ -16,11 +16,11 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Remove dev dependencies after build
-RUN npm prune --production
+# Set production for runtime
+ENV NODE_ENV=production
 
 # Expose port
 EXPOSE 5000
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["node", "dist/index.js"]
