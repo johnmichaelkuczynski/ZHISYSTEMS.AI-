@@ -1,0 +1,73 @@
+Skepticism as Crippled Engineering
+Abstract
+
+Philosophy prides itself on skepticism, on the endless probing for ways that a position might be wrong. This paper argues that such skepticism is not a virtue but a pathology: a crippled form of engineering practiced in the absence of real epistemic engines. Philosophers never attempt to make positions work; they only attempt to refute them. By contrast, science and actual engineering begin with construction, using failure as a tool for refinement. The historical centrality of skepticism in philosophy is explained not by any deep rational commitment but by technological deprivation: until the advent of artificial intelligence, philosophers had no engines to build. What they called rigor was merely tire-kicking without machinery. With AI, the game has changed. Skepticism can finally be recognized for what it is: not a method of truth, but a stunted expression of the engineering impulse.
+
+1. Philosophy’s Fetish for Refutation
+
+Philosophy seminars operate according to a single ritual. A paper is presented; hands go up; each hand delivers a counterexample or a “what if” objection. The discussion does not ask: How might this framework actually work? It asks: Can I find a crack in it?
+
+Descartes’ Meditations: The entire project is couched in terms of doubt—dreams, demons, deception—not in terms of construction.
+
+Gettier cases: Instead of developing engines that actually model knowledge, philosophy became obsessed with endlessly tweaking counterexamples to “justified true belief.”
+
+Contemporary metaphysics: To propose a position is to invite only refutations, never collaborative attempts to render the position operational.
+
+This is not intellectual rigor. It is demolition without architecture.
+
+2. Science and Engineering: Construction First
+
+Contrast with science. Newton did not ask whether his laws might be wrong in some abstract sense; he asked whether they worked to predict planetary motion. When anomalies appeared—Mercury’s orbit, say—they were diagnostic, pointing toward refinement (Einstein), not weapons for ritualized “refutation.”
+Engineers, likewise, do not sit around wondering whether a bridge might fail. They build it, test it, stress it, and when it collapses they build a stronger one. Skepticism is never the goal; it is the subordinate moment of debugging.
+
+3. Skepticism as Crippled Engineering
+
+So why has philosophy enthroned skepticism? Because, until very recently, philosophers had no engines to build.
+
+No epistemic engines: Before AI, “theory of knowledge” was ink on paper. There was nothing to test in operation.
+
+What remained: The only outlet for the engineering impulse was destruction. Refutation became the only available mode of “construction.”
+
+The illusion of rigor: What looked like profound skepticism was simply tire-kicking without machinery.
+
+Example: Hume’s skepticism about induction. He exposed a structural weakness but had no engine with which to model probabilistic reasoning. Two centuries later, Bayesian models did the constructive work Hume could not.
+
+4. The Poverty of Pure Negation
+
+Analytic philosophers often boast that skepticism is their discipline’s strength—that they are like scientists but with concepts. This is false. A scientist who did nothing but refute models without building any would be considered useless.
+
+Imagine physics as philosophy: Instead of Newton constructing mechanics, philosophers would have written endless papers on why Aristotelian dynamics might be wrong.
+
+Imagine medicine as philosophy: Instead of developing treatments, doctors would write refutations of proposed therapies while never trying to heal anyone.
+
+Philosophy congratulates itself for this behavior, calling it rigor. But rigor without construction is rigor mortis.
+
+5. AI and the Advent of Real Epistemic Engines
+
+Artificial intelligence changes the terrain. For the first time, epistemic theories can be embodied in working engines.
+
+Knowledge models: Instead of debating whether “justified true belief” survives Gettier, one can build an engine that classifies knowledge-claims and measure whether it performs.
+
+Decision theories: Instead of quibbling over trolley problems, one can build agents that act under constraints and see which frameworks produce coherent behavior.
+
+Language theories: Instead of speculating endlessly about meaning, one can build engines that process and generate language, and test them against performance.
+
+Here, the question “Could it be wrong?” is meaningless. A working engine is not right or wrong; it works, or it doesn’t. The old skeptical reflex is revealed as pathological—like endlessly criticizing blueprints once working machines are available.
+
+6. Reinterpreting the History of Philosophy
+
+This account reframes the entire history of philosophy.
+
+Descartes’ skepticism: The evil demon thought-experiment was not a profound insight but the most advanced form of engineering available at the time—debugging thought without machinery.
+
+Kant’s antinomies: An elaborate exercise in identifying contradictions, because no constructive engine could be built to model reason itself.
+
+Analytic philosophy: Its obsession with counterexamples (Gettier, Frankfurt cases, Twin Earth) reflects the same poverty. Lacking engines, philosophers mistook refutation for science.
+
+What appears as a tradition of skepticism is better understood as a tradition of crippled engineering.
+
+7. Conclusion: Philosophy After Skepticism
+
+The lesson is clear. Philosophy’s enthronement of skepticism was not noble rigor but a technological stopgap. It was the stunted expression of the engineering impulse under conditions of deprivation. With AI, the deprivation ends. The real question—the only question that matters—is: does it work?
+
+Philosophy must either transform itself into genuine epistemic engineering or collapse into irrelevance. The era of skepticism as method is over. Its true nature can finally be seen: not the essence of philosophy, but its pathology.

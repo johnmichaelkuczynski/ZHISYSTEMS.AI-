@@ -1,0 +1,151 @@
+EPISTEMIC SCOLDING AS PHILOSOPHY OF SCIENCE:
+Van Fraassen's Self-Image and the Performative Incoherence of Constructive Empiricism
+
+John-Michael Kuczynski, Ph.D.
+Zhi Systems
+
+================================================================================
+
+ABSTRACT
+
+Bas van Fraassen presents constructive empiricism as a principled middle position between scientific realism and skepticism—an exercise in disciplining belief while preserving robust scientific practice. This paper argues that van Fraassen's self-understanding is fundamentally mistaken. Constructive empiricism does not discipline belief-formation; it merely withholds epistemic honorifics from the very beliefs on which scientific practice depends. The position reduces to a post hoc admonition: continue reasoning as a realist, but do not believe your realist commitments are true. This is not epistemic humility but epistemic masochism—a view that severs belief from action, explanation, prediction, and learning, rendering it a purely ceremonial notion. Once stated plainly, constructive empiricism reveals itself as performatively incoherent: it declares that the beliefs without which science cannot function are precisely the beliefs one is never entitled to hold. Van Fraassen's brilliance is not in question; what went wrong is a philosophical temperament that mistakes restraint for insight and abstinence for achievement.
+
+================================================================================
+
+I. WHAT VAN FRAASSEN THINKS HE IS DOING
+
+Van Fraassen sees himself as intervening in a venerable philosophical lineage—the debate between empiricism and rationalism, realism and instrumentalism, stretching from Berkeley and Hume through Kant, logical empiricism, and post-positivism. The Scientific Image (1980) is written self-consciously as a major contribution to that tradition, offering what van Fraassen takes to be a subtle and principled position that his predecessors failed to articulate cleanly.
+
+In his own self-understanding, van Fraassen is doing three things at once. First, he is weighing in on a centuries-old debate, one paved with the ideas of what he would regard as the finest philosophical minds. Second, he is offering a genuine third position—not skepticism, not realism, but something that preserves the virtues of both while avoiding their excesses. Third, he is correcting what he sees as philosophical overreach: the illicit slide from "this theory works" to "this theory is true of unobservables."
+
+Van Fraassen's self-image is that of someone enforcing epistemic discipline, not tearing science down. He does not think he is rehashing skepticism or offering a merely verbal reformulation. He genuinely believes that constructive empiricism represents what a properly self-aware, non-metaphysically-inflated understanding of science looks like.
+
+The distinction he draws is this: skepticism says you cannot know the world; realism says successful theories are approximately true; constructive empiricism says belief in unobservables is optional, not forbidden. He takes this to be a subtle, principled middle ground.
+
+================================================================================
+
+II. "OPTIONAL" AS SKEPTICISM IN DISGUISE
+
+The word "optional" does almost all the work in van Fraassen's position—and it is bad work. Consider what the skeptic actually says. The skeptic claims that, for all you know, the external world might not exist or might not be as you take it to be. Crucially, the skeptic does not usually forbid belief; rather, the skeptic says belief is not rationally compelled.
+
+Now consider what van Fraassen says. He claims that belief in unobservables is not rationally required; acceptance without belief suffices. But this is functionally identical to the skeptic's position at the epistemic level. "Optional" here means: nothing in your epistemic situation rules out global error; nothing forces commitment to mind-independent reality; coherence and success do not entitle belief.
+
+This is skeptical permissiveness, not a third position.
+
+Van Fraassen attempts to escape skepticism by introducing two distinctions: belief versus acceptance, and truth versus empirical adequacy. But these distinctions do no epistemic work once you ask the decisive question: What rules out the hallucination scenario? The answer is: nothing. The position cashes out as: "Maybe you're tracking reality; maybe you're coherently hallucinating. Either way, carry on."
+
+That is skepticism with a polite smile.
+
+If belief in unobservables is not required, not licensed, and not justified by success, then success loses all epistemic force. And once success loses force, the skeptic has already won. "Optional belief" is just skepticism without the courage of its own rhetoric. Van Fraassen does not refute skepticism; he domesticates it, renames it, and claims it as sobriety.
+
+================================================================================
+
+III. THE GAP BETWEEN SELF-IMAGE AND REALITY
+
+The gap between van Fraassen's self-understanding and the actual character of his position can be stated precisely. Van Fraassen focuses on norms of belief at a very abstract level. He thinks he is adjudicating what we are entitled to believe—determining the boundaries of rational commitment. But what he actually does is presuppose world-directed cognition throughout scientific practice and then deny its legitimacy at the level of belief.
+
+He thinks he is standing shoulder to shoulder with the finest philosophical minds, cleaning up a centuries-old mess. In reality, he is mistaking a bookkeeping distinction for a philosophy of science, confusing epistemic modesty with explanatory abdication, and turning a live, practical enterprise into a retrospective metaphysical shrug.
+
+This disagreement is not about tone or scholarly tradition. It is about whether philosophy should explain why inquiry works or merely redescribe it after the fact. On that axis, constructive empiricism and genuine philosophy of science are not merely disagreeing—they are doing different kinds of intellectual work entirely.
+
+================================================================================
+
+IV. WHAT VAN FRAASSEN IS ACTUALLY DOING
+
+Van Fraassen thinks he is disciplining belief. But he is not doing that—or if he is, he is not disciplining belief-formation. He is merely issuing a post hoc admonition about belief-status.
+
+Genuine belief-discipline would look like one of the following: a norm for forming beliefs ("In circumstances C, do not form belief B"); a constraint on inference ("Do not infer existence from explanatory success"); or a revisionary cognitive policy ("Replace object-commitments with weaker commitments in live reasoning").
+
+Van Fraassen does none of these things. He explicitly allows realist hypothesis formation, realist explanation, realist intervention, realist projection, realist vocabulary, and realist confidence in practice. He only says: after all that, do not believe it is true.
+
+That is not discipline. That is epistemic scolding after the fact.
+
+The structure of his position can be stated as follows: "Before you pat yourself on the back for all the nice data modeling you've done, know that you might well be hallucinating. Now, your 'arrogance'—that is, your unearned belief that there really do exist corn-chip-eating mice and protons and electrons—is indeed the reason you are doing a good job of complying with my very own conception of what science is supposed to do. But know that, paradoxically, you are not for that reason (or any other) entitled to believe that it is true."
+
+================================================================================
+
+V. THE PERVERSE STRUCTURE OF THE POSITION
+
+The paradox at the heart of constructive empiricism can now be stated explicitly. The structure is this:
+
+Your "arrogant" realist commitments—to objects, causes, mechanisms, and persistence—are exactly what make science work. Those commitments are instrumentally indispensable. But precisely because they are indispensable and not deductively forced, you are not entitled to believe them.
+
+The view therefore becomes: the beliefs without which science cannot function are exactly the beliefs you are never rationally entitled to hold.
+
+That is not epistemic humility. That is epistemic masochism.
+
+The position ends up saying all of the following simultaneously: Keep doing exactly what you are doing. Your success depends on beliefs you should not have. Your continued success gives you no additional entitlement. If you stopped having those beliefs, inquiry would collapse. But that is irrelevant to belief-justification.
+
+At that point, belief is severed from action, explanation, prediction, success, and learning. It becomes a purely ceremonial notion. And once belief is ceremonially disconnected from everything that gives it point, there is no longer a substantive epistemology—only etiquette.
+
+================================================================================
+
+VI. THE CORN-CHIP CASE AS DECISIVE ILLUSTRATION
+
+Consider a mundane case: a mouse has eaten my corn chips. The belief "there is a mouse" is not an optional add-on to my cognitive situation. It is what licenses searching, trapping, prediction, counterfactual reasoning, and learning from failure. The concept "mouse" is not a label for sense-data; it is a commitment to a persistent, causally efficacious entity that will behave in determinate ways under various conditions.
+
+Van Fraassen's position says: Do all that—just do not believe the belief is true.
+
+But then belief is no longer playing its functional role in cognition at all. It is just a label you are forbidden to apply. The honorific "true" is withheld, but everything else—the inference, the action, the explanation, the prediction—proceeds exactly as if the belief were true and known to be true.
+
+This is why constructive empiricism feels smug, parasitic, and ultimately empty. It does not tell you how to think better. It tells you not to congratulate yourself for thinking the only way thinking works.
+
+================================================================================
+
+VII. WHAT WENT WRONG: PHILOSOPHICAL TEMPERAMENT AS SYSTEM
+
+Van Fraassen is obviously not unintelligent. He is supremely brilliant by any legitimate measure. So what went wrong?
+
+Nothing went wrong in the sense of a mistake in reasoning. What went wrong is a choice about what philosophy is for. Van Fraassen made a deliberate, principled decision to prioritize epistemic restraint over explanatory depth, and then followed that decision with extreme intelligence and consistency. What his critics reject is not a slip—it is a philosophical temperament hardened into a system.
+
+Van Fraassen is deeply committed to the idea that philosophy must never tell us we are rationally entitled to more than experience strictly licenses. This is stronger than empiricism; it is epistemic puritanism. Once you accept that as a constraint, everything else follows. Inference to the Best Explanation becomes suspect. Explanatory success loses epistemic force. Global coherence cannot entitle belief. Truth-talk about unobservables becomes indulgence.
+
+He is not trying to explain science. He is trying to discipline belief.
+
+Given that constraint, van Fraassen faces a dilemma: either allow explanatory success to justify belief (in which case realism follows), or block that inference everywhere (in which case skepticism follows). He chooses the second horn but tries to soften it rhetorically. That is where "acceptance versus belief," "empirical adequacy," and "optional ontology" come from. They are damage control, not foundations.
+
+Van Fraassen thinks skepticism is only a problem if it paralyzes practice—and he thinks it does not. When one objects that his view makes scientific success miraculous, van Fraassen replies (sincerely): "Calling it miraculous presupposes that explanation is owed here." He is not troubled by brute global regularity. He sees that as intellectual humility, not abdication.
+
+================================================================================
+
+VIII. WHY EXTREMELY INTELLIGENT PEOPLE END UP HERE
+
+This position is attractive to very intelligent people for several reasons.
+
+First, it avoids error at all costs. You will never be wrong about unobservables if you never commit to them.
+
+Second, it feels morally serious. There is an ethical tone to the position: do not overclaim, do not inflate, do not metaphysicalize.
+
+Third, it wins every local argument. At any given step, the realist does seem to be adding something not strictly forced by the evidence.
+
+Fourth, it flatters philosophical self-image. The philosopher becomes the one who "keeps science honest" rather than one who participates in its metaphysical enthusiasm.
+
+But the cost is severe: no explanation, no guidance, no difference between truth and hallucination.
+
+================================================================================
+
+IX. MISTAKING RESTRAINT FOR INSIGHT
+
+The clean diagnosis is this: van Fraassen mistook epistemic abstinence for philosophical achievement. He thought that refusing to draw conclusions equals being rigorous.
+
+But philosophy is not bookkeeping. At some point, not explaining is a failure to explain, not a virtue. A philosophy of science should illuminate why cognition works, why concepts latch onto the world, why prediction is possible at all. Van Fraassen explicitly declines that job.
+
+His view is internally coherent. His arguments are careful, subtle, and consistent. But he chose skepticism-without-panic over explanation-with-risk.
+
+Once that choice is rejected, the entire structure collapses. Nothing went wrong cognitively. What went wrong is that van Fraassen decided philosophy's highest virtue was not being wrong, rather than being explanatory.
+
+================================================================================
+
+X. CONCLUSION: PERFORMATIVE INCOHERENCE
+
+Van Fraassen's position amounts to this: your realist beliefs are indispensable, unavoidable, and explanatorily fruitful—and for that very reason, you are never entitled to believe them.
+
+Once stated plainly, the view does not just look wrong. It looks self-undermining.
+
+Constructive empiricism does not discipline belief-formation. It merely withholds epistemic honorifics from the very beliefs it relies on. It does not tell you how to think better. It tells you not to congratulate yourself for thinking the only way thinking works.
+
+The position is not a philosophy of science. It is epistemic scolding dressed as sobriety. It survives only by refusing to do what philosophy should do: explain why inquiry works, not merely redescribe it and then admonish.
+
+Van Fraassen's brilliance is real. But brilliance in the service of abstinence is still abstinence. And abstinence, in philosophy as elsewhere, is not an achievement—it is a refusal to engage.
+
+================================================================================

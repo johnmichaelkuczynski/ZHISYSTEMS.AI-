@@ -1,0 +1,119 @@
+CONSTRUCTIVE EMPIRICISM AS RETROSPECTIVE PARASITISM:
+Why van Fraassen's Program Cannot Describe, Guide, or Explain Scientific Practice
+
+John-Michael Kuczynski, Ph.D.
+Zhi Systems
+
+================================================================================
+
+ABSTRACT
+
+Bas van Fraassen's constructive empiricism, articulated in The Scientific Image (1980), holds that the aim of science is empirical adequacy rather than truth about unobservables. This paper argues that constructive empiricism fails on multiple fronts: it is not, and could not possibly be, descriptive of scientific practice; it provides no forward-looking methodological guidance; it renders the systematic success of science inexplicable; and it ultimately collapses into garden-variety skepticism. Most fundamentally, I argue that constructive empiricism is conceptually parasitic on realism—it presupposes the very ontological commitments it officially disavows. Drawing on C.I. Lewis's insight that perceptual categories are inherently modal—replete with counterfactual and predictive content—I show that the very vocabulary required to state "empirical adequacy" already commits us to object persistence, causal powers, and lawful tendencies. There is no neutral observational base to retreat to. A view that lives entirely at the level of retrospective bookkeeping, while depending on realist cognitive machinery to do the actual work, is not a genuine alternative to scientific realism but a philosophical abstention dressed in the rhetoric of hard-headed empiricism.
+
+================================================================================
+
+I. INTRODUCTION: THE REALISM/ANTI-REALISM DEBATE
+
+The debate between scientific realism and anti-realism is often presented as a fundamental question about the aims and achievements of science. Scientific realists hold that successful scientific theories are approximately true descriptions of the world, including its unobservable aspects; anti-realists of various stripes deny this, arguing that science aims at something less than truth or that we lack warrant to believe in unobservables. Bas van Fraassen's constructive empiricism is perhaps the most sophisticated contemporary form of anti-realism. According to van Fraassen, science aims not at truth but at empirical adequacy—a theory is acceptable if and only if it correctly represents observable phenomena. Belief in the literal truth of claims about unobservable entities (atoms, fields, quarks) is, on this view, epistemically optional.
+
+This paper argues that constructive empiricism, despite its philosophical sophistication, is fundamentally defective. My critique proceeds along seven interconnected lines. First, constructive empiricism is not descriptive of actual scientific practice, and could not possibly be so. Second, it provides no forward-looking methodological guidance—it is useless as a normative maxim. Third, if constructive empiricism has any truth, that truth amounts to the claim that scientific practice is indistinguishable from systematic hallucination—hardly an illuminating result. Fourth, constructive empiricism treats the projectibility and predictive success of our theories as brute facts requiring no explanation, thereby making a cosmic coincidence out of science's systematic success. Fifth, scientific realism, whatever its difficulties, at least explains these phenomena—it offers substantive answers where constructive empiricism offers only silence. Sixth, for these reasons, constructive empiricism collapses into garden-variety skepticism, albeit with a misleading veneer of scientific respectability. Seventh and most fundamentally, all cognitive categories—the very terms in which we 'model data'—presuppose the existence of an external world and embody substantive predictions about it; as C.I. Lewis showed, our perceptual concepts are inherently modal, and this modal structure cannot be articulated in terms of sense-data.
+
+================================================================================
+
+II. CONSTRUCTIVE EMPIRICISM IS NOT DESCRIPTIVE OF SCIENTIFIC PRACTICE
+
+Van Fraassen's constructive empiricism is sometimes presented with a pragmatist inflection—an insinuation that this is how 'real scientists' actually think, as opposed to philosophers spinning metaphysical fables about perception-transcendent truth. But this is false. No scientist—indeed, no cognitively functional human being—operates with the attitude: 'I don't care whether this is true; I only care whether it saves the phenomena.' That is not a live cognitive stance.
+
+The reason is straightforward. Every cognitive category we employ—mouse, electron, neuron, tumor, particle—is ontologically loaded. These are world-directed concepts, not observation-summaries. Even the most mundane judgment ('a mouse ate my corn chips') is not a statement about sense-data but a claim about what exists and what caused what. There is no intermediate cognitive stage where we affirm 'only empirical adequacy' while remaining agnostic about truth. The distinction is a philosophical overlay, not a psychological or scientific reality.
+
+Consider how inquiry actually proceeds. When the physicist posits quarks, she is not merely claiming that a certain mathematical structure 'saves the phenomena.' She is claiming that quarks exist—that they are part of the furniture of the world—and that our experiments probe their actual properties. When the physician diagnoses a tumor, she is not offering an 'empirically adequate model' of the patient's symptoms; she is asserting that there is a tumor, that it causes the symptoms, and that removing it will (probably) eliminate them. The very language of science is saturated with existential and causal commitment. To use that language while officially suspending such commitment is not 'epistemic modesty'—it is conceptual incoherence.
+
+Stephen Hawking made essentially this point when he criticized philosophers of science for misunderstanding how physics actually works. In The Grand Design, Hawking argued that treating theories as mere instruments or observation-models is simply inadequate to the self-understanding of working physicists. When a model works universally and robustly, physicists take themselves to be describing reality, not merely organizing appearances. Van Fraassen's view, whatever its logical coherence, misdescribes the practice it purports to analyze.
+
+================================================================================
+
+III. CONSTRUCTIVE EMPIRICISM PROVIDES NO FORWARD-LOOKING GUIDANCE
+
+A philosophical account of science should do more than offer retrospective commentary; it should illuminate how inquiry ought to proceed. Pragmatism and instrumentalism, whatever their limitations, have this forward-looking character. Pragmatism says: act, test, revise; do not wait for certainty that will never come; truth may emerge through practice. Instrumentalism (properly understood) says: use the best instruments available now; recognize their limitations; better instruments may come later. Both doctrines license decisions under uncertainty, explain why such decisions are rational, and treat truth as a regulative ideal—something to be approximated, even if never fully achieved.
+
+Constructive empiricism does none of this. It does not say: 'If you want to make progress, aim at empirical adequacy rather than truth.' It does not provide heuristics for theory choice, hypothesis formation, or experimental design. It offers no guidance on how to reason under uncertainty, when to trust a theory, or how to allocate epistemic risk. Instead, it says (in effect): 'Whatever you do, you never rationally exceed empirical adequacy anyway.' This is not advice. It is not a method. It is a retrospective reinterpretation of whatever scientists happen to do.
+
+The contrast with genuine methodological doctrines is stark. Consider Bridgman's operationalism: however flawed, it tells you something about how to define theoretical terms and how to ground them in measurement. Consider Popper's falsificationism: however incomplete, it tells you what makes a theory scientific and how to test it. Constructive empiricism tells you nothing comparable. It is silent on all the questions that actually matter to working scientists.
+
+The reason for this silence is structural. Constructive empiricism is necessarily retrospective because it presupposes realist cognitive machinery to do the actual work of inquiry. Scientists must posit causes, objects, mechanisms, persistence, and counterfactuals. All live inference is world-directed: What is there? What caused this? What will happen if I intervene? These are truth-apt questions, not adequacy questions. Constructive empiricism can only relabel the results after realist inquiry has already occurred. It is, in this precise sense, parasitic on the practice it purports to supersede.
+
+================================================================================
+
+IV. THE HALLUCINATION EQUIVALENCE
+
+If constructive empiricism has any truth, what exactly does that truth amount to? On reflection, its content reduces to the following claim: what scientists (and all cognizers) are doing is indistinguishable from what someone who is systematically hallucinating would be doing. This is not a caricature; it is the honest cash value of the position.
+
+Van Fraassen's view entails that we are 'stuck inside our own heads'—that we have access only to appearances, never to reality as such. The official justification echoes Berkeley, Descartes' evil demon, and the brain-in-a-vat scenarios of contemporary epistemology. On this view, we cannot step outside our perceptions to compare them with the realities they purport to represent; we can only compare perceptions with more perceptions. Grant this, and it follows that our situation is epistemically equivalent to that of a coherent hallucinator whose experiences happen to form a stable, projectible pattern.
+
+But this is precisely what skepticism has always claimed. The distinctive contribution of constructive empiricism—the thing that supposedly distinguishes it from garden-variety Cartesian doubt—is the claim that this skeptical conclusion is somehow compatible with robust scientific practice. We can do science, van Fraassen assures us, without believing in the truth of our theories; we need only accept them as empirically adequate.
+
+This maneuver does not rescue the position from skepticism; it merely repackages skepticism in scientific clothing. The skeptic says: you cannot know that your experiences correspond to reality. Van Fraassen says: you need not believe that your theories are true; accepting them as empirically adequate suffices. But the epistemic situation is identical in both cases: we are locked within the circle of appearances, unable to reach the world as it is. The difference is merely verbal—a distinction between 'belief' and 'acceptance' that does no real philosophical work.
+
+================================================================================
+
+V. THE MIRACLE OF PROJECTIBILITY
+
+The most damaging objection to constructive empiricism concerns its treatment of scientific success. Our theories—formed on the assumption that there is an external reality with a determinate structure—support predictions, extend to new observations, and display remarkable projectibility across contexts. Why should this be so?
+
+Scientific realism offers a straightforward explanation: our theories work because they are (approximately) true descriptions of a mind-independent world. The world has a structure; our theories capture (some of) that structure; therefore our theories make accurate predictions. This is the famous 'no-miracles' argument: the success of science would be miraculous if our theories were not at least approximately tracking reality.
+
+Van Fraassen rejects this argument. He claims that inference to the best explanation (IBE) is not truth-tracking—that the explanatory virtues (simplicity, unification, mechanism) are merely heuristics for navigating appearances, not indicators of truth about unobservables. But then how does he explain the systematic success of IBE? How does he account for the fact that theories selected for explanatory virtue tend to succeed predictively, often in domains far removed from their original application?
+
+His answer is deflationary: explanatory virtues work because observable phenomena are 'stable, projectible, and regular.' But this simply relocates the question without answering it. Why are observable phenomena stable, projectible, and regular? Why do our categories—formed on realist assumptions—continue to track regularities across indefinitely many observations? Van Fraassen treats these facts as primitive, requiring no further explanation.
+
+But to treat them as primitive is to accept an explanatory catastrophe. If usefulness and projectibility are left unexplained, then the world's 'cooperation' with our theories is miraculous—not once, but repeatedly, across every successful extrapolation, every stable law, every convergent measurement, every counterfactual-supporting regularity. This is not one miracle but non-denumerably many. Van Fraassen's position purchases consistency at the price of explanatory bankruptcy.
+
+The realist need not claim certainty about any particular theory. What realism provides is an explanation of scientific success—a reason why our theories, formed on world-directed assumptions, should continue to work. That explanation may be wrong in its details, but it is an explanation. Constructive empiricism offers only silence, interrupted by the injunction to stop asking.
+
+================================================================================
+
+VI. THE COLLAPSE INTO SKEPTICISM
+
+For the reasons canvassed above, constructive empiricism collapses into garden-variety skepticism. It wears the costume of hard-headed scientific empiricism, but underneath is the familiar skeptical uniform: we cannot know the external world; we are confined to appearances; coherence is all we have, and coherence requires no explanation.
+
+The rhetorical strategy of constructive empiricism is to suggest that the realism/anti-realism debate is a pseudo-problem—that once we recognize the limits of observation, we will see that truth-talk about unobservables is metaphysical excess. But this strategy fails because the 'limits of observation' thesis is just skepticism in disguise. The skeptic says we cannot transcend appearances; van Fraassen says we need not transcend them. The difference is attitudinal, not substantive.
+
+Moreover, the observable/unobservable distinction on which constructive empiricism depends is itself problematic. What counts as 'observable' is historically contingent, theory-laden, and vague at the boundaries. Atoms were unobservable in 1905; are they observable now, given electron microscopy? Van Fraassen ties observability to human perceptual capacities, but human perceptual capacities are themselves extended by instruments whose reliability we assess using... our theories. The distinction cannot bear the weight placed on it.
+
+The deepest problem is that constructive empiricism is not even a coherent stance. One cannot use world-directed concepts while suspending world-directed belief. One cannot reason about causes while remaining agnostic about the existence of causes. One cannot employ counterfactuals while denying that they pick out real modal facts. Constructive empiricism asks us to do all of these things—to use the full apparatus of realist cognition while officially disavowing its commitments. This is not modesty; it is incoherence.
+
+================================================================================
+
+VII. THE WORLD-DIRECTEDNESS OF COGNITIVE CATEGORIES: C.I. LEWIS AND THE MODAL STRUCTURE OF PERCEPTION
+
+The deepest objection to constructive empiricism concerns the nature of our cognitive categories themselves. Van Fraassen writes as though we first have 'data' or 'appearances' and then construct 'models' to organize them. But this picture is fundamentally mistaken. Our categories—the ones in terms of which we supposedly 'model data'—are themselves world-directed and embody substantive predictions about mind-independent reality.
+
+C.I. Lewis's core insight in Mind and the World-Order (1929) is that perceptual concepts are inherently modal. When you apply a concept like mouse, steel, or cheese, you are not summarizing past sense-data or labeling a recurring appearance-pattern. You are undertaking commitments to counterfactuals, dispositions, and probability distributions over future situations.
+
+To call something a mouse is already to say things like: it would likely flee from a cat; it would likely drown if submerged in water; it would gnaw soft materials; it would leave droppings; it would reproduce in certain ways. To call something steel is to commit to claims about its tensile strength, its behavior under heat, its conductivity, its resistance to corrosion. To call something cheese is to commit to claims about how it will taste, how it will melt, how it will age, how it will interact with wine.
+
+None of this is reducible to actual or possible sense-data descriptions. The counterfactual content of our concepts—what the thing would do under conditions not yet observed—is essential to those concepts. Strip away the modal content, and you no longer have the concept at all. A 'mouse' that is not disposed to flee from cats, not disposed to gnaw, not disposed to reproduce, is not a mouse in any recognizable sense.
+
+This observation is fatal to van Fraassen's program for a precise structural reason. Empirical adequacy cannot even be stated without modal structure. Prediction, confirmation, projectibility, and 'saving the phenomena' all presuppose counterfactuals. To say that a theory is empirically adequate is to say that it correctly predicts what we would observe under various conditions—but 'what we would observe' is a counterfactual claim, not a sense-datum report.
+
+Counterfactuals, however, are not sense-data. They are claims about what would happen under conditions not (yet) observed. They presuppose lawful regularities, causal powers, and dispositional properties. Therefore, observable-language is already theory-laden. The very vocabulary needed to state empirical adequacy commits you to object persistence, causal powers, and lawful tendencies. There is no neutral 'observational base' to retreat to.
+
+Lewis's point forces a disjunction: either you allow perceptual concepts with their full modal content—in which case you have already left constructive empiricism behind—or you try to purge that content—in which case you cannot describe perception, prediction, or science at all. Van Fraassen wants the benefits of the first without the commitments, and that is impossible.
+
+The unavoidable conclusion is stark: empirical adequacy is not a relation between theories and sense-data. It is a relation between theories and a modal, counterfactually structured world. Once that is admitted, the realism/anti-realism debate at van Fraassen's level is over. The invocation of C.I. Lewis is not a supporting argument for this conclusion—it is the structural collapse of the constructive empiricist position.
+
+Attempts to purify the position—to reformulate it in terms of 'patterns in experience' rather than objects—fail for the same reason. Even 'pattern' is a world-directed concept. To speak of the 'same pattern recurring' is to presuppose identity conditions, temporal persistence, and law-like regularities—all of which are realist commitments. The Aufbau-style reconstruction of experience from phenomenal primitives was abandoned precisely because it could not work without smuggling in the very structures it claimed to construct.
+
+================================================================================
+
+VIII. CONCLUSION: A RETROSPECTIVE PARASITE
+
+Constructive empiricism survives only at the level of philosophical bookkeeping, not at the level of actual cognition or scientific practice. It is not descriptive of how scientists reason, decide, or explain. It is not normative in any forward-looking sense. It renders the success of science inexplicable by treating projectibility and regularity as brute facts. It collapses into skepticism when pressed. And it presupposes the very realist commitments it officially rejects, since our cognitive categories are themselves world-directed and modally structured.
+
+The apt description is: retrospective parasitism. Constructive empiricism lets realism do all the cognitive work—positing objects, inferring causes, projecting regularities, testing predictions—and then steps in afterward to relabel the results. It says: 'Whatever you thought you were doing, you were only achieving empirical adequacy.' But this relabeling adds nothing and explains nothing. It is a philosophical tax on scientific success, not a contribution to understanding it.
+
+The question 'Do we pursue truth or merely model data?' is ill-posed, because modeling data is one of the ways we pursue truth. Our data-directed activities are world-directed activities. Our models are attempts to capture real structure. The categories in terms of which we model—mouse, electron, force, gene, intention—are shot through with counterfactual commitments that cannot be cashed out in phenomenal terms. To pretend otherwise is not hard-headed empiricism; it is philosophical asceticism with no payoff.
+
+Constructive empiricism is logically coherent in the sense that one can consistently maintain its theses without formal contradiction. But logical coherence is a minimal virtue. A philosophical position should illuminate practice, guide inquiry, and explain success. Constructive empiricism does none of these things. It is, in the end, skepticism in better clothing—a view that survives only by refusing to answer the questions that matter.
+
+================================================================================

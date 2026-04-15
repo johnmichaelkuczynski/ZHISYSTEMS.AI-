@@ -1,0 +1,60 @@
+Abstract
+Mathematical innovation has historically proceeded along two distinct but complementary paths. The first, expansion within mathematics, extends existing formal systems to new results. The second, expansion of mathematics, converts domains previously outside mathematics into formal mathematical objects. This article develops the distinction, situates it in historical context, and surveys exemplary figures whose contributions illustrate each path.
+
+1. Introduction
+
+What does it mean to innovate in mathematics? At least two trajectories can be distinguished. The first is turning mathematics into more mathematics: elaborating proofs, extending known frameworks, and generating new theorems within already-formalized systems. The second is turning non-mathematics into mathematics: importing raw conceptual material from informal reasoning, science, or social practice, and subjecting it to formalization. Both modes have produced landmark advances, though they differ in intellectual character and historical impact.
+
+2. Expansion Within Mathematics
+
+This mode is exemplified by mathematicians who work entirely inside established domains and extend them through technical mastery.
+
+Pierre de Fermat & Leonhard Euler: Fermat’s number theory and Euler’s dazzling expansions of analysis exemplify how new results can be generated from existing methods.
+
+Carl Friedrich Gauss: Extended number theory, geometry, and statistics from within; the Disquisitiones Arithmeticae remains a monument of internal development.
+
+Évariste Galois: Worked entirely within algebra to recast solvability of polynomial equations, producing group theory.
+
+Andrew Wiles: His proof of Fermat’s Last Theorem extended deep existing mathematics (elliptic curves, modular forms, Galois representations) into new territory, but it remained wholly internal to mathematics.
+
+Grigori Perelman: Solved the Poincaré conjecture by extending Ricci flow methods, again showing how technical refinement inside mathematics produces breakthrough results.
+
+Here innovation means intra-systemic deepening: new insights are harvested from the soil of established structures.
+
+3. Expansion Of Mathematics
+
+The second mode is rarer and often more radical. Here, material that was not previously mathematical is transformed into a mathematical domain.
+
+Euclid (and Greek geometers): Transformed practical measurement and surveying into deductive geometry.
+
+René Descartes: Translated problems of geometry into algebra, thereby creating analytic geometry — an importation of spatial reasoning into symbolic form.
+
+Isaac Newton & Gottfried Wilhelm Leibniz: Developed calculus by mathematizing change, motion, and infinitesimal variation.
+
+George Boole & Gottlob Frege: Converted informal logical inference into algebraic and then fully formal systems, founding mathematical logic.
+
+Francis Galton & Karl Pearson: Rendered vague ideas of heredity and correlation into statistical laws, launching biometrics.
+
+John von Neumann: Extended quantum mechanics into operator algebras and, separately, formalized strategic reasoning in economics into game theory (later enriched by Nash).
+
+John Nash: Transformed informal intuitions about conflict and cooperation into rigorous equilibrium concepts, revolutionizing economics and social science.
+
+Claude Shannon: Converted engineering intuitions about communication into information theory, mathematizing entropy and signal transmission.
+
+Norbert Wiener: Formalized feedback and control, creating cybernetics from engineering practice.
+
+Alan Turing: Rendered the intuitive notion of effective procedure into the mathematical construct of a Turing machine, founding computer science.
+
+These figures created new mathematical subject areas by formalizing domains not previously susceptible to mathematical treatment. Their contributions redefined what mathematics itself could encompass.
+
+4. Comparative Analysis
+
+Scope: Expansion-within produces depth; expansion-of produces breadth.
+
+Method: The former emphasizes technical ingenuity; the latter emphasizes conceptual translation.
+
+Historical Trajectory: Entire epochs in mathematics have been shaped more by expansion-of moments (e.g., calculus, probability, logic, computer science) than by the incremental accumulation of theorems.
+
+5. Conclusion
+
+Innovation in mathematics occurs in two modes: (1) the elaboration of mathematics into more mathematics, and (2) the formalization of non-mathematical domains into mathematics. Both are indispensable. Yet the second mode, though rarer, is often more transformative: it expands not only our stock of theorems but the very boundaries of mathematical practice. Figures such as Frege, Nash, and Shannon exemplify this. To recognize these dual trajectories is to better understand the varied intellectual profiles that mathematics has historically attracted: some thrive on intra-systemic refinement, others on conceptual translation. The health of mathematics depends on both.

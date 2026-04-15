@@ -1,0 +1,32 @@
+Causality, Relativity, and the Limits of Mellor’s Block View
+Introduction
+
+I defend the thesis that temporal order is grounded in causal order: E₁ precedes E₂ iff a signal can be transmitted from E₁ to E₂. This causal/generative view is directly supported by relativity theory, in which the light-cone structure defines the very distinction between past, present, and future. D. H. Mellor, among others, rejects this line of thought. He defends the “block universe” view, according to which all events exist tenselessly in a four-dimensional manifold and causation is merely derivative. I will argue that Mellor’s view captures only the formal geometry of relativity, while the causal/generative view captures its substance.
+
+Mellor’s Block View
+
+Mellor defends a tenseless (B-theory) conception of time.
+
+Change = differences in truth-values across times.
+
+Passage = illusion; all events simply exist at their times.
+
+Causation, in Mellor’s later work, is reduced to probabilistic dependence among events ordered by the B-series.
+
+Mellor sees this as (a) ontologically parsimonious and (b) aligned with relativity, which treats spacetime as a four-dimensional manifold without an objective present.
+
+The Causal/Generative Account
+
+Relativity identifies temporal precedence with causal connectibility: E₁ precedes E₂ iff a signal can, in principle, travel from E₁ to E₂.
+
+Thus, temporal order is not primitive but abstracted from causal structure.
+
+Mellor’s block view strips causality of this role, reducing it to covariance within a pre-given manifold.
+
+As a result, his appeal to relativity is only formal. He accepts the geometry but denies the causal fundamentality that gives the geometry temporal significance.
+
+By contrast, the generative view preserves the explanatory core of relativity: temporal order just is causal order.
+
+Conclusion
+
+The block universe, as defended by Mellor, offers parsimony only by flattening causation into statistical regularity and misrepresenting the role of physics. Relativity shows that causal connectibility is fundamental, and temporal precedence is definable only in those terms. The causal/generative account therefore aligns more closely with modern science and avoids the explanatory vacuity of Mellor’s block.

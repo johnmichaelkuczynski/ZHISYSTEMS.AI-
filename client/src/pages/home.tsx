@@ -1,0 +1,314 @@
+interface App {
+  title: string;
+  url: string;
+  videoUrl?: string;
+}
+
+export default function Home() {
+  const livingBooksByKuczynski = [
+    { title: "AI AND PHILOSOPHY", url: "https://aiandphilosophy.com" },
+    { title: "AI LOGIC", url: "https://ailogic101.xyz" },
+    { title: "ANALYTIC PHILOSOPHY (COMPLETE)", url: "https://analyticphilosophy.xyz" },
+    { title: "CAUSATION", url: "https://causality101.xyz" },
+    { title: "CRITICAL REASONING", url: "https://criticalreasoning.xyz" },
+    { title: "DICTIONARY OF ANALYTIC PHILOSOPHY", url: "https://philosophydictionary.xyz" },
+    { title: "EMPIRICISM AND ITS LIMITS", url: "https://empiricism101.xyz" },
+    { title: "EPISTEMOLOGY", url: "https://epistemology101.xyz" },
+    { title: "ETHICS", url: "https://ethics101.xyz" },
+    { title: "FREEDOM", url: "https://freedom101.xyz" },
+    { title: "MATHEMATICAL LOGIC", url: "https://mathematicallogic.app" },
+    { title: "ON THE CARDINALITY OF PROOF SPACES", url: "https://godel101.xyz" },
+    { title: "SEMANTICS", url: "https://semantics101.xyz" },
+    { title: "SYMBOLIC LOGIC", url: "https://symboliclogic.xyz" },
+    { title: "THEORETICAL KNOWLEDGE & INDUCTIVE INFERENCE", url: "https://theoreticalknowledge.xyz" },
+    { title: "WHY WAS SOCRATES EXECUTED?", url: "https://socrates101.xyz" },
+    { title: "WRITING COURSE", url: "https://writing101.xyz" }
+  ];
+
+  const classicsBooks = [
+    { title: "A ROOM WITH A VIEW", url: "https://aroomwithaview101.xyz" },
+    { title: "ANARCHISM AND OTHER ESSAYS", url: "https://anarchismandotheressays.xyz" },
+    { title: "ART OF WAR", url: "https://theartofwarbysuntzu.xyz" },
+    { title: "BOOK OF MORMON", url: "https://bookofmormon101.xyz" },
+    { title: "CIVILIZATION AND ITS DISCONTENTS", url: "https://civilizationanditsdiscontents.xyz" },
+    { title: "DEATH OF IVAN ILYCH", url: "https://ivanilych.xyz" },
+    { title: "DRACULA", url: "https://dracula101.xyz" },
+    { title: "DREAM PSYCHOLOGY", url: "https://dreampsychology.xyz" },
+    { title: "FRANKENSTEIN", url: "https://frankenstein101.xyz" },
+    { title: "INDUSTRIAL SOCIETY AND ITS FUTURE", url: "https://unabombermanifesto.xyz" },
+    { title: "KING JAMES BIBLE", url: "https://kingjamesbible.xyz" },
+    { title: "OUR KNOWLEDGE OF THE EXTERNAL WORLD", url: "https://ourknowledgeoftheexternalworld.xyz" },
+    { title: "PRINCIPLES OF PSYCHOLOGY", url: "https://herbertspencer.xyz" },
+    { title: "SEVEN SECRETS OF A STRESS FREE LIFE", url: "https://sevensecrets.xyz" },
+    { title: "SHAKESPEARE COMPLETE WORKS", url: "https://shakespeare101.xyz" },
+    { title: "THE COMMUNIST MANIFESTO", url: "https://communistmanifesto.xyz" },
+    { title: "THE LAWS", url: "https://thelawsbyplato.xyz" },
+    { title: "TOTEM AND TABOO", url: "https://totemandtaboo.xyz" },
+    { title: "TRACTATUS LOGICO-PHILOSOPHICUS", url: "https://tractatuslogicophilosophicus.xyz" }
+  ];
+
+  const courses = [
+    { title: "Logic 101", url: "https://logic101.xyz" },
+    { title: "Critical Thinking", url: "https://criticalthinking101.xyz" },
+    { title: "Philosophy 101", url: "https://philosophy101.xyz" }
+  ];
+
+
+
+  const appCategories: Record<string, App[]> = {
+    "📝 Writing & Books": [
+      { title: "Living Book Creator", url: "https://livingbook.xyz/" },
+      { title: "Book Builder", url: "https://bookbuilder.xyz" },
+      { title: "Classic EZ Reader", url: "https://classicezreader.com/" },
+      { title: "Fiction Creator", url: "https://turnnonfictionintofiction.biz", videoUrl: "/videos/fiction-creator-tutorial.mp4" },
+      { title: "Genius Dictation", url: "https://geniusdictation.com", videoUrl: "/videos/genius-dictation-tutorial.mkv" },
+      { title: "EZ Reader", url: "https://ezreader.ai" },
+      { title: "EZ Reader Plus", url: "https://ezreader.xyz" },
+      { title: "EZReader Deluxe", url: "https://ezreader.biz" },
+      { title: "EZ Story", url: "https://ezstory.xyz", videoUrl: "https://www.youtube.com/watch?v=sRaZtSnkybM" },
+      { title: "Reading Pro", url: "https://readingpro.xyz" },
+      { title: "Humanizer Plus", url: "https://humanizerplus.xyz" },
+      { title: "EZ Essay", url: "https://ezessay.xyz" },
+      { title: "EZ Paper", url: "https://ezpaper.xyz" },
+      { title: "TextMD", url: "https://textmd.xyz" },
+      { title: "Memo Pro", url: "https://memopro.xyz" },
+      { title: "NeuroText", url: "https://neurotext.uk" },
+      { title: "OCR Pro", url: "https://ocrpro.xyz" }
+    ],
+    "🎓 Education & Learning": [
+      { title: "Chess Tutor", url: "https://chesstutor.xyz" },
+      { title: "EZ Homework", url: "https://ezhw.xyz" },
+      { title: "EZGrader", url: "https://ezgrader.ai", videoUrl: "/videos/ezgrader-tutorial.mp4" },
+      { title: "Homework Helper", url: "https://homeworkrobot.xyz" },
+      { title: "Homework Humanizer", url: "https://homeworkhumanizer.xyz" },
+      { title: "Fuck Homework", url: "https://fuckhomework.xyz" }
+    ],
+    "🧠 Intelligence & Psychology": [
+      { title: "Ask A Philosopher", url: "https://analyticphilosophy.net" },
+      { title: "Ask JM", url: "https://askjm.xyz" },
+      { title: "Freud GPT", url: "https://freudgpt.me" },
+      { title: "Model Builder", url: "https://askintel.xyz" },
+      { title: "Originality Meter", url: "https://originalitymeter.com", videoUrl: "https://www.youtube.com/watch?v=lRdczUD_0PE" },
+      { title: "Intelligence Meter", url: "https://intelligencemeter.xyz" },
+      { title: "Maximize Intelligence", url: "https://maximizeintelligence.xyz", videoUrl: "/videos/maximize-intelligence-tutorial.mp4" },
+      { title: "Mind Profiler", url: "https://mindprofiler.xyz/", videoUrl: "/videos/mind-profiler-tutorial.mp4" },
+      { title: "Text Evaluator", url: "https://textevaluator.xyz" },
+      { title: "Text IQ", url: "https://textiq.xyz/", videoUrl: "/videos/text-iq-tutorial.mp4" },
+      { title: "Improve Your Writing", url: "https://improveyourwriting.xyz" },
+      { title: "Cognitive Enhancer", url: "https://cognitiveenhancer.xyz" },
+      { title: "Epistemic Engine", url: "https://epistemicengine.xyz" },
+      { title: "Psychological Profiler", url: "https://psychologicalprofiler.xyz" },
+      { title: "Psychology Pro", url: "https://psychologypro.xyz", videoUrl: "https://www.youtube.com/watch?v=0hIA4NsETZw" },
+      { title: "Psychology Pro 2.0", url: "https://psychologypro.biz" },
+      { title: "Super Profiler", url: "https://superprofiler.xyz" },
+      { title: "Cognitive Profiler", url: "https://cognitiveprofiler.xyz" },
+      { title: "Super Cognitive Profiler", url: "https://supercognitiveprofiler.xyz" },
+      { title: "Semantic Skeletonizer", url: "https://semskel.xyz" },
+      { title: "Text Genius", url: "https://textgenius.xyz" },
+      { title: "ModelWiz", url: "https://modelwiz.xyz" },
+      { title: "Model Transformer", url: "https://modeltransformer.xyz/" }
+    ],
+    "📸 Visual & Multimedia": [
+      { title: "Frame Shot", url: "https://frameshot.xyz" },
+      { title: "Photo Psychoanalysis", url: "https://photopsychoanalysis.xyz" },
+      { title: "Mind Read", url: "https://mindread.xyz" },
+      { title: "Smart Photo/Video Viewer", url: "https://smartphotoviewer.xyz" }
+    ],
+    "🎧 Audio & Interactive Media": [
+      { title: "Audio Transcriber", url: "https://audiotranscriber.xyz" },
+      { title: "Audio Visualizer", url: "https://audiovisualizer.xyz" },
+      { title: "Podcast Creator", url: "https://ezpodcast.xyz" }
+    ],
+    "⚙️ Utility & Conversion": [
+      { title: "Book to Database", url: "https://databasebooks.xyz" },
+      { title: "GPTByPass", url: "https://gptbypass.xyz", videoUrl: "https://www.youtube.com/watch?v=PR0JX_Hrgqc" },
+      { title: "New GPTBypass", url: "https://newgptbypass.xyz" },
+      { title: "Super GPTBypass", url: "https://supernewgptbypass.xyz" },
+      { title: "Team 25 Super GPTBypass", url: "https://team25gptbypass.xyz/" },
+      { title: "HTML Converter", url: "https://htmlconverter.xyz" }
+    ]
+  };
+
+  const BookItem = ({ title, url, note, author, videoUrl }: { title: string; url: string | null; note?: string; author?: string; videoUrl?: string }) => (
+    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+      <div className="w-full sm:w-80">
+        <span className="font-medium text-gray-900">{title}</span>
+        {author && (
+          <div className="text-xs text-gray-600 mt-1">{author}</div>
+        )}
+      </div>
+      <span className="text-gray-500 hidden sm:inline">—</span>
+      {url ? (
+        <div className="flex items-center gap-3">
+          <a 
+            href={url} 
+            className="text-blue-600 hover:text-blue-800 hover:underline break-all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {url}
+          </a>
+          {videoUrl && (
+            <a
+              href={videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded transition-colors whitespace-nowrap"
+              data-testid={`video-tutorial-${title.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+              📹 Tutorial
+            </a>
+          )}
+        </div>
+      ) : (
+        <span className="text-gray-600 italic">{note}</span>
+      )}
+    </div>
+  );
+
+  return (
+    <div className="font-sans bg-white text-gray-900 leading-relaxed min-h-screen">
+      {/* Contact Us - Top Left */}
+      <div className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 py-3">
+          <div className="flex items-center justify-between">
+            <a 
+              href="mailto:contact@zhisystems.ai" 
+              className="text-blue-600 hover:text-blue-800 font-medium"
+            >
+              Contact Us
+            </a>
+            <div className="flex items-center gap-6">
+              <a
+                href="/journal"
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Zhi Systems Journal
+              </a>
+              <a
+                href="/podcasts"
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Podcasts
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Main Header */}
+        <header className="mb-12">
+          <img 
+            src="/zhi-systems-logo.png" 
+            alt="Zhi Systems - High-Performance AI Tools for Writers, Thinkers, and Analysts" 
+            className="h-20"
+            data-testid="img-logo"
+          />
+        </header>
+
+        {/* Core Applications Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">
+            Core Applications
+          </h2>
+          
+          {Object.entries(appCategories).map(([category, apps]) => (
+            <div key={category} className="mb-8">
+              <h3 className="text-lg font-medium text-gray-800 mb-4">
+                {category}
+              </h3>
+              <div className="grid gap-3">
+                {apps.map((app) => (
+                  <BookItem key={app.title} title={app.title} url={app.url} videoUrl={app.videoUrl} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+
+        {/* Living Courses Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">
+            Living Courses
+          </h2>
+          
+          {/* What's a Living Course explanation */}
+          <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <p className="text-gray-700 text-sm leading-relaxed">
+              <strong>What's a Living Course?</strong> A fully AI-powered educational experience with a built-in tutor that is trained on the course material. 
+              The AI can answer questions at any level of depth about the course content, provide personalized explanations, generate practice problems, 
+              and adapt to your learning style and pace.
+            </p>
+          </div>
+          
+          <div className="grid gap-3">
+            {courses.map((course) => (
+              <BookItem key={course.title} title={course.title} url={course.url} />
+            ))}
+          </div>
+        </section>
+
+        {/* Living Books Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">
+            Living Books
+          </h2>
+          
+          {/* What's a Living Book explanation */}
+          <div className="mb-8 bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <h3 className="text-lg font-medium text-gray-900 mb-3">What's a Living Book?</h3>
+            <p className="text-gray-700 mb-3">
+              A Living Book is an interactive version of any text, powered by AI. Features include:
+            </p>
+            <ul className="text-gray-700 space-y-1 list-disc list-inside">
+              <li>Ask AI anything about the text (math notation supported)</li>
+              <li>Get AI to write about the text (with full math export support)</li>
+              <li>Rewrite the text using custom instructions</li>
+              <li>Generate tests based on the text</li>
+              <li>Take AI-generated tests</li>
+              <li>Create study guides</li>
+              <li>Generate podcasts from selected passages</li>
+              <li>Listen to AI narration</li>
+            </ul>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-lg font-medium text-gray-800 mb-4">
+              BY ZHI SYSTEMS
+            </h3>
+            
+            <div className="grid gap-3">
+              {livingBooksByKuczynski.map((book) => (
+                <BookItem key={book.title} title={book.title} url={book.url} />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-medium text-gray-800 mb-4">
+              Classics / Public Domain
+            </h3>
+            
+            <div className="grid gap-3">
+              {classicsBooks.map((book) => (
+                <BookItem key={book.title} title={book.title} url={book.url} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+      {/* Footer */}
+      <footer className="bg-gray-50 border-t border-gray-200 mt-16">
+        <div className="max-w-6xl mx-auto px-4 py-6">
+          <p className="text-gray-600 text-center">
+            © Zhi Systems 2025
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+
