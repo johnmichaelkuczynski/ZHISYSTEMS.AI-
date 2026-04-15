@@ -7,7 +7,8 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install ALL dependencies (including dev) for the build step
-RUN npm ci
+ENV NODE_ENV=development
+RUN npm install
 
 # Copy source code
 COPY . .
