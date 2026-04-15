@@ -1,0 +1,52 @@
+2026-04-15T04:16:35.045856097Z #9 6.552 npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-04-15T04:16:43.134787514Z #9 14.64 
+2026-04-15T04:16:43.134826534Z #9 14.64 added 517 packages, and audited 518 packages in 14s
+2026-04-15T04:16:43.134832754Z #9 14.64 
+2026-04-15T04:16:43.338920595Z #9 14.64 72 packages are looking for funding
+2026-04-15T04:16:43.338945396Z #9 14.64   run npm fund for details
+2026-04-15T04:16:43.338951496Z #9 14.69 
+2026-04-15T04:16:43.338957506Z #9 14.69 21 vulnerabilities (6 low, 4 moderate, 9 high, 2 critical)
+2026-04-15T04:16:43.338962556Z #9 14.69 
+2026-04-15T04:16:43.338967646Z #9 14.69 To address issues that do not require attention, run:
+2026-04-15T04:16:43.338973196Z #9 14.69   npm audit fix
+2026-04-15T04:16:43.338978146Z #9 14.69 
+2026-04-15T04:16:43.338997326Z #9 14.69 To address all issues (including breaking changes), run:
+2026-04-15T04:16:43.339001156Z #9 14.69   npm audit fix --force
+2026-04-15T04:16:43.339004856Z #9 14.69 
+2026-04-15T04:16:43.339008226Z #9 14.69 Run npm audit for details.
+2026-04-15T04:16:43.339011666Z #9 14.69 npm notice
+2026-04-15T04:16:43.339014756Z #9 14.69 npm notice New major version of npm available! 10.8.2 -> 11.12.1
+2026-04-15T04:16:43.339017776Z #9 14.69 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+2026-04-15T04:16:43.339021106Z #9 14.69 npm notice To update run: npm install -g npm@11.12.1
+2026-04-15T04:16:43.339024366Z #9 14.69 npm notice
+2026-04-15T04:16:44.045047259Z #9 DONE 15.6s
+2026-04-15T04:16:44.196553904Z 
+2026-04-15T04:16:44.196590324Z #10 [5/6] COPY . .
+2026-04-15T04:16:45.502364678Z #10 DONE 1.5s
+2026-04-15T04:16:45.653948458Z 
+2026-04-15T04:16:45.653984128Z #11 [6/6] RUN npm run build
+2026-04-15T04:16:45.839578903Z #11 0.336 
+2026-04-15T04:16:45.839606933Z #11 0.336 > rest-express@1.0.0 build
+2026-04-15T04:16:45.839613213Z #11 0.336 > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2026-04-15T04:16:45.839618403Z #11 0.336 
+2026-04-15T04:16:45.905164068Z #11 0.342 sh: vite: not found
+2026-04-15T04:16:45.905193268Z #11 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 127
+2026-04-15T04:16:45.905199308Z ------
+2026-04-15T04:16:45.905204408Z  > [6/6] RUN npm run build:
+2026-04-15T04:16:45.905210038Z 0.336 
+2026-04-15T04:16:45.905215028Z 0.336 > rest-express@1.0.0 build
+2026-04-15T04:16:45.905221268Z 0.336 > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2026-04-15T04:16:45.905227398Z 0.336 
+2026-04-15T04:16:45.905233108Z 0.342 sh: vite: not found
+2026-04-15T04:16:45.905239538Z ------
+2026-04-15T04:16:45.906318645Z Dockerfile:16
+2026-04-15T04:16:45.906334045Z --------------------
+2026-04-15T04:16:45.906345315Z   14 |     
+2026-04-15T04:16:45.906358866Z   15 |     # Build the application
+2026-04-15T04:16:45.906370406Z   16 | >>> RUN npm run build
+2026-04-15T04:16:45.906377536Z   17 |     
+2026-04-15T04:16:45.906385706Z   18 |     # Expose port
+2026-04-15T04:16:45.906392926Z --------------------
+2026-04-15T04:16:45.906400856Z error: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 127WHAT HAPPENED
+I'M TRYING TO DEPLOY ON RENDER...WHAT DO I DO WHERE?
+SOMETHING IS VERY WEIRD. THE AREA THAT USUALLY HAS THE BUILD COMMANDS--NOT THERE
