@@ -21,8 +21,7 @@ export default function Home() {
     { title: "SEMANTICS", url: "https://semantics101.xyz" },
     { title: "SYMBOLIC LOGIC", url: "https://symboliclogic.xyz" },
     { title: "THEORETICAL KNOWLEDGE & INDUCTIVE INFERENCE", url: "https://theoreticalknowledge.xyz" },
-    { title: "WHY WAS SOCRATES EXECUTED?", url: "https://socrates101.xyz" },
-    { title: "WRITING COURSE", url: "https://writing101.xyz" }
+    { title: "WHY WAS SOCRATES EXECUTED?", url: "https://socrates101.xyz" }
   ];
 
   const classicsBooks = [
