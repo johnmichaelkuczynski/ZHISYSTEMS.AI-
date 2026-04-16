@@ -58,7 +58,6 @@ export default function Home() {
       { title: "Reading Pro", url: "https://readingpro.xyz" },
       { title: "Humanizer Plus", url: "https://humanizerplus.xyz" },
       { title: "EZ Essay", url: "https://ezessay.xyz" },
-      { title: "EZ Paper", url: "https://ezpaper.xyz" },
       { title: "TextMD", url: "https://textmd.xyz" },
       { title: "NeuroText", url: "https://neurotext.uk" },
       { title: "OCR Pro", url: "https://ocrpro.xyz" }
