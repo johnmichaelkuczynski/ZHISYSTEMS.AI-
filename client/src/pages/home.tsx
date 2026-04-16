@@ -41,7 +41,6 @@ export default function Home() {
   ];
 
   const courses = [
-    { title: "Logic 101", url: "https://logic101.xyz" },
     { title: "Critical Thinking", url: "https://criticalthinking101.xyz" },
     { title: "Philosophy 101", url: "https://philosophy101.xyz" }
   ];
