@@ -125,7 +125,8 @@ export default function Home() {
       { title: "New GPTBypass", url: "https://newgptbypass.xyz" },
       { title: "Super GPTBypass", url: "https://supernewgptbypass.xyz" },
       { title: "Team 25 Super GPTBypass", url: "https://team25gptbypass.xyz/" },
-      { title: "HTML Converter", url: "https://htmlconverter.xyz" }
+      { title: "HTML Converter", url: "https://htmlconverter.xyz" },
+      { title: "SOXL Pro", url: "https://soxlpro.xyz" }
     ]
   };
 
