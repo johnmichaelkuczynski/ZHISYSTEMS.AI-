@@ -87,8 +87,6 @@ export default function Home() {
       { title: "Psychological Profiler", url: "https://psychologicalprofiler.xyz" },
       { title: "Psychology Pro", url: "https://psychologypro.xyz", videoUrl: "https://www.youtube.com/watch?v=0hIA4NsETZw" },
       { title: "Psychology Pro 2.0", url: "https://psychologypro.biz" },
-      { title: "Super Profiler", url: "https://superprofiler.xyz" },
-      { title: "Cognitive Profiler", url: "https://cognitiveprofiler.xyz" },
       { title: "Super Cognitive Profiler", url: "https://supercognitiveprofiler.xyz" },
       { title: "Semantic Skeletonizer", url: "https://semskel.xyz" },
       { title: "Text Genius", url: "https://textgenius.xyz" },
