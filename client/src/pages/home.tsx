@@ -33,7 +33,6 @@ export default function Home() {
     { title: "DRACULA", url: "https://dracula101.xyz" },
     { title: "DREAM PSYCHOLOGY", url: "https://dreampsychology.xyz" },
     { title: "FRANKENSTEIN", url: "https://frankenstein101.xyz" },
-    { title: "INDUSTRIAL SOCIETY AND ITS FUTURE", url: "https://unabombermanifesto.xyz" },
     { title: "KING JAMES BIBLE", url: "https://kingjamesbible.xyz" },
     { title: "PRINCIPLES OF PSYCHOLOGY", url: "https://herbertspencer.xyz" },
     { title: "SHAKESPEARE COMPLETE WORKS", url: "https://shakespeare101.xyz" },
