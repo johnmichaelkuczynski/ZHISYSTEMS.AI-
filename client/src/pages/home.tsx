@@ -51,7 +51,6 @@ export default function Home() {
     "📝 Writing & Books": [
       { title: "Living Book Creator", url: "https://livingbook.xyz/" },
       { title: "Book Builder", url: "https://bookbuilder.xyz" },
-      { title: "Fiction Creator", url: "https://turnnonfictionintofiction.biz", videoUrl: "/videos/fiction-creator-tutorial.mp4" },
       { title: "Genius Dictation", url: "https://geniusdictation.com", videoUrl: "/videos/genius-dictation-tutorial.mkv" },
       { title: "EZ Reader", url: "https://ezreader.ai" },
       { title: "EZ Story", url: "https://ezstory.xyz", videoUrl: "https://www.youtube.com/watch?v=sRaZtSnkybM" },
