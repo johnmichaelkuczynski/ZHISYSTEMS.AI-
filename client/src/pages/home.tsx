@@ -84,7 +84,6 @@ export default function Home() {
     ],
     "🧠 Intelligence & Psychology": [
       { title: "Ask A Philosopher", url: "https://analyticphilosophy.net" },
-      { title: "Ask JM", url: "https://askjm.xyz" },
       { title: "Freud GPT", url: "https://freudgpt.me" },
       { title: "Model Builder", url: "https://askintel.xyz" },
       { title: "Originality Meter", url: "https://originalitymeter.com", videoUrl: "https://www.youtube.com/watch?v=lRdczUD_0PE" },
