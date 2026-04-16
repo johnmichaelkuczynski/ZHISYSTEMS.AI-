@@ -110,11 +110,7 @@ export default function Home() {
       { title: "Podcast Creator", url: "https://ezpodcast.xyz" }
     ],
     "⚙️ Utility & Conversion": [
-      { title: "Book to Database", url: "https://databasebooks.xyz" },
       { title: "GPTByPass", url: "https://gptbypass.xyz", videoUrl: "https://www.youtube.com/watch?v=PR0JX_Hrgqc" },
-      { title: "New GPTBypass", url: "https://newgptbypass.xyz" },
-      { title: "Super GPTBypass", url: "https://supernewgptbypass.xyz" },
-      { title: "Team 25 Super GPTBypass", url: "https://team25gptbypass.xyz/" },
       { title: "HTML Converter", url: "https://htmlconverter.xyz" },
       { title: "SOXL Pro", url: "https://soxlpro.xyz" }
     ]
