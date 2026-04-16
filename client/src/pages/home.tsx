@@ -27,7 +27,6 @@ export default function Home() {
     { title: "A ROOM WITH A VIEW", url: "https://aroomwithaview101.xyz" },
     { title: "ANARCHISM AND OTHER ESSAYS", url: "https://anarchismandotheressays.xyz" },
     { title: "ART OF WAR", url: "https://theartofwarbysuntzu.xyz" },
-    { title: "BOOK OF MORMON", url: "https://bookofmormon101.xyz" },
     { title: "CIVILIZATION AND ITS DISCONTENTS", url: "https://civilizationanditsdiscontents.xyz" },
     { title: "DEATH OF IVAN ILYCH", url: "https://ivanilych.xyz" },
     { title: "DRACULA", url: "https://dracula101.xyz" },
