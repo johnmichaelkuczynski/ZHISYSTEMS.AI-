@@ -37,7 +37,6 @@ export default function Home() {
     { title: "KING JAMES BIBLE", url: "https://kingjamesbible.xyz" },
     { title: "OUR KNOWLEDGE OF THE EXTERNAL WORLD", url: "https://ourknowledgeoftheexternalworld.xyz" },
     { title: "PRINCIPLES OF PSYCHOLOGY", url: "https://herbertspencer.xyz" },
-    { title: "SEVEN SECRETS OF A STRESS FREE LIFE", url: "https://sevensecrets.xyz" },
     { title: "SHAKESPEARE COMPLETE WORKS", url: "https://shakespeare101.xyz" },
     { title: "THE COMMUNIST MANIFESTO", url: "https://communistmanifesto.xyz" },
     { title: "THE LAWS", url: "https://thelawsbyplato.xyz" },
