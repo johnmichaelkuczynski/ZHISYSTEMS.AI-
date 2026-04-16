@@ -66,9 +66,7 @@ export default function Home() {
     "🎓 Education & Learning": [
       { title: "Chess Tutor", url: "https://chesstutor.xyz" },
       { title: "EZ Homework", url: "https://ezhw.xyz" },
-      { title: "EZGrader", url: "https://ezgrader.ai", videoUrl: "/videos/ezgrader-tutorial.mp4" },
-      { title: "Homework Helper", url: "https://homeworkrobot.xyz" },
-      { title: "Homework Humanizer", url: "https://homeworkhumanizer.xyz" }
+      { title: "EZGrader", url: "https://ezgrader.ai", videoUrl: "/videos/ezgrader-tutorial.mp4" }
     ],
     "🧠 Intelligence & Psychology": [
       { title: "Ask A Philosopher", url: "https://analyticphilosophy.net" },
