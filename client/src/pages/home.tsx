@@ -60,7 +60,6 @@ export default function Home() {
       { title: "EZ Essay", url: "https://ezessay.xyz" },
       { title: "EZ Paper", url: "https://ezpaper.xyz" },
       { title: "TextMD", url: "https://textmd.xyz" },
-      { title: "Memo Pro", url: "https://memopro.xyz" },
       { title: "NeuroText", url: "https://neurotext.uk" },
       { title: "OCR Pro", url: "https://ocrpro.xyz" }
     ],
