@@ -54,8 +54,6 @@ export default function Home() {
       { title: "Fiction Creator", url: "https://turnnonfictionintofiction.biz", videoUrl: "/videos/fiction-creator-tutorial.mp4" },
       { title: "Genius Dictation", url: "https://geniusdictation.com", videoUrl: "/videos/genius-dictation-tutorial.mkv" },
       { title: "EZ Reader", url: "https://ezreader.ai" },
-      { title: "EZ Reader Plus", url: "https://ezreader.xyz" },
-      { title: "EZReader Deluxe", url: "https://ezreader.biz" },
       { title: "EZ Story", url: "https://ezstory.xyz", videoUrl: "https://www.youtube.com/watch?v=sRaZtSnkybM" },
       { title: "Reading Pro", url: "https://readingpro.xyz" },
       { title: "Humanizer Plus", url: "https://humanizerplus.xyz" },
