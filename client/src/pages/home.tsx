@@ -110,7 +110,6 @@ export default function Home() {
     "📸 Visual & Multimedia": [
       { title: "Frame Shot", url: "https://frameshot.xyz" },
       { title: "Photo Psychoanalysis", url: "https://photopsychoanalysis.xyz" },
-      { title: "Mind Read", url: "https://mindread.xyz" },
       { title: "Smart Photo/Video Viewer", url: "https://smartphotoviewer.xyz" }
     ],
     "🎧 Audio & Interactive Media": [
