@@ -80,8 +80,7 @@ export default function Home() {
       { title: "EZ Homework", url: "https://ezhw.xyz" },
       { title: "EZGrader", url: "https://ezgrader.ai", videoUrl: "/videos/ezgrader-tutorial.mp4" },
       { title: "Homework Helper", url: "https://homeworkrobot.xyz" },
-      { title: "Homework Humanizer", url: "https://homeworkhumanizer.xyz" },
-      { title: "Fuck Homework", url: "https://fuckhomework.xyz" }
+      { title: "Homework Humanizer", url: "https://homeworkhumanizer.xyz" }
     ],
     "🧠 Intelligence & Psychology": [
       { title: "Ask A Philosopher", url: "https://analyticphilosophy.net" },
