@@ -24,7 +24,6 @@ export default function Home() {
   ];
 
   const classicsBooks = [
-    { title: "A ROOM WITH A VIEW", url: "https://aroomwithaview101.xyz" },
     { title: "ANARCHISM AND OTHER ESSAYS", url: "https://anarchismandotheressays.xyz" },
     { title: "ART OF WAR", url: "https://theartofwarbysuntzu.xyz" },
     { title: "CIVILIZATION AND ITS DISCONTENTS", url: "https://civilizationanditsdiscontents.xyz" },
