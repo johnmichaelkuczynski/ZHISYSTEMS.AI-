@@ -97,6 +97,7 @@ export default function Home() {
     "⚙️ Utility & Conversion": [
       { title: "GPTByPass", url: "https://gptbypass.xyz", videoUrl: "https://www.youtube.com/watch?v=PR0JX_Hrgqc" },
       { title: "HTML Converter", url: "https://htmlconverter.xyz" },
+      { title: "PDF Shrinker", url: "https://shrinkpdf.xyz" },
       { title: "SOXL Pro", url: "https://soxlpro.xyz" }
     ]
   };
