@@ -58,7 +58,7 @@ export default function JournalPage() {
             ← Back to Zhi Systems
           </Link>
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            Zhi Systems Journal
+            Investor Notes
           </h1>
           <p className="text-xl text-gray-700 mb-6">
             Insights and analysis from the Zhi Systems team

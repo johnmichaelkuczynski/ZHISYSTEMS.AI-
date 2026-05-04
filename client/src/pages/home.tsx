@@ -158,13 +158,13 @@ export default function Home() {
                 href="/journal"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
-                Zhi Systems Journal
+                Investor Notes
               </a>
               <a
                 href="/podcasts"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
-                Podcasts
+                Investor Briefings
               </a>
             </div>
           </div>

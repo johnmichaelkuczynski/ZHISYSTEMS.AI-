@@ -9,16 +9,25 @@ import JournalIssue from "@/pages/journal-issue";
 import JournalAdmin from "@/pages/journal-admin";
 import Podcasts from "@/pages/podcasts";
 import NotFound from "@/pages/not-found";
+import PasswordGate from "@/components/PasswordGate";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/journal" component={Journal} />
-      <Route path="/journal/vol-:volume/no-:issue" component={JournalIssue} />
-      <Route path="/journal/:volume/:issue" component={JournalIssue} />
       <Route path="/journal/admin" component={JournalAdmin} />
-      <Route path="/podcasts" component={Podcasts} />
+      <Route path="/journal">
+        <PasswordGate><Journal /></PasswordGate>
+      </Route>
+      <Route path="/journal/vol-:volume/no-:issue">
+        <PasswordGate><JournalIssue /></PasswordGate>
+      </Route>
+      <Route path="/journal/:volume/:issue">
+        <PasswordGate><JournalIssue /></PasswordGate>
+      </Route>
+      <Route path="/podcasts">
+        <PasswordGate><Podcasts /></PasswordGate>
+      </Route>
       <Route component={NotFound} />
     </Switch>
   );
