@@ -5,59 +5,69 @@ interface App {
   title: string;
   url: string;
   videoUrl?: string;
-  description?: string;
 }
 
-const appDescriptions: Record<string, string> = {
-  "NeuroText": `## What NEUROTEXT Is
-NEUROTEXT is a multi-model AI platform for serious writing, analysis, and document transformation. It plugs into five top-tier proprietary LLMs and lets users route any task to the model best suited for it -- academic writing, deep reasoning, factual research, mathematical proofs, or casual content.
+interface AppDescription {
+  emoji: string;
+  tagline: string;
+  sections: { emoji: string; title: string; body: string }[];
+}
 
-Unlike consumer chatbots that produce generic, hedged, watered-down output, NEUROTEXT is built around a strict operating principle: the user's instructions are sacred. If you say "do not omit a single fact," nothing is omitted. If you say "divide by date," it divides by date. If you say "rewrite all 30,000 words," it rewrites all 30,000 words. No padding, no preamble, no editorializing.
+const appDescriptions: Record<string, AppDescription> = {
+  "NeuroText": {
+    emoji: "🧠",
+    tagline: "Multi-Model AI Platform for Serious Writing, Analysis, and Document Transformation",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body: `NEUROTEXT is a multi-model AI platform for serious writing, analysis, and document transformation. It plugs into five top-tier proprietary LLMs and lets users route any task to the model best suited for it -- academic writing, deep reasoning, factual research, mathematical proofs, or casual content.
 
-## Who It's For
-- Academics, graduate students, and researchers who need to write dissertations, journal articles, and literature reviews where coherence matters across hundreds of pages
-- Lawyers and legal professionals who need to organize, restructure, and brief case material without losing a single fact
-- Authors, screenwriters, and content creators who need long-form generation with structural integrity
-- Analysts and consultants who need to compress, expand, or reformat large documents while preserving every detail
-- Anyone who has ever asked an AI for a 5,000-word document and gotten 800 words back
-
-## Core Capabilities
-**Multi-Model Intelligence Evaluation.** A 4-phase scoring system evaluates any text across 17 cognitive dimensions -- depth, originality, conceptual control, argumentative rigor, semantic density, and more. Scores are genre-aware. You can compare how the same text scores across multiple proprietary LLMs side-by-side.
-
-**Universal Expansion with Three-Pass Cross-Chunk Coherence.** A document expansion engine that handles inputs up to 100,000 words. It extracts a skeleton, processes constrained chunks, then runs a stitch pass to ensure coherence across the entire document. Hits target word counts precisely.
-
-**Conservative Reconstruction.** Generates coherent, charitable essays that articulate a text's unified argument. Uses outline-first strategy for medium documents and cross-chunk strategy for very long ones. Real-time progress polling.
-
-**Full Suite Pipeline.** One-click execution of three-stage processing: Reconstruction -> 25 Likely Objections -> Objection-Proof Final Version.
-
-**MAXINTEL Intelligent Rewrite.** Recursively optimizes text to maximize intelligence scores. Keeps rewriting until cognitive metrics hit your target.
-
-**GPT Bypass Humanizer.** Transforms AI-generated text to evade AI detection tools, with built-in detection integration.
-
-**Coherence Meter.** Validates logical and semantic coherence across documents up to 5,000 words. Includes specialized modes for mathematical proofs and scientific-explanatory writing.
-
-**Screenplay Generator.** Converts source material -- novels, articles, true stories, ideas -- into properly formatted screenplays.
-
-**Signal Refiner.** Post-processing engine that maximizes signal-to-noise ratio in long generated text. Designed for documents over 10,000 words.
-
-**Dissertation Wizard.** Step-by-step guided dissertation generation with chapter planning, automatic table of contents, and chapter-by-chapter coherence enforcement.
-
-**AI Chat Assistant.** Conversational interface backed by a proprietary knowledge database, with persistent conversation history and document context awareness.
-
-**Multi-Document Library.** Load up to 5 source documents simultaneously and have the AI work across all of them.
-
-**Translation, Web Search, Speech-to-Text, Document Comparison.** Full document workflow tools built in.
-
-## What Makes It Different
-1. **It actually follows instructions.** The system's job is to do exactly what you said, no more, no less.
-2. **It hits word count targets.** Ask for 50,000 words, get 50,000 words.
-3. **It handles long documents intelligently.** Three-pass cross-chunk architecture preserves coherence even at 100,000 words.
-4. **Five proprietary LLMs, one workflow.** Pick the model best suited for each task from a single interface.
-5. **Cognitive scoring built in.** Every output can be scored across 17 cognitive dimensions.
-6. **Comprehensive rewrite detection.** When you say "rewrite all of it," the system sizes the output to match the input automatically.
-
-## Pricing
-Token-based credits -- $100 buys 1,000 credits. Provider-specific multipliers reflect the actual cost of each proprietary LLM. Stripe-integrated checkout, real-time balance updates. Freemium tier for casual users, full power unlocked at any credit purchase.`,
+Unlike consumer chatbots that produce generic, hedged, watered-down output, NEUROTEXT is built around a strict operating principle: the user's instructions are sacred. If you say "do not omit a single fact," nothing is omitted. If you say "divide by date," it divides by date. If you say "rewrite all 30,000 words," it rewrites all 30,000 words. No padding, no preamble, no editorializing.`,
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body: `- **Academics, graduate students, and researchers** -- need to write dissertations, journal articles, and literature reviews where coherence matters across hundreds of pages
+- **Lawyers and legal professionals** -- need to organize, restructure, and brief case material without losing a single fact
+- **Authors, screenwriters, and content creators** -- need long-form generation with structural integrity
+- **Analysts and consultants** -- need to compress, expand, or reformat large documents while preserving every detail
+- **Anyone** -- who has ever asked an AI for a 5,000-word document and gotten 800 words back`,
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body: `- **Multi-Model Intelligence Evaluation** -- A 4-phase scoring system evaluates any text across 17 cognitive dimensions (depth, originality, conceptual control, argumentative rigor, semantic density). Genre-aware; compare scores across multiple LLMs side-by-side.
+- **Universal Expansion with Three-Pass Cross-Chunk Coherence** -- Document expansion engine handling inputs up to 100,000 words. Extracts a skeleton, processes constrained chunks, then runs a stitch pass for full-document coherence. Hits target word counts precisely.
+- **Conservative Reconstruction** -- Generates coherent, charitable essays articulating a text's unified argument. Outline-first for medium documents, cross-chunk for very long ones. Real-time progress polling.
+- **Full Suite Pipeline** -- One-click three-stage processing: Reconstruction → 25 Likely Objections → Objection-Proof Final Version.
+- **MAXINTEL Intelligent Rewrite** -- Recursively optimizes text to maximize intelligence scores. Keeps rewriting until cognitive metrics hit your target.
+- **GPT Bypass Humanizer** -- Transforms AI-generated text to evade AI detection tools, with built-in detection integration.
+- **Coherence Meter** -- Validates logical and semantic coherence across documents up to 5,000 words. Includes specialized modes for mathematical proofs and scientific-explanatory writing.
+- **Screenplay Generator** -- Converts source material (novels, articles, true stories, ideas) into properly formatted screenplays.
+- **Signal Refiner** -- Post-processing engine that maximizes signal-to-noise ratio in long generated text. Designed for documents over 10,000 words.
+- **Dissertation Wizard** -- Step-by-step guided dissertation generation with chapter planning, automatic TOC, and chapter-by-chapter coherence enforcement.
+- **AI Chat Assistant** -- Conversational interface backed by a proprietary knowledge database, with persistent history and document context awareness.
+- **Multi-Document Library** -- Load up to 5 source documents simultaneously and have the AI work across all of them.
+- **Translation, Web Search, Speech-to-Text, Document Comparison** -- Full document workflow tools built in.`,
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body: `- **It actually follows instructions** -- The system's job is to do exactly what you said, no more, no less.
+- **It hits word count targets** -- Ask for 50,000 words, get 50,000 words.
+- **It handles long documents intelligently** -- Three-pass cross-chunk architecture preserves coherence even at 100,000 words.
+- **Five proprietary LLMs, one workflow** -- Pick the model best suited for each task from a single interface.
+- **Cognitive scoring built in** -- Every output can be scored across 17 cognitive dimensions.
+- **Comprehensive rewrite detection** -- When you say "rewrite all of it," the system sizes the output to match the input automatically.`,
+      },
+      {
+        emoji: "💳",
+        title: "Pricing",
+        body: `Token-based credits -- **$100 buys 1,000 credits**. Provider-specific multipliers reflect the actual cost of each proprietary LLM. Stripe-integrated checkout, real-time balance updates. Freemium tier for casual users, full power unlocked at any credit purchase.`,
+      },
+    ],
+  },
 };
 
 export default function Home() {
@@ -197,35 +207,6 @@ export default function Home() {
     </div>
   );
 
-  const renderDescription = (description: string) => {
-    const blocks = description.split(/\n\n+/);
-    return (
-      <div className="space-y-3 text-gray-700 text-sm leading-relaxed">
-        {blocks.map((block, i) => {
-          if (block.startsWith("## ")) {
-            return (
-              <h4 key={i} className="text-base font-semibold text-gray-900 mt-2">
-                {block.slice(3)}
-              </h4>
-            );
-          }
-          if (block.split("\n").every((line) => line.trim().startsWith("- "))) {
-            return (
-              <ul key={i} className="list-disc list-inside space-y-1">
-                {block.split("\n").map((line, j) => (
-                  <li key={j}>{renderInline(line.trim().slice(2))}</li>
-                ))}
-              </ul>
-            );
-          }
-          return (
-            <p key={i}>{renderInline(block)}</p>
-          );
-        })}
-      </div>
-    );
-  };
-
   const renderInline = (text: string) => {
     const parts = text.split(/(\*\*[^*]+\*\*)/g);
     return parts.map((part, i) =>
@@ -237,8 +218,28 @@ export default function Home() {
     );
   };
 
-  const AppItem = ({ title, url, videoUrl, description }: App) => {
+  const renderSectionBody = (body: string) => {
+    const blocks = body.split(/\n\n+/);
+    return blocks.map((block, i) => {
+      const lines = block.split("\n");
+      if (lines.every((line) => line.trim().startsWith("- "))) {
+        return (
+          <ul key={i} className="list-disc pl-6 space-y-2 text-gray-700">
+            {lines.map((line, j) => (
+              <li key={j} className="leading-relaxed">{renderInline(line.trim().slice(2))}</li>
+            ))}
+          </ul>
+        );
+      }
+      return (
+        <p key={i} className="text-gray-700 leading-relaxed">{renderInline(block)}</p>
+      );
+    });
+  };
+
+  const AppItem = ({ title, url, videoUrl }: App) => {
     const [expanded, setExpanded] = useState(false);
+    const description = appDescriptions[title];
     const testId = title.toLowerCase().replace(/\s+/g, '-');
     return (
       <div className="border-b border-gray-100 pb-3 last:border-b-0">
@@ -291,10 +292,37 @@ export default function Home() {
         </div>
         {expanded && description && (
           <div
-            className="mt-3 ml-5 p-4 bg-gray-50 border border-gray-200 rounded-md max-w-3xl"
+            className="mt-4 bg-white border border-gray-200 rounded-lg shadow-sm max-w-4xl overflow-hidden"
             data-testid={`description-${testId}`}
           >
-            {renderDescription(description)}
+            <div className="px-6 pt-6 pb-4 border-b border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                <span>{description.emoji}</span>
+                <span>{title.toUpperCase()}</span>
+              </h3>
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 hover:underline text-sm mt-2 inline-block"
+              >
+                {url}
+              </a>
+              <p className="text-gray-800 font-semibold mt-2">{description.tagline}</p>
+            </div>
+            <div className="px-6 py-4 space-y-6">
+              {description.sections.map((section, i) => (
+                <section key={i}>
+                  <h4 className="text-lg font-semibold text-gray-900 flex items-center gap-2 pb-2 mb-3 border-b border-gray-200">
+                    <span>{section.emoji}</span>
+                    <span>{section.title}</span>
+                  </h4>
+                  <div className="space-y-3 text-sm">
+                    {renderSectionBody(section.body)}
+                  </div>
+                </section>
+              ))}
+            </div>
           </div>
         )}
       </div>
@@ -361,7 +389,6 @@ export default function Home() {
                     title={app.title}
                     url={app.url}
                     videoUrl={app.videoUrl}
-                    description={appDescriptions[app.title]}
                   />
                 ))}
               </div>
