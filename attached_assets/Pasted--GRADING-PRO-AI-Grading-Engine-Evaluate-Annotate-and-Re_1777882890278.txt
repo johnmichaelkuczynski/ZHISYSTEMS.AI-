@@ -1,0 +1,46 @@
+🧠 GRADING PRO
+AI Grading Engine — Evaluate, Annotate, and Return Coursework at Scale
+
+🧩 Overview
+GRADING PRO is a full-scale AI grading and feedback platform built for evaluating real student work on demand.
+
+It transforms raw submissions — essays, problem sets, screenplays, lab reports, code — into finished, justified grades with line-level feedback, then refines those evaluations to match each instructor's exact standards.
+
+Designed for educators who need precision, scale, and control, GRADING PRO eliminates the typical failures of AI grading: shallow rubrics, hallucinated quotes, inconsistent scoring, and loss of academic context.
+
+❄️ What It Does
+One-Click Assignment Grading — Turn a prompt and a stack of submissions into fully graded work
+Long-Form Document Engine — Grade complete documents up to ~400K words in a single run
+Multi-Format Intake — Accepts PDF, DOCX, plain text, and image-based submissions
+Math & Science OCR — Reads handwritten and typeset equations through Mathpix
+AI Detection Layer — Flags AI-generated content with GPTZero before grading
+Precision Rubric Engine — Re-grades submissions until feedback matches the instructor's calibration
+🌿 Core Systems
+Multi-Model Routing — Routes grading tasks across six proprietary LLMs (SHEN 1–6)
+Three-Pass Coherence Engine — Maintains rubric consistency across very large submissions
+Recursive Refinement Loop — Iteratively improves feedback toward target rigor and tone
+Instruction Fidelity System — Executes exactly the rubric and grading criteria the instructor specifies
+Academic Calibration Layer — Adjusts tone and expectations across K–12, undergraduate, graduate, and PhD levels
+🚀 Key Advantages
+Produces finished grades and feedback, not drafts
+Handles large-scale documents (up to ~400K words)
+Maintains rubric coherence across long submissions
+Eliminates AI padding, vague praise, and generic feedback
+Built for serious academic evaluation, not casual chat
+Optional grading instructions — falls back to standard academic criteria when none are provided
+🎯 Use Cases
+University Courses — Grade essays, problem sets, and exams at scale
+Writing Programs — Evaluate long-form work with consistent rubric application
+STEM Coursework — Grade math, physics, and engineering submissions with equation OCR
+Screenwriting & Film — Evaluate properly formatted scripts and treatments
+Test Prep & Tutoring — Generate detailed feedback on practice work
+Department-Wide Standardization — Calibrate grading across multiple instructors and sections
+🧬 Academic Levels Supported
+K–12 · Community College · College Freshman · Sophomore · Junior · Senior · Undergraduate · Graduate · PhD
+
+⚙️ Tech Stack
+Frontend — React 18, TypeScript, Vite, Tailwind, shadcn/ui, KaTeX
+Backend — Node.js, Express, TypeScript (ESM)
+Database — PostgreSQL via Drizzle ORM
+AI Providers — OpenAI, Anthropic, DeepSeek, Perplexity
+Specialized Services — GPTZero (AI detection), Mathpix (math OCR)
