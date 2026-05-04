@@ -1,8 +1,64 @@
+import { useState } from "react";
+import { ChevronDown, ChevronRight } from "lucide-react";
+
 interface App {
   title: string;
   url: string;
   videoUrl?: string;
+  description?: string;
 }
+
+const appDescriptions: Record<string, string> = {
+  "NeuroText": `## What NEUROTEXT Is
+NEUROTEXT is a multi-model AI platform for serious writing, analysis, and document transformation. It plugs into five top-tier proprietary LLMs and lets users route any task to the model best suited for it -- academic writing, deep reasoning, factual research, mathematical proofs, or casual content.
+
+Unlike consumer chatbots that produce generic, hedged, watered-down output, NEUROTEXT is built around a strict operating principle: the user's instructions are sacred. If you say "do not omit a single fact," nothing is omitted. If you say "divide by date," it divides by date. If you say "rewrite all 30,000 words," it rewrites all 30,000 words. No padding, no preamble, no editorializing.
+
+## Who It's For
+- Academics, graduate students, and researchers who need to write dissertations, journal articles, and literature reviews where coherence matters across hundreds of pages
+- Lawyers and legal professionals who need to organize, restructure, and brief case material without losing a single fact
+- Authors, screenwriters, and content creators who need long-form generation with structural integrity
+- Analysts and consultants who need to compress, expand, or reformat large documents while preserving every detail
+- Anyone who has ever asked an AI for a 5,000-word document and gotten 800 words back
+
+## Core Capabilities
+**Multi-Model Intelligence Evaluation.** A 4-phase scoring system evaluates any text across 17 cognitive dimensions -- depth, originality, conceptual control, argumentative rigor, semantic density, and more. Scores are genre-aware. You can compare how the same text scores across multiple proprietary LLMs side-by-side.
+
+**Universal Expansion with Three-Pass Cross-Chunk Coherence.** A document expansion engine that handles inputs up to 100,000 words. It extracts a skeleton, processes constrained chunks, then runs a stitch pass to ensure coherence across the entire document. Hits target word counts precisely.
+
+**Conservative Reconstruction.** Generates coherent, charitable essays that articulate a text's unified argument. Uses outline-first strategy for medium documents and cross-chunk strategy for very long ones. Real-time progress polling.
+
+**Full Suite Pipeline.** One-click execution of three-stage processing: Reconstruction -> 25 Likely Objections -> Objection-Proof Final Version.
+
+**MAXINTEL Intelligent Rewrite.** Recursively optimizes text to maximize intelligence scores. Keeps rewriting until cognitive metrics hit your target.
+
+**GPT Bypass Humanizer.** Transforms AI-generated text to evade AI detection tools, with built-in detection integration.
+
+**Coherence Meter.** Validates logical and semantic coherence across documents up to 5,000 words. Includes specialized modes for mathematical proofs and scientific-explanatory writing.
+
+**Screenplay Generator.** Converts source material -- novels, articles, true stories, ideas -- into properly formatted screenplays.
+
+**Signal Refiner.** Post-processing engine that maximizes signal-to-noise ratio in long generated text. Designed for documents over 10,000 words.
+
+**Dissertation Wizard.** Step-by-step guided dissertation generation with chapter planning, automatic table of contents, and chapter-by-chapter coherence enforcement.
+
+**AI Chat Assistant.** Conversational interface backed by a proprietary knowledge database, with persistent conversation history and document context awareness.
+
+**Multi-Document Library.** Load up to 5 source documents simultaneously and have the AI work across all of them.
+
+**Translation, Web Search, Speech-to-Text, Document Comparison.** Full document workflow tools built in.
+
+## What Makes It Different
+1. **It actually follows instructions.** The system's job is to do exactly what you said, no more, no less.
+2. **It hits word count targets.** Ask for 50,000 words, get 50,000 words.
+3. **It handles long documents intelligently.** Three-pass cross-chunk architecture preserves coherence even at 100,000 words.
+4. **Five proprietary LLMs, one workflow.** Pick the model best suited for each task from a single interface.
+5. **Cognitive scoring built in.** Every output can be scored across 17 cognitive dimensions.
+6. **Comprehensive rewrite detection.** When you say "rewrite all of it," the system sizes the output to match the input automatically.
+
+## Pricing
+Token-based credits -- $100 buys 1,000 credits. Provider-specific multipliers reflect the actual cost of each proprietary LLM. Stripe-integrated checkout, real-time balance updates. Freemium tier for casual users, full power unlocked at any credit purchase.`,
+};
 
 export default function Home() {
   const livingBooksByKuczynski = [
@@ -141,6 +197,110 @@ export default function Home() {
     </div>
   );
 
+  const renderDescription = (description: string) => {
+    const blocks = description.split(/\n\n+/);
+    return (
+      <div className="space-y-3 text-gray-700 text-sm leading-relaxed">
+        {blocks.map((block, i) => {
+          if (block.startsWith("## ")) {
+            return (
+              <h4 key={i} className="text-base font-semibold text-gray-900 mt-2">
+                {block.slice(3)}
+              </h4>
+            );
+          }
+          if (block.split("\n").every((line) => line.trim().startsWith("- "))) {
+            return (
+              <ul key={i} className="list-disc list-inside space-y-1">
+                {block.split("\n").map((line, j) => (
+                  <li key={j}>{renderInline(line.trim().slice(2))}</li>
+                ))}
+              </ul>
+            );
+          }
+          return (
+            <p key={i}>{renderInline(block)}</p>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const renderInline = (text: string) => {
+    const parts = text.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, i) =>
+      part.startsWith("**") && part.endsWith("**") ? (
+        <strong key={i} className="font-semibold text-gray-900">{part.slice(2, -2)}</strong>
+      ) : (
+        <span key={i}>{part}</span>
+      )
+    );
+  };
+
+  const AppItem = ({ title, url, videoUrl, description }: App) => {
+    const [expanded, setExpanded] = useState(false);
+    const testId = title.toLowerCase().replace(/\s+/g, '-');
+    return (
+      <div className="border-b border-gray-100 pb-3 last:border-b-0">
+        <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+          <div className="w-full sm:w-80">
+            {description ? (
+              <button
+                type="button"
+                onClick={() => setExpanded(!expanded)}
+                className="flex items-center gap-1 font-medium text-gray-900 hover:text-blue-700 text-left"
+                aria-expanded={expanded}
+                data-testid={`expand-${testId}`}
+              >
+                {expanded ? (
+                  <ChevronDown className="w-4 h-4 flex-shrink-0" />
+                ) : (
+                  <ChevronRight className="w-4 h-4 flex-shrink-0" />
+                )}
+                <span>{title}</span>
+              </button>
+            ) : (
+              <span className="font-medium text-gray-900 inline-flex items-center gap-1">
+                <span className="w-4 h-4 inline-block" />
+                {title}
+              </span>
+            )}
+          </div>
+          <span className="text-gray-500 hidden sm:inline">—</span>
+          <div className="flex items-center gap-3">
+            <a
+              href={url}
+              className="text-blue-600 hover:text-blue-800 hover:underline break-all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {url}
+            </a>
+            {videoUrl && (
+              <a
+                href={videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded transition-colors whitespace-nowrap"
+                data-testid={`video-tutorial-${testId}`}
+              >
+                📹 Tutorial
+              </a>
+            )}
+          </div>
+        </div>
+        {expanded && description && (
+          <div
+            className="mt-3 ml-5 p-4 bg-gray-50 border border-gray-200 rounded-md max-w-3xl"
+            data-testid={`description-${testId}`}
+          >
+            {renderDescription(description)}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="font-sans bg-white text-gray-900 leading-relaxed min-h-screen">
       {/* Contact Us - Top Left */}
@@ -196,7 +356,13 @@ export default function Home() {
               </h3>
               <div className="grid gap-3">
                 {apps.map((app) => (
-                  <BookItem key={app.title} title={app.title} url={app.url} videoUrl={app.videoUrl} />
+                  <AppItem
+                    key={app.title}
+                    title={app.title}
+                    url={app.url}
+                    videoUrl={app.videoUrl}
+                    description={appDescriptions[app.title]}
+                  />
                 ))}
               </div>
             </div>

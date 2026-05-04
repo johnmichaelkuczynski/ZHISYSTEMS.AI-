@@ -1,0 +1,61 @@
+NEUROTEXT — Marketing Description for ChatGPT
+What NEUROTEXT Is
+NEUROTEXT is a multi-model AI platform for serious writing, analysis, and document transformation. It plugs into five top-tier proprietary LLMs and lets users route any task to the model best suited for it — academic writing, deep reasoning, factual research, mathematical proofs, or casual content.
+
+Unlike consumer chatbots that produce generic, hedged, watered-down output, NEUROTEXT is built around a strict operating principle: the user's instructions are sacred. If you say "do not omit a single fact," nothing is omitted. If you say "divide by date," it divides by date. If you say "rewrite all 30,000 words," it rewrites all 30,000 words. No padding, no preamble, no editorializing.
+
+Who It's For
+Academics, graduate students, and researchers who need to write dissertations, journal articles, and literature reviews where coherence matters across hundreds of pages
+Lawyers and legal professionals who need to organize, restructure, and brief case material without losing a single fact
+Authors, screenwriters, and content creators who need long-form generation with structural integrity
+Analysts and consultants who need to compress, expand, or reformat large documents while preserving every detail
+Anyone who has ever asked an AI for a 5,000-word document and gotten 800 words back
+Core Capabilities
+Multi-Model Intelligence Evaluation. A 4-phase scoring system evaluates any text across 17 cognitive dimensions — depth, originality, conceptual control, argumentative rigor, semantic density, and more. Scores are genre-aware (philosophical writing isn't judged by the standards of journalism). You can compare how the same text scores across multiple proprietary LLMs side-by-side.
+
+Universal Expansion with Three-Pass Cross-Chunk Coherence. A document expansion engine that handles inputs up to 100,000 words. It extracts a skeleton, processes constrained chunks, then runs a stitch pass to ensure coherence across the entire document. Hits target word counts precisely — if you ask for 25,000 words, you get 25,000 words.
+
+Conservative Reconstruction. Generates coherent, charitable essays that articulate a text's unified argument. Uses outline-first strategy for medium documents and cross-chunk strategy for very long ones. Real-time progress polling means you watch the work happen.
+
+Full Suite Pipeline. One-click execution of three-stage processing: Reconstruction → 25 Likely Objections → Objection-Proof Final Version. Designed to bulletproof an argument against criticism before publication.
+
+MAXINTEL Intelligent Rewrite. Recursively optimizes text to maximize intelligence scores. Keeps rewriting until the cognitive metrics hit your target, while still respecting custom instructions and external knowledge sources.
+
+GPT Bypass Humanizer. Transforms AI-generated text to evade AI detection tools. Built-in detection integration tells you in real-time whether your output reads as human or AI.
+
+Coherence Meter. Validates logical and semantic coherence across documents up to 5,000 words. Includes specialized modes for mathematical proofs and scientific-explanatory writing.
+
+Screenplay Generator. Converts source material — novels, articles, true stories, ideas — into properly formatted screenplays following three-act structure with beat placement, scene headings, and visual storytelling.
+
+Signal Refiner. Post-processing engine that maximizes signal-to-noise ratio in long generated text. Eliminates repetition, tightens claims, cuts bloat. Specifically designed for documents over 10,000 words where AI tends to pad.
+
+Dissertation Wizard. Step-by-step guided dissertation generation with chapter planning, automatic table of contents, and chapter-by-chapter coherence enforcement.
+
+AI Chat Assistant. Conversational interface backed by a proprietary knowledge database, with persistent conversation history and document context awareness.
+
+Multi-Document Library. Load up to 5 source documents simultaneously and have the AI work across all of them — comparison, synthesis, cross-referencing.
+
+Translation, Web Search, Speech-to-Text, Document Comparison. Full document workflow tools built in.
+
+What Makes It Different
+1. It actually follows instructions. Most AI tools dilute user instructions through layers of safety and helpfulness training. NEUROTEXT's prompt architecture is built around the opposite principle — the system's job is to do exactly what you said, no more, no less. If you say "do not omit a single fact," every fact is preserved. If you say "no puffery," there's no puffery.
+
+2. It hits word count targets. Ask for 50,000 words, get 50,000 words. The Universal Expansion engine has built-in continuation logic that keeps generating until the target is met, with coherence preserved across chunks via global skeleton enforcement.
+
+3. It handles long documents intelligently. Most AI tools either truncate inputs over 10,000 words or produce incoherent Frankenstein output. NEUROTEXT's three-pass cross-chunk architecture extracts a global skeleton, generates each chunk under that constraint, then runs a stitch pass to enforce coherence across the entire document — even at 100,000 words.
+
+4. Five proprietary LLMs, one workflow. No need to hop between separate AI tools and tabs. Pick the model best suited for each task from a single interface, with a token-based credit system that bills accurately per provider.
+
+5. Cognitive scoring built in. Every output can be scored across 17 cognitive dimensions to verify it's actually substantive — not just long.
+
+6. Comprehensive rewrite detection. When you say "rewrite all of it" or "include every fact," the system automatically sizes the output to match the input and routes to the full processing pipeline. No more putting in 30,000 words and getting a 132-word summary back.
+
+Pricing Model
+Token-based credits — $100 buys 1,000 credits. Provider-specific multipliers reflect the actual cost of each proprietary LLM. Stripe-integrated checkout, real-time balance updates. Freemium tier for casual users, full power unlocked at any credit purchase.
+
+Tagline Options for ChatGPT to Riff On
+"The AI tool that actually does what you ask."
+"Five proprietary LLMs. One operator. Zero excuses."
+"Built for people who write things that matter."
+"When you say 30,000 words, we mean 30,000 words."
+"The serious writer's AI workstation."
