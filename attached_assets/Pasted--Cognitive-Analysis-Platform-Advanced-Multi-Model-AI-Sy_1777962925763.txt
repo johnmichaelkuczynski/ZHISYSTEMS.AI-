@@ -1,0 +1,40 @@
+🎓 Cognitive Analysis Platform
+Advanced Multi-Model AI System — Measure, Improve, and Humanize the Intelligence of Written Thought
+
+🧩 Overview
+The Cognitive Analysis Platform is a full-service intelligence evaluation and text optimization suite. It performs end-to-end analysis, scoring, and enhancement of written work — from instant cognitive fingerprinting and intelligence grading to humanization, formal axiomatization, and rigorous mathematical proof checking.
+
+Designed for researchers, writers, educators, and analytical philosophers, it merges precision evaluation logic with humanlike textual nuance — turning raw text into a transparent map of the author's mind.
+
+🧠 What It Does
+Multi-Model Intelligence Evaluation — A 4-phase system that scores text across 17 cognitive dimensions, producing a complete intelligence and cognitive-fingerprint profile of the author.
+MAXINTEL Rewriter — Recursively rewrites any text to maximize its measured intelligence score, with optional custom instructions and external knowledge integration.
+GPT Bypass Humanizer — Transforms AI-generated prose into undetectable, human-style writing that bypasses AI detection filters without sacrificing meaning.
+Coherence Meter — Evaluates structural and logical coherence of any text, with specialized modes for general writing, scientific argument, and mathematical proof.
+Mathematical Proof System (Four Modes)
+COHERENCE — Scores structural soundness only (flow, notation, justification).
+COGENCY — Determines whether the theorem is true and the proof valid; surfaces counterexamples and flaws.
+MAX COHERENCE — Rewrites a proof for clarity while preserving its claims.
+MAXIMIZE TRUTH — Corrects defective proofs; if the theorem is false, finds and proves a related true theorem.
+Text Model Validator — Includes Reconstruction, Isomorphism, Mathematical Model, Truth Select, and Math Truth Select for literal truth verification across multiple reasoning engines.
+Axiomatic System Transformer — Converts natural-language theory into a complete formal axiomatization: primitive terms, axioms, defined terms, an uninterpreted symbolic calculus, and a satisfying semantic model.
+BOTTOMLINE Synthesizer — Distills batch analysis results into a polished final output tailored to a chosen audience, objective, tone, length, and emphasis.
+Full Suite Pipeline — One-click execution of the entire pipeline (Batch → BOTTOMLINE → Objections) with real-time progress and a single "Copy All Results" export.
+Objections Function — Generates 25 likely objections with compelling counter-arguments, usable standalone or as a follow-up to BOTTOMLINE.
+⚙️ Technical Features
+Multi-Provider Model Selection: Integrates ZHI 1 through ZHI 5 reasoning engines with automatic fallback for resilience under rate limits or outages.
+Genre-Aware Analysis: Calibrates evaluation criteria to the genre and intent of the submitted text.
+Aggressive Batch Mode: Runs multiple analytical functions simultaneously with enforced maximal-formalization and maximal-truth defaults.
+Persistent Context Chat: AI assistant with conversation history and access to the Zhi knowledge database.
+Document Intake: OCR-backed document ingestion (Mathpix), audio-to-text input (AssemblyAI), and direct file upload.
+Export & Delivery: PDF and text downloads, formatted multi-section copy-to-clipboard, and email delivery (SendGrid).
+Resilient Architecture: Optional Stripe billing, friendly error recovery, and silent multi-provider failover — users never see raw error messages.
+🎓 Designed For
+Researchers & Analytical Philosophers: Measure the cognitive depth of arguments and stress-test theoretical claims.
+Writers & Editors: Rewrite drafts to maximize clarity, intelligence, and stylistic precision.
+Educators & Students: Evaluate essays, proofs, and arguments with rigorous, transparent scoring.
+Mathematicians & Logicians: Audit proofs for both structural coherence and underlying truth, and formalize informal theory.
+💡 Core Idea
+The Cognitive Analysis Platform redefines text evaluation as an interactive analytical process. It doesn't just score — it diagnoses, justifies, improves, and rewrites. The result: analysis that is faster, fairer, and intellectually honest.
+
+Cognitive Analysis Platform — where evaluation meets evolution.
