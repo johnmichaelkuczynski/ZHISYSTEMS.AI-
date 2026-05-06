@@ -9,6 +9,7 @@ export default function Courses() {
   const courses: Course[] = [
     { title: "Philosophy 101", url: "https://aiphil1.xyz" },
     { title: "Psychology 101", url: "https://psych1.xyz" },
+    { title: "College Algebra", url: "https://aialbebra1.xyz" },
   ];
 
   return (
