@@ -429,12 +429,14 @@ export default function Home() {
       { title: "Podcast Creator", url: "https://ezpodcast.xyz" }
     ],
     "⚙️ Utility & Conversion": [
-      { title: "Forex Edge", url: "https://usdhkd.xyz" },
       { title: "GPTByPass", url: "https://gptbypass.xyz", videoUrl: "https://www.youtube.com/watch?v=PR0JX_Hrgqc" },
       { title: "HTML Converter", url: "https://htmlconverter.xyz" },
-      { title: "PDF Shrinker", url: "https://shrinkpdf.xyz" },
-      { title: "SOXL Options Edge", url: "https://soxledge.xyz" },
-      { title: "SOXL Pro", url: "https://soxlpro.xyz" }
+      { title: "PDF Shrinker", url: "https://shrinkpdf.xyz" }
+    ],
+    "💹 Finance": [
+      { title: "Forex Edge", url: "https://usdhkd.xyz" },
+      { title: "SOXL Options Pro", url: "https://soxlpro.xyz" },
+      { title: "SOXL Options Edge", url: "https://soxledge.xyz" }
     ]
   };
 
