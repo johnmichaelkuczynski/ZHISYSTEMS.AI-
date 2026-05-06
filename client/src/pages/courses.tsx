@@ -8,6 +8,7 @@ interface Course {
 export default function Courses() {
   const courses: Course[] = [
     { title: "Philosophy 101", url: "https://aiphil1.xyz" },
+    { title: "Psychology 101", url: "https://psych1.xyz" },
   ];
 
   return (
