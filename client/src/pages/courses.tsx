@@ -58,7 +58,7 @@ export default function Courses() {
           </h2>
 
           {/* What's a Living Course explanation */}
-          <div className="mb-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="mb-8 p-4 bg-blue-50 rounded-lg border border-blue-200 space-y-3">
             <p className="text-gray-700 text-sm leading-relaxed">
               <strong>What's a Living Course?</strong> A fully AI-powered
               educational experience with a built-in tutor that is trained on
@@ -66,6 +66,19 @@ export default function Courses() {
               depth about the course content, provide personalized explanations,
               generate practice problems, and adapt to your learning style and
               pace.
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              <strong>Embedded Real-Time AI Tutors.</strong> Every course ships
+              with a live, course-aware AI tutor built directly into the
+              learning environment -- ready to explain, quiz, and guide the
+              student moment-by-moment as they work through the material.
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              <strong>100% Cheatproof.</strong> These courses are engineered so
+              that AI cannot be used to cheat on them. Every assessment,
+              exercise, and graded interaction is structured to make external AI
+              assistance useless -- the only way to pass is to actually learn
+              the material.
             </p>
           </div>
 
