@@ -20,6 +20,37 @@ interface Course {
 }
 
 const courseDescriptions: Record<string, CourseDescription> = {
+  "Psychology 101": {
+    emoji: "🧠",
+    tagline:
+      "An AI-Augmented Online College Course in the Science of Mind and Behavior",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "Psychology 101 is a fully online, asynchronous undergraduate course that teaches the foundations of psychological science -- how people think, learn, remember, and influence one another. Across 13 sequenced modules, students work through landmark studies (Pavlov, Skinner, Zimbardo, Milgram, Loftus) and the core tools of careful psychological reasoning, culminating in a short term paper analyzing a contemporary article in psychology.\n\nUnlike generic AI study tools that hand students finished answers, Psychology 101 is built around a strict pedagogical principle: the AI is a tutor, not a ghostwriter. It explains, tests, coaches, and gives formative feedback -- but it never writes the assignment for the student. Every module enforces a deliberate read -> think -> draft -> critique -> submit loop, with progress unlocking only when prior work is genuinely complete.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Undergraduate students** -- taking an introductory psychology course and wanting structured, on-demand instruction outside of lecture\n\n**Independent learners and career switchers** -- who want a rigorous, college-level grounding in psychology without enrolling in a degree program\n\n**Instructors and TAs** -- looking for a ready-to-deploy course shell with built-in AI scaffolding and academic-integrity guardrails\n\n**High school students preparing for AP Psychology** -- needing a deeper conceptual foundation than a study guide can provide\n\n**Anyone** -- who has ever opened an intro psych textbook, gotten lost in jargon, and wished they had a patient tutor on call",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**13-Module Sequenced Curriculum** -- Six discussions, five essays, and a culminating term paper covering branches of psychology, conditioning, memory, the mind-brain problem, mental illness, cognitive biases, the bystander effect, and contemporary readings from Kahneman, Dweck, and Pinker & Bloom.\n\n**AI Tutor (Claude-powered)** -- A conversational tutor scoped to the current module that answers conceptual questions, walks through landmark studies, and probes the student's reasoning -- without leaking the assignment answer.\n\n**Per-Module Study Guide** -- One-click generation of a focused study guide with key concepts, core arguments, common pitfalls, and self-check questions.\n\n**Step-by-Step Tutorial Walkthroughs** -- A guided, numbered breakdown of each reading with short examples and a \"what to do next\" nudge toward the assignment.\n\n**Audio Podcast Explainers** -- A 2-3 minute single-host script for each module, designed to be listened to on a commute or walk.\n\n**Plain-Language Reading Rewrites** -- A clarity-pass rewrite of every reading, preserving every claim and example while simplifying sentence structure and vocabulary.\n\n**Formative Draft Feedback** -- Students get one round of structured, instructor-style feedback on a draft before final submission. The AI describes what to revise and why -- it never rewrites or supplies phrasings.\n\n**Mediocre-Answer Critique Exercise** -- The system can generate a deliberately weak student answer that learners must critique, training the metacognitive skill of recognizing flawed reasoning.\n\n**Sequential Unlocking & Progress Tracking** -- Modules unlock in order; an Assessments page tracks completed work, points earned, and remaining requirements.\n\n**Syllabus, Accessibility, and Support Pages** -- A full course shell with grading policy, learning outcomes, accessibility statement, and student-support information.",
+      },
+      {
+        emoji: "🎯",
+        title: "What Makes It Different",
+        body:
+          "**The AI refuses to do the work for you** -- Every prompt is engineered around formative feedback and Socratic questioning. No drafting. No phrasings. No model-answer leaks.\n\n**Modules unlock sequentially** -- Students cannot skip ahead. The course enforces the actual learning sequence rather than letting users cherry-pick topics.\n\n**Built around landmark studies, not just definitions** -- Pavlov, Skinner, Zimbardo, Milgram, Loftus, Asch, Darley & Latane -- each module is anchored in a real study with named methodology, results, and limitations.\n\n**Drafts get one round of instructor-grade critique** -- Mirrors how a good TA actually works: read the draft, name what's working, name what's weak, ask Socratic questions, point at the next revision step.\n\n**Five distinct AI study modes per module** -- Tutor chat, study guide, tutorial, podcast script, and clarity rewrite -- each with its own prompt discipline, so students learn the same material from multiple angles.\n\n**Academic-integrity-first prompt design** -- Every system prompt explicitly forbids writing assignment text, supplying answers, or quoting the instructor's reference standard.\n\n**Designed for a real grading scheme** -- Discussions and essays carry actual point values; the term paper anchors the course; the assessment view sums it all up.",
+      },
+    ],
+  },
   "Philosophy 101": {
     emoji: "📜",
     tagline:
