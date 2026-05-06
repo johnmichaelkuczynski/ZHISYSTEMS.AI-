@@ -412,7 +412,7 @@ export default function Home() {
       { title: "Improve Your Writing", url: "https://improveyourwriting.xyz" },
       { title: "Cognitive Enhancer", url: "https://cognitiveenhancer.xyz" },
       { title: "Psychology Pro", url: "https://psychologypro.xyz", videoUrl: "https://www.youtube.com/watch?v=0hIA4NsETZw" },
-      { title: "Super Cognitive Profiler", url: "https://supercognitiveprofiler.com" },
+      { title: "Cognitive Profiler", url: "https://supercognitiveprofiler.com" },
       { title: "Semantic Skeletonizer", url: "https://semskel.xyz" },
       { title: "Text Genius", url: "https://textgenius.xyz" },
       { title: "ModelWiz", url: "https://modelwiz.xyz" },
