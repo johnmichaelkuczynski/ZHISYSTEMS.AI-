@@ -381,13 +381,6 @@ export default function Home() {
     { title: "TRACTATUS LOGICO-PHILOSOPHICUS", url: "https://tractatuslogicophilosophicus.xyz" }
   ];
 
-  const courses = [
-    { title: "Critical Thinking", url: "https://criticalthinking101.xyz/" },
-    { title: "Philosophy 101", url: "https://philosophy101.xyz" }
-  ];
-
-
-
   const appCategories: Record<string, App[]> = {
     "📝 Writing & Books": [
       { title: "Living Book Creator", url: "https://livingbook.xyz/" },
@@ -618,6 +611,12 @@ export default function Home() {
             </a>
             <div className="flex items-center gap-6">
               <a
+                href="/courses"
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Living Courses
+              </a>
+              <a
                 href="/journal"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
@@ -669,28 +668,6 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </section>
-
-        {/* Living Courses Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">
-            Living Courses
-          </h2>
-          
-          {/* What's a Living Course explanation */}
-          <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-            <p className="text-gray-700 text-sm leading-relaxed">
-              <strong>What's a Living Course?</strong> A fully AI-powered educational experience with a built-in tutor that is trained on the course material. 
-              The AI can answer questions at any level of depth about the course content, provide personalized explanations, generate practice problems, 
-              and adapt to your learning style and pace.
-            </p>
-          </div>
-          
-          <div className="grid gap-3">
-            {courses.map((course) => (
-              <BookItem key={course.title} title={course.title} url={course.url} />
-            ))}
-          </div>
         </section>
 
         {/* Living Books Section */}
