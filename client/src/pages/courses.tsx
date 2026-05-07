@@ -197,6 +197,7 @@ export default function Courses() {
     { title: "Philosophy 101", url: "https://aiphil1.xyz" },
     { title: "Psychology 101", url: "https://psych1.xyz" },
     { title: "College Algebra", url: "https://aialbebra1.xyz" },
+    { title: "Systems Science 101", url: "https://systemsscience.xyz" },
   ];
 
   return (
