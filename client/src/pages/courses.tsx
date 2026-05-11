@@ -260,6 +260,7 @@ export default function Courses() {
     { title: "College Algebra", url: "https://aialbebra1.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
+    { title: "English Composition", url: "https://englishcomposition.xyz" },
   ];
 
   return (
