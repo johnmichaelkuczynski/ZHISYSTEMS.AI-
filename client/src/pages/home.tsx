@@ -416,7 +416,8 @@ export default function Home() {
       { title: "Semantic Skeletonizer", url: "https://semskel.xyz" },
       { title: "Text Genius", url: "https://textgenius.xyz" },
       { title: "ModelWiz", url: "https://modelwiz.xyz" },
-      { title: "Model Transformer", url: "https://modeltransformer.xyz/" }
+      { title: "Model Transformer", url: "https://modeltransformer.xyz/" },
+      { title: "LLM Plus", url: "https://llmplus.xyz/" }
     ],
     "📸 Visual & Multimedia": [
       { title: "Frame Shot", url: "https://frameshot.xyz" },
