@@ -1,0 +1,72 @@
+📚 LIVING BOOK CREATOR
+Multi-Model AI Platform for Academic Writing, Document Analysis, and Argument Reconstruction
+
+🧩 Overview
+Living Book Creator is a multi-model AI workbench for evaluating, transforming, and arguing with any written text. It plugs into five top-tier providers (Grok / xAI as the default, plus OpenAI, Anthropic, DeepSeek, and Perplexity) and lets users route any task to the model best suited for it — chat, study guide generation, dialectical analysis, structured outlining, full document reconstruction, podcast scripting, two-document synthesis, and more.
+
+Unlike consumer chatbots that produce generic, hedged, watered-down output, Living Book Creator is built around a strict operating principle: every analysis is rigorous, every output is explicit, and the user's instructions are sacred. If you ask for a 10-question test, you get 10. If you ask for a strict outline of a 12,000-word document, the outline covers the document — not a vague summary of it. No padding, no preamble, no editorializing.
+
+👥 Who It's For
+Academics, graduate students, and researchers -- need to evaluate, summarize, and stress-test papers, dissertations, and arguments before submission or publication
+Philosophers and theorists -- need formal axiomatization, dialectical analysis, and structured argument diagrams of theoretical claims
+Writers and authors -- need full-length rewrites, podcast adaptations, and side-by-side comparisons of competing manuscripts
+Students -- need study guides, custom-difficulty tests, and one-click question sets generated from any source document
+Lawyers, analysts, and consultants -- need to extract positions, compare opposing documents, and generate dialectical analyses
+Anyone -- who wants to upload a document and have an actually intelligent reader engage with it instead of summarizing it back
+⚙️ Core Capabilities
+Multi-Provider AI Routing -- Five integrated providers (Grok / xAI, OpenAI GPT-4o, Anthropic Claude, DeepSeek, Perplexity). Route any task to any model on demand. Grok is the default; every other provider is one click away.
+
+Document Workflow -- PDF / DOCX / TXT upload, mathematical notation preservation (KaTeX + MathJax), HTML structure preservation via mammoth.js, iframe-based stable viewers, and a dedicated Document Formatter for cleanup and math editing.
+
+Contextual AI Chat -- Highlight any passage and chat about it. The AI sees only the selected text plus the document context, so answers are anchored to what you actually pointed at, not the whole file.
+
+Study Guide Generator -- Generates structured study guides scaled to the length and complexity of the selected text. Output is formatted, not collapsed into one paragraph.
+
+Test Me -- Customizable difficulty (1–10), proportional question counts (10–30 for single-doc, ~32 for two-doc), and five categories of questions per test (Factual, Conceptual, Analytical, Application, Critical Evaluation). Single-question and full-test modes both supported.
+
+Strict Outline -- Numbered section-by-section outline of any document, with title + description per section and key themes as badges. Outline reflects the actual structure of the source, not an AI's guess at what should be there.
+
+Full Document Rewrite -- Two-pass pipeline: generate strict outline first, then expand into a full reconstructed document in one continuous flow. Supports custom rewrite instructions.
+
+Summary + Thesis -- Extracts the core thesis and a structured summary, kept distinct so you can see what the text says vs. what it actually argues.
+
+Thesis Deep-Dive -- Long-form expansion of a single thesis: arguments, evidence, philosophical foundations, implications.
+
+Position Statement Generator -- Extracts the explicit position(s) a text takes on a topic, with optional verbatim quote support.
+
+Dialectical Analysis -- Reconstructs the argumentative back-and-forth implied by the text: claims, counter-claims, rebuttals, and concessions.
+
+Structured Diagram -- Color-coded visual breakdown of argumentative structure: main thesis, sub-theses, supporting arguments (with evidence and reasoning), auxiliary arguments, critiques and rebuttals, and concluding formulation.
+
+Suggested Readings -- Generates a curated reading list anchored to the selected text's themes, arguments, and discipline.
+
+Podcast Generation -- Single-narrator, dialogue (HOST/GUEST), and custom modes. Multi-section script generation scaled to text length (20–90 conversational exchanges). SSML output drives Azure TTS with distinct voices ("alloy" host, "nova" guest) for natural delivery. One-click MP3 download.
+
+Content Rewriting -- Custom-instruction rewrite of any selected passage, with provider-of-choice routing.
+
+Two-Document Mode -- Side-by-side viewer with a full second-tier toolset: Compare & Contrast, Mentalities (analyzing the worldview behind each), Synthesize, Test Me (cross-document), Question Set, Create Dialogue (between the two authors), Rewrite, Two-Doc Podcast, and Comparative Diagram.
+
+Comparative Diagram -- Multi-section argumentative comparison across two documents: theses, methodologies, evidence quality, assumptions, implications, strengths, weaknesses, philosophical foundations, practical applications, and synthesis.
+
+System Diagnostic -- One-click self-check that verifies all API providers, the database, and the full functional pipeline are operational. Color-coded pass / fail / warn / skip report with per-check timing. Confirms formal properties (submit works, endpoints respond, sessions persist) without grading the AI's answers.
+
+Credit System & Auth -- User accounts, persistent chat history, per-operation credit tracking, and Stripe-ready payment integration.
+
+🚀 What Makes It Different
+It actually follows instructions -- The system's job is to do exactly what you said. If you ask for 30 test questions, you get 30, not 7. If you ask for a structured outline of a 12,000-word essay, you get a structured outline of a 12,000-word essay, not a 200-word summary.
+
+It separates structure from content -- Outlines reflect the document's real architecture. Tests are categorized by cognitive type. Argument diagrams distinguish supporting evidence from rebuttals. Most AI tools collapse all of this into one undifferentiated "summary"; this platform does not.
+
+Five proprietary providers, one workflow -- Grok (default), OpenAI, Anthropic, DeepSeek, Perplexity. Pick the model best suited for each task, or run them in parallel and compare. No lock-in to a single vendor's quirks.
+
+Two-document analysis is first-class, not bolted on -- Compare & Contrast, Mentalities, Synthesize, cross-document Test Me, Create Dialogue, Comparative Diagram, and a dedicated two-doc podcast pipeline are all built directly into the side-by-side workspace.
+
+Length-proportional output -- Test counts, podcast exchange counts, and outline section counts scale with the input text. A two-page note doesn't get the same treatment as a 90-page chapter, and neither gets short-changed.
+
+Full document reconstruction in one pass -- Outline + expansion happen together. The pipeline doesn't stop halfway and ask you to confirm; it just produces the finished document.
+
+Math survives the round trip -- KaTeX + MathJax + a dedicated math-notation processor preserve equations through upload, processing, rewriting, and export. Most AI tools mangle math; this one doesn't.
+
+Verifiable plumbing -- The built-in System Diagnostic runs 27 end-to-end checks (env vars, DB, every provider's live ping, every major endpoint's actual HTTP behavior) and reports formal pass/fail with timings. You don't have to guess whether something is broken.
+
+Document fidelity -- DOCX uploads preserve HTML structure via mammoth.js. PDF uploads keep their text content. Exports go back out as DOCX. The document is the unit of work, not a wall of plain text.
