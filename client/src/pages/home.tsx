@@ -802,6 +802,8 @@ Unlike consumer chatbots that produce generic, hedged, watered-down output, NEUR
   },
 };
 
+appDescriptions["Model Builder"] = appDescriptions["ModelWiz"];
+
 export default function Home() {
   const livingBooksByKuczynski = [
     { title: "AI AND PHILOSOPHY", url: "https://aiandphilosophy.com" },
