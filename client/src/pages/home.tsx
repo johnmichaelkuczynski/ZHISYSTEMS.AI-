@@ -15,119 +15,58 @@ interface AppDescription {
 
 const appDescriptions: Record<string, AppDescription> = {
   "ModelWiz": {
-    emoji: "🧙",
-    tagline: "Model Wizard -- Coherence Analysis and Formal Reconstruction of Natural-Language Reasoning",
+    emoji: "🧠",
+    tagline: "Cognitive Analysis Platform -- Multi-Model AI for Intelligence Analysis, Cognitive Profiling, and Argument Stress-Testing",
     sections: [
       {
         emoji: "🧩",
         title: "Overview",
-        body: `Model Wizard is a system for analyzing natural-language text, evaluating its coherence, and transforming it into explicit formal structures.
+        body: `The Cognitive Analysis Platform is a multi-model AI system for evaluating the intelligence and cognitive fingerprint of any written text. It plugs into five top-tier proprietary LLMs (ZHI 1-5) and lets users route any task to the model best suited for it -- intelligence scoring, formal axiomatization, mathematical proof checking, scientific accuracy auditing, or full-pipeline argument synthesis.
 
-It does not guess. It does not embellish. It does not invent structure where none exists.
-
-Model Wizard extracts, tests, and formalizes what a text actually commits itself to.`,
+Unlike consumer chatbots that produce generic, hedged, watered-down output, the Cognitive Analysis Platform is built around a strict operating principle: every analysis is rigorous, every verdict is explicit, and the user's instructions are sacred. If you ask for 25 objections, you get 25 objections. If you ask for a refined rewrite that absorbs every counter-argument, that is exactly what is produced. No padding, no preamble, no editorializing.`,
       },
       {
-        emoji: "🔍",
-        title: "What It Does",
-        body: `Given a passage of prose, Model Wizard can:
-
-- Evaluate logical and conceptual coherence
-- Identify implicit premises, dependencies, and inferential links
-- Detect gaps, equivocations, circularity, and underdetermination
-- Reconstruct the content as:
-  - formal arguments
-  - axiom systems
-  - schemas
-  - constraint models
-  - model-theoretic structures
-- Generate multiple legitimate formalizations of the same content when ambiguity permits
-
-All outputs are content-preserving, explicitly annotated, and constraint-checked.`,
+        emoji: "👥",
+        title: "Who It's For",
+        body: `- **Academics, graduate students, and researchers** -- need to evaluate the intellectual rigor of papers, dissertations, and arguments before submission or publication.
+- **Philosophers and theorists** -- need formal axiomatization, proof-checking, and conceptual stress-testing of theoretical claims.
+- **Mathematicians** -- need separate evaluation of structural coherence vs. mathematical truth, plus automatic correction of defective proofs.
+- **Lawyers, analysts, and consultants** -- need to anticipate every objection a critic could raise and have a polished, objection-proof final document.
+- **Authors and entrepreneurs** -- need to know whether their ideas survive scrutiny before committing them to print or pitch.
+- **Anyone** -- who wants to know what an actually intelligent reader would think of their writing, instead of a flattering AI summary.`,
       },
       {
-        emoji: "🧠",
-        title: "Core Principle",
-        body: `If a text means something, it has a structure. If it has no structure, it does not mean what it appears to mean.
-
-Model Wizard forces language to pay its inferential debts.`,
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body: `- **Multi-Model Intelligence Evaluation** -- A 4-phase scoring system evaluates any text across 17 cognitive dimensions (depth, originality, conceptual control, argumentative rigor, semantic density). Genre-aware; compare scores across multiple LLMs side-by-side.
+- **Full Suite Pipeline** -- One-click execution of the complete analysis chain: 5 batch analyses (+ optional Axiomatic Model) -> BOTTOMLINE synthesis -> 25 Objections with counter-arguments -> Refined Rewrite that absorbs every objection. Download the entire report as one document.
+- **MAXINTEL Intelligent Rewrite** -- Recursively optimizes text to maximize intelligence scores. Keeps rewriting until cognitive metrics hit your target.
+- **Conservative Reconstruction** -- Generates the most charitable, coherent version of a text's unified argument, surfacing the strongest reading the author could have intended.
+- **BOTTOMLINE Synthesis** -- Collapses multiple intermediate analyses into one polished final output tailored to a specific audience, objective, tone, length, and emphasis. Intelligent weighting prioritizes the most relevant intermediate results.
+- **25 Objections + Counter-Arguments** -- Standalone or pipeline mode. Generates the 25 most likely objections from skeptical readers and crafts a compelling response to each, ordered by likelihood. Tailored to the stated audience.
+- **Refined Rewrite** -- Takes the BOTTOMLINE and rewrites it in light of all 25 objections, strengthening weak claims and incorporating counter-arguments inline.
+- **Axiomatic System Transformer** -- Transforms natural language theoretical text into a complete formal axiomatization: primitive terms, axioms, defined terms, an uninterpreted formal calculus, and a semantic model. Never refuses -- always produces output.
+- **Mathematical Proof System** -- Four distinct modes: COHERENCE (structural quality only), COGENCY (truth + soundness with counterexamples), MAX COHERENCE (improves structure while preserving content), MAXIMIZE TRUTH (corrects defective proofs using extended thinking; if the theorem is false, finds and proves a similar true theorem).
+- **Scientific-Explanatory Coherence** -- Dual assessment: logical consistency AND scientific accuracy, scored separately. The rewrite mode replaces pseudoscientific claims with accurate explanations.
+- **Truth Select & Math Truth Select** -- Literal-truth verification modes that ignore rhetorical structure and grade the actual factual or mathematical claims.
+- **GPT Bypass Humanizer** -- Transforms AI-generated text to evade AI detection tools, with built-in detection integration.
+- **Coherence Meter** -- Validates logical and semantic coherence across documents up to 5,000 words. Includes specialized modes for mathematical proofs and scientific-explanatory writing.
+- **AI Chat Assistant** -- Conversational interface backed by the Zhi knowledge database, with persistent history and document context awareness.
+- **Document Workflow** -- PDF/text upload, OCR (Mathpix), speech-to-text (AssemblyAI), translation, web search, and one-click download of every output as a single document.
+- **System Diagnostic** -- One-click self-check that verifies all API providers, the database, and the full analysis pipeline are operational. Color-coded pass/warn/fail with downloadable report.`,
       },
       {
-        emoji: "🧪",
-        title: "What It Is For",
-        body: `- Testing whether prose actually makes determinate claims
-- Turning informal reasoning into explicit formal models
-- Diagnosing hidden contradictions and ambiguities
-- Comparing alternative formalizations of the same content
-- Stress-testing arguments prior to publication or deployment`,
-      },
-      {
-        emoji: "🚫",
-        title: "What It Is Not",
-        body: `- Not a paraphraser
-- Not a summarizer
-- Not a style improver
-- Not an "AI explainer"
-
-If you want fluency, use something else. If you want discipline, use this.`,
-      },
-      {
-        emoji: "🧱",
-        title: "Formalization Modes",
-        body: `Model Wizard supports reconstruction into:
-
-- Predicate and first-order logic
-- Axiom systems
-- Schema-based representations
-- Computational abstractions
-- Mathematical structures
-- Domain-specific constraint models
-
-When multiple formalisms are possible, the system enumerates and compares them rather than selecting one arbitrarily.`,
-      },
-      {
-        emoji: "⚖️",
-        title: "Coherence Evaluation",
-        body: `Before formalization, Model Wizard evaluates:
-
-- Inferential continuity
-- Consistency
-- Conceptual stability
-- Dependency structure
-- Degree of underdetermination
-
-Texts that cannot be cleanly formalized are reported as such -- with reasons.
-
-Failure is an output, not a bug.`,
-      },
-      {
-        emoji: "❓",
-        title: "Why This Exists",
-        body: `Most systems:
-
-- smooth over incoherence
-- hallucinate structure
-- reward rhetorical confidence
-
-Model Wizard does the opposite.
-
-It treats incoherence as a failure condition, not an invitation to creativity.`,
-      },
-      {
-        emoji: "👤",
-        title: "Typical Users",
-        body: `- Researchers and theorists
-- Formal methods and specification designers
-- Philosophers and logicians
-- AI system builders
-- Anyone who needs language to be answerable`,
-      },
-      {
-        emoji: "🛠️",
-        title: "Status",
-        body: `Actively developed. Deployed in production reasoning systems. Designed to be predictable, stable, and exact.
-
-If your text survives this tool, it deserves to be taken seriously.`,
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body: `- **It actually follows instructions** -- The system's job is to do exactly what you said. If you ask for 25 objections, you get 25, not 7.
+- **It separates structure from truth** -- A well-organized argument for a false claim scores high on coherence and low on cogency. Most AI systems collapse these into one mushy "quality" score; this platform does not.
+- **It corrects, not just critiques** -- When a proof is defective or a claim is pseudoscientific, the system fixes it. If a theorem is false, it finds and proves a similar true theorem instead.
+- **Five proprietary LLMs, one workflow** -- ZHI 1 through ZHI 5. Pick the model best suited for each task, or run multiple in parallel and compare. Automatic fallback chain handles rate limits and outages.
+- **Cognitive scoring built in** -- Every output can be scored across 17 cognitive dimensions, with genre-aware calibration.
+- **Objection-proof output** -- The Full Suite pipeline doesn't stop at synthesis. It generates the 25 most likely objections, then rewrites the synthesis to absorb every one of them. The final document is something a critic cannot easily dismiss.
+- **One-click full report** -- After running the Full Suite, every stage (5 batch analyses, optional Axiomatic Model, BOTTOMLINE, 25 Objections, Refined Rewrite) is downloadable as a single timestamped .txt file.
+- **Self-diagnosing** -- Built-in diagnostic tab pings every AI provider, the database, and exercises the core pipeline end-to-end. You always know whether the system is healthy.
+- **No fallback fluff** -- When something fails, it fails explicitly. No silent fake outputs, no "as an AI language model" hedging.`,
       },
     ],
   },
