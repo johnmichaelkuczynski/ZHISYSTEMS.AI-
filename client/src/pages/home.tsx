@@ -647,6 +647,31 @@ export default function Home() {
           />
         </header>
 
+        {/* About Zhi Systems */}
+        <section className="mb-12">
+          <div className="p-4 bg-blue-50 rounded-lg border border-blue-200 space-y-3">
+            <p className="text-gray-900 text-base font-semibold">
+              About Zhi Systems
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Zhi Systems builds high-performance, fully customized AI
+              applications for writing, psychological research, financial
+              forecasting, and specialized utilities (such as GPTByPass and
+              Audio Transcriber).
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              We are also the leading creator of autonomous AI-powered Living
+              Courses -- complete with embedded real-time tutors and designed
+              to meet the strictest accreditation and integrity standards.
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              We work with clients of all sizes and are extremely flexible. Our
+              traditional clients include hedge funds, law firms, and think
+              tanks.
+            </p>
+          </div>
+        </section>
+
         {/* Core Applications Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">
