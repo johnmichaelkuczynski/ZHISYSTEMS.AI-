@@ -232,6 +232,198 @@ Designed for writers, educators, and content developers, it merges literary crea
       },
     ],
   },
+  "Originality Meter": {
+    emoji: "🧠",
+    tagline: "Evaluate, Compare, and Transform Text for Originality, Intelligence, Cogency, and Quality",
+    sections: [
+      {
+        emoji: "✳️",
+        title: "Overview",
+        body: `Originality Meter is a system for evaluating, comparing, and transforming text with respect to originality, intelligence, cogency, and overall quality.
+
+It does not reward fluency, polish, or jargon.
+It does not confuse verbosity with depth.
+It does not mistake recombination for thought.
+
+Its singular virtue is that it distinguishes genuinely fresh thinking from merely recycled text.
+
+Originality Meter analyzes prose to determine what kind of intellectual work is actually being done.
+
+It separates:
+
+- real inference from stylistic noise
+- conceptual contribution from paraphrase
+- intelligence from imitation
+
+It can evaluate text, compare texts, rewrite text, and generate work -- while enforcing the same standards throughout.`,
+      },
+      {
+        emoji: "📊",
+        title: "Evaluate a Single Text",
+        body: `- Measure originality
+- Measure intelligence
+- Measure cogency
+- Measure overall quality
+- Identify recycled structures, clichés, and pseudo-insight
+- Detect genuine conceptual moves and inferential control`,
+      },
+      {
+        emoji: "⚖️",
+        title: "Compare Two Texts",
+        body: `- Compare originality, intelligence, and cogency side-by-side
+- Determine whether one text is derivative of the other
+- Diagnose how the texts differ (depth, structure, contribution)
+- Distinguish disagreement from mere rewording`,
+      },
+      {
+        emoji: "✍️",
+        title: "Rewrite and Improve Text",
+        body: `- Rewrite prose to increase:
+  - originality
+  - intelligence
+  - cogency
+  - signal density
+- Eliminate recycled phrasing and template logic
+- Replace imitation with real conceptual work
+- Preserve content while strengthening structure`,
+      },
+      {
+        emoji: "🎓",
+        title: "Do Homework",
+        body: `- Completes assignments at any level
+- Produces answers that reflect actual understanding, not boilerplate
+- Avoids generic academic filler and obvious AI patterns`,
+      },
+      {
+        emoji: "🤖",
+        title: "Humanize AI-Written Text",
+        body: `- Detects AI-like structure and surface fluency
+- Rewrites text to restore human markers:
+  - asymmetry
+  - friction
+  - implication
+  - uneven emphasis
+- Produces prose that reads as thought, not synthesis`,
+      },
+      {
+        emoji: "🧪",
+        title: "Core Distinction",
+        body: `Not all novelty is originality.
+Not all clarity is intelligence.
+Not all coherence is thought.
+
+Originality Meter is built to detect the difference between:
+
+- new combinations vs new ideas
+- fluent prose vs controlled reasoning
+- academic form vs intellectual substance
+
+This distinction governs every function of the system.`,
+      },
+      {
+        emoji: "🎯",
+        title: "What It Is For",
+        body: `- Evaluating essays, papers, and articles
+- Comparing drafts, sources, or competing arguments
+- Detecting pseudo-intellectual writing
+- Improving AI-generated text without stylistic fakery
+- Producing genuinely high-level homework and analysis
+- Enforcing real intellectual standards at scale`,
+      },
+      {
+        emoji: "🧱",
+        title: "Design Principles",
+        body: `- Content-sensitive, not style-driven
+- No reward for jargon or verbosity
+- No penalty for clarity
+- Explicit, explainable evaluations
+- Rewrite logic governed by the same metrics used for scoring`,
+      },
+      {
+        emoji: "🧠",
+        title: "Summary",
+        body: `Originality Meter is not an AI detector.
+It is not a grammar checker.
+It is not a style polisher.
+
+It is a system for answering one question:
+
+**Is this text actually doing intellectual work -- or only pretending to?**`,
+      },
+    ],
+  },
+  "EZ Homework": {
+    emoji: "✏️",
+    tagline: "Easy Homework -- Accurate, Fully Worked Assignments with Perfect Math Notation",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body: `Easy Homework completes assignments accurately, cleanly, and at any level.
+
+You provide an assignment. The system returns a correct, fully worked solution -- with perfect mathematical notation where required.
+
+No guessing. No partial answers. No formatting errors.`,
+      },
+      {
+        emoji: "📚",
+        title: "Any Subject, Any Level",
+        body: `Supports:
+
+- Mathematics (basic through advanced)
+- Logic
+- Science
+- Philosophy
+- Economics
+- Technical and analytical subjects
+- Written assignments and problem sets
+
+Grade level is irrelevant -- the system adapts to the task.`,
+      },
+      {
+        emoji: "🧮",
+        title: "Fully Worked Solutions",
+        body: `- Step-by-step reasoning when appropriate
+- Final answers clearly separated
+- No skipped steps unless explicitly requested`,
+      },
+      {
+        emoji: "∑",
+        title: "Perfect Math Notation",
+        body: `- Proper mathematical symbols
+- Correct structure and spacing
+- Clean, readable expressions
+- Suitable for direct submission
+
+Math is rendered as math -- not approximated with plain text.`,
+      },
+      {
+        emoji: "📏",
+        title: "Assignment-Faithful",
+        body: `- Answers the question as written
+- Follows instructions precisely
+- Respects all constraints, formats, and requirements`,
+      },
+      {
+        emoji: "🎯",
+        title: "Use Cases",
+        body: `- Homework completion
+- Exam preparation
+- Work verification
+- Learning by example
+- Time-sensitive assignments`,
+      },
+      {
+        emoji: "🧠",
+        title: "Philosophy",
+        body: `Most tools either explain vaguely or format poorly.
+
+Easy Homework prioritizes correctness, clarity, and fidelity.
+
+It produces work that is ready to submit.`,
+      },
+    ],
+  },
   "Model Transformer": {
     emoji: "🔁",
     tagline: "Structure-Preserving Transformation of Formal Models, Theories, and Axiom Systems",
