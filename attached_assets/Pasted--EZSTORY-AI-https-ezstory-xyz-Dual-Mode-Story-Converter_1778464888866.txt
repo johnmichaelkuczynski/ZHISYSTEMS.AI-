@@ -1,0 +1,45 @@
+🎭 EZSTORY.AI https://ezstory.xyz
+
+Dual-Mode Story Converter — Transform Fiction ↔ Non-Fiction with Precision and Style
+
+🧩 Overview EZSTORY.AI is a bidirectional narrative transformation engine that converts fiction into non-fiction and non-fiction into fiction with full stylistic and structural control. It bridges the gap between storytelling and analysis — letting users turn essays into immersive stories, or stories into polished academic arguments.
+
+Designed for writers, educators, and content developers, it merges literary creativity with analytical rigor, producing outputs that are both stylistically consistent and conceptually sound.
+
+🧠 What It Does
+
+Fiction → Non-Fiction Converter — Transforms short stories, novels, or scenes into essays, commentaries, or research-style analyses that preserve the original ideas while expressing them in academic or expository form.
+
+Non-Fiction → Fiction Converter — Converts essays, lectures, or reports into narrative prose — short stories, dramatic scenes, or dialogues — preserving factual content within an imaginative frame.
+
+Custom Instruction Mode — Users can write their own transformation directives (“rewrite this essay as a Kafkaesque allegory” or “convert this story into a moral psychology paper”) or use refined built-in defaults.
+
+Style Sample Importer — Upload a writing sample to clone tone, diction, and rhythm; or select from predefined presets (e.g., philosophical, journalistic, literary).
+
+Bidirectional Rewrite Engine — Allows recursive cycling: a story can be turned into an essay, refined, and then re-fictionalized — preserving cumulative meaning while shifting registers.
+
+Adaptive Context Awareness — Maintains narrative logic, temporal structure, and factual coherence through multi-layer semantic mapping.
+
+⚙️ Technical Features
+
+Dual-Pipeline Architecture: Separate inference logic for narrative generation and analytic reformulation.
+
+Semantic Style Alignment: Matches tone and rhetorical structure between input and target genre.
+
+Cognitive Mode Selector: Fictionalization ↔ De-fictionalization modes with precision scaling.
+
+Preservation Matrix: Tracks plot-concept correspondences to maintain continuity across transformations.
+
+Multi-Model Integration: Combines ZHI, SHEN, and proprietary narrative logic engines for balanced creativity and factual control.
+
+🎯 Designed For
+
+Authors & Storytellers: Instantly transform research or essays into publishable narrative fiction.
+
+Academics & Essayists: Convert stories or creative writing into analytic prose suitable for publication or coursework.
+
+Educators: Demonstrate the structural relationship between argument and narrative form.
+
+Developers & Publishers: Generate dual-format content for multi-genre digital projects.
+
+💡 Core Idea EZSTORY.AI makes genre itself a tool of cognition. It shows that every story hides an argument — and every argument hides a story.
