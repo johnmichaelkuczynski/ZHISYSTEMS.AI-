@@ -232,6 +232,67 @@ Designed for writers, educators, and content developers, it merges literary crea
       },
     ],
   },
+  "Frame Shot": {
+    emoji: "🎞️",
+    tagline: "Frame Flow -- Instant Frame Extraction for Fast, Frictionless Video Review",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body: `Frame Flow automatically extracts still images from a video at fixed intervals.
+
+You upload a video. Frame Flow returns a clean sequence of evenly spaced snapshots -- allowing you to scan the entire recording instantly without scrubbing, pausing, or frame-by-frame searching.`,
+      },
+      {
+        emoji: "⚙️",
+        title: "How It Works",
+        body: `- Upload a video.
+- Frame Flow samples the video at predetermined intervals.
+- Each sampled frame is saved as a still image.
+- You browse the stills and select the frame you want.
+
+That's it.`,
+      },
+      {
+        emoji: "🎯",
+        title: "Why It Exists",
+        body: `Finding a good frame in a video is unnecessarily tedious.
+
+If you record yourself and need:
+
+- A flattering photo
+- A profile image
+- A thumbnail
+- A still for marketing, documentation, or analysis
+
+Frame Flow removes the friction entirely.`,
+      },
+      {
+        emoji: "✨",
+        title: "Features",
+        body: `- Automatic frame extraction
+- Evenly spaced snapshots across the full video
+- Instant visual overview of the entire recording
+- No manual playback or scrubbing`,
+      },
+      {
+        emoji: "📌",
+        title: "Use Cases",
+        body: `- Selecting the best still from a selfie video
+- Creating thumbnails from recordings
+- Reviewing posture, expression, or movement
+- Content creation and marketing
+- Documentation and visual analysis`,
+      },
+      {
+        emoji: "🎯",
+        title: "Core Idea",
+        body: `Video contains too much information for simple selection.
+
+Frame Flow reduces motion to choice -- fast, clean, and decisive.`,
+      },
+    ],
+  },
   "Originality Meter": {
     emoji: "🧠",
     tagline: "Evaluate, Compare, and Transform Text for Originality, Intelligence, Cogency, and Quality",
