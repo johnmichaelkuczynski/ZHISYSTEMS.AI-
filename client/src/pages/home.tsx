@@ -233,104 +233,110 @@ Designed for writers, educators, and content developers, it merges literary crea
     ],
   },
   "Model Transformer": {
-    emoji: "🎓",
-    tagline: "Advanced AI Platform for Formal Analysis -- Transform, Compare, and Analyze Axiomatic Systems",
+    emoji: "🔁",
+    tagline: "Structure-Preserving Transformation of Formal Models, Theories, and Axiom Systems",
     sections: [
       {
         emoji: "🧩",
         title: "Overview",
-        body: `Theory Transformer is a full-service AI reasoning suite for formal logic and axiomatic theories. It performs end-to-end analysis, transformation, and comparison of first-order logic systems -- from model-to-model translation and conservative-extension analysis to canonical rewriting and interpretation discovery.
+        body: `Model Transformer is a system for transforming formal models, theories, schemas, and axiom sets without altering their content.
 
-Provides 10 specialized functions for working with first-order logic theories.
+It does not simplify, explain, or summarize. It re-expresses structure while preserving meaning.
 
-Designed for logicians, philosophers, mathematicians, and theoretical researchers, it merges rigorous proof-theoretic logic with intuitive, conversational explanations.`,
+The system treats theories as formal objects whose truth conditions, models, and constraints must survive transformation intact.`,
+      },
+      {
+        emoji: "🔧",
+        title: "What It Does",
+        body: `Model Transformer takes a formal representation and generates alternative but equivalent formulations, including:
+
+- Definitional extensions and eliminations
+- Ontology inversions (primitive <-> defined symbols)
+- Schema- and arity-preserving rewrites
+- Language shifts with model preservation
+- Explicit interpretation mappings across domains
+
+Each transformation is either:
+
+- Certified equivalent, or
+- Explicitly flagged where equivalence cannot be guaranteed
+
+There is no silent drift.`,
       },
       {
         emoji: "🧠",
-        title: "What It Does",
-        body: `- **Axiom-Set / Theory Transformation** -- Detects the underlying axiom pattern (strict order, equivalence, group, etc.) in a model description and produces a different but isomorphic model in a new domain, with explicit object mapping.
-- **Schema & Definitional Equivalence** -- Two-argument checks that determine whether two theories share the same models or are mutually inter-definable, with concise 4-part output (RESULT, WHY, INTUITIVE EXPLANATION, TRANSLATED AXIOMS).
-- **Model-Preserving Rewrite** -- Normalizes any axiom-set to canonical form (LANGUAGE: {predicates} + numbered AXIOMS), eliminating unnecessary primitives and producing pipeline-ready output.
-- **Conservative Extension Analysis** -- Two-argument check (Base Theory T₁ vs. Extended Theory T₂) using the correct definition: T₂ is conservative iff it proves no new theorems in L₁.
-- **Compare Conceptual Schemes** -- Side-by-side comparison of how two theories classify primitive vs. derived notions.
-- **Ontological Dependence** -- Maps which primitives genuinely depend on which others.
-- **Alternative Conceptualizations** -- Generates equivalent axiom-sets built on different primitive vocabularies.
-- **Canonical Meaning Interpretation** -- Identifies the intended interpretations of primitive symbols.
-- **Find an Interpretation** -- Locates true models across 23 domains organized into 5 groups (A-E), including mathematical, computational, philosophical, physical, linguistic, chemical, biological, economic, social, organizational, network, and market-microstructure interpretations.`,
-      },
-      {
-        emoji: "⚙️",
-        title: "Technical Features",
-        body: `- **Multi-Provider Model Selection** -- Integrates Zhi 1, Zhi 2, Zhi 3, and Zhi 4 reasoning engines -- provider names fully abstracted behind unified branding.
-- **Cross-Chunk Coherence (CC) System** -- Three-pass architecture (skeleton extraction → chunk processing → stitch verification) for large multi-domain batch jobs.
-- **Isolated DB Instruction Sets** -- Every function and subfunction loads its own instructions from PostgreSQL -- fail-fast enforcement prevents cross-contamination between domains.
-- **F10 Batch Mode** -- Each of 23 interpretation domains runs independently using its own f10-* preset.
-- **5-Layer Fallback Chain** -- User instructions → subfunction DB lookup → main-function DB lookup → hardcoded defaults → generic fallback. No function ever runs with empty instructions.
-- **Dual-Input UI** -- Functions 2, 3, 5, and 6 expose two side-by-side input boxes for comparison work, with <<<SEPARATOR>>> parsing on the backend.
-- **Axiom Builder** -- Build single axiom-sets or paired System A / System B outputs with independent copy buttons.
-- **Paste Normalization** -- Cleans malformed clipboard content from PDFs and word processors automatically.`,
-      },
-      {
-        emoji: "🏗️",
-        title: "Architecture",
-        body: `- **Frontend** -- React + TypeScript, Vite, Wouter routing, TanStack Query, Shadcn/ui + Radix, Tailwind CSS v4 (Swiss/Rationalist theme).
-- **Backend** -- Node.js + Express, TypeScript via tsx, RESTful /api/ endpoints (/api/process, /api/chat, /api/cc/batch, /api/cc/process, /api/cc/job/:jobId).
-- **AI Layer** -- Unified provider abstraction over OpenAI, Anthropic, xAI (Grok), and DeepSeek SDKs.
-- **Database** -- PostgreSQL via Drizzle ORM. Tables: instruction_sets (75 hyphen-keyed presets), mt_jobs, mt_chunks, mt_interpretations, users.
-- **Build** -- Vite for client, esbuild for server bundling, output to dist/.`,
-      },
-    ],
-  },
-  "ModelWiz": {
-    emoji: "🎓",
-    tagline: "Advanced Multi-Model AI System -- Measure, Improve, and Humanize the Intelligence of Written Thought",
-    sections: [
-      {
-        emoji: "🧩",
-        title: "Overview",
-        body: `The Cognitive Analysis Platform is a full-service intelligence evaluation and text optimization suite. It performs end-to-end analysis, scoring, and enhancement of written work -- from instant cognitive fingerprinting and intelligence grading to humanization, formal axiomatization, and rigorous mathematical proof checking.
+        title: "Core Principle",
+        body: `Sameness of content does not require sameness of form.
 
-Designed for researchers, writers, educators, and analytical philosophers, it merges precision evaluation logic with humanlike textual nuance -- turning raw text into a transparent map of the author's mind.`,
+Model Transformer operates on structure, not surface syntax.`,
       },
       {
-        emoji: "🧠",
-        title: "What It Does",
-        body: `- **Multi-Model Intelligence Evaluation** -- A 4-phase system that scores text across 17 cognitive dimensions, producing a complete intelligence and cognitive-fingerprint profile of the author.
-- **MAXINTEL Rewriter** -- Recursively rewrites any text to maximize its measured intelligence score, with optional custom instructions and external knowledge integration.
-- **GPT Bypass Humanizer** -- Transforms AI-generated prose into undetectable, human-style writing that bypasses AI detection filters without sacrificing meaning.
-- **Coherence Meter** -- Evaluates structural and logical coherence of any text, with specialized modes for general writing, scientific argument, and mathematical proof.
-- **Mathematical Proof System (Four Modes)** -- COHERENCE (structural soundness only), COGENCY (theorem truth + proof validity, surfaces counterexamples), MAX COHERENCE (rewrites for clarity while preserving claims), MAXIMIZE TRUTH (corrects defective proofs; if theorem is false, finds and proves a related true theorem).
-- **Text Model Validator** -- Includes Reconstruction, Isomorphism, Mathematical Model, Truth Select, and Math Truth Select for literal truth verification across multiple reasoning engines.
-- **Axiomatic System Transformer** -- Converts natural-language theory into a complete formal axiomatization: primitive terms, axioms, defined terms, an uninterpreted symbolic calculus, and a satisfying semantic model.
-- **BOTTOMLINE Synthesizer** -- Distills batch analysis results into a polished final output tailored to a chosen audience, objective, tone, length, and emphasis.
-- **Full Suite Pipeline** -- One-click execution of the entire pipeline (Batch → BOTTOMLINE → Objections) with real-time progress and a single "Copy All Results" export.
-- **Objections Function** -- Generates 25 likely objections with compelling counter-arguments, usable standalone or as a follow-up to BOTTOMLINE.`,
+        emoji: "🎯",
+        title: "What It Is For",
+        body: `- Formal verification and specification refactoring
+- Equivalence checking across axiom systems or schemas
+- Translating between mathematical, computational, and conceptual models
+- Rewriting brittle formal systems without semantic loss
+- Making implicit structure explicit`,
       },
       {
-        emoji: "⚙️",
-        title: "Technical Features",
-        body: `- **Multi-Provider Model Selection** -- Integrates ZHI 1 through ZHI 5 reasoning engines with automatic fallback for resilience under rate limits or outages.
-- **Genre-Aware Analysis** -- Calibrates evaluation criteria to the genre and intent of the submitted text.
-- **Aggressive Batch Mode** -- Runs multiple analytical functions simultaneously with enforced maximal-formalization and maximal-truth defaults.
-- **Persistent Context Chat** -- AI assistant with conversation history and access to the Zhi knowledge database.
-- **Document Intake** -- OCR-backed document ingestion (Mathpix), audio-to-text input (AssemblyAI), and direct file upload.
-- **Export & Delivery** -- PDF and text downloads, formatted multi-section copy-to-clipboard, and email delivery (SendGrid).
-- **Resilient Architecture** -- Optional Stripe billing, friendly error recovery, and silent multi-provider failover -- users never see raw error messages.`,
-      },
-      {
-        emoji: "🎓",
-        title: "Designed For",
-        body: `- **Researchers & Analytical Philosophers** -- Measure the cognitive depth of arguments and stress-test theoretical claims.
-- **Writers & Editors** -- Rewrite drafts to maximize clarity, intelligence, and stylistic precision.
-- **Educators & Students** -- Evaluate essays, proofs, and arguments with rigorous, transparent scoring.
-- **Mathematicians & Logicians** -- Audit proofs for both structural coherence and underlying truth, and formalize informal theory.`,
-      },
-      {
-        emoji: "💡",
-        title: "Core Idea",
-        body: `The Cognitive Analysis Platform redefines text evaluation as an interactive analytical process. It doesn't just score -- it diagnoses, justifies, improves, and rewrites. The result: analysis that is faster, fairer, and intellectually honest.
+        emoji: "🚫",
+        title: "What It Is Not",
+        body: `- Not a paraphraser
+- Not an explainer
+- Not a simplifier
+- Not a teaching tool
 
-**Cognitive Analysis Platform -- where evaluation meets evolution.**`,
+If you want intuition, this is the wrong system. If you want semantic equivalence, this is the right one.`,
+      },
+      {
+        emoji: "🔄",
+        title: "Transformations Supported",
+        body: `- Definitional equivalence
+- Conservative extensions
+- Ontology inversion
+- Primitive / defined symbol swapping
+- Interpretation discovery (mathematical, computational, physical, social, etc.)
+- Explicit domain reconstruction
+
+All transformations are constraint-checked and annotated.`,
+      },
+      {
+        emoji: "📤",
+        title: "Output Guarantees",
+        body: `Every transformation reports:
+
+- Whether equivalence holds
+- What mappings were applied
+- Which primitives were altered
+- Where (if anywhere) information was added, weakened, or lost
+
+No hidden reinterpretation. No cosmetic rewrites.`,
+      },
+      {
+        emoji: "❓",
+        title: "Why This Exists",
+        body: `Most systems rewrite form and assume meaning survives.
+
+Model Transformer rewrites form only after meaning is fixed.
+
+This is the difference between translation and mutation.`,
+      },
+      {
+        emoji: "👤",
+        title: "Typical Users",
+        body: `- Formal methods engineers
+- Logicians and mathematicians
+- Specification authors
+- AI system designers
+- Anyone working with brittle or high-stakes formal structures`,
+      },
+      {
+        emoji: "📌",
+        title: "Status",
+        body: `Actively developed. Used in production reasoning systems. Designed to scale across domains, not examples.
+
+If two systems are truly the same, this tool will show it. If they are not, it will show that too.`,
       },
     ],
   },

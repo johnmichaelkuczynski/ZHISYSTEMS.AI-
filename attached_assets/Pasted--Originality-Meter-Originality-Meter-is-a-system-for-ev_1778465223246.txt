@@ -1,0 +1,88 @@
+🧠 Originality Meter
+Originality Meter is a system for evaluating, comparing, and transforming text with respect to originality, intelligence, cogency, and overall quality.
+
+It does not reward fluency, polish, or jargon.
+It does not confuse verbosity with depth.
+It does not mistake recombination for thought.
+
+Its singular virtue is that it distinguishes genuinely fresh thinking from merely recycled text.
+
+✳️ Overview
+Originality Meter analyzes prose to determine what kind of intellectual work is actually being done.
+
+It separates:
+
+real inference from stylistic noise
+conceptual contribution from paraphrase
+intelligence from imitation
+It can evaluate text, compare texts, rewrite text, and generate work—while enforcing the same standards throughout.
+
+🔍 What It Does
+Given one or two passages of text, Originality Meter can:
+
+📊 Evaluate a Single Text
+Measure originality
+Measure intelligence
+Measure cogency
+Measure overall quality
+Identify recycled structures, clichés, and pseudo-insight
+Detect genuine conceptual moves and inferential control
+⚖️ Compare Two Texts
+Compare originality, intelligence, and cogency side-by-side
+Determine whether one text is derivative of the other
+Diagnose how the texts differ (depth, structure, contribution)
+Distinguish disagreement from mere rewording
+✍️ Rewrite and Improve Text
+Rewrite prose to increase:
+originality
+intelligence
+cogency
+signal density
+Eliminate recycled phrasing and template logic
+Replace imitation with real conceptual work
+Preserve content while strengthening structure
+🎓 Do Homework
+Completes assignments at any level
+Produces answers that reflect actual understanding, not boilerplate
+Avoids generic academic filler and obvious AI patterns
+🤖 Humanize AI-Written Text
+Detects AI-like structure and surface fluency
+Rewrites text to restore human markers:
+asymmetry
+friction
+implication
+uneven emphasis
+Produces prose that reads as thought, not synthesis
+🧪 Core Distinction
+Not all novelty is originality.
+Not all clarity is intelligence.
+Not all coherence is thought.
+
+Originality Meter is built to detect the difference between:
+
+new combinations vs new ideas
+fluent prose vs controlled reasoning
+academic form vs intellectual substance
+This distinction governs every function of the system.
+
+🎯 What It Is For
+Evaluating essays, papers, and articles
+Comparing drafts, sources, or competing arguments
+Detecting pseudo-intellectual writing
+Improving AI-generated text without stylistic fakery
+Producing genuinely high-level homework and analysis
+Enforcing real intellectual standards at scale
+🧱 Design Principles
+Content-sensitive, not style-driven
+No reward for jargon or verbosity
+No penalty for clarity
+Explicit, explainable evaluations
+Rewrite logic governed by the same metrics used for scoring
+🧠 Summary
+Originality Meter is not an AI detector.
+It is not a grammar checker.
+It is not a style polisher.
+
+It is a system for answering one question:
+
+Is this text actually doing intellectual work—or only pretending to?
