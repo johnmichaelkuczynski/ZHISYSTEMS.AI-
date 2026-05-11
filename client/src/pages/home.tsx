@@ -14,6 +14,123 @@ interface AppDescription {
 }
 
 const appDescriptions: Record<string, AppDescription> = {
+  "ModelWiz": {
+    emoji: "🧙",
+    tagline: "Model Wizard -- Coherence Analysis and Formal Reconstruction of Natural-Language Reasoning",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body: `Model Wizard is a system for analyzing natural-language text, evaluating its coherence, and transforming it into explicit formal structures.
+
+It does not guess. It does not embellish. It does not invent structure where none exists.
+
+Model Wizard extracts, tests, and formalizes what a text actually commits itself to.`,
+      },
+      {
+        emoji: "🔍",
+        title: "What It Does",
+        body: `Given a passage of prose, Model Wizard can:
+
+- Evaluate logical and conceptual coherence
+- Identify implicit premises, dependencies, and inferential links
+- Detect gaps, equivocations, circularity, and underdetermination
+- Reconstruct the content as:
+  - formal arguments
+  - axiom systems
+  - schemas
+  - constraint models
+  - model-theoretic structures
+- Generate multiple legitimate formalizations of the same content when ambiguity permits
+
+All outputs are content-preserving, explicitly annotated, and constraint-checked.`,
+      },
+      {
+        emoji: "🧠",
+        title: "Core Principle",
+        body: `If a text means something, it has a structure. If it has no structure, it does not mean what it appears to mean.
+
+Model Wizard forces language to pay its inferential debts.`,
+      },
+      {
+        emoji: "🧪",
+        title: "What It Is For",
+        body: `- Testing whether prose actually makes determinate claims
+- Turning informal reasoning into explicit formal models
+- Diagnosing hidden contradictions and ambiguities
+- Comparing alternative formalizations of the same content
+- Stress-testing arguments prior to publication or deployment`,
+      },
+      {
+        emoji: "🚫",
+        title: "What It Is Not",
+        body: `- Not a paraphraser
+- Not a summarizer
+- Not a style improver
+- Not an "AI explainer"
+
+If you want fluency, use something else. If you want discipline, use this.`,
+      },
+      {
+        emoji: "🧱",
+        title: "Formalization Modes",
+        body: `Model Wizard supports reconstruction into:
+
+- Predicate and first-order logic
+- Axiom systems
+- Schema-based representations
+- Computational abstractions
+- Mathematical structures
+- Domain-specific constraint models
+
+When multiple formalisms are possible, the system enumerates and compares them rather than selecting one arbitrarily.`,
+      },
+      {
+        emoji: "⚖️",
+        title: "Coherence Evaluation",
+        body: `Before formalization, Model Wizard evaluates:
+
+- Inferential continuity
+- Consistency
+- Conceptual stability
+- Dependency structure
+- Degree of underdetermination
+
+Texts that cannot be cleanly formalized are reported as such -- with reasons.
+
+Failure is an output, not a bug.`,
+      },
+      {
+        emoji: "❓",
+        title: "Why This Exists",
+        body: `Most systems:
+
+- smooth over incoherence
+- hallucinate structure
+- reward rhetorical confidence
+
+Model Wizard does the opposite.
+
+It treats incoherence as a failure condition, not an invitation to creativity.`,
+      },
+      {
+        emoji: "👤",
+        title: "Typical Users",
+        body: `- Researchers and theorists
+- Formal methods and specification designers
+- Philosophers and logicians
+- AI system builders
+- Anyone who needs language to be answerable`,
+      },
+      {
+        emoji: "🛠️",
+        title: "Status",
+        body: `Actively developed. Deployed in production reasoning systems. Designed to be predictable, stable, and exact.
+
+If your text survives this tool, it deserves to be taken seriously.`,
+      },
+    ],
+  },
   "LLM Plus": {
     emoji: "🧠",
     tagline: "Multi-Model Scholarly Chat with Persistent Per-Project Memory and Recursive Compression",
