@@ -1,0 +1,78 @@
+🧠 GENIUS DICTATION
+Multi-Modal AI Platform for Intelligent Content Transformation, GPT Bypass, and Real-Time Dictation
+
+🧩 Overview
+Genius Dictation is a multi-model AI system for transforming, humanizing, and evaluating any written or spoken content. It connects to five top-tier proprietary LLMs (ZHI 1–5) and lets users route each task to the model best suited for it -- style-based rewriting, AI detection bypass, intelligence scoring, voice dictation, or OCR document processing.
+
+Unlike consumer writing tools that produce generic, padded, watered-down output, Genius Dictation is built around a strict operating principle: every transformation follows the user's instructions exactly, every rewrite matches a real style sample, and the user's text is never replaced with hallucinated content. If you put in raw dictation about hiring frauds, you get a rewrite about hiring frauds. No topic drift, no editorializing, no fabrication.
+
+👥 Who It's For
+Authors and entrepreneurs -- need to transform raw voice dictation into polished, intelligent prose without losing their voice or edge
+Academics and researchers -- need rewrites that match a rigorous philosophical or academic style, not generic AI filler
+Students -- need to submit human-sounding text that bypasses AI detection tools without changing what they actually said
+Professionals and consultants -- need rapid document processing, OCR extraction, and intelligent reformatting of uploaded files
+Anyone -- who wants their spoken or written ideas transformed into something that actually sounds like a smart human wrote it
+⚙️ Core Capabilities
+Real-Time Voice Dictation -- Speak directly into the platform; text streams live as you speak. Supports multiple speech engines (Gladia, Deepgram, AssemblyAI, browser-native).
+
+Style-Based Intelligent Rewrite -- Does NOT tell the AI to "make it better." Instead, provides a real style sample and instructs the model to rewrite in that exact style -- not a caricature of it, but that style. Default style is rigorous academic philosophical prose.
+
+GPT Bypass Humanizer -- Transforms AI-generated or AI-sounding text to evade AI detection tools. Uses pure style transfer: clones Box B's style with surgical precision while preserving Box A's content 100%. Built-in GPTZero detection shows before/after AI scores.
+
+Real-Time Streaming Output -- Both the Transform and GPT Bypass functions stream output word-by-word using Server-Sent Events and flushSync(), so you see the rewrite being generated live.
+
+Automatic AI Detection -- Every text box -- input, output, style sample -- automatically runs GPTZero detection after a 1.5-second debounce. AI scores displayed as live badges. No manual button needed.
+
+Multi-Model Intelligence Analysis -- Evaluates any text across multiple cognitive dimensions: grammar, lexical precision, stylistic quality, conceptual depth, logical structure, and originality. Produces a full written assessment with quoted examples and errata.
+
+OCR Document Processing -- Upload PDFs, images, or documents. AI-prioritized OCR (Mathpix) extracts clean text with superior accuracy over traditional Tesseract.
+
+Mathematical Content -- Parses and evaluates mathematical expressions, generates SVG-based graphs, renders LaTeX notation in-app and in downloadable PDFs.
+
+Text-to-Speech Narration -- Every output can be narrated aloud using Azure Speech or ElevenLabs voices. Download audio as a file.
+
+PDF / Word / TXT Export -- One-click download of every output as a formatted document. Print/Save PDF available directly from the browser.
+
+Stripe Payment Integration -- Credit-based system with Stripe checkout. Credits deducted per transformation. Non-authenticated users can access basic features; premium features require login.
+
+🚀 Rewrite Logic (All 7 Provisions)
+Provision 1: User instructions always win -- If the user gives explicit instructions, those are followed exactly, above all else.
+
+Provision 2: Instructions + style sample = both honored -- If the user provides custom instructions AND selects a style sample, the system follows the instructions while writing in that sample's style.
+
+Provision 3: Never "make it better" -- always "make it like this" -- The system never vaguely instructs the LLM to improve the text. It always provides a concrete style sample and says: rewrite in this exact style.
+
+Provision 4: Short texts are expanded 3x by default -- Any input under two pages (~500 words) is automatically tripled in length by adding examples, definitions, and clarifications -- unless the user explicitly instructs otherwise.
+
+Provision 5: Non-fiction fragments become complete essays -- If the input is a non-fiction fragment, the rewrite completes it into a full essay with introduction, development, and conclusion -- unless the user says otherwise.
+
+Provision 6: Fiction fragments become complete stories -- If the input is a fiction fragment, the rewrite completes it into a full story with beginning, development, and conclusion -- unless the user says otherwise.
+
+Provision 7: These provisions apply everywhere -- Rewrite mode, Re-Rewrite mode, GPT Bypass (Humanize) mode, and Re-Humanize mode all follow these same provisions.
+
+🔍 What Makes It Different
+It rewrites your actual text -- Topic drift is forbidden. If you input text about hiring frauds, the output is about hiring frauds. The system uses explicit input markers and strict instructions to prevent AI hallucination.
+
+It separates style from content -- The GPT Bypass function clones style at a molecular level while leaving every idea, fact, and argument from the original text intact. Style transfer is surgical, not approximate.
+
+It never editorializes -- Edgy prose stays edgy. Sharp, concise prose stays sharp and concise. The rewrite preserves the original's register and tone unless the user explicitly asks for a change.
+
+Five LLMs, one workflow -- ZHI 1 (Claude Sonnet), ZHI 2 (GPT-4o), ZHI 3 (DeepSeek), ZHI 4 (Perplexity), ZHI 5. Pick the model best suited for each task.
+
+Streaming built in -- Output is not dumped at the end. You watch it being written, word by word, in real time.
+
+Automatic AI scoring on everything -- Every input and output box detects its own AI probability score automatically. You always know exactly where you stand before and after a rewrite.
+
+Voice-first design -- The entire platform is designed around voice dictation as the primary input method. Speak your ideas raw; the platform handles the rest.
+
+🛠️ Technical Stack
+Frontend: React + TypeScript, Tailwind CSS, shadcn/ui
+Backend: Express.js, Node.js
+Database: PostgreSQL with Drizzle ORM
+AI Providers: OpenAI (GPT-4o), Anthropic (Claude Sonnet), Perplexity, DeepSeek
+AI Detection: GPTZero
+Speech-to-Text: Gladia, Deepgram, AssemblyAI, Web Speech API
+Text-to-Speech: Azure Cognitive Services, ElevenLabs
+OCR: Mathpix (AI-prioritized), Tesseract (fallback)
+Payments: Stripe
+Authentication: Passport.js (session-based, optional)
