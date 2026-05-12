@@ -1,0 +1,69 @@
+📄 EZ READER
+AI-Powered Document Processing Platform for Intelligent Text Transformation, Style Transfer, and Academic Writing
+
+🧩 Overview
+EZ Reader is a multi-model AI platform built for serious writers, researchers, and academics who need to process, transform, and refine documents with precision. It routes any writing task to five proprietary AI models (ZHI 1–4) and applies a strict operating principle: your instructions are followed exactly. If you ask for a rewrite in a specific voice, that is what you get. If you paste a fragment, it becomes a complete, polished document. No padding, no hedging, no watered-down output.
+
+Unlike generic AI writing tools, EZ Reader separates style transfer from content generation, allows deep integration of reference material, detects AI authorship in the output, and supports iterative refinement through a persistent instruction workflow. It handles everything from raw text to PDFs, Word documents, images, and audio recordings.
+
+👥 Who It's For
+Academics and graduate students -- need to rewrite, expand, or transform papers and dissertation chapters while preserving argument structure and scholarly tone
+Philosophers and theorists -- need a system that follows nuanced stylistic and argumentative instructions without smoothing over sharpness or complexity
+Journalists and essayists -- need to match a specific editorial voice or expand a fragment into a fully developed piece
+Lawyers and analysts -- need clean, authoritative rewrites of technical documents with precise language
+Authors -- need to transfer the stylistic fingerprint of one text onto another, or expand rough notes into complete drafts
+Anyone -- who wants an AI that does exactly what it is told, not what it thinks sounds better
+⚙️ Core Capabilities
+Multi-Model Text Transformation -- Five ZHI models (ZHI 1–4) handle rewrites, expansions, style transfers, and completions. Each model has distinct strengths; pick the one best suited to the task or compare outputs across models.
+
+Default Rewrite Engine -- A 7-provision rewrite system that matches style (not "makes it better"), expands inputs under two pages to 3x length, turns fragments into complete essays or stories, preserves edginess and sharpness, and adds clarity through logical and empirical support. Rewrites the entire input from the first word.
+
+Style Transfer / Humanizer -- Paste a style sample and the system rewrites your document to match that voice at a granular level -- rhythm, diction, sentence structure, and argumentative posture. Built-in AI detection loop checks and refines until the output reads as human-written.
+
+Content Source Integration -- Toggle on a reference document and the system thoroughly incorporates all its information, arguments, evidence, and insights into the output. Not a light reference -- a deep integration that adds length as needed.
+
+AI Detection (GPTZero) -- Built-in AI authorship scoring on every output. Shows confidence score and per-sentence breakdown. Used automatically in the humanizer loop to verify results before delivery.
+
+Document Upload & Chunking -- Upload PDF, DOCX, TXT, image, or audio files up to 50MB. Large documents are automatically split into chunks and processed sequentially, with results assembled into a single output.
+
+Audio Transcription -- Transcribe spoken recordings using OpenAI Whisper, Azure Speech, or Gladia. Output feeds directly into the processing pipeline.
+
+Mathematical Content Handling -- LaTeX formulas are protected during processing and restored intact in the output. Mathpix integration extracts math from images and PDFs. MathJax renders equations cleanly in the editor.
+
+Online Search Integration -- Pull live web content into any processing task. Fetched results are treated as reference material and integrated into the output.
+
+Saved Instructions -- Save and reuse custom instruction sets. Load a saved instruction with one click instead of retyping it every session.
+
+Iterative Refinement -- Process output becomes the new input. Run multiple passes with different instructions to progressively refine a document toward the target.
+
+Freemium Credit System -- Credits are deducted per unlock. Preview mode shows the first portion of every output; purchase credits to unlock the full result. Stripe-integrated checkout built into the app.
+
+🚀 What Makes It Different
+It follows instructions -- The system's job is to do exactly what you said. If you ask for a rewrite in the style of Nietzsche, you get that style. If you ask for 3x expansion, the output is 3x longer. Not approximately. Not mostly.
+
+Style transfer is real -- Most AI tools simulate style superficially. EZ Reader analyzes rhythm, sentence architecture, diction register, and argumentative posture from a sample and applies all of it to the target text -- not just tone.
+
+Fragments become complete documents -- Paste a half-finished essay or a rough paragraph and the system produces a finished, full-length piece. It does not complete the sentence; it rewrites the whole thing properly from the beginning.
+
+Sharpness is preserved, not softened -- The default rewrite logic explicitly preserves edginess, bluntness, and argumentative aggression. The system does not sand down provocative claims into bland consensus language.
+
+Content sources are integrated, not referenced -- When you toggle on a content source, the AI is instructed to thoroughly incorporate every argument, piece of evidence, and insight from that source. It adds length if needed to do so properly.
+
+AI detection is built into the loop -- The humanizer does not just rewrite; it checks AI scores after each pass and keeps refining until the output meets the target. Detection is a workflow step, not an afterthought.
+
+Five models, one interface -- ZHI 1 through ZHI 4 are available in every session. Switch models mid-workflow, compare outputs, or chain them -- all without leaving the platform.
+
+💳 Pricing (Credits)
+Model	Credits per Unlock
+ZHI 1	3 credits
+ZHI 2	8 credits
+ZHI 3	2 credits
+ZHI 4	1 credit
+Credits are purchased through the in-app Stripe checkout. Every output is fully generated before unlock -- you see a preview, then pay to reveal the complete result.
+
+🛠 Technical Stack
+Frontend: React 18, TypeScript, Tailwind CSS, shadcn/ui, MathJax 3.0
+Backend: Node.js 20, Express.js, TypeScript
+Database: PostgreSQL (Neon serverless) with Drizzle ORM
+AI Providers: OpenAI GPT-4o, Anthropic Claude 3.7, Perplexity, DeepSeek, Azure OpenAI
+Supporting Services: GPTZero (AI detection), Mathpix (math OCR), OpenAI Whisper (transcription), Google Vision OCR, SendGrid (email), Stripe (payments)
