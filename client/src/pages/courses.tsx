@@ -292,6 +292,7 @@ export default function Courses() {
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
+    { title: "Macroeconomics", url: "https://macroeconomics101.xyz" },
   ];
 
   return (
