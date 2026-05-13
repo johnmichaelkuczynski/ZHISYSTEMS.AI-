@@ -205,6 +205,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "Microeconomics": {
+    emoji: "📊",
+    tagline:
+      "AI-Powered Economics Course Platform with Writing Process Forensics and Academic Integrity Enforcement",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "**What it is** -- An interactive online course platform for introductory Microeconomics that pairs a structured curriculum with a conversational AI tutor and a high-integrity writing environment.\n\n**What it runs on** -- Claude Sonnet 4.5 powers the in-module tutor; GPTZero powers real-time AI-content scoring; a custom keystroke-forensics engine analyzes how every submission was actually produced.\n\n**Operating principle** -- Every submission is evaluated not just on what was written, but on how it was produced. If a student is asked to type their own response, that is exactly what the system enforces.\n\n**What it refuses to do** -- No silent pastes, no ghostwritten paragraphs, no tutor that drafts the assignment for the student, no plausible deniability at grading time.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Students** -- enrolled in introductory Microeconomics who need a structured curriculum, an always-available tutor, and clear feedback on their writing\n\n**Instructors and professors** -- need to assign writing-intensive work in the age of LLMs without losing the ability to verify authorship\n\n**Teaching assistants and graders** -- need a single dashboard to review submissions, AI probability scores, and process-forensics reports side by side\n\n**Department administrators** -- need defensible, auditable evidence of academic integrity enforcement across sections\n\n**Accessibility coordinators** -- need a first-class accommodated mode that disables monitoring without forcing students into a parallel workflow\n\n**Anyone** -- who believes that learning economics still requires the student to do the thinking",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**Structured Curriculum** -- A complete sequence of numbered modules covering opportunity cost, supply and demand, elasticity, market structures, and core micro topics. Content is ingested from canonical course materials and rendered as navigable, lesson-by-lesson units.\n\n**AI Tutor (Claude Sonnet 4.5)** -- A persistent side-panel tutor available inside every module. Programmed with hard guardrails so it explains, questions, and challenges -- but never writes the assignment for the student.\n\n**Draft Workshop (Box 1)** -- A low-stakes drafting space where students paste an early draft and receive a single round of conceptual feedback on what needs work. Once feedback is delivered, the draft locks. No infinite revision loops, no AI co-authoring.\n\n**Submission Canvas (Box 2)** -- A custom high-integrity editor where final responses must be typed. External pasting is blocked, every keystroke is recorded, and the student sees their own AI-probability score in real time as they write.\n\n**Real-Time GPTZero Integration** -- Live AI-detection scoring surfaced as a traffic-light indicator while the student types, so there are no surprises at submission time.\n\n**Writing Process Forensics** -- Diachronic analysis of keystroke timing, pauses, deletions, and burst patterns. Distinguishes natural human composition from pasted or transcribed AI output, even when the final text would pass a static detector.\n\n**Assessments and Progress Tracking** -- Per-module point tracking, submission status, and grading history surfaced in a single student-facing dashboard.\n\n**Admin Dashboard** -- Instructor view at /admin/submissions for reviewing every submission alongside its AI score, process-forensics report, and full keystroke replay.\n\n**Accommodated Mode** -- A first-class accessibility mode that disables paste prevention and process monitoring for students with documented accommodations, without segregating them into a separate workflow.\n\n**Syllabus and Start Here** -- Clear onboarding with course objectives, grading policy, integrity expectations, and a guided first-session walkthrough.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**It enforces what it asks for** -- If the assignment says \"type your response,\" the platform makes that the only thing that works. No quiet pasting, no workaround tabs.\n\n**It evaluates process, not just product** -- Most AI-detection tools grade the final text. Microeconomics grades the history of how that text appeared on the screen. Pasted AI output looks nothing like genuine composition under keystroke analysis.\n\n**The tutor refuses to do the work** -- The Claude tutor is configured to teach, probe, and explain -- never to draft, outline, or revise an assignment on the student's behalf. Students get help understanding; they do not get help cheating.\n\n**Two-stage writing pipeline** -- Draft Workshop and Submission Canvas separate \"thinking out loud\" from \"final accountable work.\" Students get one round of substantive feedback, then own their final draft.\n\n**Real-time feedback, not post-hoc accusation** -- Students see their AI score as they write. Integrity issues become a conversation during composition, not a confrontation after submission.\n\n**Accommodations are built in, not bolted on** -- Accommodated mode is part of the core design, so students with documented needs use the same interface as everyone else without monitoring.\n\n**Auditable by design** -- Every submission carries a full forensic record: keystroke log, AI-score history, draft progression, and tutor transcript. Grading decisions are defensible end-to-end.",
+      },
+    ],
+  },
   "English Composition": {
     emoji: "📚",
     tagline:
@@ -324,6 +355,7 @@ export default function Courses() {
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
     { title: "Macroeconomics", url: "https://macroeconomics101.xyz" },
+    { title: "Microeconomics", url: "https://microeconomics.xyz" },
   ];
 
   return (

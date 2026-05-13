@@ -1,0 +1,50 @@
+📊 MACROECONOMICS 101
+AI-Powered Economics Course Platform with Writing Process Forensics and Academic Integrity Enforcement
+
+🧩 Overview
+What it is -- An interactive online course platform for introductory Macroeconomics that pairs a structured curriculum with a conversational AI tutor and a high-integrity writing environment.
+What it runs on -- Claude Sonnet 4.5 powers the in-module tutor; GPTZero powers real-time AI-content scoring; a custom keystroke-forensics engine analyzes how every submission was actually produced.
+Operating principle -- Every submission is evaluated not just on what was written, but on how it was produced. If a student is asked to type their own response, that is exactly what the system enforces.
+What it refuses to do -- No silent pastes, no ghostwritten paragraphs, no tutor that drafts the assignment for the student, no plausible deniability at grading time.
+👥 Who It's For
+Students -- enrolled in introductory Macroeconomics who need a structured curriculum, an always-available tutor, and clear feedback on their writing
+Instructors and professors -- need to assign writing-intensive work in the age of LLMs without losing the ability to verify authorship
+Teaching assistants and graders -- need a single dashboard to review submissions, AI probability scores, and process-forensics reports side by side
+Department administrators -- need defensible, auditable evidence of academic integrity enforcement across sections
+Accessibility coordinators -- need a first-class accommodated mode that disables monitoring without forcing students into a parallel workflow
+Anyone -- who believes that learning economics still requires the student to do the thinking
+⚙️ Core Capabilities
+Structured Curriculum -- A complete sequence of numbered modules covering opportunity cost, supply and demand, elasticity, market structures, and core macro topics. Content is ingested from canonical course materials and rendered as navigable, lesson-by-lesson units.
+
+AI Tutor (Claude Sonnet 4.5) -- A persistent side-panel tutor available inside every module. Programmed with hard guardrails so it explains, questions, and challenges -- but never writes the assignment for the student.
+
+Draft Workshop (Box 1) -- A low-stakes drafting space where students paste an early draft and receive a single round of conceptual feedback on what needs work. Once feedback is delivered, the draft locks. No infinite revision loops, no AI co-authoring.
+
+Submission Canvas (Box 2) -- A custom high-integrity editor where final responses must be typed. External pasting is blocked, every keystroke is recorded, and the student sees their own AI-probability score in real time as they write.
+
+Real-Time GPTZero Integration -- Live AI-detection scoring surfaced as a traffic-light indicator while the student types, so there are no surprises at submission time.
+
+Writing Process Forensics -- Diachronic analysis of keystroke timing, pauses, deletions, and burst patterns. Distinguishes natural human composition from pasted or transcribed AI output, even when the final text would pass a static detector.
+
+Assessments and Progress Tracking -- Per-module point tracking, submission status, and grading history surfaced in a single student-facing dashboard.
+
+Admin Dashboard -- Instructor view at /admin/submissions for reviewing every submission alongside its AI score, process-forensics report, and full keystroke replay.
+
+Accommodated Mode -- A first-class accessibility mode that disables paste prevention and process monitoring for students with documented accommodations, without segregating them into a separate workflow.
+
+Syllabus and Start Here -- Clear onboarding with course objectives, grading policy, integrity expectations, and a guided first-session walkthrough.
+
+🚀 What Makes It Different
+It enforces what it asks for -- If the assignment says "type your response," the platform makes that the only thing that works. No quiet pasting, no workaround tabs.
+
+It evaluates process, not just product -- Most AI-detection tools grade the final text. Macroeconomics 101 grades the history of how that text appeared on the screen. Pasted AI output looks nothing like genuine composition under keystroke analysis.
+
+The tutor refuses to do the work -- The Claude tutor is configured to teach, probe, and explain -- never to draft, outline, or revise an assignment on the student's behalf. Students get help understanding; they do not get help cheating.
+
+Two-stage writing pipeline -- Draft Workshop and Submission Canvas separate "thinking out loud" from "final accountable work." Students get one round of substantive feedback, then own their final draft.
+
+Real-time feedback, not post-hoc accusation -- Students see their AI score as they write. Integrity issues become a conversation during composition, not a confrontation after submission.
+
+Accommodations are built in, not bolted on -- Accommodated mode is part of the core design, so students with documented needs use the same interface as everyone else without monitoring.
+
+Auditable by design -- Every submission carries a full forensic record: keystroke log, AI-score history, draft progression, and tutor transcript. Grading decisions are defensible end-to-end.
