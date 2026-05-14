@@ -939,7 +939,6 @@ export default function Home() {
     { title: "AI LOGIC", url: "https://ailogic101.xyz" },
     { title: "ANALYTIC PHILOSOPHY (COMPLETE)", url: "https://analyticphilosophy.xyz" },
     { title: "CAUSATION", url: "https://causality101.xyz" },
-    { title: "CRITICAL REASONING", url: "https://criticalreasoning.xyz" },
     { title: "DICTIONARY OF ANALYTIC PHILOSOPHY", url: "https://philosophydictionary.xyz" },
     { title: "EMPIRICISM AND ITS LIMITS", url: "https://empiricism101.xyz" },
     { title: "EPISTEMOLOGY", url: "https://epistemology101.xyz" },
