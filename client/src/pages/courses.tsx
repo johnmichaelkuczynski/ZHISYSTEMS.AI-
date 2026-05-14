@@ -356,6 +356,7 @@ export default function Courses() {
     { title: "English Composition", url: "https://englishcomposition.xyz" },
     { title: "Macroeconomics", url: "https://macroeconomics101.xyz" },
     { title: "Microeconomics", url: "https://microeconomics.xyz" },
+    { title: "Probability Theory", url: "https://probabilitytheory.xyz" },
   ];
 
   return (
