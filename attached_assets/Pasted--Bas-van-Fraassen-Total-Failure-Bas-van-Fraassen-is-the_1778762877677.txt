@@ -1,0 +1,88 @@
+# Bas van Fraassen: Total Failure
+
+Bas van Fraassen is the main architect of late twentieth-century anti-realism in philosophy of science. His 1980 book *The Scientific Image* introduced "constructive empiricism," the view that science aims at empirically adequate theories, not true ones, and that accepting a theory commits you only to belief in its empirical adequacy, not its truth. He has defended this position for forty-five years, rebranding it "empiricist structuralism" in his 2008 book *Scientific Representation* when the original formulation took too many hits.
+
+The position is wrong. It is also, in its operative content, either trivial or incoherent. What follows is an anatomy of how the program works, why each of its moves fails, and why it has survived anyway.
+
+## The Core Move
+
+The program starts with a platitude: we know the world through models, and perception is mediated. Nobody disputes this. Van Fraassen then adds a wrinkle: don't believe your models are true; believe only that they are empirically adequate. Use them, teach them, work within them, but do not commit to the reality of what they posit beyond what is directly observable.
+
+This wrinkle is the entire load-bearing content of the position. Everything else is scaffolding. And the wrinkle is incoherent, because it presupposes a picture of belief on which belief is some additional inner act of endorsement, separable from the cognitive economy of using a theory. On that picture, you can accept a theory in every functional sense — reason from it, predict with it, build further inferences on it, act on those predictions — while withholding some extra inner glow of conviction called "belief in its truth."
+
+But belief is not an extra ingredient. Belief is the functional state of treating the model as how things are. Once you are reasoning from a model, predicting with it, updating it when it fails, and acting on its outputs, you have believed it. There is no remainder left over to either grant or withhold. The "acceptance without belief" gloss is asking you to have all the functional properties of belief while denying the label. That is not a distinct doxastic attitude. It is a verbal stipulation.
+
+Van Fraassen needs belief to be a Cartesian assent — a free act of the will, separable from the rest of cognition — so that it can be withheld without disrupting anything else. That picture of belief was dead before he started using it.
+
+## The QM Camouflage
+
+The program is implemented almost entirely with examples from quantum mechanics. This is not accidental. QM is the one domain where the distinction between "saving the phenomena" and "saying what is really there" has prima facie content, because the measurement problem genuinely strains naive realism and no consensus interpretation exists. The choice of QM as the home turf does two jobs at once:
+
+- It makes the position locally plausible, because realism really is harder to defend cleanly in QM than elsewhere.
+- It makes the position locally unfalsifiable, because any objection can be deflected as resting on a contested reading of the formalism.
+
+The technical apparatus also functions as a barrier to entry. Maybe a third of philosophers of science can follow the modal interpretation, the semantic view of theories, and the symmetries-and-invariances machinery well enough to push back. Of those, a smaller fraction can do it fluently enough to win the floor in real time. So van Fraassen routinely wins arguments by out-jawing his interlocutors on the equations, and when someone else can match him at that level, the rest of the room can't follow what is being said.
+
+Take the same program out of QM and apply it to botany, plate tectonics, epidemiology, or structural engineering, and it is absurd. Nobody thinks finches and faults are "empirically adequate fictions." The QM choice lets him export an anti-realist conclusion from the one domain where it is locally credible to all of science, where it isn't.
+
+## The Counterexample-Management Apparatus
+
+The standard objection to constructive empiricism is the historical one, sharpest in Grover Maxwell's continuum argument: before we had electron microscopes, we posited cells, structures, organelles. Then we built the microscopes, and we saw exactly what had been posited. The same story repeats across the history of science. Atoms, microbes, DNA, viruses, distant galaxies — empirically successful theories keep getting verified at the unobservable level, again and again. This is a massive inductive base for thinking that empirical adequacy is truth-conducive. The "no miracles" argument is just: if empirical adequacy weren't tracking truth, this track record would be inexplicable.
+
+Van Fraassen has three deflections, rotated as needed:
+
+- **Slippery slope.** Maxwell's continuum from naked eye to electron microscope is a fallacy: vague boundaries are still real boundaries. This is bogus, because Maxwell isn't committing a slippery slope. He is saying that the line van Fraassen draws — at unaided human perception — is being drawn for no principled reason except to protect the thesis. The burden is on van Fraassen to say why that particular point on the continuum is epistemically privileged, and he can't, because the answer ("that's what humans can do without instruments") is anthropocentric and arbitrary. A creature with better eyes would, on his view, have a different ontology. Ontology shouldn't track retinal resolution.
+
+- **Selection bias.** We only count the cases where verification was possible, so the track record is unrepresentative. This is a non-argument. The cases where verification was possible are precisely the cases that test the hypothesis. You don't get to discount your test set because the results are inconvenient.
+
+- **Redescription.** You didn't really *see* the cell; you had a visual experience caused by an instrument whose theoretical interpretation says there is a cell there. "Seeing" gets dissolved into "having instrument-mediated experiences theoretically interpretable as evidence for." This redescription generalizes immediately to naked-eye perception — you don't see the tree, you have retinal stimulations theoretically interpretable as caused by a tree. Once you play that game, all perception collapses into instrument-mediated inference, and the observable/unobservable distinction evaporates from the other end.
+
+The deflections do not combine into a coherent defense. Each one is weak on its own; each one is defeated by the objection the next one was supposed to handle. The position only survives because the deflections are never deployed simultaneously and never examined together.
+
+## The Causation Amputation
+
+If counterfactual-supporting generalizations are real, and causation grounds them, then the world contains modal structure — the connective tissue that makes some regularities lawlike and others accidental. "All copper conducts electricity" supports counterfactuals because being copper causes conduction. "All the coins in my pocket are quarters" doesn't, because being-in-pocket doesn't cause quarterdom. The asymmetry is causal, and the causal asymmetry is in the world. There is no separate puzzle about counterfactual support that isn't a puzzle about causation.
+
+Van Fraassen can't have this, because causation in the world is exactly the kind of unobservable modal structure his program forbids. So he goes Humean: there are no causal connections in nature, just regularities. Causal language is a projection of our pragmatic interests onto patterns we find useful to flag.
+
+This is the third application of the same move:
+
+- **Unobservables** → not in the world, projected by theoretical commitment.
+- **Laws** → not in the world, projected by inferential practice.
+- **Causation** → not in the world, projected by pragmatic interest.
+
+Three deep features of reality, all relocated into the head of the inquirer, all to keep the world ontologically thin enough that "empirical adequacy" can be the whole story. What's left in the world is a sequence of observable events with no modal connective tissue. Nothing causes anything; nothing necessitates anything; nothing would have been otherwise. Just a pageant of correlated happenings narrated causally by us, for our own reasons.
+
+This isn't an account of causation. It is a refusal to have one. You can argue about how to *analyze* causation — counterfactual, interventionist, mechanistic, powers-based — but you can't deny the phenomenon without denying everything that depends on it, which is everything. Engineering, medicine, agriculture, cooking, every practical activity humans engage in presupposes that some things make other things happen. Nobody walks across a bridge thinking the load-bearing capacity is a pragmatic projection onto a regularity. The position is professional, not lived.
+
+## Explanation Goes Too
+
+By implication, explanation goes the same way. If there is no causation in the world, there is no "because" in nature, and explanation can't be a matter of tracking what produces what. *The Scientific Image* has a chapter on this — the pragmatic theory of explanation — and it runs the same maneuver: take a feature of the world that the thin ontology can't accommodate, relocate it into our practices, declare the problem dissolved. Explanation becomes a matter of answering why-questions in context, not a matter of identifying real explanatory structure.
+
+## The Shape of the Whole
+
+The program runs by systematically evicting modal structure from the world and re-housing it in the inquirer. Truth, laws, causation, explanation, counterfactual force — all out of the world, all into us. The ontology required to make empirical adequacy the whole aim of science is one with no connective tissue at all, just a sequence of observable events.
+
+The full anatomy:
+
+- **Step 1 — Innocuous platitude.** We have only our models; perception is mediated. Establishes shared ground. Nobody disputes this.
+- **Step 2 — The wrinkle.** Don't believe the model is true, just believe it is empirically adequate. This is the entire load-bearing content and it is incoherent, because the distinction between "believing the model is empirically adequate" and "believing the model is true about what it talks about" disappears once belief is properly understood as functional.
+- **Step 3 — QM camouflage.** Implement the wrinkle in the one domain where it has surface plausibility. Use the technical apparatus to outpace philosophical interlocutors. Hide the fact that the same wrinkle applied to botany or structural engineering is insane.
+- **Step 4 — Counterexample management.** Deploy slippery-slope, selection-bias, and redescription deflections against the historical record of verified posits. Never run them simultaneously, so the incoherence between them never gets pinned.
+- **Step 5 — Causation amputation.** Eliminate causation from the world, because if causation is real and does the work it obviously does, the program is finished.
+- **Step 6 — Explanation amputation.** Make explanation pragmatic, because real explanatory structure requires the modal facts the program forbids.
+
+The deepest problem is that the whole program is a substantive metaphysical thesis about science. It claims that science aims at X, not Y. It claims that belief and acceptance are distinct attitudes. It claims that observable and unobservable mark an epistemically significant boundary. It claims that causation isn't in the world. Every one of these is a substantive claim about unobservable structure — the nature of belief, the nature of inquiry, the nature of modal facts. The position is performatively self-refuting at every level. It can only be stated by doing the thing it forbids.
+
+## Why It Survives
+
+The program is wrong, but it has had a long life. Several reasons, none of them flattering:
+
+- **Career sunk cost.** *The Scientific Image* made van Fraassen. Walking it back would mean conceding that his major contribution was a sophisticated mistake. People don't do that at eighty-four.
+- **Seminar-room appeal.** The position is contrarian, technically intricate, and lets philosophers feel epistemically virtuous (humble, agnostic, refusing to overreach) while doing nothing scientifically productive. Tailor-made for environments where interesting argument is rewarded over getting things right.
+- **Useful sparring partner.** Constructive empiricism is a permanent fixture of the realism/anti-realism debate not because it's correct but because it's a clean, well-formulated opponent that realists can sharpen their arguments against. It doesn't have to win to survive.
+- **The underlying intuition isn't crazy.** We should be more cautious about ontological commitments than naive realists tend to be. The history of science contains posits that didn't pan out (phlogiston, caloric, ether). The mistake isn't caring about fallibility; the mistake is freezing the caution into a doctrine and drawing the line at an indefensible place.
+
+What is "great" about the position, from inside the field, is that it is *the* paradigm anti-realist view of the late twentieth century, and the alternative is conceding that the realists were basically right. That is a hard pill at any age. The program survives because abandoning it would require admitting that forty-five years of work were spent defending a confusion about what belief is and a refusal to let the world be as thick as it obviously is.
+
+The position is a total failure. The career built on it is, by any reasonable academic metric, a success. These two facts are not in tension. They describe the same phenomenon from different angles.
