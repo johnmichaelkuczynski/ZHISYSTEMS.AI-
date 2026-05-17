@@ -1119,7 +1119,6 @@ export default function Home() {
       { title: "EZ Reader", url: "https://ezreader.ai" },
       { title: "Classic EZ Reader", url: "https://classicezreader.com" },
       { title: "EZ Story", url: "https://ezstory.xyz", videoUrl: "https://www.youtube.com/watch?v=sRaZtSnkybM" },
-      { title: "Reading Pro", url: "https://readingpro.xyz" },
       { title: "TextMD", url: "https://textmd.xyz" },
       { title: "NeuroText", url: "https://neurotext.uk" },
       { title: "OCR Pro", url: "https://ocrpro.xyz" }
