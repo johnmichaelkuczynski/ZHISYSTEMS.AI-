@@ -388,6 +388,7 @@ export default function Courses() {
     { title: "Macroeconomics", url: "https://macroeconomics101.xyz" },
     { title: "Microeconomics", url: "https://microeconomics.xyz" },
     { title: "Probability Theory", url: "https://probabilitytheory.xyz" },
+    { title: "AI 101", url: "https://introductorycourseinai.xyz" },
   ];
 
   return (
