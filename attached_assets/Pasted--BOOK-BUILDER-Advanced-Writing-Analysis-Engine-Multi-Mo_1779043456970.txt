@@ -1,0 +1,75 @@
+🧠 BOOK BUILDER
+Advanced Writing & Analysis Engine — Multi-Model AI Platform for Document Processing, Cognitive Profiling, and Intelligent Rewriting
+
+🧩 Overview
+Book Builder is a multi-model AI system built for serious writers, researchers, and thinkers who need more than a grammar checker or a generic chatbot. It connects to five top-tier proprietary LLMs (ZHI 1–5) and lets users route any task to the model best suited for it — document rewriting, cognitive profiling, AI detection bypassing, mathematical proof rendering, or full-pipeline text transformation.
+
+Unlike consumer writing tools that produce safe, watered-down suggestions, Book Builder is built around a strict operating principle: every output is rigorous, every instruction is followed exactly, and the user's intent is never diluted. If you ask for a humanized rewrite that evades AI detection, you get one. If you ask for a deep cognitive profile across 17 dimensions, you get all 17 — scored, explained, and visualized.
+
+👥 Who It's For
+Academics, graduate students, and researchers -- need to process, rewrite, and analyze papers, dissertations, and source documents before submission or publication
+Philosophers and theorists -- need formal analysis, proof-checking, and conceptual stress-testing of theoretical claims
+Mathematicians -- need proper LaTeX rendering, mathematical proof evaluation, and text-to-math conversion
+Lawyers, analysts, and consultants -- need to rewrite and restructure documents while preserving precise meaning
+Authors and entrepreneurs -- need to know whether their writing communicates clearly, intelligently, and persuasively
+Anyone -- who wants to produce writing that reads like it was written by someone who actually knows what they are doing
+⚙️ Core Capabilities
+Multi-Model Document Rewriting -- Upload a PDF, DOCX, or paste text, then rewrite it in full using any of five LLMs. Control rewrite length, tone, and chunk-by-chunk granularity. Compare outputs across models side-by-side.
+
+Chunked Rewriter -- Splits long documents into manageable segments and rewrites each one independently. Supports per-chunk selection, custom instructions per segment, and re-rewriting individual chunks after the initial pass.
+
+Cognitive Profiler (Mind Profiler) -- Evaluates any text across 17 cognitive dimensions including depth, originality, argumentative rigor, conceptual control, and semantic density. Produces a scored profile with genre-aware calibration and visual breakdowns.
+
+GPT Bypass Humanizer -- Transforms AI-generated text to evade AI detection tools. Built-in GPTZero integration lets you verify the result before and after transformation in a single workflow.
+
+AI Detection -- Runs any document through GPTZero and returns a detailed detection report with sentence-level highlighting and probability scores.
+
+Text-to-Speech -- Converts any text to natural-sounding audio using ElevenLabs. Includes voice selection, playback controls, and downloadable output.
+
+Graph Generator -- Converts natural language descriptions into rendered SVG visualizations. Supports mathematical function plotting, academic charts, and data diagrams generated directly from text.
+
+Text-to-Math Converter -- Transforms written mathematical expressions and prose descriptions into properly formatted LaTeX notation, rendered inline with MathJax and KaTeX.
+
+OCR Processing -- Extracts text from scanned images and image-based PDFs using Tesseract. Feeds extracted content directly into the rewriting and analysis pipeline.
+
+AI Chat Assistant -- Persistent conversational interface backed by all five ZHI models. Supports document context injection, chat history, math rendering toggle, and auxiliary chat for secondary research threads.
+
+Custom Rewrite -- Select any portion of a rewritten document and apply targeted rewrite instructions to that passage alone, without disturbing the surrounding content.
+
+Text Cleaner -- Standalone utility that strips hidden characters, normalizes whitespace, and reconstructs proper paragraph structure from corrupted or exported text.
+
+Analytics Dashboard -- Tracks rewriting activity, model usage, and document processing history. Includes custom report generation and data export.
+
+🚀 What Makes It Different
+It actually follows instructions -- The system's job is to do exactly what you said. If you set a rewrite length to 150%, you get 150%. If you select three specific chunks, only those three are rewritten.
+
+Five proprietary LLMs, one workflow -- ZHI 1 through ZHI 5. Pick the model best suited for each task, or switch mid-session without losing your document or context.
+
+Real document handling -- Upload PDF, DOCX, or plain text files. The system extracts, chunks, processes, and reconstructs the full document — not just a pasted snippet.
+
+Cognitive scoring built in -- Every document can be profiled across 17 cognitive dimensions, with genre-aware calibration that accounts for the type of writing being evaluated.
+
+Detection and humanization in one place -- Run AI detection, apply humanization, and re-run detection to verify the result — all without leaving the platform.
+
+Math-first rendering -- LaTeX expressions are detected, sanitized, and rendered correctly throughout the interface. The system distinguishes mathematical notation from currency symbols and never corrupts technical content.
+
+Chunk-level precision -- Long documents are never treated as a single blob. Every rewrite, analysis, and transformation operates at the chunk level, giving you surgical control over the output.
+
+Persistent chat with document awareness -- The chat assistant retains conversation history and can be loaded with document context, turning it into a research assistant that actually knows what you are working on.
+
+🔗 External Services
+Label	Provider	Purpose
+ZHI 1	OpenAI GPT-4	Primary LLM, Whisper transcription
+ZHI 2	Anthropic Claude	Balanced LLM for analysis and rewriting
+ZHI 3	DeepSeek	Efficient LLM, default for most tasks
+ZHI 4	Perplexity	Fast LLM with search-augmented responses
+ZHI 5	xAI Grok	Advanced reasoning and long-context tasks
+—	GPTZero	AI content detection
+—	ElevenLabs	Text-to-speech audio generation
+—	Tesseract	OCR for image and scanned PDF extraction
+🗄️ Tech Stack
+Frontend: React 18, TypeScript, Tailwind CSS, shadcn/ui, TanStack Query, Wouter
+Backend: Node.js, Express.js, TypeScript, ES Modules
+Database: PostgreSQL with Drizzle ORM
+Build: Vite (frontend), esbuild (backend)
+Math Rendering: MathJax, KaTeX
