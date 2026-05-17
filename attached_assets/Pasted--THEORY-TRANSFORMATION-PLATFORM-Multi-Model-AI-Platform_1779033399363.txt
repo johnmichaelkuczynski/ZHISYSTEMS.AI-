@@ -1,0 +1,83 @@
+🧠 THEORY TRANSFORMATION PLATFORM
+Multi-Model AI Platform for Formal Axiomatic Analysis, Theory Comparison, and Model Discovery
+
+🧩 Overview
+The Theory Transformation Platform is a multi-model AI system for analyzing, transforming, and comparing first-order logic theories. It plugs into four top-tier proprietary LLMs (ZHI 1–4) and lets users route any task to the model best suited for it -- axiom-set transformation, definitional equivalence checking, conservative extension analysis, canonical rewriting, or interpretation discovery across 23 formal domains.
+
+Unlike consumer chatbots that produce generic, hedged, watered-down output, the Theory Transformation Platform is built around a strict operating principle: every analysis is rigorous, every verdict is explicit, and the user's instructions are sacred. If you ask for a model in a chemical domain, you get a chemical model, not a mathematical one. If you ask whether two theories are definitionally equivalent, you get a yes/no verdict with the explicit translation -- not a hedged essay. No padding, no preamble, no editorializing.
+
+👥 Who It's For
+Logicians and formal philosophers -- need rigorous model-to-model transformations, definitional equivalence checks, and conservative extension verdicts with explicit translations
+Mathematicians -- need canonical rewriting of axiom systems, minimal-primitive normalization, and structural comparison across alternative axiomatizations
+Theoretical computer scientists -- need to detect underlying axiom patterns (order, equivalence, group, lattice) and find isomorphic models in computational domains
+Ontologists and conceptual analysts -- need ontological-dependence mapping, primitive-vs-derived classification, and alternative conceptualizations of the same theory
+Researchers in interpretation theory -- need to find true models for a theory across 23 distinct interpretation domains in a single batch run
+Anyone -- who wants to know what a theory actually says, what it commits to, and what other systems are formally indistinguishable from it
+⚙️ Core Capabilities
+Axiom-Set / Theory Transformation -- Detects the underlying axiom pattern in a model description (strict order, equivalence, group, lattice, etc.) and produces a different but isomorphic model in a new domain with explicit object-by-object mapping. Conversational output format.
+
+Schema Equivalence (2 Args) -- Two-argument model-theoretic sameness check. Determines whether two theories have the same class of models, with explicit verdict and supporting reasoning.
+
+Definitional Equivalence (2 Args) -- Bi-directional definitional translation between two theories. Produces 4-part concise output: RESULT, WHY, INTUITIVE EXPLANATION, TRANSLATED AXIOMS, with explicit symbol mapping (e.g. R ↦ <). No long proofs, no jargon.
+
+Model-Preserving Rewrite -- Canonical normalization of any axiom system. Output format: LANGUAGE: {predicates} + numbered AXIOMS list. Removes unnecessary primitives (constants become existential axioms), produces minimal vocabulary with no prose -- optimized for downstream AI pipelines.
+
+Conservative Extension Analysis (2 Args) -- Two-argument check (Base Theory T₁ vs. Extended Theory T₂) using the correct definition: T₂ is conservative iff it proves no new theorems in L₁. Explicit definability is treated as sufficient but not necessary. Prompt includes three calibration examples to guide reasoning.
+
+Compare Conceptual Schemes (2 Args) -- Side-by-side comparison of how two theories classify their primitive vs. derived notions. Surfaces which concepts are taken as fundamental in each scheme.
+
+Ontological Dependence -- Maps which primitive symbols genuinely depend on which others. Identifies the true minimal ontology of a theory.
+
+Generate Alternative Conceptualizations -- Produces equivalent axiom-sets built on different primitive vocabularies. Useful for discovering that a single theory has multiple legitimate foundational presentations.
+
+Interpret Canonical Meaning -- Identifies the intended interpretations of primitive symbols in a theory, recovering the conceptual content behind formal symbols.
+
+Find an Interpretation -- Locates true models for a theory across 23 domains organized into 5 groups (A–E) -- mathematical, computational, philosophical, physical, linguistic, chemical, biological, economic, social, organizational, network, market-microstructure, and more. Mandatory category enforcement: the AI must use the specified domain, with custom output format (INTERPRETATION + WHY THIS WORKS).
+
+F10 Batch Mode -- Runs all 23 interpretation domains in a single job. Each domain uses its own isolated f10-* database preset with three-pass Cross-Chunk Coherence (skeleton extraction → chunk processing → stitch verification).
+
+Axiom Builder -- Build single axiom-sets or paired System A / System B outputs. When <<<SEPARATOR>>> is detected, the UI renders two independent boxes with separate Copy A / Copy B buttons.
+
+Multi-Provider Routing -- ZHI 1 through ZHI 4. Pick the model best suited for each task, or compare side-by-side. Provider names are fully abstracted behind unified branding.
+
+System Diagnostic -- Verifies all four API providers, the PostgreSQL connection, and the full instruction-set pipeline are operational.
+
+🚀 What Makes It Different
+It actually follows instructions -- The system's job is to do exactly what you said. If you ask for a model in the chemical domain, you get a chemical model, not a "creative interpretation" in a different field.
+
+Zero cross-contamination -- Every function and every F10 domain loads its instructions from an isolated PostgreSQL preset. Fail-fast enforcement throws MissingPresetError rather than silently falling back to a generic prompt. A chemistry job can never accidentally use the mathematics prompt.
+
+Five-layer fallback chain, no empty prompts -- User instructions → subfunction DB lookup → main-function DB lookup → hardcoded defaults → generic fallback. No function ever runs with an empty instruction set, but every layer is explicit and inspectable.
+
+It separates structure from truth -- A theory can be formally consistent yet ontologically empty, or compact yet definitionally rich. The platform reports each dimension separately rather than collapsing them into one mushy "quality" score.
+
+It corrects, not just critiques -- When a rewrite is requested, the system produces the rewrite. When a translation is requested, it produces the translation. When a model is requested, it produces a model -- not a discussion of how one might construct one.
+
+Four proprietary LLMs, one workflow -- ZHI 1 through ZHI 4. Pick per task or run in parallel and compare. Provider details are fully hidden from the UI.
+
+Dual-input comparison built in -- Functions 2, 3, 5, and 6 expose side-by-side input boxes for two-theory comparison work, with <<<SEPARATOR>>> parsing handled transparently on the backend.
+
+23 interpretation domains in one batch -- F10 Batch Mode runs every domain in groups A–E independently and returns a unified report. Each domain is processed under its own isolated preset with cross-chunk coherence verification.
+
+Paste normalization -- Cleans malformed clipboard content from PDFs, word processors, and academic papers automatically before submission.
+
+Canonical output formats -- Functions 3, 4, and 10 produce machine-readable structured output (LANGUAGE/AXIOMS blocks, 4-part verdict blocks, INTERPRETATION/WHY THIS WORKS blocks) suitable for downstream pipelines, not just human reading.
+
+🏗️ Architecture
+Frontend: React + TypeScript, Vite, Wouter, TanStack Query, Shadcn/ui + Radix, Tailwind CSS v4 (Swiss/Rationalist theme)
+Backend: Node.js + Express, TypeScript via tsx, RESTful /api/ endpoints (/api/process, /api/chat, /api/cc/batch, /api/cc/process, /api/cc/job/:jobId)
+AI Layer: Unified provider abstraction over OpenAI, Anthropic, xAI (Grok), and DeepSeek SDKs -- branded internally as ZHI 1–4
+Database: PostgreSQL via Drizzle ORM. Tables: instruction_sets (75 hyphen-keyed presets), mt_jobs, mt_chunks, mt_interpretations, users
+Build: Vite for client, esbuild for server bundling, output to dist/
+🔑 Required Environment Variables
+DATABASE_URL -- PostgreSQL connection string
+OPENAI_API_KEY -- OpenAI access
+ANTHROPIC_API_KEY -- Anthropic access
+XAI_API_KEY -- xAI / Grok access
+DEEPSEEK_API_KEY -- DeepSeek access
+▶️ Getting Started
+npm install
+npm run db:push     # apply Drizzle schema
+npm run dev         # start dev server
+
+The app runs both frontend and backend on a single port via the Start application workflow.
