@@ -1120,8 +1120,7 @@ export default function Home() {
       { title: "Classic EZ Reader", url: "https://classicezreader.com" },
       { title: "EZ Story", url: "https://ezstory.xyz", videoUrl: "https://www.youtube.com/watch?v=sRaZtSnkybM" },
       { title: "TextMD", url: "https://textmd.xyz" },
-      { title: "NeuroText", url: "https://neurotext.uk" },
-      { title: "OCR Pro", url: "https://ocrpro.xyz" }
+      { title: "NeuroText", url: "https://neurotext.uk" }
     ],
     "🎓 Education & Learning": [
       { title: "Chess Tutor", url: "https://chesstutor.xyz" },
@@ -1143,7 +1142,6 @@ export default function Home() {
       { title: "Cognitive Enhancer", url: "https://cognitiveenhancer.xyz" },
       { title: "Psychology Pro", url: "https://psychologypro.xyz", videoUrl: "https://www.youtube.com/watch?v=0hIA4NsETZw" },
       { title: "Cognitive Profiler", url: "https://supercognitiveprofiler.com" },
-      { title: "Semantic Skeletonizer", url: "https://semskel.xyz" },
       { title: "Text Genius", url: "https://textgenius.xyz" },
       { title: "ModelWiz", url: "https://modelwiz.xyz" },
       { title: "Model Transformer", url: "https://modeltransformer.xyz/" },
@@ -1152,7 +1150,8 @@ export default function Home() {
     "📸 Visual & Multimedia": [
       { title: "Frame Shot", url: "https://frameshot.xyz" },
       { title: "Photo Psychoanalysis", url: "https://photopsychoanalysis.xyz" },
-      { title: "Smart Photo/Video Viewer", url: "https://smartphotoviewer.xyz" }
+      { title: "Smart Photo/Video Viewer", url: "https://smartphotoviewer.xyz" },
+      { title: "OCR Pro", url: "https://ocrpro.xyz" }
     ],
     "🎧 Audio & Interactive Media": [
       { title: "Audio Transcriber", url: "https://audiotranscriber.xyz" },
