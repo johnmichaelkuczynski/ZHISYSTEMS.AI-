@@ -1,0 +1,78 @@
+🎓 AI 102: Applied AI Engineering A fully online, asynchronous college course with a real-time AI-integrity engine, built for the LLM era
+
+🧩 Overview AI 102 is a 13-module college-level course that teaches the practical building blocks of modern AI applications — prompting as engineering, context windows, system prompts, retrieval-augmented generation, tool use, model selection, fine-tuning, structured output, chains and agents, cost and latency, and how the pieces fit together into a real system — through discussions, essays, and a culminating critical-analysis term paper on one foundational applied-AI paper. It is designed to be taken in a world where every student has a chatbot one tab over, and is built around a strict operating principle: the work the student turns in must be the student's own thinking.
+
+Unlike traditional LMS course shells that simply collect a final PDF and hope for the best, AI 102 ships with a live two-layer integrity engine that watches the writing as it happens, scores the final text against a frontier AI-detection service, replays every keystroke for the instructor, and adapts its judgment to each student's own writing baseline. The course is rigorous, the grading is transparent, and the system never refuses to render a verdict.
+
+👥 Who It's For
+
+College and university instructors — who need to assign substantial written work without surrendering the classroom to ChatGPT
+Department chairs and deans — who need a defensible, auditable record of student writing process, not just product
+Course designers building in the LLM era — who want a working reference implementation of an integrity-first online course
+Students taking AI 102 — who get a guided AI tutor, model responses for every assignment, and a clear signal of when their writing is drifting toward AI-generated
+Researchers in writing process and detection — who get a rich event stream (keystrokes, pauses, deletions, caret jumps) on every submission, plus per-feature forensics
+Anyone teaching writing-intensive material online — who refuses to choose between "give up and let AI do it" and "ban technology entirely"
+⚙️ Core Capabilities Full 13-module applied-AI curriculum — 7 discussions, 5 essays, and a term paper (with required outline) covering prompting as engineering, context windows and system prompts, retrieval-augmented generation, tool use and function calling, model selection trade-offs, fine-tuning vs. prompting vs. RAG, structured output and validation, chains and agents, cost and latency engineering, evaluation and observability, and a culminating critical analysis of one foundational applied-AI paper (Lewis et al. on RAG, Schick et al. on Toolformer, or Wei et al. on chain-of-thought). 800 points total.
+
+Integrity Canvas — Per-assignment two-box workflow. Box 1 produces single-shot AI feedback in five sections and then locks the draft so it cannot be silently rewritten by a chatbot. Box 2 is a paste-blocked editor that captures every keystroke, autosaves every 5 seconds, runs real-time GPTZero scoring with sentence-level highlighting, surfaces a traffic-light bar, and warns after 30 cumulative seconds in the red.
+
+Two-layer AI detection — Every submission is scored by two independent systems. GPTZero analyzes the final text. A diachronic process-forensics engine analyzes the writing process itself across 11 features (burst uniformity, pause before new sentence/paragraph, deletion ratio, structural edits, caret backtracks, abandoned starts, burst-length variability, front-to-back linearity, active time, characters per second) and produces a 0–100 suspicion score with human / mixed / likely-AI thresholds.
+
+Per-student baseline with anti-drift lock — The forensics engine folds in each student's own writing rhythm via running mean for the first two submissions, then freezes the baseline. This blocks the slow-drift attack where a student gradually trains the system to accept AI-like writing as their personal norm.
+
+AI Tutor (Claude Sonnet 4.5) — Speaks for the instructor, asks probing questions, and gives formative feedback. Will never write the student's assignment for them. Module-aware: pulls in the relevant prompt and concepts for whichever assignment the student is working on.
+
+One-time integrity disclosure — On first module visit, every student sees a generic disclosure modal that names GPTZero (which is already public) but never names the process-forensics features. Acknowledgment is persisted. No tuning oracle is ever leaked to students.
+
+Live throttled integrity signal — While writing, students see the live process-suspicion class only — no feature names, no flag list, no thresholds. Rate-limited to one call per 60 seconds and gated on real writing volume. Accommodated students get a plain textarea and skip monitoring entirely.
+
+Admin dashboard — /admin/submissions and per-submission detail pages with replay, sparkline, activity report, raw vs. baseline-adjusted forensics, GPTZero per-sentence highlights, and a per-student accommodation toggle. First authenticated user can claim admin via bootstrap; after that, admin is granted only by an existing admin.
+
+Activity report on every submission — The server computes a human-readable activity report on insert (total time, pauses, edit patterns, suspicious bursts) so the instructor never has to read raw keystroke JSON.
+
+Sequential gating — Students unlock module N+1 only after submitting module N. The server enforces it; the UI mirrors it.
+
+System Diagnostic — One-click self-check at /api/diagnostic/run verifies the database connection, all tables, curriculum integrity (13 modules, 800 points), the live GPTZero key, the Anthropic key, process-forensics scoring on two synthetic fixtures (transcription must score ≥70 likely-AI; composition must score <35 human), and full functional round-trips on drafts, autosave, submissions, gating, and admin toggles. Pass/fail/skip with full evidence.
+
+🚀 What Makes It Different It treats writing as a process, not a product — Most plagiarism tools see only the final text. AI 102 sees the entire writing session: every keystroke, every pause, every deletion, every caret jump. The forensic signal is independent of what GPTZero thinks of the prose.
+
+It is honest about what students can see — The disclosure modal names GPTZero because GPTZero is public knowledge. It never names the process-forensics features, because doing so would hand a sophisticated cheater a tuning oracle. This asymmetry is deliberate.
+
+It cannot be trained out of catching you — The per-student baseline freezes after two submissions. A student who tries to slowly normalize AI-like rhythm into their baseline cannot succeed: the window closes early.
+
+The tutor refuses to do the work — The Anthropic-backed tutor is configured to ask questions, point at concepts, and give formative feedback — never to write the assignment. This is enforced in the prompt, not just suggested.
+
+The diagnostic is the spec — The two synthetic fixtures (transcription must score likely-AI, composition must score human) gate any change to the forensics weights or thresholds. Tuning is not vibes-driven; it is test-driven.
+
+Single source of truth for curriculum — The 13-module curriculum lives in one TypeScript file consumed by both the client and the server. Module IDs, points, prompts, and model responses cannot drift between what the student sees and what the server validates against.
+
+Accommodations are first-class — An admin toggle per student switches that student to a plain textarea with no monitoring, no paste-block, no scoring. The system records the accommodation; no feature flags or special routes required.
+
+No silent fallbacks — When GPTZero is unreachable, the submission is recorded with aiStatus: failed and surfaced as such. When the API key is missing, the diagnostic says so loudly. There are no fake green checks.
+
+One self-check covers the whole stack — /api/diagnostic/run exercises env vars, database connectivity, schema reachability, curriculum integrity, both AI providers live, both forensics fixtures, and a complete functional round-trip (create student → ack integrity → save draft → lock → autosave canvas → submit → check gating → list → toggle accommodation → cascade delete). One button, the whole truth.
+
+🏗️ Stack
+
+Monorepo: pnpm workspaces, Node 24, TypeScript 5.9
+API: Express 5 + Zod (zod/v4) + Drizzle ORM
+Database: External Neon Postgres
+Web: React + Vite 7, served on port 5000 with /api proxied to the API server on port 8000
+AI providers: Anthropic Claude Sonnet 4.5 (tutor + grader) via the workspace Replit AI integration; GPTZero v2 (final-text AI scoring)
+Build: esbuild (CJS bundle for the API server)
+API codegen: Orval from OpenAPI spec
+🔐 Required Environment
+
+DATABASE_URL — Neon Postgres connection string
+SESSION_SECRET — express-session secret
+AI_INTEGRATIONS_ANTHROPIC_API_KEY + AI_INTEGRATIONS_ANTHROPIC_BASE_URL — Anthropic via the Replit AI integration
+GPTZERO_API_KEY — GPTZero v2 (course works without it, but every submission's aiStatus will be failed)
+ASSEMBLYAI_API_KEY (optional) — enables voice dictation in the canvas
+🧪 Key Commands
+
+pnpm run typecheck — full typecheck across all packages
+pnpm run build — typecheck + build all packages
+pnpm --filter @workspace/db run push — push DB schema changes
+pnpm --filter @workspace/api-server run dev — run the API server locally
+pnpm --filter @workspace/phil-101 run dev — run the web app locally
+curl -X POST $URL/api/diagnostic/run — run the full self-check
