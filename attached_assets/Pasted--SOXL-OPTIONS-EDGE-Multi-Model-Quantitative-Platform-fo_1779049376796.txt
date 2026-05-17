@@ -1,0 +1,58 @@
+📈 SOXL OPTIONS EDGE
+Multi-Model Quantitative Platform for Options Mispricing Detection, Stochastic Volatility Calibration, and Walk-Forward Backtesting
+
+🧩 Overview
+SOXL Options Edge is a multi-model quantitative trading platform that identifies mispriced options on the SOXL 3× leveraged semiconductor ETF by comparing live market prices against fair values computed from 13 different stochastic and Lévy pricing models. It plugs into institutional-grade calibration techniques (Carr-Madan FFT, Levenberg-Marquardt least-squares, CIR-MLE, GARCH(1,1), Cholesky-fBM Monte Carlo) and lets users route any analysis to the model best suited for the current market regime — short-dated jump risk, long-dated smile fitting, regime-switching variance, or rough volatility.
+
+Unlike retail screeners that surface "unusual options activity" without explaining why, SOXL Options Edge is built around a strict operating principle: every signal is grounded in a calibrated model, every fair-value gap is quantified in dollars and percent, and every recommendation is paired with a Monte-Carlo confidence band. If the model says a put is 40% overpriced, the platform shows you the 50,000-path terminal distribution that proves the strikes in question carry no realistic probability mass. No black boxes, no hand-waving, no "trust the algorithm."
+
+👥 Who It's For
+Quantitative traders and prop-shop researchers -- need to validate that a model's edge survives walk-forward backtesting before allocating capital, and want rolling-Sharpe regime detection across multiple competing pricers
+Options market makers and vol arbitrageurs -- need real-time mispricing surfaces with per-strike confidence bands to identify which contracts are genuinely off-fair vs. simply stale data
+Academic researchers in financial mathematics -- need a working laboratory for comparing Heston, Bates, SVJJ, CGMY, NIG, SABR, Rough Heston, and other stochastic/Lévy models on the same data with identical calibration protocols
+Risk managers running 3× leveraged ETF books -- need tail-floor-enforced fair values that don't understate crash-insurance premium on far-OTM puts
+Retail traders graduating from naive directional bets -- want to know whether the put they're about to sell is statistically rich or whether they're picking up nickels in front of a steamroller
+Anyone -- who wants to know what an actually calibrated, model-aware fair value looks like, instead of a Black-Scholes mid with the implied vol the broker quoted back to them
+⚙️ Core Capabilities
+Multi-Model Pricing Engine -- 13 stochastic and Lévy models share a single Pricer interface (Heston, Bates, SVJJ, Merton, Kou, Variance Gamma, CGMY, NIG, SABR, Double Heston, Rough Heston, BS-Realized-Vol, BS-GARCH 30d Forecast). Switch models live from the sidebar; each has its own cache so previously-fit models load instantly.
+
+Dual Calibration Pipeline -- Every pricer calibrates twice: once to 2 years of historical SOXL returns (cached weekly per ISO-week + model) for a "what the world has been doing" baseline, and once to the live options chain via Levenberg-Marquardt least-squares on observed mid prices (cached every 10 minutes). The gap between historical and market-implied parameters surfaces as the Parameter Gap dashboard.
+
+Three Interactive 3-D Surfaces -- Market implied volatility, model fair-value implied volatility, and per-option mispricing all rendered as full strike × expiration Plotly surfaces. Color-clipped at ±200% so the colorbar stays readable while raw Z-values are preserved for far-OTM crash-insurance regions.
+
+Mean-Reversion Disequilibrium Overlay -- A 200-day moving-average z-score with OLS-fit reversion speed (λ) is layered on top of every model's drift, so fair values automatically tilt toward mean reversion when SOXL is stretched. The same overlay flows into the Monte-Carlo confidence bands.
+
+Monte-Carlo Confidence-Band Signals -- Every top-mispriced option gets a 5,000-path simulation of its terminal payoff distribution. Signals are labeled BUY / SELL / WATCH based on where the live market price sits within the model's 90% confidence band. Antithetic variates halve variance at no computational cost.
+
+Robinhood-Style Featured Picks -- The page leads with "FEATURED CALL TO BUY" and "FEATURED PUT TO SELL" cards whose strikes are overlaid as dashed lines on a SOXL price chart with timeframe buttons (1D / 1W / 1M / 3M / YTD / 1Y / 5Y / MAX) and a log/linear toggle. The featured picks are guaranteed to match the top row of the underlying signal tables.
+
+Pricing Diagnostics Panel -- A built-in self-test that runs three sanity checks: put-call parity per expiration, Black-Scholes comparison at realized vol and ATM market IV, and a 50k-path terminal-distribution histogram with top-overpriced-put strikes marked. Catches engine bugs and model breakdowns before they show up as bad trades.
+
+Walk-Forward Backtest Module -- Four-tab backtesting suite that replays any strategy point-in-time using Polygon historical option chains. Each backtest day re-calibrates models from the available history (no look-ahead bias), pulls that day's chain via Polygon as_of, scores edges, and trades through a full Portfolio / Order / Position harness with configurable slippage, equal-weight sizing, and mark-to-market via VWAP or model fallback.
+
+Model Comparison Tab -- Multiselect over all 13 pricers; runs the App-mispricing strategy with each chosen model on the same window and renders equity overlays, a Sharpe-sorted summary table, rolling 90 / 180 / 365-day Sharpe charts for regime-shift detection, a "Best Model by Window" month-end leaderboard with cumulative win-counts, and a 🎯 Current Recommendation panel pinned at the top showing the trailing-90-day Sharpe winner with runner-up and verdict label.
+
+Verdict Banner -- Every backtest result is interpreted with a Sharpe-based verdict: EXCEPTIONAL (>2.0), STRONG (≥1.5), DECENT (≥1.0), MARGINAL (≥0.5), NO MEANINGFUL EDGE (≥0.0), or LOSING STRATEGY (<0). Comparator lines for Buy-and-Hold SOXL and Black-Scholes-Edge are appended automatically with a paired t-test of daily returns.
+
+Natural-Language Strategy Builder -- Describe a strategy in plain English ("Every Monday, sell a 30-delta SOXL put expiring Friday, hold to expiration, 1% of capital") and the platform uses Anthropic Claude Sonnet 4.5 to convert it into a structured JSON spec. Ambiguous fields surface as clarification questions before save. Strategies persist to disk with full CRUD (run / duplicate / delete).
+
+Tail-Floor Calibration -- After fitting historical Heston-family params, an iterative bumper simulates 180-day terminal prices and adjusts xi (×1.25) and rho (-0.10) up to 8 times until the 5th-percentile drawdown is at least 35% — appropriate for a 3× leveraged ETF. Prevents understating put fair values during low-vol regimes.
+
+🚀 What Makes It Different
+It actually calibrates -- Every pricer's parameters are fit from data twice per session — once from history, once from the live chain. The platform doesn't ask you to type in a volatility number and trust it. Most retail tools collapse this into a single "IV" field; this one shows you both, side by side, and flags the gap.
+
+It separates structure from truth -- A signal can be statistically large without being meaningful. The platform reports raw edge percentages uncapped (some far-OTM puts genuinely look 500% overpriced because the model can't generate the crash scenarios needed to justify them) and then asks the diagnostics panel to prove the model is or isn't missing tail mass at those strikes. Two separate questions, two separate answers.
+
+It corrects, not just critiques -- When the put-call parity test detects a model bug, the platform raises a warning banner. When the terminal-distribution histogram shows no mass at the strikes of the top over-puts, the platform surfaces it as a model-breakdown diagnostic. When historical and market parameters diverge sharply, the Parameter Gap dashboard explains what the market is pricing in that history isn't.
+
+Thirteen models, one interface -- Pick the model best suited for the current question: Heston for vanilla SV, Bates/SVJJ for jump risk, Kou or Merton for crash-insurance pricing, VG/CGMY/NIG when you suspect non-Gaussian tails, SABR for smile-dynamics-driven strategies, Double Heston for two-factor variance, Rough Heston when realized vol is path-dependent, or the BS-Realized/BS-GARCH baselines when you want a flat-vol reference. Automatic cache reuse and parallel calibration keep model-switching near-instant.
+
+Walk-forward, not curve-fit -- The backtest harness re-calibrates models from data available as of each backtest day. There is no look-ahead bias by construction. The Model Comparison tab makes it trivial to verify that whichever model "wins" your in-sample Sharpe race also wins your out-of-sample one.
+
+Statistical scoring built in -- Every signal carries a Monte-Carlo confidence band (5,000 paths, antithetic variates). Every backtest carries a Sharpe verdict, a paired t-test vs. Buy-and-Hold, and rolling-Sharpe charts that show whether the edge is persistent or a single-window fluke.
+
+Regime-aware recommendations -- The 🎯 Current Recommendation panel doesn't just tell you which model had the best full-window Sharpe; it tells you which one is winning right now, in the trailing 90 trading days, and how many of the last N months it has been the leader. Switch the model in the sidebar accordingly.
+
+Honest about data limits -- The platform tells you exactly what Polygon's basic plan can and can't deliver (delayed last_trade prints, no NBBO quotes), filters out stale prints via no-arbitrage intrinsic checks, and labels residual noisy edges on illiquid strikes as a data limitation rather than a model bug. No silent fallbacks.
+
+One-click full diagnostic -- The Pricing Diagnostics expander runs three independent sanity checks on the active model in a single click. Color-coded pass/warn/fail surfaces engine bugs and model breakdowns before they cost real money.
