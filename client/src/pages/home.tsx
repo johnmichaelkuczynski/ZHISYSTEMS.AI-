@@ -2172,7 +2172,7 @@ export default function Home() {
       { title: "Text Genius", url: "https://textgenius.xyz" },
       { title: "ModelWiz", url: "https://modelwiz.xyz" },
       { title: "Model Transformer", url: "https://modeltransformer.xyz/", videoUrl: "https://www.youtube.com/watch?v=EubJaYvDbpg" },
-      { title: "LLM Plus", url: "https://llmplus.xyz/" }
+      { title: "LLM Plus", url: "https://llmplus.xyz/", videoUrl: "https://youtu.be/MreIR_4VH-M" }
     ],
     "📸 Visual & Multimedia": [
       { title: "Frame Shot", url: "https://frameshot.xyz" },
