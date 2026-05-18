@@ -1,0 +1,61 @@
+📄 SHRINK YOUR PDF
+A fast, free, no-account-required PDF compression tool with target-size support and per-page intelligence.
+
+🧩 Overview
+Shrink Your PDF is a browser-based PDF compression tool built on top of Ghostscript. It plugs into a small Express API that processes uploads in memory and streams progress back to the browser in real time. Users can either pick a quality preset (from Print Quality down to Extreme) or set an exact target file size in megabytes and let the app pick the right strategy automatically.
+
+Unlike most online PDF compressors that quietly fail on stubborn pages, return one-size-fits-all output, or hide the file behind a paywall, Shrink Your PDF is built around three principles: every page is processed independently, every compression attempt is visible to the user, and no file ever leaves the temporary in-memory buffer. If you ask for 1 MB, the system tries strategies from gentlest to most aggressive and stops the moment it hits your target. If a page resists compression, you see it, you decide whether to keep it as-is, and you recompress without re-uploading.
+
+👥 Who It's For
+Anyone emailing large PDFs -- needs to fit a scanned contract, invoice, or report under a mailbox attachment limit (usually 10 MB or 25 MB)
+Students and researchers -- need to shrink scanned textbooks, papers, and lecture notes for upload portals with strict size caps
+Lawyers, accountants, and consultants -- need to compress signed agreements and image-heavy reports without losing legibility
+Designers and print shops -- need a quick way to triage oversized client files before review or proofing
+Anyone tired of uploading sensitive documents to sketchy "free" PDF sites -- needs an option that doesn't require an account, an email, or a wait queue
+⚙️ Core Capabilities
+Quality Preset Mode -- Five named compression levels: Extreme (50 dpi), Maximum (72 dpi), Recommended (120 dpi), Print Quality (200 dpi), and Press Quality (300 dpi). Each preset maps to a tuned set of Ghostscript downsampling, JPEG quality, and color preservation parameters.
+
+Target Size Mode -- Set an exact file size in MB via slider, presets (500 KB, 1 MB, 2 MB, 5 MB, 10 MB, 25 MB), or numeric input. The backend tries up to nine compression strategies in order (printer → ebook → screen → extreme → rasterize at 100/72/50/36/24 dpi) and stops as soon as the target is met.
+
+Per-Page Processing -- Every page is split out and compressed independently, so a single stubborn page can never hang the whole job. Each page has its own 45-second timeout; failures are reported and the job continues.
+
+Stubborn Page Detection -- Any page that compresses to more than 80% of its original size (or fails outright) is automatically flagged in an amber panel with a checkbox. Tick the pages you want to keep as-is and click recompress -- no re-upload required.
+
+Rasterize Fallback -- For pre-compressed, signed, or otherwise resistant PDFs that ignore standard pdfwrite passes, the app falls back to the pdfimage24/pdfimage8 device with JPEG compression. This is what makes aggressive compression actually aggressive on real-world files.
+
+Real-Time Progress via SSE -- Both modes stream live progress over Server-Sent Events. Quality mode shows "Compressing page X of Y" with a true progress bar; target mode shows each strategy as it's tried, with the resulting file size and a ✓ when the target is hit.
+
+Grayscale Conversion -- Optional toggle that strips color from the output for extra savings on scans, photos, and color-heavy documents. Available in both modes.
+
+Per-Page Report -- After every job, an expandable table shows every page's original size, compressed size, percentage saved, and status (ok / stubborn / kept original / failed). No black box.
+
+In-Memory Processing -- Files are held in a Map with a 30-minute TTL and deleted automatically. Nothing is written to disk beyond a short-lived temp directory used during the Ghostscript pass itself.
+
+XHR Upload Progress -- Real upload progress bar via XMLHttpRequest.upload.onprogress, so large files don't appear to stall at "uploading…" for thirty seconds.
+
+Hard 100 MB Upload Cap -- Enforced client-side and server-side to keep the in-memory model safe.
+
+Resumable Recompression -- Once a file is uploaded, the buffer is reused for every subsequent compression attempt. Try different quality levels, toggle grayscale, or exclude stubborn pages without re-uploading a single byte.
+
+🚀 What Makes It Different
+It actually compresses stubborn PDFs -- Most online tools quietly return the original file (or a 2% smaller copy) when they hit a pre-compressed, scanned, or signed PDF. Shrink Your PDF detects this and falls back to a rasterize-and-rebuild pass that typically achieves 70-95% size reduction on image-heavy documents.
+
+It separates user intent from compression strategy -- You either pick a quality level (and accept whatever size results) or pick a target size (and accept whatever quality results). Most tools conflate the two with a useless "low / medium / high" slider that doesn't tell you what you'll get.
+
+It tells you exactly what happened -- Every page's before/after size, every strategy that was tried, every page that resisted compression. No hidden processing, no vague "done!" message.
+
+It lets you intervene without starting over -- Stubborn pages get flagged, and you can keep them as originals and recompress the rest with one click. No re-upload, no losing your settings.
+
+It hits exact target sizes -- Set "1 MB" and the system will try increasingly aggressive strategies until it gets there, stopping at the first one that works so you keep the highest possible quality. If it can't hit your target, it returns the smallest version it managed and tells you why.
+
+It never leaves your browser session -- Files are processed in memory, kept for 30 minutes, and deleted. No account, no email, no upload queue, no "your file is in position 47."
+
+It's free and unbranded -- No watermark, no daily limit, no "upgrade to compress more than 3 files per day."
+
+It's built on the right tool for the job -- Ghostscript is the reference implementation for PDF compression. The app is a thin, opinionated, browser-friendly wrapper around it -- not a half-baked WebAssembly imitation.
+
+🛠️ Stack
+Frontend -- React 18 + Vite + TypeScript, Tailwind CSS, shadcn/ui components, wouter for routing, EventSource for SSE
+Backend -- Express 5 (Node.js 24) + TypeScript, Ghostscript via child_process, in-memory job store with 30-minute TTL
+Monorepo -- pnpm workspaces with shared API spec (OpenAPI + Orval codegen), Drizzle ORM scaffolding, and per-artifact builds
+Compression engine -- Ghostscript 10.05.1 with pdfwrite (standard passes) and pdfimage24 / pdfimage8 (rasterize fallback)
