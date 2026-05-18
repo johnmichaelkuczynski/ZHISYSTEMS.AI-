@@ -2254,9 +2254,10 @@ export default function Home() {
     ],
     "📸 Visual & Multimedia": [
       { title: "Frame Shot", url: "https://frameshot.xyz" },
+      { title: "Graphic Novel Creator", url: "https://graphicnovelcreator.xyz" },
+      { title: "OCR Pro", url: "https://ocrpro.xyz" },
       { title: "Photo Psychoanalysis", url: "https://photopsychoanalysis.xyz" },
-      { title: "Smart Photo/Video Viewer", url: "https://smartphotoviewer.xyz" },
-      { title: "OCR Pro", url: "https://ocrpro.xyz" }
+      { title: "Smart Photo/Video Viewer", url: "https://smartphotoviewer.xyz" }
     ],
     "🎧 Audio & Interactive Media": [
       { title: "Audio Transcriber", url: "https://audiotranscriber.xyz" },
