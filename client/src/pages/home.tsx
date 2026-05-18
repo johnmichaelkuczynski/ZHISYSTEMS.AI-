@@ -1880,7 +1880,7 @@ export default function Home() {
       { title: "Major Brain", url: "https://majorbrain.xyz" },
       { title: "Model Builder", url: "https://modelwiz.xyz" },
       { title: "Originality Meter", url: "https://originalitymeter.com", videoUrl: "https://www.youtube.com/watch?v=lRdczUD_0PE" },
-      { title: "Intelligence Meter", url: "https://intelligencemeter.xyz" },
+      { title: "Intelligence Meter", url: "https://intelligencemeter.biz" },
       { title: "Maximize Intelligence", url: "https://maximizeintelligence.xyz", videoUrl: "/videos/maximize-intelligence-tutorial.mp4" },
       { title: "Mind Profiler", url: "https://mindprofiler.xyz/", videoUrl: "/videos/mind-profiler-tutorial.mp4" },
       { title: "Text Evaluator", url: "https://textevaluator.xyz" },
