@@ -1,0 +1,89 @@
+🖼️ SMART PHOTO VIEWER
+
+High-Performance Photo & Video Viewer with Local AI-Powered Organization
+🧩 Overview
+
+Smart Photo Viewer is a privacy-first media viewer for browsing, organizing, and analyzing large photo and video collections directly in your browser. It combines a fast, flexible viewing experience with completely local AI features — every model runs inside the browser, and no images or data ever leave your device.
+
+Unlike cloud photo apps that upload your library, compress your originals, and lock features behind subscriptions, Smart Photo Viewer is built around a strict operating principle: your media stays yours, photos are never cropped, and every control is visible in the UI rather than hidden behind keyboard shortcuts. Open a folder, scroll through thousands of files smoothly, and use local AI to group by theme or find visually similar images — all offline, all private.
+👥 Who It's For
+
+    Photographers and content creators -- need to triage large shoots quickly without uploading originals to a cloud service
+    Videographers and editors -- need frame-accurate screenshot capture, batch screenshot extraction, and multi-video side-by-side comparison
+    Archivists and collectors -- need to browse massive local libraries without size limits, format conversions, or compression
+    Researchers and analysts -- need to find visually similar items and auto-cluster images by theme across thousands of files
+    Privacy-conscious users -- need a media viewer that never sends a single byte to a server, suitable for any content
+    Anyone -- who is tired of cloud photo apps cropping their pictures, losing originals, or charging monthly fees
+
+⚙️ Core Capabilities
+
+    Dynamic Masonry Grid -- Mouse wheel changes column count on the fly (1 to 20 columns). Photos display at full natural aspect ratio with zero cropping and zero gaps between cells. Lazy batch loading keeps it snappy with thousands of files.
+
+    Multi-Photo Viewing -- Display up to 8 photos simultaneously in a configurable grid (1, 2, 4, 6, or 8 slots). Pick any image from the library for any slot via thumbnail picker. Mirrors the multi-video workflow.
+
+    Multi-Video Playback -- Play up to 8 videos at once in a synchronized grid. Independent speed control per slot, full containment with no cropping, perfect for comparison work.
+
+    Filmstrip View -- Horizontal thumbnail strip with large preview pane, eight thumbnail sizes (80px to 500px), auto-scrolling to keep the current image centered, bright yellow active indicator, and zoom-with-drag-to-pan support.
+
+    Full-Screen Viewer -- Click left or right third of the image to navigate. Mouse wheel to zoom. Zoom level persists across navigation. Reset button appears when zoomed. Position indicator shows "X / Y" at all times.
+
+    Slideshow Mode -- Smooth crossfade transitions, four transition types (fade, slide, zoom, none), five transition speeds, configurable interval. Previous/Next/Pause controls always visible. Starts from whatever photo you are currently viewing — never jumps back to the first one.
+
+    Video Screenshot Capture -- One-click screenshot of the current video frame, downloaded immediately to your Downloads folder with timestamp in the filename. No dialogs, no folder pickers, no clipboard tricks.
+
+    Batch Screenshot Tool -- Generate any number of evenly-spaced screenshots across a video (5 to 2000, range scales with video length). Live progress, preview filmstrip, downloads all frames as a single ZIP.
+
+    Group by Theme (Local AI) -- Auto-clusters your entire library by visual similarity using a CLIP model that runs 100% in the browser. After the first model download, works completely offline.
+
+    Find Similar (Local AI) -- Right-click any image to instantly surface visually similar items from across your library. Powered by local CLIP embeddings cached in IndexedDB.
+
+    Drag-and-Drop Folder Loading -- Drop a folder onto the window, or use the file picker (Ctrl+A to select all). Folder picker also supported. Handles thousands of files without crashing.
+
+    Format Support -- Images: JPG, JPEG, JFIF, PNG, GIF, WebP, BMP, SVG, HEIC, HEIF, AVIF, TIF, TIFF. Videos: MP4, WebM, OGG, MOV, AVI, MKV, M4V, FLV, WMV, 3GP, MPG, MPEG.
+
+🚀 What Makes It Different
+
+    Photos are never cropped -- Every view uses object-contain with letterboxing. What you shot is what you see, at the exact aspect ratio you shot it. No square crops, no center crops, no thumbnails that lie about composition.
+
+    Every control is visible -- No hidden keyboard shortcuts you have to memorize. Every feature — slideshow, multi-photo, screenshots, navigation — has a clearly labeled button in the UI.
+
+    Slideshow starts where you are -- Open any photo, hit Slideshow, and it begins right there. The standard "always restart from photo 1" behavior of other viewers is gone.
+
+    100% local AI -- CLIP runs in WebGL inside your browser via transformers.js. Embeddings are cached in IndexedDB. After the first model download, theme grouping and similarity search work fully offline with zero server calls.
+
+    Privacy by design -- No accounts, no telemetry, no uploads, no analytics. Safe for any content. The entire app is static files served from your browser.
+
+    No cloud, no compression, no size limit -- Open a folder with 10,000 photos and they all load. Your originals are read directly from disk via the browser's File API — never copied, never uploaded, never re-encoded.
+
+    Built for big libraries -- Lazy batch thumbnail loading, IndexedDB embedding cache, virtualized rendering patterns. Handles thousands of files without freezing the tab.
+
+    One-click ZIP export for batch screenshots -- Extract 100 evenly-spaced frames from a video and get a single ZIP download. No per-file "Save As" dialogs.
+
+    Multi-everything -- Up to 8 photos or 8 videos on screen at once, each in its own slot, each independently controllable. Compare shots, sync playback, A/B variants.
+
+🛠️ Tech Stack
+
+    React 18 + TypeScript + Vite -- Modern build pipeline, fast HMR
+    Tailwind CSS v3 -- Traditional PostCSS setup for reliable production builds
+    transformers.js -- CLIP model running locally in the browser via WebGL
+    IndexedDB -- Persistent caching for AI embeddings
+    JSZip -- Client-side ZIP generation for batch screenshot downloads
+    File System Access API -- Direct disk access for folder loading (where supported)
+
+📦 Running Locally
+
+npm install
+npm run dev
+
+Open http://localhost:5000 in your browser.
+🌐 Deployment
+
+Target: Render.com or any static host
+
+    Build command: npm run build
+    Start command: npm run preview
+    Output directory: dist/
+
+🔒 Privacy & Security
+
+All AI processing happens locally in the browser. No images, metadata, or telemetry are sent to external servers. The app makes zero network requests after the initial page load and one-time AI model download. Safe for any content.
