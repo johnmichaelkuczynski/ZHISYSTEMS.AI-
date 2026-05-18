@@ -2171,7 +2171,7 @@ export default function Home() {
       { title: "Cognitive Profiler", url: "https://cognitiveprofiler.xyz" },
       { title: "Text Genius", url: "https://textgenius.xyz" },
       { title: "ModelWiz", url: "https://modelwiz.xyz" },
-      { title: "Model Transformer", url: "https://modeltransformer.xyz/" },
+      { title: "Model Transformer", url: "https://modeltransformer.xyz/", videoUrl: "https://www.youtube.com/watch?v=EubJaYvDbpg" },
       { title: "LLM Plus", url: "https://llmplus.xyz/" }
     ],
     "📸 Visual & Multimedia": [
