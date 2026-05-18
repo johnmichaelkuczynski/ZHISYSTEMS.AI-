@@ -1,0 +1,79 @@
+📖 EZ PODCAST CREATOR
+
+AI-Powered Document Analysis Platform for Interactive Study, Content Generation, and Scholarly Research
+🧩 Overview
+
+Living Book Creator is a web application that transforms any document into a dynamic, interactive study companion. Upload a PDF, DOCX, or TXT file -- or paste text directly -- and the platform unlocks a full suite of AI-powered tools for analyzing, discussing, testing, rewriting, and reimagining your content. It plugs into five top-tier proprietary LLMs (ZHI 1-4) and lets users route any task to the model best suited for it.
+
+Unlike generic chatbots that produce hedged, watered-down output, Living Book Creator is built around interactive engagement: every function works on your entire document, every interaction is contextual, and every output is downloadable. Whether you're studying a philosophy text, drafting a research paper, or exploring a novel, the platform turns passive reading into active analysis.
+👥 Who It's For
+
+    Students and learners -- need to grasp dense material, prepare for exams, and quiz themselves on what they've read
+    Researchers and academics -- need to extract theses, map argument structures, and find related scholarly works
+    Writers and authors -- need to rewrite, restructure, and rethink their drafts in fresh ways
+    Podcasters and content creators -- need to convert written content into engaging audio dialogues or solo narrations
+    Teachers and instructors -- need to generate test questions, study guides, and discussion prompts from source texts
+    Anyone curious -- who wants to have a real conversation with a document instead of just skimming it
+
+⚙️ Core Capabilities
+
+    Multi-Model AI Integration -- Route any analysis task through OpenAI GPT-4o (ZHI 1), Anthropic Claude (ZHI 2), DeepSeek (ZHI 3), or Perplexity (ZHI 4). Pick the model best suited to the task or compare outputs across providers.
+
+    Document Upload Pipeline -- One-click upload for PDF, DOCX, and TXT files. Automatic text extraction, math notation formatting (KaTeX), and preservation of original HTML structure via Mammoth.js. Direct text input also supported.
+
+    Interactive Test Me -- Generates a 5-question test (3 multiple choice + 2 short answer) from your entire document, with real test-taking interface, automatic grading, score feedback, and one-click regeneration for unlimited practice.
+
+    Cognitive Map -- Produces a true visual diagram using Mermaid.js showing the hierarchical structure of any document: thesis → claims → sub-claims → evidence. Two-column layout pairs structured text analysis with the visual flowchart.
+
+    Summary/Thesis Extraction -- Distills any document into clean THESIS and EXPLANATION sections. Scrollable display with copy, TXT download, and Word export.
+
+    Thesis Deep Dive -- Comprehensive scholarly analysis broken into four structured sections: EXTRACTED THESIS, ORIGINAL WORDING, MODERN APPLICATIONS, and CROSS-COMPARISON. Two-column layout pairs the source passage with the deep-dive output.
+
+    Suggested Readings -- Generates 8-12 academic book recommendations tailored to the themes, concepts, and subject matter of your document. Each recommendation includes author, title, and a specific explanation of relevance.
+
+    Rewrite Function -- Rewrites your entire document or selected text according to your instructions. Ships with a smart default ("rewrite in as lucid a way as possible, expand or summarize as needed, use vivid examples, write so an eighth grader can understand it") that you can customize or replace entirely.
+
+    Discuss Function -- Full chat interface for having a real conversation about any document. Auto-starts with an overview, maintains conversation history, supports follow-up questions, and exports any AI response as TXT or Word.
+
+    Podcast Generation -- Converts documents into spoken audio podcasts. Four modes: Single Host (Normal), Dialogue (Normal), Single Host (Custom), Dialogue (Custom). Uses distinct voices for HOST and GUEST (alloy and nova) via Microsoft Azure TTS for natural speech.
+
+    Two-Document Comparison -- Side-by-side analysis of two documents at once. Includes dual-document Test Me, Podcast generation (with synthesis workflow), Rewrite, and mind map generation. Auto-complete intelligence handles short documents automatically.
+
+    Text Selection Tools -- Highlight any passage to trigger a popup toolbar for targeted AI analysis. Discuss specific paragraphs without leaving the document view.
+
+🚀 What Makes It Different
+
+    Every function works on the entire document -- Standing buttons run on the whole document by default, not just chunks. No need to manually feed text to the AI piece by piece.
+
+    Auto-complete intelligence -- Short documents (≤1000 words) automatically use entire content. Larger documents support manual chunk selection for targeted analysis. The system adapts to document size.
+
+    True visual diagrams, not just text -- The Cognitive Map function generates real Mermaid flowcharts with arrows and connected nodes, showing argument structure as a diagram rather than describing it in prose.
+
+    Interactive testing, not just question display -- Test Me presents a real test-taking interface with input fields, answer submission, automatic grading, and score feedback -- not a static list of questions.
+
+    Dual-model comparison built in -- Switch AI providers per function. Run the same document through ZHI 1 and ZHI 2 to compare scholarly depth, tone, and accuracy across models.
+
+    Every output is exportable -- Copy to clipboard, download as TXT, save as Word (.docx), or generate PDF. Nothing is locked inside the app.
+
+    Natural-voice podcast generation -- SSML scripts produce distinct, natural-sounding voices for multi-speaker dialogues, not robotic monotone narration.
+
+    Contextual chat, not generic chat -- AI responses focus on the selected text or specific document being viewed, with full awareness of source material and conversation history.
+
+    No watered-down output -- The platform follows your instructions literally. If you ask for a rewrite at eighth-grade level with vivid examples, that's exactly what you get.
+
+🛠 Tech Stack
+
+    Frontend: React 18 + TypeScript, Wouter routing, Radix UI / shadcn/ui, Tailwind CSS, TanStack Query, KaTeX, Mermaid.js
+    Backend: Node.js + Express, TypeScript, Multer (file uploads), Mammoth.js (DOCX parsing)
+    Database: PostgreSQL with Drizzle ORM (Neon serverless)
+    AI Providers: OpenAI GPT-4o, Anthropic Claude, DeepSeek, Perplexity
+    Audio: Microsoft Azure Text-to-Speech with SSML
+    Build: Vite
+
+📝 Getting Started
+
+    Upload a PDF, DOCX, or TXT file -- or paste text directly into the input box
+    Click any standing button to run an analysis on the entire document
+    Or highlight a passage to trigger the text selection toolbar for targeted analysis
+    Switch AI providers (ZHI 1-4) per function to compare outputs
+    Export any result as TXT, Word, or PDF
