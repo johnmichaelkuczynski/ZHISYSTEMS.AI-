@@ -2347,7 +2347,7 @@ export default function Home() {
     ],
     "💹 Finance": [
       { title: "Forex Edge", url: "https://usdhkd.xyz" },
-      { title: "SOXL Options Pro", url: "https://soxlpro.xyz" },
+      { title: "SOXL Options Pro", url: "https://soxlpro.xyz", videoUrl: "https://youtube.com/watch?v=TXgcuKomlrs" },
       { title: "SOXL Options Edge", url: "https://soxledge.xyz" }
     ]
   };
