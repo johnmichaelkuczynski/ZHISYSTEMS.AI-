@@ -1,0 +1,78 @@
+🧠 AI PERSONALITY ANALYSIS PLATFORM
+Multi-Model AI Platform for Personality, Clinical, and Behavioral Profiling Across Text, Image, Video, and Documents
+
+🧩 Overview
+The AI Personality Analysis Platform is a multi-model AI system for evaluating the personality, emotional state, and behavioral fingerprint of any subject — whether that subject appears as a written passage, a photograph, a video clip, or an uploaded document. It plugs into five top-tier proprietary LLMs (知 1–5) and lets users route any task to the model best suited for it — facial-expression reading, MBTI typing, clinical screening, evolutionary-niche analysis, stylometric profiling, or full psychoanalytic synthesis.
+
+Unlike consumer chatbots that produce hedged, watered-down personality blurbs, the AI Personality Analysis Platform is built around a strict operating principle: every analysis is evidence-grounded, every verdict is explicit, and the user's framework choice is sacred. If you ask for a 50-question MBTI breakdown, you get 50 questions answered. If you ask for a Dark Tetrad assessment with cluster-by-cluster scoring, that is exactly what is produced. No padding, no preamble, no editorializing.
+
+👥 Who It's For
+Psychologists, therapists, and clinical researchers -- need rigorous multi-framework screening (MMPI, MCMI, DSM-5 SCID, PID-5) for hypothetical case-study work and teaching examples
+Personality theorists and typologists -- need parallel scoring across MBTI, Big Five, Enneagram, HEXACO, Socionics, Hogan, and DISC on the same subject
+HR, recruiters, and organizational consultants -- need vocational fit, dark-trait screening, and behavioral-niche analysis (EVO Psych) on candidate writing or video interviews
+Writers, biographers, and journalists -- need to profile real or fictional subjects with evidence-anchored, citation-style support for every trait inference
+Stylometric and rhetorical analysts -- need writing-style fingerprints, author matching, and side-by-side comparisons of vertical vs. horizontal worldview
+Anyone -- who wants a serious, framework-grounded personality read instead of a vague "you seem creative and empathetic" AI summary
+⚙️ Core Capabilities
+Multi-Modal Analysis -- Run any framework across text (up to 500,000 characters), images (with face detection + AWS Rekognition + Face++), video (visual + audio + transcript via Whisper), and documents (PDF + DOCX). Uploaded media stays loaded so you can run multiple frameworks on the same subject without re-uploading.
+
+MBTI Typing -- Full 16-type analysis across text, image, video, and documents. Returns dominant type, cognitive-function stack, and evidence references for each dichotomy (E/I, S/N, T/F, J/P).
+
+Big Five (OCEAN) -- Five-factor scoring with facet-level breakdowns across text, image, and video. Evidence-anchored ratings on Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.
+
+Enneagram (9-Type) -- Core type plus wing, instinctual stack, integration/disintegration vectors, and growth path. Available for text, image, and video.
+
+Dark Traits / Personality Pathology -- Dark Tetrad (narcissism, Machiavellianism, psychopathy, sadism), Cluster B patterns, and other maladaptive traits inferred from facial expressions, body language, grooming, interpersonal markers, and written tells.
+
+Personality Structure (8-Framework Synthesis) -- Comprehensive consolidated analysis synthesizing Big Five/OCEAN, HEXACO, 16PF, MBTI, Keirsey, Socionics, Hogan, and DISC into one unified profile. Text, image, and video.
+
+Clinical Screening (4-Framework Battery) -- Hypothetical-case-study analysis combining MMPI-2/MMPI-3, MCMI, DSM-5 SCID, and PID-5. Returns elevated scales, candidate diagnoses, and appropriate clinical disclaimers. Text, image, and video.
+
+Anxiety / Affective Assessment -- Full screening across BDI, Hamilton Depression Rating Scale, Beck Anxiety Inventory, GAD-7, and PHQ-9. Text, image, and video.
+
+EVO Psych (Evolutionary Niche Analysis) -- Custom 10-pole evolutionary typology scoring 20 benchmarks across Enforcer, Explorer/Scout, Healer/Empath, Strategist/Schemer, Signaler/Performer, Caretaker/Nurturer, Aggressor/Protector, Broker/Diplomat, Seer/Pattern-Interpreter, and Mimic/Adaptor. Includes specialized visual benchmarks for images and temporal-dynamics scoring for video.
+
+Vertical vs. Horizontal Orientation -- Bipolar worldview meta-dimension. Vertical captures transcendence, sacred hierarchy, ascent, discipline (Nietzsche, Evola, mystics). Horizontal captures immanence, coalition, solidarity, harm/safety framing (DEI, social justice, therapy-speak). Returns worldview signature, key phrases, and dominant-mode classification.
+
+Verticality Radar (Stylometric Profiling) -- Writing-style analysis distinct from worldview. Scores ego-pronoun rate, metaphor density, sentence complexity, hypotaxis vs. parataxis, formality markers, and rhetorical strategies. Returns a verticality quotient (0 = horizontal narrative, 1 = vertical logical). Single-text mode plus two-text comparison mode with side-by-side results and author matching (e.g., "Writes like Voltaire"). Requires minimum 100 words per text.
+
+Vocational Analysis -- Career-fit and work-style profiling across text, image, and video.
+
+Stanford-Binet Intelligence Profile -- Cognitive-domain analysis across text, image, and video.
+
+Deep Dive Synthesis -- 100-question comprehensive text analysis producing an evidence-anchored, citation-style master profile.
+
+Psychoanalysis -- Deep psychoanalytic interpretation (text only) with auto-truncation to 2,000 words and full multi-model fallback.
+
+Facial Detection -- AWS Rekognition + Face++ integration for ground-truth feature extraction (age, emotion, gender, accessories, head pose) feeding into vision analyses to prevent fabrication.
+
+Audio Transcription -- OpenAI Whisper transcribes spoken content in uploaded videos so verbal and non-verbal cues are analyzed together.
+
+Session Persistence -- Analyses persist via localStorage and survive page reloads. Messages append rather than clear, enabling continuous analysis series on the same subject across multiple frameworks.
+
+Email Sharing -- One-click share of any completed analysis via SendGrid with a stable share link.
+
+🚀 What Makes It Different
+It actually grounds every claim -- Vision analyses receive structured face-detection data and scene context before the LLM is allowed to speak. No fabricated eye color, no hallucinated facial expressions, no invented body language.
+
+It runs the framework you asked for -- If you click MBTI, you get a full MBTI assessment, not a generic personality blurb that mentions MBTI in passing. Every framework prompt is comprehensive (50 questions for image/video, 100 for Deep Dive text).
+
+Five proprietary LLMs, one workflow -- 知 1 (Anthropic Claude), 知 2 (OpenAI GPT-4o), 知 3 (Venice / Llama 3.3), 知 4 (Perplexity Sonar), 知 5 (Grok-3). Pick the model best suited for each task, or let the automatic fallback chain pick a working model when your first choice is rate-limited, out of credits, or doesn't support the modality.
+
+Multimodal in the real sense -- The same subject can be profiled from a photograph, a video, a writing sample, and a PDF — and the platform keeps your uploaded media loaded so you can run framework after framework without re-uploading.
+
+Stylometry as a first-class citizen -- The Verticality Radar treats writing style as a measurable signal separate from content, with author matching, side-by-side comparison mode, and a quantitative verticality quotient.
+
+Clinical-grade frameworks, responsibly framed -- The 4-framework Clinical battery (MMPI / MCMI / SCID / PID-5) produces serious assessments for hypothetical case-study and educational use, with appropriate disclaimers built into every output.
+
+Evolutionary lens out of the box -- EVO Psych is a custom 10-pole typology not available in any other consumer platform, with both visual benchmarks (for images) and temporal-dynamics scoring (for video).
+
+Smart defaults, never blocked -- 知 1 (Claude) is the default model because it's strongest for image work. Long texts are auto-truncated to 2,000 words instead of being rejected. Rate-limited models automatically fall back to the next available model in the chain.
+
+Session memory that doesn't get in your way -- Your work survives reloads, accumulates across frameworks, and you can clear and start fresh with one click.
+
+🔌 External Services
+AI Models -- OpenAI (GPT-4o, Whisper), Anthropic (Claude Sonnet 4), Perplexity (Sonar Pro), Grok / xAI (grok-3), Venice (Llama 3.3 70B)
+Facial Analysis -- AWS Rekognition, Face++
+Email Delivery -- SendGrid
+Storage -- In-memory session management with localStorage persistence on the client
