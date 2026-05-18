@@ -1,0 +1,74 @@
+🧠 COGNITIVE PROFILER
+Multi-Model AI Platform for Intelligence Analysis, Cognitive Profiling, and Psychological Assessment
+
+🧩 Overview
+The Cognitive Profiler is a multi-model AI system for evaluating the intelligence and cognitive fingerprint of any written text. It plugs into four top-tier proprietary LLMs (ZHI 1–4) and lets users route any task to the model best suited for it -- cognitive scoring, psychological profiling, psychopathological assessment, or full-document sequential analysis.
+
+Unlike consumer chatbots that produce generic, hedged, watered-down output, the Cognitive Profiler is built around a strict operating principle: every analysis is rigorous, every verdict is explicit, and the user's instructions are sacred. If you submit a writing sample, you get a real assessment. If you submit a long document, it is processed chunk by chunk with a full sequential pipeline. No padding, no preamble, no editorializing.
+
+👥 Who It's For
+Academics, graduate students, and researchers -- need to evaluate the intellectual rigor of papers, dissertations, and arguments before submission or publication
+Philosophers and theorists -- need formal cognitive stress-testing and conceptual clarity assessment of theoretical claims
+Psychologists and clinicians -- need a structured psychological and psychopathological profile of written communication
+Lawyers, analysts, and consultants -- need to understand the reasoning style and cognitive strengths of a document's author
+Authors and entrepreneurs -- need to know whether their ideas demonstrate genuine intelligence before committing them to print or pitch
+Anyone -- who wants to know what an actually intelligent reader would think of their writing, instead of a flattering AI summary
+⚙️ Core Capabilities
+Multi-Model Intelligence Evaluation -- Four proprietary LLMs (ZHI 1 through ZHI 4) score any text across 18 intelligence dimensions (insightfulness, point development, logical structure, originality, depth, precision, and more). Pick the model best suited for each task or compare results across providers.
+
+18-Question Intelligence Assessment Protocol -- Every cognitive analysis answers all 18 mandatory assessment questions with detailed reasoning and a numeric score (0–100). Questions probe insight, development, logical structure, originality, complexity, coherence, precision, and genuine understanding.
+
+Sequential Chunk Processing -- Documents over 1,000 words are automatically split into sequential chunks and processed one at a time with controlled 10-second delays. Real-time streaming updates show each chunk as it completes.
+
+Psychological Analysis -- Deep psychological profiling of writing samples, assessing personality traits, emotional patterns, attachment style, and behavioral tendencies revealed through written language.
+
+Psychopathological Assessment -- Structured evaluation of psychopathological indicators present in text, with clinical-level analysis of thought patterns and communication style.
+
+Comprehensive Cognitive Analysis -- Full 20-parameter cognitive assessment with individual parameter scoring, authentic quotations extracted directly from the submitted text, and percentile-ranked scores showing where the author stands relative to the general population.
+
+Comprehensive Psychological Analysis -- Complete psychological profile across 20 parameters, with detailed reasoning, direct quotations, and population-relative percentile scoring.
+
+File Upload Support -- PDF, Word (.docx), and plain text (.txt) files accepted. Robust text extraction pipeline handles documents of any length with automatic chunking for large files.
+
+Real-Time Streaming -- All analyses stream results live to the screen as they are generated, with visible progress indicators showing which chunk or parameter is currently being processed.
+
+Downloadable Reports -- Every analysis can be downloaded as a formatted report for archiving, sharing, or further study.
+
+Four ZHI Providers -- ZHI 1 (OpenAI), ZHI 2 (Anthropic), ZHI 3 (DeepSeek), ZHI 4 (Perplexity). Each brings different strengths; all are available on demand.
+
+Credit System -- Usage is tracked via a credit system. Users purchase credits to run analyses. Special accounts available for development and testing with unlimited access.
+
+🚀 What Makes It Different
+It actually follows instructions -- The system's job is to do exactly what you said. If you ask for an 18-question assessment, you get all 18 questions answered, not a summary.
+
+It separates cognitive from psychological -- A well-structured argument by an emotionally dysregulated author scores high on cognitive coherence and low on psychological stability. Most AI systems collapse these into one mushy "quality" score; this platform does not.
+
+It corrects, not just critiques -- The system is built to identify weaknesses and score them accurately, not to provide encouragement or hedge verdicts.
+
+Four proprietary LLMs, one workflow -- ZHI 1 through ZHI 4. Pick the model best suited for each task, or run multiple and compare. Automatic fallback handling manages rate limits and outages.
+
+Population-relative scoring -- Scores are expressed as percentiles. A score of 85 means the text exceeds 85% of the general population on that dimension. No ambiguous letter grades or vague qualitative labels.
+
+Sequential processing built in -- Long documents do not time out or fail. They are split, queued, and processed sequentially with real-time updates at every step.
+
+Authentic quotations -- Comprehensive analyses extract real quotations directly from the submitted text, not paraphrases or invented examples. Every citation is verifiable against the original.
+
+Instructional video included -- A full tutorial video is available directly in the app, accessible from every page via the header navigation.
+
+📋 Analysis Modes
+Mode	Description
+Cognitive (Standard)	Fast 18-question intelligence assessment with ZHI provider of your choice
+Psychological (Standard)	Structured psychological profile of the writing sample
+Comprehensive Cognitive	Full 20-parameter cognitive analysis with quotations and percentile scoring
+Comprehensive Psychological	Full 20-parameter psychological analysis with quotations and percentile scoring
+📄 Supported File Types
+PDF -- Full text extraction from any PDF document
+Word (.docx) -- Complete Word document parsing
+Plain Text (.txt) -- Direct text ingestion
+🔑 Technical Notes
+Minimum submission length: 100 characters
+Sequential chunking activates automatically above 1,000 words
+Each chunk is processed with a 10-second delay to ensure quality and avoid rate limits
+All four ZHI providers tested and verified operational
+Real-time Server-Sent Events (SSE) for live streaming of results
+PostgreSQL database for user accounts and credit tracking
