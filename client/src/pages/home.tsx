@@ -1144,6 +1144,48 @@ Unlike point-forecast trading tools that produce a single "expected" number, USD
   ],
 };
 
+appDescriptions["Chess Tutor"] = {
+  emoji: "♟️",
+  tagline:
+    "An AI-powered chess training system that plays, evaluates, and teaches in real time",
+  sections: [
+    {
+      emoji: "🧩",
+      title: "Overview",
+      body: `CHESS TUTOR is an AI-powered chess training system that plays, evaluates, and teaches in real time. It adapts to each user's skill level, analyzing every move to generate personalized lessons, drills, and strategy insights.
+
+Live now at https://chesstutor.xyz`,
+    },
+    {
+      emoji: "⚙️",
+      title: "What CHESS TUTOR Does",
+      body: `**Interactive Play Mode** -- Users play directly against the AI, which adjusts difficulty dynamically based on performance.
+
+**Move Evaluation** -- Each move is analyzed for accuracy, positional strength, and tactical awareness, with instant feedback.
+
+**Personalized Lessons** -- Automatically creates targeted lessons and practice drills from the user's gameplay history.
+
+**Strategy Breakdown** -- Explains tactical errors, opening principles, and midgame or endgame strategy in natural language.
+
+**Performance Analytics** -- Tracks rating progression, move quality, and recurring weaknesses to optimize training focus.`,
+    },
+    {
+      emoji: "👥",
+      title: "Designed For",
+      body: `**Beginners** -- Learn chess fundamentals through guided feedback and hands-on play.
+
+**Intermediate Players** -- Identify strategic blind spots and refine competitive play.
+
+**Advanced Players & Coaches** -- Use AI diagnostics to sharpen technique and create tailored training plans.`,
+    },
+    {
+      emoji: "🚀",
+      title: "Core Idea",
+      body: `CHESS TUTOR fuses gameplay, instruction, and analysis into one adaptive learning environment. It doesn't just show better moves -- it teaches how to think like a master, one position at a time.`,
+    },
+  ],
+};
+
 appDescriptions["SOXL Options Pro"] = {
   emoji: "📈",
   tagline:
