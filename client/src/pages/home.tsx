@@ -1751,7 +1751,6 @@ export default function Home() {
     ],
     "🎧 Audio & Interactive Media": [
       { title: "Audio Transcriber", url: "https://audiotranscriber.xyz" },
-      { title: "Audio Visualizer", url: "https://audiovisualizer.xyz" },
       { title: "Podcast Creator", url: "https://ezpodcast.xyz" }
     ],
     "⚙️ Utility & Conversion": [
