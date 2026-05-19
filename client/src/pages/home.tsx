@@ -2323,7 +2323,7 @@ export default function Home() {
       { title: "Cognitive Enhancer", url: "https://cognitiveenhancer.xyz" },
       { title: "Psychology Pro", url: "https://psychologypro.xyz", videoUrl: "https://www.youtube.com/watch?v=0hIA4NsETZw" },
       { title: "Cognitive Profiler", url: "https://cognitiveprofiler.xyz" },
-      { title: "Text Genius", url: "https://textgenius.xyz" },
+      { title: "Text Genius", url: "https://textgenius.xyz", videoUrl: "https://www.youtube.com/watch?v=w2bgAo4nf64" },
       { title: "ModelWiz", url: "https://modelwiz.xyz" },
       { title: "Model Transformer", url: "https://modeltransformer.xyz/", videoUrl: "https://www.youtube.com/watch?v=EubJaYvDbpg" },
       { title: "LLM Plus", url: "https://llmplus.xyz/", videoUrl: "https://youtu.be/MreIR_4VH-M" }
