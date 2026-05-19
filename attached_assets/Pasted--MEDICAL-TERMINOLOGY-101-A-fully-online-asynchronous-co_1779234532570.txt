@@ -1,0 +1,50 @@
+🩺 MEDICAL TERMINOLOGY 101
+A fully online, asynchronous college-level course in the working vocabulary of medicine — taught by an AI Tutor that speaks for the instructor of record.
+
+🧩 Overview
+Medical Terminology 101 is an interactive course shell built around a single open-source course text by Dr. Margaret Hsu, MD. Students work through 13 modules covering word parts and decoding, body organization, the integumentary, musculoskeletal, cardiovascular and lymphatic, respiratory, digestive, urinary and reproductive, nervous, endocrine, and blood systems, plus pharmacology, imaging abbreviations, and reading a complete medical record. The course culminates in a term paper that follows a single patient through presentation, workup, treatment, and patient-education translation.
+
+Unlike generic AI chatbots that write essays for students, this platform is built around a strict pedagogical principle: the AI Tutor (Anthropic Claude Sonnet 4.5) speaks for the instructor, pushes back on weak or vague answers, and gives formative feedback — but it will never write a student's work for them. Every assignment, every draft-feedback pass, and every tutor turn is rigorously constrained.
+
+👥 Who It's For
+Pre-health and pre-nursing undergraduates -- need a precise working vocabulary before clinical coursework, anatomy and physiology, or NCLEX-style exam prep
+Allied-health students -- medical assistants, scribes, coders, EMTs, radiologic techs, and pharmacy techs who must decode unfamiliar terms on the job
+Healthcare administrators and analysts -- need to read charts, claims, and clinical documentation without a clinical background
+Returning adult learners -- need an asynchronous, self-paced on-ramp into medicine that meets Quality Matters Higher Ed Rubric (7th ed.) standards
+Career-changers -- exploring a move into healthcare and want a rigorous, college-level foundation before committing to a degree program
+Anyone -- who wants to read their own lab results, discharge summaries, and patient portals without Googling every other word
+⚙️ Core Capabilities
+13-Module Curriculum -- A structured 800-point course covering word parts and decoding, body organization, all major organ systems, pharmacology, imaging, and reading a full medical record. Each module ships with objectives, a reading, a graded assignment, and an instructor reference standard.
+
+AI Tutor (Suffix-First Decoding) -- A Socratic tutor backed by Claude Sonnet 4.5, prompted as Dr. Hsu's voice. Refuses to write assignments, decomposes unfamiliar terms suffix → prefix → root, and distinguishes literal etymology from current clinical meaning.
+
+One-Round Draft Feedback -- Students submit a draft per assignment and receive a single round of formative feedback structured into five fixed sections: prompt-fit, argument structure, weak reasoning, what's missing, and what to revise first. Never rewrites the student's work.
+
+Per-Module AI Actions -- One-click generation of a Study Guide (key terms, core ideas, pitfalls, self-check questions), a Tutorial (numbered step-by-step walkthrough), a Podcast script (2–3 minute audio explainer), or a plain-English Rewrite of the reading — all calibrated to a first-time undergraduate with no biology background.
+
+Instructor Reference Standards -- Every assignment is paired with a hidden model response that the AI uses to calibrate feedback without ever quoting, paraphrasing, or comparing against it.
+
+Quality Matters–Aligned Course Shell -- Pages for Start Here, Syllabus, Modules, General Tutor, Assessments, Support, Accessibility, and a System Diagnostic, all wired to the Quality Matters Higher Ed Rubric (7th ed.).
+
+Persistent Progress & Drafts -- All student work, drafts, feedback, and tutor conversations persist in PostgreSQL via Drizzle ORM, keyed to the signed-in student.
+
+General Tutor Chat -- A standalone conversational interface for questions outside a specific module — anatomy review, decoding practice, or clarifying a clinical scenario — with full persistent history.
+
+System Diagnostic -- One-click self-check that verifies the API server, the database, and the Anthropic AI integration are all operational. Color-coded pass/warn/fail.
+
+🚀 What Makes It Different
+It actually teaches, instead of doing the work -- The AI Tutor is explicitly prompted to refuse to write assignments, draft theses, or supply final answers. It asks the next question instead of giving the next sentence.
+
+Suffix-first decoding, not memorization -- Students learn a repeatable procedure for unfamiliar terms (identify the suffix, then prefix, then root, then assemble), rather than flashcard drilling.
+
+Literal vs. clinical meaning is taught explicitly -- Terms like hypertension, myocardial infarction, or hypoxia are decoded from their roots AND distinguished from their current clinical usage — a distinction most intro courses skip.
+
+Instructor-calibrated AI feedback -- Every draft-feedback pass is silently calibrated against a hidden instructor reference standard, so feedback quality doesn't drift with the model's mood.
+
+One round of feedback, not infinite -- Mirrors a real classroom: students get one pre-submission feedback pass and must integrate it themselves. No infinite-loop AI rewriting.
+
+Built on a single coherent course text -- Not a chatbot bolted onto a generic LMS. The curriculum, the tutor's voice, the reference standards, and the assessments are all derived from one open-source course text by Dr. Margaret Hsu, MD.
+
+Asynchronous and accessible by default -- Quality Matters–aligned, screen-reader-friendly, keyboard-navigable, and self-paced — designed for working adults and non-traditional students.
+
+Domain-locked AI -- Every prompt in the system (tutor, draft feedback, study guide, tutorial, podcast, rewrite) is constrained to medical-terminology framing. The model will not drift into off-topic essay help.
