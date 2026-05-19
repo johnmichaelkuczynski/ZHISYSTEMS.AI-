@@ -1,0 +1,52 @@
+🧠 AI 104 — AI AND THE DISCIPLINES
+Fully Online, Asynchronous College Course on How AI Is Reshaping Practice Across the Major Disciplines
+
+🧩 Overview
+AI 104 is a self-paced, college-level course platform that walks students through how artificial intelligence is changing the practice of the sciences, the humanities, law, medicine, finance, engineering and software development, education, journalism, and creative work. It is built as a complete Learning Management environment — readings, structured discussions, short essays, a term paper, an embedded AI Tutor, instructor review tooling, and a Postgres-backed gradebook — packaged as one web app a student or instructor can use end-to-end.
+
+Unlike generic "AI in education" demos that bolt a chatbot onto a static syllabus, AI 104 is built around a strict pedagogical principle: the AI Tutor is configured to teach, not to do the work for the student. Every module enforces engagement before submission, every submission is timestamped and stored for audit, and every credential the course issues is one whose meaning the instructor can defend. Modules unlock sequentially, tutor sessions are reviewable, and the entire 13-module arc — 6 discussions, 5 essays, and a 100-point term paper — is delivered with the same readings, assignments, and model responses the instructor would use in person.
+
+👥 Who It's For
+Undergraduate students -- need a rigorous, self-paced introduction to AI's effects on the disciplines they are training to enter, with assessments that actually measure their thinking rather than their access to AI
+Graduate students and early-career professionals -- need a structured framework for thinking about augmentation vs. substitution vs. transformation as they decide how to position their own careers
+Faculty and instructors -- need a turnkey, Quality-Matters-aligned course shell with built-in submission review, gradebook, and an AI Tutor that pushes back on weak student arguments instead of writing the papers for them
+Curriculum designers -- need a working reference implementation of how to deliver an AI-augmented course that preserves assessment validity rather than degrading it
+Department chairs and program directors -- need a deployable LMS-style module they can stand up quickly to offer an AI-and-the-professions course without building one from scratch
+Anyone evaluating AI in higher education -- who wants to see what a course looks like when AI is integrated as a feature of the environment rather than treated as a threat to be policed
+⚙️ Core Capabilities
+13-Module Disciplinary Curriculum -- A fixed sequence of 6 discussions, 5 essays, and a 100-point term paper covering AI's effects across the sciences, humanities, law, medicine, finance, engineering, education, journalism, creative work, and disciplinary resistance. Every module ships with verbatim readings, assignment prompts, learning objectives, and a model response for instructor calibration.
+
+Embedded AI Tutor (Anthropic Claude Sonnet 4.5) -- A per-module conversational tutor backed by the Anthropic AI integration, system-prompted in the instructor's voice. It discusses readings, generates counter-arguments, and gives formative feedback — but is hard-blocked from writing student assignments. Every tutor session is persisted and reviewable by the instructor.
+
+Sequential Module Unlocking -- Students must submit each module before the next becomes available, with an admin override (?admin=true) for instructor previews. Progress is tracked per student and reflected on the Modules, Assessments, and Start Here pages.
+
+Submissions and Gradebook -- Every submission is timestamped, stored in Postgres, surfaced on a student-facing Assessments page, and listed in the instructor's Admin Submissions queue with full per-submission detail view and per-student tutor transcript.
+
+Instructor Admin Console -- Admin-flagged users see a dedicated submissions queue with per-submission review, student record, full tutor conversation history, and submission text — everything needed to grade and provide feedback without leaving the app.
+
+Printable Syllabus -- A full Quality-Matters-style syllabus page (course info, instructor info, learning outcomes, grading table, schedule, integrity policy, accessibility, institutional policies) with a one-click Print / Save-as-PDF button.
+
+Self-Service Onboarding -- Students sign in by email and name (cookie-based session, no password), write a personal introduction the tutor uses to personalize its questions, and proceed straight into Module 1.
+
+System Diagnostic Page -- A one-click /diagnostic route verifies the database connection, the auth flow, the Anthropic integration, and end-to-end submission roundtrip — useful for setup verification and post-deploy smoke testing.
+
+Document-Style Print Layout -- Print stylesheets across the syllabus, module-detail, and assessment pages produce clean PDF output suitable for accreditation files or student records.
+
+🚀 What Makes It Different
+It teaches, it doesn't ghostwrite -- The AI Tutor is system-prompted to refuse to draft assignments. If a student asks it to write their essay, it pivots back to questions about the reading. The tutor's job is to make the student think, not to generate the deliverable.
+
+It separates engagement from output -- Every tutor message and every submission is timestamped and stored. The instructor can see not only what the student handed in but how much they engaged with the material before handing it in, and the academic-integrity policy is enforceable rather than aspirational.
+
+It treats AI as a feature of the environment, not a threat -- Assessments are designed for a world in which students have AI access. The course's pedagogy assumes AI exists and structures the work around activities that AI cannot substitute for, rather than pretending AI is not in the room.
+
+One coherent course, not a kit -- All 13 modules ship complete: readings, learning objectives, assignment prompts, model responses, and tutor configuration are mirrored verbatim between the API server and the frontend so the student experience and the gradebook always agree.
+
+Production-grade architecture -- Pnpm monorepo with TypeScript end-to-end. Express + Drizzle ORM + Postgres (Neon) on the backend, React + Vite + TanStack Query + shadcn/ui on the frontend, with an auto-generated typed API client shared between them.
+
+Backed by a real database from day one -- Students, submissions, tutor conversations, and progress all persist in Postgres via the DATABASE_URL connection. No mocks, no in-memory state, no demo-only fallbacks.
+
+Quality Matters-aligned course shell -- The syllabus, accessibility statement, support page, and engagement policies are built to the Quality Matters Higher Ed Rubric (7th ed.), making the app drop-in usable for institutional review.
+
+One-click diagnostic -- The /diagnostic page exercises every external dependency (database, auth, Anthropic) in a single pass and reports color-coded pass/warn/fail status, so setup and post-deploy verification take seconds rather than hours.
+
+Self-paced without sacrificing rigor -- No late penalties, unlimited resubmissions (most recent counts), and sequential unlocking. The course meets students where they are while still requiring them to do the work in order.

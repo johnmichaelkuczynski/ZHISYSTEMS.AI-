@@ -1,0 +1,60 @@
+🎓 AI 103 — EVALUATING AI SYSTEMS
+A Fully Online, Asynchronous College-Level Course Platform for the Practice of Evaluating AI Systems
+
+🧩 Overview
+AI 103 is a complete online course platform built around a single, focused curriculum: how to evaluate AI systems rigorously. Students work through 13 sequential modules covering correctness versus plausibility, hallucination, calibration, benchmark design, evaluation-set construction, human and model-as-judge evaluation, adversarial robustness, production monitoring, and human-in-the-loop verification — culminating in a term paper engaging with a foundational article on AI evaluation methodology.
+
+Unlike generic LMS shells that wrap third-party content, this platform is the course. Every module, prompt, rubric, and tutor interaction is purpose-built for evaluation literacy. The AI Tutor (Anthropic Claude Sonnet 4.5) speaks for the instructor of record, pushes back on weak arguments, and gives formative feedback — but it will never write a student's work for them. Grading protocols, term-paper scaffolding, and integrity checks are enforced by the system, not left to honor.
+
+👥 Who It's For
+Undergraduate and graduate students -- need a structured, credit-style course in modern AI evaluation methodology, with weekly discussions, essays, and a term paper
+Working ML engineers and applied scientists -- need to formalize the difference between "the model sounds right" and "the model is right," and learn how production evaluation actually works
+Product managers and AI policy professionals -- need to read evaluation claims critically and know which numbers in a model card actually mean something
+Educators and curriculum designers -- need a reference implementation of an asynchronous, AI-tutor-assisted course that maintains academic rigor
+Self-directed learners -- want a complete, sequenced curriculum on AI evaluation rather than a scattered reading list
+Anyone -- who has ever asked "is this model actually good, or does it just sound good?" and wants a real answer
+⚙️ Core Capabilities
+13-Module Sequenced Curriculum -- A fixed-order learning path covering the full landscape of AI evaluation: correctness vs. plausibility, hallucination, calibration, benchmark design, evaluation-set construction, human and model-as-judge evaluation, adversarial robustness, production monitoring, human-in-the-loop verification, and synthesis. Modules unlock as students submit each one.
+
+Mixed Assessment Types -- Twelve graded modules (50 points each) alternate between discussion posts and short essays, capped by a two-stage term paper (Outline 100 pts + Final 100 pts = 200 pts). Total course weight: 800 points.
+
+AI Tutor Per Module -- Each module has a dedicated tutor conversation powered by Anthropic Claude Sonnet 4.5. The tutor is given the module's reading, objectives, and assignment as system context, and is explicitly instructed to challenge weak claims and refuse to write the student's submission.
+
+Module-Aware Drafting Workspace -- Students draft submissions in a canvas tied to the module, save versions, and receive AI feedback on demand. Draft history is preserved per module per student.
+
+Submission + Grading Pipeline -- Submissions are stored against the student's record with timestamps, version history, and per-module status. Instructor-side review surfaces the active submission, drafts, and tutor transcripts for context.
+
+Term Paper Two-Stage Workflow -- The term paper is split into a graded outline and a graded final, each with its own rubric. The outline must be submitted before the final unlocks.
+
+Integrity & Originality Checks -- A background integrity service runs on submissions (including a fire-and-forget GPTZero pass on the final submission) without blocking the student's workflow.
+
+Instructor / Admin Console -- A dedicated admin surface lists every student submission, supports drill-down to individual submissions, drafts, and tutor history, and exposes grading controls separate from the student-facing app.
+
+Self-Diagnostic Suite -- A one-click diagnostic page runs a full system + functional self-check: provisions a temporary Diagnostic Bot user, exercises the live API over loopback HTTP, hits the real Express middleware stack (cookies, sessions, validation, route handlers, DB writes, response serialization), then deletes the test user via FK cascade. Verifies that the formal mechanics of the app work — not the quality of any answers, grades, or content.
+
+Accessibility-First Frontend -- A dedicated accessibility page documents the app's accommodations, and the UI is built on shadcn/ui primitives with keyboard navigation, semantic structure, and serif typography tuned for long-form reading.
+
+External Postgres + Drizzle -- All persistent state (students, progress, drafts, canvases, submissions, conversations, messages) lives in an external Postgres instance accessed through Drizzle ORM with schema-checked migrations.
+
+Replit AI Integrations -- Anthropic access is provisioned through the Replit AI Integrations proxy (no user-supplied API key required); the same DATABASE_URL is shared across dev and production so behavior is identical end-to-end.
+
+🚀 What Makes It Different
+It is a course, not a course shell -- The curriculum, rubrics, tutor prompts, and term-paper scaffolding are first-class parts of the app. There is nothing to "configure" before a student can begin.
+
+The AI Tutor pushes back -- Most "AI for education" tools optimize for student satisfaction. This one is instructed to challenge weak arguments, ask for evidence, and refuse to draft the student's work. Formative feedback, not flattery.
+
+Sequential unlocking enforces the arc -- Modules unlock as the prior one is submitted. The curriculum's order is pedagogical, not a menu — students can't skip the foundation and jump to adversarial robustness.
+
+Drafting is separated from submission -- Students can iterate in the canvas, talk to the tutor, and revise without "burning" attempts. Submission is a deliberate, recorded action.
+
+Two-stage term paper, with the outline graded on its own merits -- The outline (100 pts) is a real grade, not a checkbox. The final (100 pts) builds on it. This mirrors how serious writing actually develops.
+
+Diagnostics that exercise the real stack -- The self-check doesn't mock anything. It boots a temporary user, walks the full request pipeline against the live database, then cleans itself up — so green means the production path actually works.
+
+Integrity checks that don't block the student -- Originality and integrity signals are computed in the background after submission, not gated in front of it. The student is never stuck waiting on a third-party API to finish.
+
+Single source of truth for the API -- The frontend talks to the backend through generated React Query hooks and Zod schemas (OpenAPI → codegen). Contract drift between client and server is caught at build time.
+
+One database, dev and prod -- The same external Postgres is used in both environments. What you see while developing is what students will see — no separate "demo" data to keep in sync.
+
+Instructor of record stays a human -- The AI Tutor speaks for the instructor; it does not replace them. Grading, course design, and authority over the curriculum remain with Dr. Margaret Hsu.

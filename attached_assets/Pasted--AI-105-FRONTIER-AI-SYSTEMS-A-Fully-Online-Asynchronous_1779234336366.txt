@@ -1,0 +1,60 @@
+🤖 AI 105: FRONTIER AI SYSTEMS
+A Fully Online Asynchronous College Course on the Technical Foundations of Modern AI
+
+🧩 Overview
+AI 105: Frontier AI Systems is a self-paced, college-level course that takes students through the technical landscape of contemporary AI: what current architectures actually do, where they fail, and how alignment, evaluation, distillation, and multi-agent systems shape what gets deployed in the world. Thirteen modules — eleven discussions and essays, plus a two-stage term paper — work through mechanistic interpretability, the Bitter Lesson, mixture-of-experts, the optimization landscape, long-context architectures, inference-time compute, tokenization, generalization, the alignment problem, distillation, multi-agent systems, and the evaluation crisis.
+
+Unlike most online course shells that hand the student a video and a quiz, AI 105 is built around an AI Tutor that teaches by questioning. The tutor pushes back on weak or vague answers, offers counterarguments, and grounds every reply in specific mechanisms rather than hand-wavy intuition. It will discuss the readings, critique drafts, and pull on threads — but it will never write the student's assignment for them. Instructor of record: Dr. Alex Park.
+
+👥 Who It's For
+Undergraduates new to AI -- need a rigorous on-ramp to the technical literature without a graduate-level prerequisite stack
+Computer science and engineering students -- need to move beyond surface-level use of LLMs and understand what frontier systems actually are
+Philosophy, cognitive science, and policy students -- need the technical grounding to argue seriously about alignment, evaluation, and AI risk
+Working professionals retraining for AI roles -- need a self-paced course that issues no busywork and treats them as adults
+Educators and curriculum designers -- need a working reference for what a serious, AI-tutor-augmented online course can look like
+Anyone -- who wants to read primary AI research with confidence instead of relying on second-hand summaries
+⚙️ Core Capabilities
+13-Module Curriculum -- Six discussions (50 pts each), five essays (50 pts each), one capstone discussion (50 pts), and a two-stage term paper (200 pts) — 750 points total. Each module ships with a full reading, an assignment prompt, and an instructor-grade model response used internally for calibration but never shown to the student.
+
+AI Tutor (Claude Sonnet 4.5) -- Per-module conversational tutor that knows the entire course overview, the current module's reading and assignment, and the student's own introduction. Speaks for the instructor of record, refuses to write submissions, and stays in role across long sessions.
+
+General Tutor -- Course-wide tutor for cross-module questions, study planning, and "what does this concept connect to?" exploration that doesn't fit inside a single module.
+
+Module-Level AI Actions -- One-click study guide, step-by-step tutorial walkthrough, 2–3 minute podcast script, and a plain-English rewrite of the reading. All generated on demand from the current module's content.
+
+Formative Draft Feedback -- Students get exactly one round of structured pre-submission feedback on a draft. The AI sees the model response privately to calibrate judgment but is forbidden from quoting it, comparing against it, or rewriting the student's work. Five fixed headings, under 450 words.
+
+Mediocre-Answer Critique Exercise -- The tutor can generate a deliberately mediocre answer on request, seeded with three or more identifiable weaknesses, so students can practice critique without being handed an exemplar to copy.
+
+Sequential Module Unlocking -- Modules unlock as the student submits each one. The Modules page tracks progress, surfaces the next module to start, and lets students return to any prior submission.
+
+Two-Stage Term Paper Pipeline -- Outline (100 pts) graded first against a five-section rubric; final paper (100 pts) then graded as a developed realization of the approved outline. Students choose from three foundational articles (Sutton's "Bitter Lesson," Olah et al.'s "Zoom In," or Gu & Dao's "Mamba").
+
+Persistent Session & Progress -- Single signed-cookie sign-in (no passwords), per-student introduction stored for tutor personalization, and full submission history backed by a Postgres database.
+
+Self-Paced Pacing -- No deadlines, no late penalties, unlimited resubmissions. Most-recent submission counts. Recommended pacing of one module per week is a suggestion, not a constraint.
+
+Accessibility-First UI -- WCAG 2.1 AA target, keyboard-navigable, semantic HTML, prose-grade typography, print-friendly syllabus, and a published accessibility statement.
+
+System Diagnostic -- One-click self-check that verifies the curriculum loader, the moduleById lookup, the database connection, and the AI provider. Color-coded pass/fail report surfaces broken wiring before students hit it.
+
+🚀 What Makes It Different
+The tutor argues with you -- The system's job is to teach by questioning, not to flatter. Vague answers get pushed back on. Shallow reasoning gets a counterargument. If you want a chatbot that agrees with everything you type, this is not it.
+
+It refuses to write your assignments -- The AI Tutor is system-prompted to decline assignment writing and to redirect the student into thinking through it themselves. Draft feedback uses the instructor's model response privately as a calibration anchor but is forbidden from quoting or paraphrasing it.
+
+Mechanism over vibes -- Every prompt insists on grounding claims in specific mechanisms: what the architecture actually does, what the training procedure actually optimizes, what evidence would distinguish two competing explanations. Anthropomorphism is treated as a failure mode.
+
+Source-grade course content -- All thirteen modules are authored readings, not scraped or generated boilerplate. Each module ships with a verbatim instructor-quality model response that defines the standard the student is being graded against.
+
+One tutor, one course, no drift -- The tutor is scoped to AI 105. It knows the full module list, the current reading, the assignment, and the student's stated background. It does not pretend to be a general assistant and does not pull the conversation off-course.
+
+Built on the Quality Matters Higher Ed Rubric (7th ed.) -- The course shell — syllabus, learning outcomes, accessibility statement, engagement expectations, late policy, AI policy — is structured to map cleanly onto the standard used by accredited online programs.
+
+Two-stage term paper, not just a deadline -- The outline is graded as a substantive deliverable (100 pts) before the paper is written. The final paper is then judged as a realization of the approved plan, not as a fresh document, which discourages last-minute rewrites and rewards real planning.
+
+One signed cookie, no passwords -- Authentication is a single signed session cookie. No password reset flows, no email verification gauntlet, no third-party identity provider. Students sign in once and get back to the work.
+
+Open educational resources, no textbook -- Every reading is embedded directly in the module. The three term-paper articles are all freely available online. Students pay $0 for materials.
+
+Honest about what it can and cannot do -- The AI policy, the academic integrity statement, and the tutor's own behavior all converge on the same message: the AI is a serious thinking partner, not a ghostwriter, and submissions that appear to be pasted AI output will receive no credit.
