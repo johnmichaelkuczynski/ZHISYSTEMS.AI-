@@ -1,0 +1,51 @@
+🎓 SOCIOLOGY 101
+A Fully Online, Asynchronous College-Level Introduction to Sociology with an AI Tutor of Record
+
+🧩 Overview
+Sociology 101 is a complete, self-paced college course on the systematic study of human social life. It plugs an Anthropic Claude Sonnet 4.5 AI Tutor into the role of instructor of record (Dr. Helena Marsh), routes every conversation, draft, and submission through that tutor, and grades student work against an instructor-authored reference standard. Thirteen modules cover the sociological imagination, culture, socialization, structure and role, groups and bureaucracy, deviance, stratification, race and ethnicity, gender and sexuality, family, religion and education, social change, and a capstone term paper.
+
+Unlike chatbot tutoring tools that produce generic, hedged, watered-down answers, Sociology 101 is built around a strict pedagogical principle: the tutor teaches by questioning, pushes back on weak reasoning, and never writes the student's work for them. If a student asks the tutor to draft their assignment, it declines and walks them through the thinking instead. Every module unlocks sequentially, every submission gets formative feedback, and every grade is justified.
+
+👥 Who It's For
+Undergraduate students -- need a rigorous, gen-ed-friendly introduction to sociology that actually teaches the discipline's vocabulary and habits of analysis
+Self-directed learners -- need a college-quality sociology course without enrolling in a brick-and-mortar institution, on their own schedule
+Instructors and course designers -- need a reference implementation of an asynchronous course built to the Quality Matters Higher Ed Rubric (7th ed.) with built-in AI tutoring
+Returning learners and career changers -- need to learn how to see individual experience as the intersection of biography and history before tackling more advanced social-science work
+Anyone -- who wants to understand culture, inequality, institutions, and social change with the rigor of classical theory (Durkheim, Marx, Weber, Mead, Goffman, Bourdieu) rather than punditry
+⚙️ Core Capabilities
+13-Module Curriculum -- A sequenced course totaling 800 points covering the sociological imagination, culture, socialization, social structure and role, groups and bureaucracy, deviance and social control, stratification, race and ethnicity, gender and sexuality, family, religion and education, social change, and a capstone term paper. Each module unlocks once the previous submission is in.
+
+AI Tutor as Instructor of Record -- A persistent Claude Sonnet 4.5 tutor configured to speak in Dr. Helena Marsh's voice. Maintains conversation history per module, asks probing questions, offers counterarguments, and refuses to write the student's assignment.
+
+Formative Draft Feedback -- One round of structured feedback on every draft before final submission. Output uses a fixed five-section format (Does the draft answer the prompt? / Is the argument structure clear? / Where is the reasoning weak? / What is missing? / What would I revise first?) and never quotes or compares the student's work to the instructor's reference.
+
+Automated Grading with Reference Standard -- Every submission is scored against an instructor-authored model response. Grades come with a written rationale, not just a number.
+
+On-Demand Study Aids -- One-click generation of a study guide, step-by-step tutorial walkthrough, audio-explainer podcast script, or plain-language rewrite for any module reading. All sociology-calibrated and never substitutive for the student's own work.
+
+Critique Exercises -- The tutor can generate a deliberately mediocre B-/C+ student answer for the student to critique, training the skill of distinguishing strong from weak sociological argumentation.
+
+Term Paper Capstone -- A 200-point two-part capstone (Part A outline, Part B final paper) applying sociological frameworks to a phenomenon of the student's choosing, with tutor support at every stage.
+
+System Diagnostic -- One-click self-check that verifies environment variables, database connectivity, AI integration roundtrip, and that the full 13-module / 800-point curriculum is loaded. Color-coded pass/warn/fail per check.
+
+Accessibility-First Design -- Built to conform with WCAG 2.1 Level AA. Keyboard navigation, semantic markup, dedicated accessibility statement, and an open feedback channel.
+
+Quality Matters Course Shell -- Start Here onboarding, full syllabus with learning outcomes, module index, assessment overview, and instructor information — all the artifacts of a real college course, not a toy demo.
+
+🚀 What Makes It Different
+It actually teaches, instead of doing the work -- The tutor's job is to make the student think, not to hand them a polished essay. Ask it to write your paper and it will decline and ask you a better question instead.
+
+It separates the tutor from the grader -- Formative feedback never quotes or compares against the reference standard. Grading is a separate, justified verdict. Most AI-in-education tools collapse these into one mushy "helpful response"; this platform does not.
+
+Instructor of record, not chatbot helper -- The AI is configured with a real teaching philosophy, a real curriculum, and a real voice. It stays in character as Dr. Helena Marsh across every interaction, every module.
+
+Classical theory, treated seriously -- Durkheim, Marx, Weber, Mead, Goffman, Cooley, Bourdieu, Merton, and Becker are used analytically, not decoratively. The tutor flags students who name-drop a theorist without doing the conceptual work.
+
+Sequenced and gated, like a real course -- Modules unlock in order. Students can't skip ahead, and they can't skip the term-paper outline to jump to the final. This produces actual learning progression instead of a buffet of disconnected snippets.
+
+Built to a real higher-ed rubric -- The course shell follows the Quality Matters Higher Ed Rubric (7th ed.): Start Here, syllabus with outcomes, accessibility statement, instructor information, communication norms, and clearly stated AI policy.
+
+Self-verifying -- The System Diagnostic page proves at any moment that the database, AI integration, environment, and curriculum invariants (exactly 13 modules, exactly 800 points) are all in working order. If something breaks, you see it before a student does.
+
+No padding, no editorializing -- Readings are written for first-time undergraduates in plain language. The tutor's replies are tight (3–8 paragraphs). Study guides cap at 500 words. Podcasts cap at 450 words. Every piece of generated material is sized for actual student attention.
