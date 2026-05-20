@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "Developmental Math": {
+    emoji: "🧮",
+    tagline:
+      "AI-Graded Online Course Platform with Integrity Forensics and Sequential Mastery Gating",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "Developmental Math is a single-instructor online course platform that delivers a 14-item curriculum (12 discussions and essays plus a term-paper outline and term paper, totalling 800 points) covering place value through one-step equations. Every student response is graded by Claude against an instructor-authored model answer and rationale, with feedback returned in seconds.\n\nUnlike generic LMS quiz engines that mark multiple-choice answers and call it a day, Developmental Math is built around a strict operating principle: the platform should be able to tell, with evidence, whether a student actually did the work. Every submission runs through a two-layer integrity stack -- synchronic AI detection on the text itself plus diachronic process forensics on the writing stream -- and a sequential gate prevents anyone from skipping ahead. No padding, no shortcuts, no way to fake mastery.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Community-college and developmental-math instructors** -- need to give individualized written feedback at scale without spending nights grading\n\n**Online-program directors** -- need a defensible audit trail that distinguishes student work from AI output, on every submission\n\n**Tutoring centers and bridge programs** -- need a structured 14-step path from place value to algebra with consistent grading rigor across students\n\n**Curriculum designers** -- need a chassis they can swap content into without rebuilding the integrity, grading, or progress-tracking layers\n\n**Students returning to school** -- want immediate, constructive feedback on their math reasoning instead of waiting a week for a red-pen score\n\n**Anyone** -- who wants to know whether a learner actually understands the material, instead of whether they pasted a plausible answer",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**AI-Graded Submissions** -- Every response is graded by Claude Sonnet 4.5 against the instructor's model answer and rationale, returning a numeric score (0..pointValue) and 2-5 sentences of LaTeX-aware feedback. Charitable about MathLive notation: \\frac, ^{}, _{} are treated identically to their plain-text equivalents.\n\n**14-Item Curriculum, 800 Points** -- 12 x 50-point discussions/essays + a 100-point term-paper outline + a 100-point term paper. Sequenced strictly: place value -> whole-number ops -> factors -> fractions -> decimals -> percents -> ratios -> signed numbers -> one-step equations -> outline -> paper.\n\n**MathLive-Powered Composition** -- Students compose in a real math field, not a textarea. Their LaTeX is what the grader sees, eliminating the \"I meant 1/2\" ambiguity that plagues plain-text math submissions.\n\n**Two-Layer Integrity Stack** -- Synchronic detection (AI-detector pass on the final text) plus diachronic detection (process forensics on the keystroke/composition stream). One catches AI text that was pasted in; the other catches AI text that was retyped to defeat detector tools.\n\n**Writing-Process Forensics** -- 11-feature analyzer on the composition stream returns an absolute score (0..100) and class (human | mixed | likelyAI). Per-student baseline is folded in for the first 2 submissions then frozen -- stops slow-drift attacks that gradually train the baseline toward a cheating profile.\n\n**Sequential Gating** -- Items must be completed in order. The gate runs server-side on every POST /algebra/submissions, so it cannot be bypassed by anyone with a valid session.\n\n**Transactional Submission Pipeline** -- Submission insert + baseline update happen inside a Postgres transaction with SELECT ... FOR UPDATE on the student row, so concurrent submissions cannot double-fold the baseline and silently lose a sample.\n\n**Process-Forensics Field Isolation** -- All process_* columns (score, class, features, flags, events) are stripped from student-facing responses. Only admin endpoints return them -- sophisticated cheaters cannot use the analyzer as a tuning oracle.\n\n**Live Process Score** -- Students see a throttled (60s) preview of their current writing-process score while composing, returning only {score, class} -- never features or flags.\n\n**Admin Submissions Console** -- Full per-submission view including process score, class, flags, and raw event stream. The only place forensic columns surface.\n\n**System Diagnostic** -- One-click self-check that verifies the database, curriculum integrity (14 items / 800 pts), Anthropic key, live Anthropic ping, list/get/submit/grade round-trip, and both synthetic process-forensics regression tests.\n\n**End-to-End Functional Walk** -- Separate one-click check that hits the real Express app over loopback as a synthetic student: sign in -> list -> submit -> grade -> progress -> tear down. Synthetic student row is always deleted via FK cascade, even when steps fail.\n\n**Accommodations Flag** -- Per-student boolean that disables process-forensics analysis entirely for students who legitimately type, paste, or compose differently (assistive tech, dictation, IEPs).",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**It grades the reasoning, not just the answer** -- Claude reads the work against the instructor's rationale, so a student who shows correct reasoning gets credit even if a minor arithmetic slip costs the final value. The feedback names what was correct and what to improve next.\n\n**It separates \"AI text\" from \"AI behavior\"** -- A detector pass on the finished text can be defeated by retyping. Process forensics on the keystroke stream can be defeated by hand-transcribing AI output. Running both, with separate scores, means a cheater has to defeat two independent systems.\n\n**Forensic results are invisible to students by design** -- The analyzer cannot be probed. Students never see their process score, class, features, or flags -- only the grader's content feedback. Sophisticated tuning attacks have nowhere to anchor.\n\n**Baseline freezes** -- Per-student writing-process baseline is captured from the first 2 submissions and then frozen. Slow drift attacks that gradually shift the baseline over many submissions cannot succeed.\n\n**Sequential gating is server-side and load-bearing** -- The frontend hides locked items, but the server is the source of truth. Anyone with a valid cookie still cannot POST a submission for an item they have not unlocked.\n\n**One-click diagnostics that actually call live APIs** -- Both the system check and the end-to-end walk make real round-trips (Anthropic ping, real submit + grade, real loopback HTTP) instead of mocking. If the diagnostic is green, the platform really works for a student right now.\n\n**Cleanup contract on the E2E walk** -- The synthetic test student is always deleted at the end via FK cascade, even when intermediate steps fail. No synthetic rows ever leak into the real DB.\n\n**Same chassis as Philosophy 101** -- The grading, integrity, and diagnostics stack is shared. Cloning a new course is a curriculum swap -- not a rebuild.",
+      },
+    ],
+  },
   "Algebra 2": {
     emoji: "📐",
     tagline:
@@ -664,6 +695,7 @@ export default function Courses() {
     { title: "Medical Terminology", url: "https://medicalterminology.xyz" },
     { title: "College Algebra", url: "https://collegealgebra.xyz" },
     { title: "Algebra 2", url: "https://algebra2.xyz" },
+    { title: "Developmental Math", url: "https://developmentalmath.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },

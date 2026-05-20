@@ -1,0 +1,100 @@
+🧮 DEVELOPMENTAL MATH
+AI-Graded Online Course Platform with Integrity Forensics and Sequential Mastery Gating
+
+🧩 Overview
+Developmental Math is a single-instructor online course platform that delivers a 14-item curriculum (12 discussions and essays plus a term-paper outline and term paper, totalling 800 points) covering place value through one-step equations. Every student response is graded by Claude against an instructor-authored model answer and rationale, with feedback returned in seconds.
+
+Unlike generic LMS quiz engines that mark multiple-choice answers and call it a day, Developmental Math is built around a strict operating principle: the platform should be able to tell, with evidence, whether a student actually did the work. Every submission runs through a two-layer integrity stack — synchronic AI detection on the text itself plus diachronic process forensics on the writing stream — and a sequential gate prevents anyone from skipping ahead. No padding, no shortcuts, no editorializing.
+
+👥 Who It's For
+Community-college and developmental-math instructors -- need to give individualized written feedback at scale without spending nights grading
+Online-program directors -- need a defensible audit trail that distinguishes student work from AI output, on every submission
+Tutoring centers and bridge programs -- need a structured 14-step path from place value to algebra with consistent grading rigor across students
+Curriculum designers -- need a chassis they can swap content into without rebuilding the integrity, grading, or progress-tracking layers
+Students returning to school -- want immediate, constructive feedback on their math reasoning instead of waiting a week for a red-pen score
+Anyone -- who wants to know whether a learner actually understands the material, instead of whether they pasted a plausible answer
+⚙️ Core Capabilities
+AI-Graded Submissions -- Every response is graded by Claude Sonnet 4.5 against the instructor's model answer and rationale, returning a numeric score (0..pointValue) and 2–5 sentences of LaTeX-aware feedback. Charitable about MathLive notation: \frac, ^{}, _{} are treated identically to their plain-text equivalents.
+
+14-Item Curriculum, 800 Points -- 12 × 50-point discussions/essays + a 100-point term-paper outline + a 100-point term paper. Sequenced strictly: place value → whole-number ops → factors → fractions → decimals → percents → ratios → signed numbers → one-step equations → outline → paper.
+
+MathLive-Powered Composition -- Students compose in a real math field, not a textarea. Their LaTeX is what the grader sees, eliminating the "I meant ½" ambiguity that plagues plain-text math submissions.
+
+Two-Layer Integrity Stack -- Synchronic detection (AI-detector pass on the final text) plus diachronic detection (process forensics on the keystroke/composition stream). One catches AI text that was pasted in; the other catches AI text that was retyped to defeat detector tools.
+
+Writing-Process Forensics -- 11-feature analyzer on the composition stream returns an absolute score (0..100) and class (human | mixed | likelyAI). Per-student baseline is folded in for the first 2 submissions then frozen — stops slow-drift attacks that gradually train the baseline toward a cheating profile.
+
+Sequential Gating -- Items must be completed in order. The gate runs server-side on every POST /algebra/submissions, so it cannot be bypassed by anyone with a valid session.
+
+Transactional Submission Pipeline -- Submission insert + baseline update happen inside a Postgres transaction with SELECT ... FOR UPDATE on the student row, so concurrent submissions cannot double-fold the baseline and silently lose a sample.
+
+Process-Forensics Field Isolation -- All process_* columns (score, class, features, flags, events) are stripped from student-facing responses. Only admin endpoints return them — sophisticated cheaters cannot use the analyzer as a tuning oracle.
+
+Live Process Score -- Students see a throttled (60s) preview of their current writing-process score while composing, returning only {score, class} — never features or flags.
+
+Admin Submissions Console -- Full per-submission view including process score, class, flags, and raw event stream. The only place forensic columns surface.
+
+System Diagnostic -- One-click self-check that verifies the database, curriculum integrity (14 items / 800 pts), Anthropic key, live Anthropic ping, list/get/submit/grade round-trip, and both synthetic process-forensics regression tests. Color-coded pass/fail with copy-pasteable details.
+
+End-to-End Functional Walk -- Separate one-click check that hits the real Express app over loopback as a synthetic student: sign in → list → submit → grade → progress → tear down. Exercises cookies, sessions, validation, route handlers, and serialization end to end. Synthetic student row is always deleted via FK cascade, even when steps fail.
+
+Accommodations Flag -- Per-student boolean that disables process-forensics analysis entirely for students who legitimately type, paste, or compose differently (assistive tech, dictation, IEPs).
+
+🚀 What Makes It Different
+It grades the reasoning, not just the answer -- Claude reads the work against the instructor's rationale, so a student who shows correct reasoning gets credit even if a minor arithmetic slip costs the final value. The feedback names what was correct and what to improve next.
+
+It separates "AI text" from "AI behavior" -- A detector pass on the finished text can be defeated by retyping. Process forensics on the keystroke stream can be defeated by hand-transcribing AI output. Running both, with separate scores, means a cheater has to defeat two independent systems.
+
+Forensic results are invisible to students by design -- The analyzer cannot be probed. Students never see their process score, class, features, or flags — only the grader's content feedback. Sophisticated tuning attacks have nowhere to anchor.
+
+Baseline freezes -- Per-student writing-process baseline is captured from the first 2 submissions and then frozen. Slow drift attacks that gradually shift the baseline over many submissions cannot succeed.
+
+Sequential gating is server-side and load-bearing -- The frontend hides locked items, but the server is the source of truth. Anyone with a valid cookie still cannot POST a submission for an item they have not unlocked.
+
+One-click diagnostics that actually call live APIs -- Both the system check and the end-to-end walk make real round-trips (Anthropic ping, real submit + grade, real loopback HTTP) instead of mocking. If the diagnostic is green, the platform really works for a student right now.
+
+Cleanup contract on the E2E walk -- The synthetic test student is always deleted at the end via FK cascade, even when intermediate steps fail. No synthetic rows ever leak into the real DB.
+
+Same chassis as Philosophy 101 -- The grading, integrity, and diagnostics stack is shared. Cloning a new course is a curriculum swap — not a rebuild.
+
+🧱 Architecture
+Frontend (web) -- React + Vite, wouter routing, MathLive math fields, TailwindCSS. Lives in artifacts/algebra-101/.
+
+Backend (API) -- Express + Drizzle ORM + Pino logging + Anthropic SDK. Lives in artifacts/api-server/. Single process serves the entire /api surface for both algebra-101 and phil-101.
+
+Database -- Postgres (Neon in production), schema in lib/db/src/schema/. Tables: students, course_items, algebra_submissions, plus shared tables for the phil-101 chassis. FK cascade from students ensures clean tear-down of test data.
+
+AI -- Claude Sonnet 4.5 for grading, accessed via the Replit AI integration so no per-instructor key management is needed.
+
+Auth -- Cookie-session, signed with SESSION_SECRET. Email + name sign-in for students; admin flag is a column on students.
+
+🛠️ Run It
+Three workflows, all registered as artifacts:
+
+artifacts/algebra-101: web — pnpm --filter @workspace/algebra-101 run dev
+artifacts/api-server: API Server — pnpm --filter @workspace/api-server run dev
+artifacts/phil-101: web — pnpm --filter @workspace/phil-101 run dev
+Required secrets:
+
+DATABASE_URL -- Postgres connection string (Neon recommended)
+SESSION_SECRET -- random string used to sign session cookies
+AI_INTEGRATIONS_ANTHROPIC_API_KEY + AI_INTEGRATIONS_ANTHROPIC_BASE_URL -- provided by the Replit Anthropic integration
+To bootstrap a fresh database:
+
+pnpm --filter @workspace/db run push
+node scripts/seed_algebra.mjs
+
+Then open /algebra-101/diagnostic and click Run diagnostic (expect 12/12 green) and Run end-to-end check (expect 9/9 green).
+
+📂 Where Things Live
+Concern	File
+Curriculum (canonical)	artifacts/api-server/src/data/algebra-curriculum.json
+Curriculum source document	attached_assets/Developmental_Math_Course_Book_*.docx
+API routes	artifacts/api-server/src/routes/algebra.ts
+System diagnostic	artifacts/api-server/src/routes/algebra.ts (POST /algebra/diagnostic)
+End-to-end walk	artifacts/api-server/src/lib/algebraFunctionalCheck.ts
+Process forensics analyzer	artifacts/api-server/src/lib/processForensics.ts
+DB schema	lib/db/src/schema/
+Student-facing UI	artifacts/algebra-101/src/pages/
+Diagnostic UI	artifacts/algebra-101/src/pages/Diagnostic.tsx
+Admin UI	artifacts/algebra-101/src/pages/AdminSubmissions.tsx
