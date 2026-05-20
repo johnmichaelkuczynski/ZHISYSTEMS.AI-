@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "English Composition 102": {
+    emoji: "📚",
+    tagline:
+      "A Fully Online, AI-Tutored College Course in Research-Based Writing and Argument",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "English Composition 102 is a 14-module, asynchronous college course that takes students from raw curiosity to a defended, ten-to-fifteen page researched argument. Every module pairs verbatim instructor-authored reading with a graded assignment and a model response, and every module is backed by an embedded AI Tutor that speaks for the instructor of record.\n\nUnlike generic writing platforms that hand students finished prose on request, English Composition 102 is built around a strict pedagogical principle: the AI Tutor will discuss, probe, push back, and critique -- but it will never write a student's assignment for them. Every submission is timestamped, stored, and reviewable. The course is designed end-to-end to develop the one capacity a researched writer actually needs: the ability to formulate a question, follow the evidence, and defend a conclusion in your own words.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**First- and second-year undergraduates** -- who have completed Composition 101 (or its equivalent) and need a rigorous, research-focused follow-on course that satisfies a general-education writing requirement\n\n**Self-directed learners** -- who want a real, graded composition curriculum with feedback and a defensible final paper, on their own schedule\n\n**Returning students** -- who need to re-enter academic writing through a course that treats them as adults and gives them an AI tutor that teaches rather than ghostwrites",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**Embedded AI Tutor** -- Powered by Anthropic Claude Sonnet 4.5. The tutor is system-prompted to teach by asking, push back on weak claims, surface counterarguments, and refuse to draft student work. Conversation history is persisted per module per student.\n\n**Sequential Module Unlock** -- Modules unlock only after the previous one is submitted. The unlock state is tracked server-side against each student record, so progress is durable across sessions and devices.\n\n**Researched-Argument Pipeline** -- Curriculum walks students through the full research arc: question formulation, annotated bibliography, source typing, synthesis, literature review, quotation/paraphrase/summary, the researched argument, methods of reasoning, disciplinary genre, visual argument, peer review, public-audience writing, and the final research paper.\n\n**Two-Part Research Paper** -- The capstone (200 points) is split into a 100-point Research Paper Proposal (with four-source annotated bibliography) and a 100-point 10-15 page Research Paper developed from the approved proposal.\n\n**Draft Auto-Save** -- Student drafts are auto-saved to the database as they type. No work is lost on refresh, navigation, or session timeout.\n\n**Submission System** -- Every submission is timestamped, versioned, and stored. Resubmissions are allowed under the self-paced policy; the most recent submission is the one that counts.\n\n**AI Action Toolkit** -- One-click actions on any reading: generate a podcast-style audio explainer, request a plain-language rewrite, get a guided summary, or surface candidate counterarguments -- all framed to extend the student's thinking rather than replace it.\n\n**Progress Dashboard** -- Per-student progress page tracks which modules are complete, which are unlocked, total points earned, and a running grade against the 90/80/70/60 scale.\n\n**Instructor Introduction Capture** -- New students submit a short self-introduction the AI Tutor uses to personalize its questions to the student's background, major, and stated writing goals.\n\n**Printable Syllabus** -- One-click print-to-PDF of the full syllabus, including grading scale, module table, schedule, late/resubmission policy, engagement expectations, and academic integrity / AI policy.\n\n**Accessibility Page** -- WCAG 2.1 AA conformance statement, accommodation request workflow, and feedback channel.\n\n**System Diagnostic** -- Admin-side self-check that verifies the database connection, AI provider access, curriculum integrity, and the submission pipeline are all operational.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**The AI Tutor will not write your paper** -- The tutor is system-prompted to refuse, pivot back to questions, and surface the student's own reasoning. There is no prompt-engineering route around it; the refusal is the pedagogy.\n\n**Verbatim instructor-authored curriculum** -- Every reading, assignment, and model response in all 14 modules is written by a composition instructor, not generated. Students get the same prose every time, in the instructor's voice and at the instructor's standard.\n\n**Model responses are full responses** -- Each module includes a complete model assignment response of the length and quality a top student would actually submit, followed by a labeled analysis explaining why the response works. Students get a target, not a rubric.\n\n**Research methodology is taught explicitly** -- Modules cover the difference between primary, secondary, and tertiary sources; how to trace a claim through the chain; the difference between summary, paraphrase, and patchwriting; deductive, inductive, and abductive reasoning; and the rhetoric of charts and visual evidence. These are not assumed background.\n\n**The research paper is built in stages, not assigned at the end** -- The capstone is a proposal + paper, with the proposal accepted before the paper is written. Students cannot reach the final paper without first defending the question, the field map, the candidate thesis, the anticipated objection, and a four-source annotated bibliography.\n\n**Every submission is timestamped and auditable** -- All student work and all AI-Tutor conversations are stored. Instructors can review engagement; academic-integrity claims can be checked against the timeline.\n\n**Self-paced without late penalties** -- The course is asynchronous and open-enrollment. Resubmissions are allowed; the most recent counts. The pacing is the student's responsibility, and the AI Tutor is available at every step.\n\n**Real database, not in-memory state** -- Student records, sessions, submissions, drafts, tutor conversations, and progress are all persisted to a Postgres database. Sessions survive restarts; work survives across devices.\n\n**Built to Quality Matters Higher Ed Rubric (7th ed.)** -- The course shell -- syllabus, learning outcomes, accessibility, support, institutional policies, engagement expectations -- is structured to meet established higher-ed online-course quality standards out of the box.",
+      },
+    ],
+  },
   "English Composition": {
     emoji: "📚",
     tagline:
@@ -604,6 +635,7 @@ export default function Courses() {
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
+    { title: "English Composition 102", url: "https://englishcomp102.xyz" },
     { title: "Macroeconomics", url: "https://macroeconomics101.xyz" },
     { title: "Microeconomics", url: "https://microeconomics.xyz" },
     { title: "Probability Theory", url: "https://probabilitytheory.xyz" },

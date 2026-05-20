@@ -1,0 +1,54 @@
+📚 ENGLISH COMPOSITION 102 A Fully Online, AI-Tutored College Course in Research-Based Writing and Argument
+
+🧩 Overview English Composition 102 is a 14-module, asynchronous college course that takes students from raw curiosity to a defended, ten-to-fifteen page researched argument. Every module pairs verbatim instructor-authored reading with a graded assignment and a model response, and every module is backed by an embedded AI Tutor that speaks for the instructor of record.
+
+Unlike generic writing platforms that hand students finished prose on request, English Composition 102 is built around a strict pedagogical principle: the AI Tutor will discuss, probe, push back, and critique — but it will never write a student's assignment for them. Every submission is timestamped, stored, and reviewable. The course is designed end-to-end to develop the one capacity a researched writer actually needs: the ability to formulate a question, follow the evidence, and defend a position in their own sentences.
+
+👥 Who It's For First- and second-year undergraduates -- who have completed Composition 101 (or its equivalent) and need a rigorous, research-focused follow-on course that satisfies a general-education writing requirement Self-directed learners -- who want a real, graded composition curriculum with feedback and a defensible final paper, on their own schedule Returning students -- who need to re-enter academic writing through a course that treats them as adults and gives them an always-available tutor Instructors and program directors -- who want a reference implementation of an AI-assisted composition course that does not collapse into "let the bot write it" Writing-center coordinators -- who need a structured curriculum students can work through alongside live tutoring Anyone -- who wants to build the capacity to read a body of sources, take a defensible position, and write a paper that survives a serious objection ⚙️ Core Capabilities 14-Module Curriculum -- Eight discussions, five essays, and a two-part research paper, totaling 850 points. Each module includes an objectives list, a verbatim reading, a graded assignment with point-weighted sub-sections, and a complete model response with analysis annotations.
+
+Embedded AI Tutor -- Powered by Anthropic Claude Sonnet 4.5. The tutor is system-prompted to teach by asking, push back on weak claims, surface counterarguments, and refuse to draft student work. Conversation history is persisted per module per student.
+
+Sequential Module Unlock -- Modules unlock only after the previous one is submitted. The unlock state is tracked server-side against each student record, so progress is durable across sessions and devices.
+
+Researched-Argument Pipeline -- Curriculum walks students through the full research arc: question formulation, annotated bibliography, source typing, synthesis, literature review, quotation/paraphrase/summary, the researched argument, methods of reasoning, disciplinary genre, visual argument, peer review, public-audience writing, and the final research paper.
+
+Two-Part Research Paper -- The capstone (200 points) is split into a 100-point Research Paper Proposal (with four-source annotated bibliography) and a 100-point 10–15 page Research Paper developed from the approved proposal.
+
+Draft Auto-Save -- Student drafts are auto-saved to the database as they type. No work is lost on refresh, navigation, or session timeout.
+
+Submission System -- Every submission is timestamped, versioned, and stored. Resubmissions are allowed under the self-paced policy; the most recent submission is the one that counts.
+
+AI Action Toolkit -- One-click actions on any reading: generate a podcast-style audio explainer, request a plain-language rewrite, get a guided summary, or surface candidate counterarguments — all framed to extend the student's thinking rather than replace it.
+
+Progress Dashboard -- Per-student progress page tracks which modules are complete, which are unlocked, total points earned, and a running grade against the 90/80/70/60 scale.
+
+Instructor Introduction Capture -- New students submit a short self-introduction the AI Tutor uses to personalize its questions to the student's background, major, and stated writing goals.
+
+Printable Syllabus -- One-click print-to-PDF of the full syllabus, including grading scale, module table, schedule, late/resubmission policy, engagement expectations, and academic integrity / AI policy.
+
+Accessibility Page -- WCAG 2.1 AA conformance statement, accommodation request workflow, and feedback channel.
+
+System Diagnostic -- Admin-side self-check that verifies the database connection, AI provider access, curriculum integrity, and the submission pipeline are all operational.
+
+🚀 What Makes It Different The AI Tutor will not write your paper -- The tutor is system-prompted to refuse, pivot back to questions, and surface the student's own reasoning. There is no prompt-engineering route around it; the refusal is the pedagogy.
+
+Verbatim instructor-authored curriculum -- Every reading, assignment, and model response in all 14 modules is written by a composition instructor, not generated. Students get the same prose every time, in the instructor's voice and at the instructor's standard.
+
+Model responses are full responses -- Each module includes a complete model assignment response of the length and quality a top student would actually submit, followed by a labeled analysis explaining why the response works. Students get a target, not a rubric.
+
+Research methodology is taught explicitly -- Modules cover the difference between primary, secondary, and tertiary sources; how to trace a claim through the chain; the difference between summary, paraphrase, and patchwriting; deductive, inductive, and abductive reasoning; and the rhetoric of charts and visual evidence. These are not assumed background.
+
+The research paper is built in stages, not assigned at the end -- The capstone is a proposal + paper, with the proposal accepted before the paper is written. Students cannot reach the final paper without first defending the question, the field map, the candidate thesis, the anticipated objection, and a four-source annotated bibliography.
+
+Every submission is timestamped and auditable -- All student work and all AI-Tutor conversations are stored. Instructors can review engagement; academic-integrity claims can be checked against the timeline.
+
+Self-paced without late penalties -- The course is asynchronous and open-enrollment. Resubmissions are allowed; the most recent counts. The pacing is the student's responsibility, and the AI Tutor is available at every step.
+
+Real database, not in-memory state -- Student records, sessions, submissions, drafts, tutor conversations, and progress are all persisted to a Postgres database. Sessions survive restarts; work survives across devices.
+
+Built to Quality Matters Higher Ed Rubric (7th ed.) -- The course shell — syllabus, learning outcomes, accessibility, support, institutional policies, engagement expectations — is structured to meet established higher-ed online-course quality standards out of the box.
+
+🛠 Tech Stack Frontend -- React 18 + Vite, Wouter routing, TanStack Query, Tailwind CSS, shadcn/ui components, Sonner toasts Backend -- Node.js + Fastify, Drizzle ORM, generated OpenAPI client (@workspace/api-client-react) Database -- PostgreSQL (Neon-hosted), accessed via DATABASE_URL AI -- Anthropic Claude Sonnet 4.5 via the Replit AI Integrations proxy Auth -- Signed-cookie sessions; email + name registration Monorepo -- pnpm workspaces, multi-artifact layout (artifacts/phil-101, artifacts/api-server, shared lib/) 📦 Course Structure
+
+Module Type Points
+1 Research Questions and Inquiry Discussion 50 2 Framing a Researchable Question Essay 50 3 The Annotated Bibliography Discussion 50 4 Synthesis Across Sources Essay 50 5 Primary, Secondary, and Tertiary Sources Discussion 50 6 The Literature Review Essay 50 7 Quotation, Paraphrase, and Summary Discussion 50 8 The Researched Argument Essay 50 9 Methods of Reasoning Discussion 50 10 Genre and the Demands of the Discipline Essay 50 11 Data, Charts, and Visual Argument Discussion 50 12 Peer Review and the Workshop Discussion 50 13 Writing for Publication and Public Audiences Discussion 50 14 Research Paper (Proposal + Final) Term Paper 200 Total 850 📝 Academic Integrity You may use the embedded AI Tutor for discussion, clarification, counter-arguments, and formative critique of your own draft thinking. You must write your own submissions in your own words. Submitting AI-generated text as your own work — whether from this tutor or any third-party service — is a violation of academic integrity and will be referred to the dean. All submissions and tutor messages are timestamped and stored for audit.
