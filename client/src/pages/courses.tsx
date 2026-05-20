@@ -143,7 +143,7 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
-  "College Algebra": {
+  "Algebra 1": {
     emoji: "🧮",
     tagline:
       "Self-Paced, AI-Graded College Algebra Course with Real Math Input and Instant Feedback",
@@ -693,7 +693,7 @@ export default function Courses() {
     { title: "Psychology 101", url: "https://psych1.xyz" },
     { title: "Sociology 101", url: "https://sociology101.xyz" },
     { title: "Medical Terminology", url: "https://medicalterminology.xyz" },
-    { title: "College Algebra", url: "https://collegealgebra.xyz" },
+    { title: "Algebra 1", url: "https://collegealgebra.xyz" },
     { title: "Algebra 2", url: "https://algebra2.xyz" },
     { title: "Developmental Math", url: "https://developmentalmath.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
