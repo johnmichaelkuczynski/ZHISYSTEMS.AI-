@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "Algebra 2": {
+    emoji: "📐",
+    tagline:
+      "AI-Graded, Integrity-Hardened Online Course in Intermediate Algebra",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "Algebra 2 is a self-contained online course that takes a student from the diagnostic placement quiz through twelve graded discussion/essay assignments and a two-stage term paper -- 14 items, 800 points total -- with every submission graded by an AI tutor against a faculty-authored rubric and a model response. The platform is built around a strict operating principle: every grade is explicit, every piece of feedback is specific, and the integrity stack is impossible to game from the client side.\n\nUnlike consumer tutoring chatbots that produce generic, hedged, watered-down feedback, Algebra 2 returns a precise score against a published rubric, a paragraph of targeted feedback tied to the actual algebraic moves in the student's response, and a permanent record of the writing process that produced the submission. If a student pastes AI output into the editor, the system catches it two different ways -- once on the finished text, and once on the keystroke stream that produced it.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Community college and four-year algebra students** -- need a self-paced intermediate algebra course that grades like a real instructor, not a quiz auto-checker\n\n**Returning adult learners** -- need a course that meets them where they are, with a diagnostic placement quiz and targeted feedback on every step they get wrong\n\n**Homeschool families and independent study programs** -- need a turnkey 800-point algebra course with rubric-graded essays and a term paper, not just multiple-choice drills\n\n**Instructors piloting AI-assisted grading** -- need a transparent, auditable grading pipeline with admin tooling, process-forensics, and an end-to-end self-check\n\n**Course coordinators** -- need a clonable chassis they can re-skin into the next course in the series without touching the integrity stack\n\n**Anyone** -- who wants to actually learn intermediate algebra by writing, not by clicking the correct radio button",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**AI-Graded Free-Response Assignments** -- Every one of the 12 discussion/essay items is graded by Claude Sonnet 4.5 against a faculty-authored rubric and a model response. Returns a numeric score, paragraph-length feedback tied to the student's actual reasoning, and is stored permanently against the student record.\n\n**Two-Stage Term Paper Workflow** -- A 100-point outline followed by a 250-point full paper, graded with extra rigor because they are the capstone of the course.\n\n**Diagnostic Placement Quiz** -- An ungraded warm-up that probes the prerequisite skills (factoring, fractions, basic functions) so the student knows on day one whether they are ready for the course.\n\n**Integrity Canvas Editor** -- Full keystroke-stream capture with paste-block detection. Real-time AI-likelihood scoring via GPTZero with a traffic-light bar; sentence-level highlighting of AI-flagged regions; cumulative-red warnings that escalate as the session goes on.\n\n**Process Forensics (Diachronic AI Detection)** -- Eleven writing-process features (typing rhythm, edit/insert ratio, burstiness, caret-jump patterns, paste markers) are extracted from every submission and compared against the student's frozen n=2 baseline. Catches AI use that escapes synchronic text-based detection by analyzing how the text was produced, not just what it says.\n\n**Two-Layer AI Detection** -- GPTZero scores the finished text (synchronic); Process Forensics scores the keystroke stream (diachronic). A student would have to fake both -- typing realistically and producing human-shaped prose -- to evade detection.\n\n**Sequential Gating** -- Students cannot submit module 5 before completing module 4. The gate is server-enforced on every POST and cannot be bypassed from the client.\n\n**Per-Student Process Baseline** -- Each student's first two submissions establish their personal writing-process fingerprint. The baseline is frozen after submission 2 to defeat slow-drift attacks that would gradually train the baseline toward a cheating profile.\n\n**Admin Console** -- Full visibility into every submission with process-forensics columns, AI scores, baseline deviation, and grading history. Student-facing endpoints strip these columns so the analyzer cannot be used as a tuning oracle.\n\n**System Diagnostic** -- One-click self-check that verifies database connectivity, curriculum integrity (14 items, 800 points), Anthropic API reachability, and a live submit-and-grade round-trip on a dedicated diagnostic account.\n\n**End-to-End Functional Check** -- Loopback HTTP walk that signs in as a synthetic student, lists items, submits a real graded assignment, verifies it appears in the student list and progress endpoint, logs out, and tears down every row it created.\n\n**Course-Identity Clone Chassis** -- All course-specific content lives in a single curriculum JSON and five identity strings. The integrity stack, grading pipeline, forensics analyzer, and diagnostics are course-agnostic and ship unchanged into the next course in the series.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**It actually grades writing, not clicks** -- Free-response algebra. The student types out their reasoning and the AI grades the reasoning, not whether the final answer matches a key.\n\n**It catches AI cheating two ways** -- Pasted AI output fails GPTZero on the text and fails process forensics on the keystroke stream. Trying to evade one detector signals harder on the other.\n\n**The integrity stack is server-enforced** -- Sequential gating, baseline freezing, and process-forensics are all enforced on the server. The client cannot disable, fake, or bypass them.\n\n**Feedback is specific, not hedged** -- The grader is prompted to be \"kind but rigorous.\" It cites the student's actual algebraic moves and tells them precisely where the reasoning broke. No \"good effort, try again.\"\n\n**The diagnostic is honest** -- /diagnostic runs a live submit-and-grade round-trip end-to-end. If anything is wrong -- bad key, dead DB, broken grader -- it fails loudly with the actual error string, not a generic \"something went wrong.\"\n\n**Clonable without touching the integrity stack** -- Swap the curriculum JSON and five identity strings to spin up the next course. The forensics analyzer, gating logic, and diagnostics are course-agnostic and re-used as-is.\n\n**One-click full diagnostic report** -- Two diagnostic cards on the same page, both with copy-to-clipboard output suitable for pasting into a support ticket.\n\n**No persistent test pollution** -- The end-to-end check creates its own synthetic diagnostic student, runs the full walk, and deletes the student (cascading every row) in a finally block. Zero rows left behind on success or failure.",
+      },
+    ],
+  },
   "English Composition 102": {
     emoji: "📚",
     tagline:
@@ -632,6 +663,7 @@ export default function Courses() {
     { title: "Sociology 101", url: "https://sociology101.xyz" },
     { title: "Medical Terminology", url: "https://medicalterminology.xyz" },
     { title: "College Algebra", url: "https://collegealgebra.xyz" },
+    { title: "Algebra 2", url: "https://algebra2.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
