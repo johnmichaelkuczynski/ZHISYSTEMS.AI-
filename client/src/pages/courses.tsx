@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "American Government": {
+    emoji: "🏛️",
+    tagline:
+      "A Quality Matters-Aligned Online Course Shell for Introductory American Government",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "American Government 101 is a fully online, asynchronous undergraduate course shell built to the Quality Matters Higher Ed Rubric (7th ed.). It delivers a 14-module curriculum covering the constitutional foundations, institutions, behaviors, and policy outputs of the U.S. political system, with every assignment instrumented for AI-assisted instruction, originality verification, and rubric-based grading.\n\nUnlike a static LMS course pack, this shell is a live application: students read the module, converse with a module-scoped AI tutor grounded in the syllabus, draft and submit work through a single interface, and receive immediate rubric feedback plus an AI-text probability score on every submission. Instructors get a course that is identical in structure to the Philosophy 101, Business 101, and Algebra 101 sister shells, so workflows, grading conventions, and student expectations carry across the catalog.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Undergraduate students** -- need a structured, self-paced introduction to American government that unlocks module-by-module and provides on-demand tutoring\n\n**Adjuncts and full-time faculty** -- need a turn-key course shell that already meets QM standards, with no setup beyond enrollment and grade review\n\n**Instructional designers** -- need a reference implementation of QM-aligned module structure, learning outcomes mapping, and accessibility documentation\n\n**Department chairs** -- need a consistent 800-point, 14-module course that articulates cleanly with other 101-level offerings in the catalog\n\n**Accessibility coordinators** -- need a course that ships with a documented accessibility statement and support pathway out of the box\n\n**Anyone** -- who wants to study the U.S. political system in a course that treats writing, source use, and academic integrity as first-class concerns",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**14-Module Curriculum (800 pts)** -- Constitutional foundations, federalism, civil liberties and rights, Congress, the presidency, the bureaucracy, the judiciary, public opinion, media, parties, elections, interest groups, domestic policy, and foreign policy. Seven discussions, five essays, a term-paper outline, and a final term paper.\n\n**Module-Scoped AI Tutor** -- Every module ships with a dedicated tutor conversation grounded in that module's reading and prompt. Students can rehearse arguments, test interpretations, and clarify concepts before they write. Conversation history is persisted per student per module.\n\n**General Tutor** -- A course-wide tutor entry point for cross-cutting questions, study planning, and review across all 14 modules.\n\n**Originality Verification** -- Every submission is automatically scored by GPTZero for AI-generated text probability. Scores are stored alongside the submission and surfaced to graders.\n\n**Rubric-Based Auto-Feedback** -- Discussion posts and essays receive immediate rubric-aligned feedback against the assignment's learning outcomes, with per-criterion strengths and revision targets.\n\n**Sequential Module Unlock** -- Modules unlock on submission of the prior module, enforcing pacing without manual instructor intervention.\n\n**Quality Matters Alignment** -- Course mapping, measurable learning outcomes, assessment alignment, and accessibility documentation written to the QM Higher Ed Rubric, 7th edition.\n\n**Accessibility Statement & Support Pathway** -- Dedicated Accessibility and Support pages document accommodations, alternate formats, and the path to request institutional support.\n\n**Syllabus and Start-Here Onboarding** -- A guided Start Here page walks new students through registration, integrity acknowledgement, and the first module. The Syllabus page is the authoritative course contract.\n\n**Integrity Acknowledgement** -- Students record an explicit academic integrity acknowledgement before submitting work; the timestamp is persisted with their profile.\n\n**System Diagnostic** -- One-click self-check that exercises the database connection, the AI tutor pipeline, and the originality-verification pipeline end-to-end, with pass/fail reporting suitable for an instructor to verify the course is healthy before term start.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**It is a course, not a course management system** -- The shell ships with finished, graded, QM-aligned content for American Government. Faculty adopt the course; they do not assemble it.\n\n**Every assignment has a tutor and an originality score** -- Tutoring and AI-text detection are not bolt-ons. They are part of the assignment lifecycle and are wired into the same submission record the grader sees.\n\n**Instructional consistency across the catalog** -- American Government 101 is structurally identical to Philosophy 101, Business 101, and Algebra 101. A student who has taken any one of them already knows how to take the others.\n\n**Pacing is enforced by the product, not the instructor** -- Sequential unlock means students cannot skip ahead, and instructors do not have to police it.\n\n**The diagnostic page is the source of truth for course health** -- Before a term begins, an instructor runs the diagnostic and gets an honest pass/fail on the database, the tutor, and originality checks. No guessing whether the course is wired correctly.\n\n**Accessibility and integrity are documented, not assumed** -- The course ships with explicit, student-facing Accessibility and Support pages and an integrity acknowledgement step. QM reviewers do not have to ask where these live.",
+      },
+    ],
+  },
   "Prealgebra": {
     emoji: "🧮",
     tagline: "AI-Graded, Integrity-Hardened Online Course in Pre-Algebra",
@@ -791,6 +822,7 @@ export default function Courses() {
     { title: "Prealgebra", url: "https://prealgebra.xyz" },
     { title: "Business 101", url: "https://introtobusiness.xyz" },
     { title: "Data Analytics", url: "https://analysis101.xyz" },
+    { title: "American Government", url: "https://government101.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
