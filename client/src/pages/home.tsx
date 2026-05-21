@@ -2412,7 +2412,7 @@ export default function Home() {
       { title: "EZGrader", url: "https://ezgrader.ai", videoUrl: "/videos/ezgrader-tutorial.mp4" }
     ],
     "🧠 Intelligence & Psychology": [
-      { title: "Ask A Philosopher", url: "https://analyticphilosophy.net" },
+      { title: "Ask A Philosopher", url: "https://genius101.xyz" },
       { title: "Freud GPT", url: "https://freudgpt.me" },
       { title: "Major Brain", url: "https://majorbrain.xyz" },
       { title: "Model Builder", url: "https://modelwiz.xyz" },
