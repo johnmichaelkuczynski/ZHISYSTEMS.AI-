@@ -1,0 +1,58 @@
+🧮 PRE-ALGEBRA 100
+AI-Graded, Integrity-Hardened Online Course in Pre-Algebra
+
+🧩 Overview
+Pre-Algebra 100 is a self-contained online course that takes a student from a diagnostic placement quiz through twelve graded discussion and essay assignments and a two-stage term paper — 14 items, 800 points total — with every submission graded by an AI tutor against a faculty-authored rubric and a hidden model response. The platform is built around a strict operating principle: every grade is explicit, every piece of feedback is specific, and the integrity stack is impossible to bypass with off-the-shelf chatbot output.
+
+Unlike consumer tutoring chatbots that produce generic, hedged, watered-down feedback, Pre-Algebra 100 returns a precise score against a published rubric, a paragraph of targeted feedback tied to the actual arithmetic and reasoning in the student's response, and a permanent record of the writing process that produced the submission. If a student pastes AI output into the editor, the system catches it two different ways — once on the finished text, and once on the keystroke stream that produced it. No padding, no preamble, no editorializing.
+
+👥 Who It's For
+Adult learners returning to math -- need a structured, low-pressure on-ramp that rebuilds whole-number, fraction, decimal, percent, and early algebra skills before tackling Algebra 101
+Community college and developmental-math students -- need rigorous, transparent grading on every assignment rather than a single pass/fail at the end of the term
+Homeschool families and middle/high school students -- need a self-paced curriculum with faculty-quality feedback on showing work, not just final answers
+Tutors and instructors -- need a turnkey course shell with model responses, rubrics, and an audit trail of every student submission
+Test-prep candidates (GED, HiSET, accuplacer, ASVAB math) -- need targeted practice on place value, operations, fractions, decimals, percent, proportions, basic equations, and the coordinate plane
+Anyone -- who wants to learn pre-algebra by actually doing problems and getting real feedback, not by watching videos and clicking through quizzes
+⚙️ Core Capabilities
+AI-Graded Assignments -- Every submission is graded synchronously by Claude against the faculty-authored rubric and the hidden model response for that item. The grader returns a numeric score (clamped to the item's point value) plus a paragraph of targeted feedback tied to the specific arithmetic moves in the student's work.
+
+14-Item, 800-Point Curriculum -- Six discussions on whole-number operations, integers, decimals, percents, equations, and geometry; five essays on factoring, fractions, ratios, variables, and inequalities; one discussion on the coordinate plane; plus a two-stage term paper outline and term paper. Best score per item counts toward the course total.
+
+Hidden Model Responses -- Every item ships with a faculty-written model response and a "Why This Is a Model Response" rationale that the grader uses as its reference. Students never see the model, but the grader does — so the bar is concrete, not vague.
+
+Diagnostic Placement Quiz -- A short pre-course diagnostic that checks readiness for Pre-Algebra 100 and surfaces specific gaps (place value, signed arithmetic, fractions, percent) before the student begins assignment work.
+
+Hybrid Math Editor -- A prose textarea for showing work and explaining reasoning, plus a MathLive equation field for symbolic input. Equations are stored as LaTeX and rendered with KaTeX so fractions, exponents, radicals, and signed expressions display correctly.
+
+GPTZero Integrity Check -- Every submission is screened through GPTZero on the finished text. AI-likelihood scores are recorded on every submission and visible to course administrators.
+
+Writing-Process Forensics -- A keystroke-level recorder captures inserts, deletes, caret jumps, focus changes, and pasted blocks while the student writes. A pure analyzer with 11 features produces a per-submission suspicion score (0–100), classified as human / mixed / likely-AI, with a frozen per-student baseline so the system adapts to each writer.
+
+Per-Student Process Baseline -- The first two submissions establish a baseline; later submissions are scored against that baseline rather than a one-size-fits-all profile. A student whose natural writing rhythm is slow and choppy is not penalized for being slow and choppy.
+
+Admin Submissions Console -- Faculty/admins can review every submission with full process-forensics features, baseline deviation, GPTZero score, grader output, and the raw text. Student-facing views strip all integrity fields.
+
+Best-Score-Counts Gradebook -- Students can resubmit any item; only the highest score per item counts toward the 800-point total. The gradebook shows running totals, per-item bests, and the rubric for every item.
+
+Self-Paced, No Lockout -- All 14 items are available from day one. Students can work in any order, take any item as many times as they want, and leave/return without losing state.
+
+🚀 What Makes It Different
+It actually grades the math, not the vibes -- The grader reads the student's actual arithmetic, factoring, equation steps, and verifications against a faculty model response. A correct answer with no work shown does not get full credit; a wrong answer with sound reasoning and an honest verification does not get zero.
+
+It separates the answer from the work -- Pre-algebra is about showing your steps. The rubric rewards stating the place value, showing every borrow and carry, naming the technique, verifying with the inverse operation, and explaining the underlying idea — not just "the answer is 7."
+
+Two-channel integrity, not one -- Most platforms either check the finished text (easy to defeat by retyping) or watch keystrokes (easy to dismiss as noise). Pre-Algebra 100 does both, on every submission, and shows them side-by-side in the admin console.
+
+Per-student baseline, not a generic profile -- The process-forensics analyzer freezes a baseline from the student's first two submissions. A meticulous, slow writer and a fast, sloppy writer each get judged against their own normal — not against a population average that flags every careful student as suspicious.
+
+Hidden model responses, public rubrics -- Students know exactly what they're being graded on (the rubric is in every assignment), but they cannot game the grader by copying a model answer (the model is server-side only, used by the grader as its reference).
+
+Best-score grading without grade inflation -- Students can retry any item, but every retry is graded against the same rubric and the same model response. There is no participation credit and no "good effort" bump. The only way to raise a score is to actually do better work.
+
+Faculty-authored curriculum, verbatim from the source -- All 14 items are parsed directly from a single source-of-truth course book. Background, assignment, model response, and grading rationale are stored together for every item; the parser is the only path content takes into the database.
+
+Synchronous grading, no queue -- Submissions are graded inside the POST handler. Students see their score and feedback in seconds, not the next morning.
+
+One-click diagnostic of the integrity stack -- A built-in diagnostic runs two synthetic-stream tests (one transcription, one composition) end-to-end and confirms the process-forensics analyzer is classifying correctly. If anyone tweaks the weights or thresholds, this catches it.
+
+Quiet on the student side, loud on the admin side -- Students see scores, feedback, and the rubric — nothing about process forensics or GPTZero. Admins see every signal. The system is honest with the student about the grade and honest with the institution about the integrity story.
