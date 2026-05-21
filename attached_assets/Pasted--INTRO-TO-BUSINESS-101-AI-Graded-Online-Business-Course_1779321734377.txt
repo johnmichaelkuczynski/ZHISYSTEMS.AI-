@@ -1,0 +1,60 @@
+💼 INTRO TO BUSINESS 101
+
+AI-Graded Online Business Course with Two-Layer Integrity Forensics and Sequential Mastery Gating
+🧩 Overview
+
+Intro to Business 101 is a single-instructor online course platform that delivers a 15-module curriculum (8 discussions, 5 essays, a business-plan outline, and a full business plan, totalling 850 points) covering what a business is, value creation, organizational forms, markets and pricing, financial statements, operations, marketing, management, strategy, ethics, entrepreneurship, risk, and business in the age of AI. Every student response is graded by Claude against an instructor-authored model answer and rationale, with feedback returned in seconds.
+
+Unlike generic LMS quiz engines that grade multiple-choice answers and call it a day, Intro to Business 101 is built around a strict operating principle: the platform should be able to tell, with evidence, whether a student actually did the work. Every submission runs through a two-layer integrity stack — synchronic AI detection on the text itself plus diachronic process forensics on the writing stream — and a sequential gate prevents anyone from skipping ahead. No padding, no shortcuts, no editorializing.
+👥 Who It's For
+
+    Community-college and intro-business instructors -- need to give individualized written feedback at scale without spending nights grading discussion boards and essays
+    Online-program directors -- need a defensible audit trail that distinguishes student work from AI output, on every submission
+    Workforce-development and continuing-ed programs -- need a structured 15-step path from "what is a business" to a complete written business plan, with consistent grading rigor across cohorts
+    Curriculum designers -- need a chassis they can swap content into without rebuilding the integrity, grading, or progress-tracking layers
+    Returning and first-generation students -- want immediate, constructive feedback on their business reasoning instead of waiting a week for a red-pen score
+    Anyone -- who wants to know whether a learner actually understands the material, instead of whether they pasted a plausible answer
+
+⚙️ Core Capabilities
+
+    AI-Graded Submissions -- Every response is graded by Claude Sonnet 4.5 against the instructor's model answer and rationale, returning a numeric score (0..pointValue) and 2–5 sentences of substantive feedback. The grader rewards specificity (named firms, real numbers, identifiable trade-offs) and penalizes generic MBA-speak.
+
+    15-Module Curriculum, 850 Points -- 8 × 50-point discussions + 5 × 50-point essays + 100-point business-plan outline + 100-point business plan. Sequenced strictly: definitions → value creation → organizational forms → markets → financial statements → operations → marketing → management → strategy → ethics → entrepreneurship → risk → AI in business → outline → final plan.
+
+    Sequential Mastery Gating -- Module N+1 stays locked until module N is submitted. The server enforces this on POST /submissions with a 403, so a student cannot bypass the gate by hand-crafting requests or sharing URLs.
+
+    Integrity Canvas (Box 2) -- The submission editor logs keystrokes, blocks paste, samples GPTZero scores in real time during typing, highlights AI-suspicious sentences inline, and surfaces a traffic-light bar plus a cumulative-red warning. The full event stream is saved with the submission.
+
+    Draft Workshop (Box 1) -- A single-shot AI-feedback round on a draft before the student commits. Once the draft is submitted for feedback it locks, preserving a clean before/after artifact that grading and integrity review can both reference.
+
+    Two-Layer AI Detection -- Synchronic detection (GPTZero on the finished text) plus diachronic detection (process forensics on the keystroke stream: pause distribution, burst patterns, baseline drift, paste events, and revision shape). Each layer can flag independently; the combination is much harder to defeat than either alone.
+
+    Process Forensics Analyzer -- 11-feature scoring model with an n=2 baseline freeze per student, producing a 0–100 process score and a class label (human, mixed, likelyAI). Wired into POST /submissions so every accepted submission carries a forensic verdict at write time, not as an afterthought.
+
+    Sequential Tutor Conversation -- A per-module tutor backed by Claude with persistent conversation history. The tutor sees the module's reading and assignment context but never the model answer, so it can guide without leaking the rubric.
+
+    Assessments Dashboard -- A student-facing list of every submission with its grade, feedback, AI verdict, and process verdict. Forensic columns (process_*) are stripped from student responses by the serialization layer — they exist only in instructor views.
+
+    Integrity Disclosure & Acknowledgment -- A one-time integrity ack gate that students must accept before the module page will open the editor, recording consent to the AI-detection and process-forensics policies with timestamp.
+
+    System & Functional Diagnostic -- One-click in-process self-check (DB, curriculum, Anthropic + GPTZero keys, live AI grader round-trip, submission/canvas/tutor persistence, progress recompute) with cleanup. Color-coded pass/fail with per-check timing.
+
+    End-to-End Functional Check -- One-click loopback walk through the real HTTP stack: signs in a synthetic student, acks integrity, opens a tutor conversation, autosaves the canvas, asserts the sequential gate refuses out-of-order submits with a 403, submits the first module, verifies it appears in both the module page and the assessments list, then tears down the synthetic student (FK CASCADE removes all its rows). No mocks, no real data touched.
+
+🚀 What Makes It Different
+
+    It actually catches AI work -- Two independent detectors run on every submission: GPTZero on the final text and a process-forensics analyzer on the keystroke stream. A student who pastes AI output trips synchronic detection; a student who retypes AI output into the canvas trips diachronic detection. Defeating both at once requires actually writing the thing.
+
+    It separates structure from substance -- A grammatically clean answer that misses the point scores poorly on substance; a rough answer that nails the trade-off scores well. The grader is instructed to reward specificity (named firms, real numbers, identifiable mechanisms) and penalize generic MBA-speak, so the score reflects business reasoning, not polish.
+
+    It enforces the syllabus, not just suggests it -- Sequential gating is a server-side 403, not a hidden link. Students cannot skip Discussion 1 to get to the Business Plan, even if they hand-craft requests. The gate is the same code path the diagnostic E2E walk exercises on every run.
+
+    It records evidence, not just verdicts -- Every submission carries its keystroke log, paste-block events, sampled GPTZero score history, final GPTZero verdict, and process-forensics score with feature breakdown. If a grade is challenged, the instructor has the receipts; if the integrity stack is challenged, the data is replayable.
+
+    It uses one grader the same way every time -- Claude Sonnet 4.5 against the instructor's model answer and rationale, with a fixed prompt structure. No A/B-tested grading, no per-student rubric drift, no humans on the night shift quietly being more generous than humans on the morning shift.
+
+    It is built to clone -- The integrity stack, grading pipeline, diagnostics, sequential gate, draft workshop, integrity canvas, and tutor are all course-agnostic. Swapping the curriculum is a single-file edit; the rest of the chassis is untouched. Intro to Business 101 is one of a family of courses that share this platform.
+
+    It tells you when it is broken -- The diagnostics page runs both an in-process self-check (DB, curriculum, AI keys, live API pings, submit/canvas/tutor round-trip) and an end-to-end loopback walk that exercises the real HTTP stack with a synthetic student that deletes itself at the end. The operator can verify the entire pipeline is healthy in under five seconds, without touching real student data.
+
+    One-click full report -- The diagnostic report is copy-pastable JSON, time-stamped, and includes per-check duration. Operators get a single artifact they can paste into an incident ticket or send to the platform owner without screenshotting anything.
