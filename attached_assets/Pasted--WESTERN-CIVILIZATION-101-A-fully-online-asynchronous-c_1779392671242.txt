@@ -1,0 +1,54 @@
+🏛️ WESTERN CIVILIZATION 101
+
+A fully online, asynchronous college-level survey of the Western tradition — from Greco-Roman antiquity and Judeo-Christian religion through the Renaissance, Enlightenment, revolutions, and the modern world.
+🧩 Overview
+
+Western Civilization 101 is a 15-module, 850-point introductory history course delivered as a self-contained web app. Students read a unit of the course text, complete the assignment (a discussion post, a structured essay, or a research-paper deliverable), receive Socratic formative feedback from an AI tutor that speaks for the instructor, and submit graded work — all in one place. The course text was authored by Dr. Lawrence Dodge and is used here as the canonical reading.
+
+Unlike a generic chatbot wrapper or a passive LMS, this app is built around a strict pedagogical principle: the AI tutor never writes the student's work, never bypasses the assignment, and never softens the rubric. It asks better questions, surfaces weak reasoning, and flags AI-generated prose before submission. Every module ships with the instructor's own model response so students can see what an A-grade answer actually looks like.
+👥 Who It's For
+
+    First-year undergraduates -- need a rigorous but humane introduction to the Western canon without lectures or fixed class times
+    Returning and adult learners -- need a fully asynchronous course they can complete around work and family obligations
+    Homeschool and dual-enrollment students -- need a college-level survey with a published syllabus, model responses, and a real research-paper track
+    Self-directed readers -- want to work through Greco-Roman antiquity, Christianity, the Renaissance, the Reformation, the Scientific Revolution, the Enlightenment, the revolutions, industrialization, and the twentieth century with structured prompts and feedback
+    Instructors and TAs -- want a reference implementation of an AI tutor that critiques without ghostwriting, plus a built-in originality check
+    Anyone -- who wants to understand how the modern West actually came to be, instead of a flattering summary of it
+
+⚙️ Core Capabilities
+
+    15-Module Curriculum -- 8 discussion units (50 pts each), 5 long-form essays (50 pts each), a Research Paper Proposal (100 pts), and a final Research Paper Assignment (100 pts) -- 850 points total. Every module has objectives, a primary reading, an assignment prompt, and an instructor-authored model response.
+
+    Socratic AI Tutor -- Conversational interface backed by Anthropic Claude Sonnet 4.5 that speaks for the instructor of record. Asks probing questions, names specific weaknesses in a draft, and points to the relevant section of the course text. Refuses to write the assignment for the student — always.
+
+    Inline Draft Critique -- One-click "critique my draft" action against the active module's rubric. Returns targeted feedback on thesis clarity, evidence, historical accuracy, and structure without rewriting the prose.
+
+    Autosaving Drafts -- Every keystroke in the assignment editor is persisted to the database per student per module, so work survives tab closes, browser crashes, and device switches.
+
+    Submission + Gradebook -- Submitted work is stored with timestamp, word count, and module reference. Progress is recomputed automatically and surfaced as a per-module completion state and a running point total out of 850.
+
+    GPTZero Originality Check -- Every submission is screened by GPTZero's AI-detector API before it counts. Students and instructors see the AI-probability score and class label (human / mixed / ai) attached to each submission.
+
+    Instructor Model Responses -- Each of the 15 modules ships with the instructor's own model response and a "Why This Is a Model" rubric breakdown, so students see the target before they write — not after they're graded.
+
+    Persistent Tutor Conversations -- Tutor threads are saved per student per module. Students can return to a prior conversation and continue where they left off; instructors can audit the full transcript.
+
+    Accessibility First -- Semantic HTML, keyboard-navigable nav and forms, sufficient color contrast, screen-reader-friendly labels, and a dedicated Accessibility page that documents the commitments and the contact route for accommodations.
+
+    System Diagnostic -- One-click self-check that verifies the database connection, the Anthropic AI integration, the GPTZero API key, curriculum integrity (15 modules / 850 pts), submission + draft round-trips, progress recompute, and a live tutor critique. Pass/fail per check with timings and detail strings — ideal for instructor sanity-checks and post-deploy verification.
+
+🚀 What Makes It Different
+
+    It is a course, not a chatbot -- The product is a 15-module, 850-point survey with a published syllabus, real rubrics, and a research-paper track. The AI is a tutor inside the course, not the course itself.
+
+    The tutor never ghostwrites -- The system prompt and the UI both refuse to produce the student's submission. The tutor critiques, questions, and points to the reading — it will not write the essay for you, ever.
+
+    Model responses are the instructor's own -- Every module's model response was authored by Dr. Lawrence Dodge as part of the source text. Students see exactly what the instructor considers an A-grade answer.
+
+    Originality is enforced, not assumed -- GPTZero runs on every submission as a first-class part of the grading pipeline, not a bolted-on plugin. Scores are visible to both the student and the instructor.
+
+    Fully asynchronous, fully online -- No live sessions, no fixed times, no proctoring software. Students work at their own pace; progress is reconstructed from submissions on every page load.
+
+    Single curriculum source of truth -- The 15-module curriculum lives in one generated TypeScript file shared between the web app and the API server, parsed directly from the instructor's source document. There is no second copy to drift.
+
+    Honest infrastructure -- External Neon Postgres for durable storage, Drizzle ORM with a real migration path, Anthropic via Replit AI Integrations, and a live diagnostic endpoint that pings every dependency. No mocks, no silent fallbacks — if a dependency is down, the diagnostic says so.
