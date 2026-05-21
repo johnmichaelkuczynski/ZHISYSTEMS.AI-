@@ -1,0 +1,85 @@
+📊 DATA ANALYTICS 101
+
+A Fully Online, Socratic College Course in Data Analytics — Powered by an AI Tutor That Refuses to Write Your Work For You 🧩 Overview
+
+Data Analytics 101 is a fully online, asynchronous, college-level survey of how analysts turn observations of the world into knowledge that supports decisions. Across 15 graded items — 8 discussions, 5 essays, and a two-stage capstone analysis — students work through the building blocks of analytic practice: questions and decisions, data types and quality, descriptive statistics, probability and sampling, correlation and causation, hypothesis testing, regression, A/B testing, data visualization, machine learning, ethics and privacy, and the impact of AI on analytics.
+
+Unlike consumer course platforms that let AI write essays on behalf of the student, this course is built around a strict pedagogical principle: the AI Tutor teaches in the Socratic voice of the instructor of record, asks questions instead of giving answers, and never produces submission-ready text. Every submission is screened for AI authorship before it touches the grade book. The student does the thinking; the platform makes the thinking better. 👥 Who It's For
+
+Undergraduates -- a first college-level analytics course that builds the judgment behind the tools, not just the syntax
+Career-switchers and self-learners -- a structured 15-item curriculum with model responses and rubric-based feedback, available open-enrollment and self-paced
+Working analysts -- a refresher on the foundations (sampling, confounding, hypothesis testing, visualization ethics) that bootcamps and on-the-job training tend to skip
+Instructors -- a turnkey course shell built to the Quality Matters Higher Ed Rubric (7th ed.), with full readings, assignments, model responses, and an AI tutor pre-configured to a Socratic teaching voice
+Anyone -- who wants to learn what data analytics actually is, beyond dashboards and SQL syntax, before deciding whether to invest further
+⚙️ Core Capabilities
+
+15-Item Verbatim Curriculum -- 8 Discussions, 5 Essays, and a two-stage Capstone (Proposal + 10–15 page Analytic Paper). Every reading, assignment prompt, model response, and rubric is rendered directly from the canonical course text — no paraphrasing, no drift.
+
+Socratic AI Tutor -- Anthropic Claude Sonnet 4.5, system-prompted to speak in the instructor's voice. Asks questions, surfaces counterexamples, and gives formative feedback. Explicitly refuses to write submissions for the student.
+
+Per-Module Tutor Sessions -- Each of the 15 modules has its own scoped tutor that knows the reading, the assignment, and the student's prior submissions. Conversations persist so students can return mid-essay.
+
+Submission Pipeline -- Free-text submissions are graded against the module's rubric, with strengths, gaps, and a Socratic prompt to push the next revision.
+
+AI Authorship Screening (GPTZero) -- Every submission is automatically scored by GPTZero before grading. Suspected AI-written work is flagged for instructor review rather than silently accepted.
+
+Sequential Unlock -- Modules unlock in order as the previous one is submitted, mirroring the pacing of an instructor-led course while preserving self-paced flexibility.
+
+Capstone Two-Stage Workflow -- The Capstone Analysis Proposal (100 pts) is graded and approved before the Capstone Analysis Assignment (100 pts) unlocks, modeling real research-supervision practice.
+
+Course Shell to QM Rubric -- Start Here, Syllabus, Modules, Assessments, Support, Accessibility, and Diagnostic pages all built to the Quality Matters Higher Ed Rubric (7th ed.) standard for online course design.
+
+Persistent Student Records -- Postgres-backed (Neon). Submissions, grades, tutor transcripts, and progress all retained across sessions and devices.
+
+Diagnostic Self-Check -- One-click endpoint that verifies the curriculum loads, both AI providers (Anthropic + GPTZero) are reachable, the database responds, and the full submission-and-grade pipeline works end-to-end. Color-coded pass/warn/fail report.
+
+Accessibility -- Designed to conform with WCAG 2.1 Level AA. Keyboard-navigable, screen-reader-labelled, and high-contrast throughout.
+🚀 What Makes It Different
+
+It teaches, it doesn't ghostwrite -- The AI Tutor will discuss the reading, challenge a draft, and propose questions the student hasn't considered. It will not produce a paragraph the student can paste into a submission. This is enforced in the system prompt, not just suggested.
+
+It catches AI submissions, not just hopes against them -- Every submission runs through GPTZero before a grade is issued. Suspected AI work is surfaced explicitly, not buried.
+
+Model responses are real, not generic -- Every assignment ships with a model response that demonstrates the level of reasoning the rubric actually rewards, plus an explicit analysis of why the response works. Students see what a defensible answer looks like before they write their own.
+
+Curriculum is verbatim, not paraphrased -- The reading text, assignment prompts, and rubrics are auto-generated from the canonical source document. There is no editorial layer between the instructor's text and what the student reads.
+
+One instructor voice across 15 modules -- The tutor speaks in a single, consistent pedagogical voice rather than the generic helpful-assistant tone of a default chatbot. Students get the same instructor in every module.
+
+Built to a real higher-ed rubric -- Every page in the course shell exists because the Quality Matters Higher Ed Rubric (7th ed.) requires it, not because it looked nice on a landing page.
+
+Honest about what data analytics is -- The capstone is an analytic paper, not a dashboard or a Kaggle notebook. The course's claim is that an analyst's job is to produce work they can defend on the merits, and the assignments are designed to make the student do exactly that.
+
+Fully online, no proctoring theater -- The course is open-enrollment and self-paced. Integrity is enforced through AI-screening and Socratic engagement, not lockdown browsers or webcam surveillance.
+🛠️ Stack
+
+Frontend -- React + Vite, TypeScript, TailwindCSS, shadcn/ui, Wouter (routing), TanStack Query
+Backend -- Node.js + Fastify (TypeScript), generated OpenAPI client/server contract
+Database -- Postgres (Neon), Drizzle ORM, persistent sessions
+AI -- Anthropic Claude Sonnet 4.5 (tutor + grading), GPTZero (AI-authorship detection)
+Auth -- Session-based with account creation on first sign-in
+Hosting -- Replit Deployments
+📚 Course Map
+
+Discussions (50 pts each)
+
+What Data Analytics Is
+Data Types and Data Quality
+Probability and Sampling
+Hypothesis Testing and Statistical Significance
+A/B Testing and Experimental Design
+Machine Learning Fundamentals
+Ethics, Privacy, and the Limits of Data
+Data Analytics in the Age of AI
+Essays (50 pts each)
+
+Questions, Data, and Decisions
+Descriptive Statistics and the Shape of Data
+Correlation, Causation, and Confounding
+Regression and Predictive Modeling
+Data Visualization and Honest Reporting
+Capstone (200 pts total)
+
+Capstone Analysis Proposal (100 pts)
+Capstone Analysis Assignment (100 pts) — 10–15 page analytic paper
+Total: 850 points across 15 graded items.

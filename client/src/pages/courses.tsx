@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "Data Analytics": {
+    emoji: "📊",
+    tagline:
+      "A Fully Online, Socratic College Course in Data Analytics -- Powered by an AI Tutor That Refuses to Write Your Work For You",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "Data Analytics 101 is a fully online, asynchronous, college-level survey of how analysts turn observations of the world into knowledge that supports decisions. Across 15 graded items -- 8 discussions, 5 essays, and a two-stage capstone analysis -- students work through the building blocks of analytic practice: questions and decisions, data types and quality, descriptive statistics, probability and sampling, correlation and causation, hypothesis testing, regression, A/B testing, visualization, machine learning fundamentals, and the ethics and limits of data.\n\nUnlike consumer course platforms that let AI write essays on behalf of the student, this course is built around a strict pedagogical principle: the AI Tutor teaches in the Socratic voice of the instructor of record, asks questions instead of giving answers, and never produces submission-ready text. Every submission is screened for AI authorship before it touches the grade book. The student does the thinking; the platform makes the thinking better.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Undergraduates** -- a first college-level analytics course that builds the judgment behind the tools, not just the syntax\n\n**Career-switchers and self-learners** -- a structured 15-item curriculum with model responses and rubric-based feedback, available open-enrollment and self-paced\n\n**Working analysts** -- a refresher on the foundations (sampling, confounding, hypothesis testing, visualization ethics) that bootcamps and on-the-job training tend to skip\n\n**Instructors** -- a turnkey course shell built to the Quality Matters Higher Ed Rubric (7th ed.), with full readings, assignments, model responses, and an AI tutor pre-configured to a Socratic teaching voice\n\n**Anyone** -- who wants to learn what data analytics actually is, beyond dashboards and SQL syntax, before deciding whether to invest further",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**15-Item Verbatim Curriculum** -- 8 Discussions, 5 Essays, and a two-stage Capstone (Proposal + 10-15 page Analytic Paper). Every reading, assignment prompt, model response, and rubric is rendered directly from the canonical course text -- no paraphrasing, no drift.\n\n**Socratic AI Tutor** -- Anthropic Claude Sonnet 4.5, system-prompted to speak in the instructor's voice. Asks questions, surfaces counterexamples, and gives formative feedback. Explicitly refuses to write submissions for the student.\n\n**Per-Module Tutor Sessions** -- Each of the 15 modules has its own scoped tutor that knows the reading, the assignment, and the student's prior submissions. Conversations persist so students can return mid-essay.\n\n**Submission Pipeline** -- Free-text submissions are graded against the module's rubric, with strengths, gaps, and a Socratic prompt to push the next revision.\n\n**AI Authorship Screening (GPTZero)** -- Every submission is automatically scored by GPTZero before grading. Suspected AI-written work is flagged for instructor review rather than silently accepted.\n\n**Sequential Unlock** -- Modules unlock in order as the previous one is submitted, mirroring the pacing of an instructor-led course while preserving self-paced flexibility.\n\n**Capstone Two-Stage Workflow** -- The Capstone Analysis Proposal (100 pts) is graded and approved before the Capstone Analysis Assignment (100 pts) unlocks, modeling real research-supervision practice.\n\n**Course Shell to QM Rubric** -- Start Here, Syllabus, Modules, Assessments, Support, Accessibility, and Diagnostic pages all built to the Quality Matters Higher Ed Rubric (7th ed.) standard for online course design.\n\n**Persistent Student Records** -- Postgres-backed (Neon). Submissions, grades, tutor transcripts, and progress all retained across sessions and devices.\n\n**Diagnostic Self-Check** -- One-click endpoint that verifies the curriculum loads, both AI providers (Anthropic + GPTZero) are reachable, the database responds, and the full submission-and-grade pipeline works end-to-end. Color-coded pass/warn/fail report.\n\n**Accessibility** -- Designed to conform with WCAG 2.1 Level AA. Keyboard-navigable, screen-reader-labelled, and high-contrast throughout.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**It teaches, it doesn't ghostwrite** -- The AI Tutor will discuss the reading, challenge a draft, and propose questions the student hasn't considered. It will not produce a paragraph the student can paste into a submission. This is enforced in the system prompt, not just suggested.\n\n**It catches AI submissions, not just hopes against them** -- Every submission runs through GPTZero before a grade is issued. Suspected AI work is surfaced explicitly, not buried.\n\n**Model responses are real, not generic** -- Every assignment ships with a model response that demonstrates the level of reasoning the rubric actually rewards, plus an explicit analysis of why the response works. Students see what a defensible answer looks like before they write their own.\n\n**Curriculum is verbatim, not paraphrased** -- The reading text, assignment prompts, and rubrics are auto-generated from the canonical source document. There is no editorial layer between the instructor's text and what the student reads.\n\n**One instructor voice across 15 modules** -- The tutor speaks in a single, consistent pedagogical voice rather than the generic helpful-assistant tone of a default chatbot. Students get the same instructor in every module.\n\n**Built to a real higher-ed rubric** -- Every page in the course shell exists because the Quality Matters Higher Ed Rubric (7th ed.) requires it, not because it looked nice on a landing page.\n\n**Honest about what data analytics is** -- The capstone is an analytic paper, not a dashboard or a Kaggle notebook. The course's claim is that an analyst's job is to produce work they can defend on the merits, and the assignments are designed to make the student do exactly that.\n\n**Fully online, no proctoring theater** -- The course is open-enrollment and self-paced. Integrity is enforced through AI-screening and Socratic engagement, not lockdown browsers or webcam surveillance.",
+      },
+    ],
+  },
   "Business 101": {
     emoji: "💼",
     tagline:
@@ -728,6 +759,7 @@ export default function Courses() {
     { title: "Algebra 2", url: "https://algebra2.xyz" },
     { title: "Developmental Math", url: "https://developmentalmath.xyz" },
     { title: "Business 101", url: "https://introtobusiness.xyz" },
+    { title: "Data Analytics", url: "https://analysis101.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
