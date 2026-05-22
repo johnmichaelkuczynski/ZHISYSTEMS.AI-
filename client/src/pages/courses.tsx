@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "Public Speaking": {
+    emoji: "🎤",
+    tagline:
+      "A 14-Module Course Platform with Multi-Modal AI-Graded Submissions (Written, Multiple Choice, and Live Audio)",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "Public Speaking 101 is a full course chassis that takes a student from foundational rhetoric through advanced delivery in 14 sequenced modules. Each module is bound to one of three submission modalities -- written response, 20-question multiple choice, or recorded audio -- and every submission is graded by a real backend pipeline, not a placeholder.\n\nUnlike generic LMS shells that just store text, Public Speaking 101 runs each submission through the appropriate verification stack: written responses are scored by GPTZero for AI-generated content, bubble quizzes are auto-scored server-side against an answer key, and audio submissions are uploaded to S3, transcribed by AssemblyAI, then graded against a delivery rubric by Claude Sonnet 4.5. Server-side sequential gating enforces module order; cross-tenant audio keys are rejected at the route level; and two independent diagnostics prove the entire stack works end-to-end on every click.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Students enrolled in a public speaking course** -- need a single place to submit written reflections, take comprehension quizzes, and record spoken exercises with structured feedback on each.\n\n**Instructors and curriculum designers** -- need a turn-key chassis where the 14-module sequence, bubble banks, and audio rubrics are already wired end-to-end without writing grading code.\n\n**Course operators running multiple cohorts** -- need per-student gating, isolated audio storage, and a one-click diagnostic that proves every external dependency is live.\n\n**Developers extending the chassis** -- need a clean three-modality reference implementation (HTTP submissions, S3 presigned uploads, background analysis jobs) that can be cloned to other subjects.\n\n**Anyone** -- who wants a working example of a multi-modal AI-graded learning app instead of a slide deck describing one.",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**14-Module Sequential Curriculum** -- The full course is encoded as typed module objects (d1, e1, d2, e2, d3, e3, d4, e4, d5, e5, d6, d8, tpp, tp) with a fixed 6 written / 4 bubble / 4 audio modality split. Module order is enforced server-side; premature submits return HTTP 403 with the list of missing prerequisites.\n\n**Written Modality (GPTZero-Backed)** -- Long-form text submissions are persisted immediately, then a background job sends the content to GPTZero. The submission row is updated in place with aiScore, aiClass, and aiStatus (pending -> completed | failed), so the student sees their submission instantly and the AI verdict streams in.\n\n**Multiple-Choice Modality (20-Question Bubble Quizzes)** -- Each of the 4 bubble modules has a 20-row answer bank in bubble_questions. Submissions arrive as an array of selected indices, are scored server-side against the correct indices, and the response returns bubbleScore / bubbleTotal plus per-question explanations. No client trust.\n\n**Audio Modality (Record -> Upload -> Transcribe -> Grade)** -- Browser records via MediaRecorder, calls /audio/upload-url to mint a per-student/per-module S3 presigned PUT, uploads the blob directly to S3, then posts {moduleId, key, durationSec} to create the submission. A background pipeline pulls the audio, transcribes it with AssemblyAI, scores it against a delivery rubric with Claude Sonnet 4.5, and writes the result to performance_analyses.\n\n**Sequential Gating** -- A single enforceGating() helper blocks any submission whose prior modules aren't all present in the student's submission history. Applied uniformly to written, bubble, and audio routes.\n\n**Cross-Tenant Key Authorization** -- Audio submissions verify that the supplied S3 key starts with the exact publicspeaking/{studentId}/{moduleId}/ prefix. Forged keys from another student's namespace return 403 before any DB write.\n\n**Per-Modality Submission UI** -- Module pages switch on module.modality and render the appropriate component: WrittenSubmission, BubbleSubmission, or AudioSubmission. Each renders its own results panel (AI verdict, score with explanations, transcript + rubric breakdown).\n\n**System Diagnostic (19-Check)** -- One-click self-check that verifies every external dependency is operational: database connectivity, Anthropic API, GPTZero, AssemblyAI, S3 HeadBucket, AWS credentials, curriculum integrity (14 modules, 6/4/4 split), and bubble bank completeness (80 rows). Color-coded pass/fail report with per-check timing.\n\n**End-to-End Walk Diagnostic (Loopback HTTP)** -- A second diagnostic spins up a synthetic student, walks the real user flow over loopback HTTP (sign in, list modules, attempt out-of-order submit -> 403, submit written, mint presigned audio URL, reject cross-tenant key -> 403, submit audio, submit bubble all-correct, verify progress, log out), then tears the student down via FK CASCADE. Proves the full HTTP stack works end-to-end on every click.\n\n**Session-Based Authentication** -- Cookie-backed sessions issued by /auth/login, validated on every protected route via requireStudent middleware, cleared by /auth/logout. The session round-trips through /auth/me for the frontend to hydrate.\n\n**Per-Student Progress Tracking** -- /publicspeaking/progress returns the list of completed module ids for the signed-in student, used by the curriculum sidebar to render locks, checkmarks, and the \"next module\" call-to-action.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**Three real modalities, not one with cosmetic variants** -- Most course platforms ship a single text-box submission and call multiple-choice \"interactive content.\" Public Speaking 101 has three genuinely distinct backend pipelines (GPTZero, server-side scoring, S3 + AssemblyAI + Claude) wired to three distinct frontend components.\n\n**Server enforces order, not the UI** -- Sequential gating lives in the route handlers, not the sidebar. A student can't bypass module locks by crafting a direct API request; the server checks prior submissions on every POST.\n\n**Audio keys are authorization-checked, not just trusted** -- The audio submission route refuses any S3 key that doesn't start with the student's own publicspeaking/{studentId}/{moduleId}/ prefix. A forged key returns 403 before the DB is touched.\n\n**Two diagnostics, not one** -- The system check verifies every external dependency is reachable in isolation. The end-to-end walk creates a real synthetic student and exercises the actual HTTP stack across all three modalities. Together they catch both \"the API key is wrong\" and \"the routes don't compose\" failure modes.\n\n**Synthetic test data is always torn down** -- The walk diagnostic's finally{} block deletes the synthetic student row; FK CASCADE removes their submissions and analyses. Zero persistent rows on a passing run, zero persistent rows on a failing run.\n\n**No mocked grading, no placeholder pipelines** -- Every grading path calls a real provider. If GPTZero is down, the written submission's aiStatus becomes failed and the user sees it. If AssemblyAI is down, the audio analysis row stays pending with an explicit error. The system never silently returns fake scores.\n\n**One-click clone target** -- The chassis was designed to be cloned to other subjects (philosophy, algebra, etc. -- all sibling artifacts in this monorepo). The curriculum file, bubble bank seeder, and diagnostic are parameterized to make this straightforward.\n\n**Live external integrations only** -- AssemblyAI for transcription, Claude Sonnet 4.5 for delivery rubrics, GPTZero for AI-content detection, AWS S3 for audio storage. No mocks, no in-memory shims, no if (process.env.NODE_ENV === \"test\") branches in the production code path.",
+      },
+    ],
+  },
   "Western Civilization": {
     emoji: "🏛️",
     tagline:
@@ -855,6 +886,7 @@ export default function Courses() {
     { title: "Data Analytics", url: "https://analysis101.xyz" },
     { title: "American Government", url: "https://government101.xyz" },
     { title: "Western Civilization", url: "https://westernciv.xyz" },
+    { title: "Public Speaking", url: "https://publicspeaking101.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
