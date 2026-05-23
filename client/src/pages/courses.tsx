@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "U.S. History II": {
+    emoji: "🇺🇸",
+    tagline:
+      "A fully online, asynchronous college-level survey of United States history from Reconstruction to the present",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "U.S. History II (HIST 152) is a 14-module, 800-point introductory history course delivered as a self-contained web app. Students read a unit of the course text, complete the assignment (a discussion post, a structured essay, or a research-paper deliverable), receive Socratic formative feedback from an AI tutor that speaks for the instructor, and submit graded work -- all in one place. The course text was authored by Dr. Lawrence Dodge and is used here as the canonical reading.\n\nUnlike a generic chatbot wrapper or a passive LMS, this app is built around a strict pedagogical principle: the AI tutor never writes the student's work, never bypasses the assignment, and never softens the rubric. It asks better questions, surfaces weak reasoning, and flags AI-generated prose before submission. Every module ships with the instructor's own model response so students can see what an A-grade answer actually looks like.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**First-year undergraduates** -- need a rigorous but humane introduction to modern American history without lectures or fixed class times\n\n**Returning and adult learners** -- need a fully asynchronous course they can complete around work and family obligations\n\n**Homeschool and dual-enrollment students** -- need a college-level survey with a published syllabus, model responses, and a real research-paper track\n\n**Self-directed readers** -- want to work through the Civil War's unresolved questions, Reconstruction and its defeat, the Gilded Age, the new immigration, Populism and Progressivism, empire, the world wars, the New Deal, the Cold War, the civil rights movement, and the crisis of authority from Vietnam through Watergate with structured prompts and feedback\n\n**Instructors and TAs** -- want a reference implementation of an AI tutor that critiques without ghostwriting, plus a built-in originality check\n\n**Anyone** -- who wants to understand how the modern United States actually came to be, instead of a flattering summary of it",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**14-Module Curriculum** -- 7 discussion units (50 pts each), 5 long-form essays (50 pts each), a Term Paper Outline (100 pts), and a final Term Paper (100 pts) -- 800 points total. Every module has objectives, a primary reading, an assignment prompt, and an instructor-authored model response.\n\n**Socratic AI Tutor** -- Conversational interface backed by Anthropic Claude Sonnet 4.5 that speaks for the instructor of record. Asks probing questions, names specific weaknesses in a draft, and points to the relevant section of the course text. Refuses to write the assignment for the student -- always.\n\n**Inline Draft Critique** -- One-click \"critique my draft\" action against the active module's rubric. Returns targeted feedback on thesis clarity, evidence, historical accuracy, and structure without rewriting the prose.\n\n**Autosaving Drafts** -- Every keystroke in the assignment editor is persisted to the database per student per module, so work survives tab closes, browser crashes, and device switches.\n\n**Submission + Gradebook** -- Submitted work is stored with timestamp, word count, and module reference. Progress is recomputed automatically and surfaced as a per-module completion state and a running point total out of 800.\n\n**Sequential Gating** -- The server enforces module order on every submission: a student cannot submit module N until every prior module has been submitted. The gate is enforced in the API, not just the UI, so it cannot be bypassed by anyone with a valid session.\n\n**GPTZero Originality Check** -- Every submission is screened by GPTZero's AI-detector API before it counts. Students and instructors see the AI-probability score and class label (human / mixed / ai) attached to each submission.\n\n**Instructor Model Responses** -- Each of the 14 modules ships with the instructor's own model response and a \"Why This Is a Model\" rubric breakdown, so students see the target before they write -- not after they're graded.\n\n**Persistent Tutor Conversations** -- Tutor threads are saved per student per module. Students can return to a prior conversation and continue where they left off; instructors can audit the full transcript.\n\n**Accessibility First** -- Semantic HTML, keyboard-navigable nav and forms, sufficient color contrast, screen-reader-friendly labels, and a dedicated Accessibility page that documents the commitments and the contact route for accommodations.\n\n**System Diagnostic** -- One-click self-check that verifies the database connection, the Anthropic AI integration, the GPTZero API key, curriculum integrity (14 modules / 800 pts), submission + draft round-trips, progress recompute, and a live tutor critique. Pass/fail per check with timings and detail strings -- ideal for instructor sanity-checks and post-deploy verification.\n\n**End-to-End Functional Check** -- A second one-click diagnostic that walks the real HTTP API exactly as a student would: sign in, acknowledge integrity, open the tutor, autosave a draft, probe the sequential gate (must return 403), submit module 1, and read the submission back. Creates a synthetic student row that is torn down at the end via FK cascade, so it leaves zero residue in the database.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**It is a course, not a chatbot** -- The product is a 14-module, 800-point survey with a published syllabus, real rubrics, and a research-paper track. The AI is a tutor inside the course, not the course itself.\n\n**The tutor never ghostwrites** -- The system prompt and the UI both refuse to produce the student's submission. The tutor critiques, questions, and points to the reading -- it will not write the essay for you, ever.\n\n**Model responses are the instructor's own** -- Every module's model response was authored by Dr. Lawrence Dodge as part of the source text. Students see exactly what the instructor considers an A-grade answer.\n\n**Originality is enforced, not assumed** -- GPTZero runs on every submission as a first-class part of the grading pipeline, not a bolted-on plugin. Scores are visible to both the student and the instructor.\n\n**Module order is enforced on the server** -- Sequential gating lives in the API, not in the UI. A student cannot skip ahead by hitting the endpoint directly; the gate is part of the data contract.\n\n**Two diagnostics, not one** -- The system check verifies every external dependency and pure-function path; the end-to-end check walks the real HTTP stack as a student. Either one is one click; together they make a post-deploy smoke test trivial.\n\n**The chassis is course-agnostic** -- The integrity stack, the tutor, the autosave, the gating, the originality check, and the two diagnostics are all generic. Swapping in a different course is a content edit (one curriculum file on the client, one on the server) -- the platform doesn't change.",
+      },
+    ],
+  },
   "U.S. History I": {
     emoji: "🇺🇸",
     tagline:
@@ -919,6 +950,7 @@ export default function Courses() {
     { title: "Western Civilization", url: "https://westernciv.xyz" },
     { title: "Public Speaking", url: "https://publicspeaking101.xyz" },
     { title: "U.S. History I", url: "https://ushistory101.xyz" },
+    { title: "U.S. History II", url: "https://ushistory102.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
