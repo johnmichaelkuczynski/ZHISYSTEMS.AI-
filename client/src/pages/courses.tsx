@@ -937,7 +937,7 @@ function CourseItem({ course }: { course: Course }) {
 export default function Courses() {
   const courses: Course[] = [
     { title: "Philosophy 101", url: "https://aiphil1.xyz" },
-    { title: "Psychology 101", url: "https://psych1.xyz" },
+    { title: "Psychology 101", url: "https://aipsych1.xyz" },
     { title: "Sociology 101", url: "https://sociology101.xyz" },
     { title: "Medical Terminology", url: "https://medicalterminology.xyz" },
     { title: "Algebra 1", url: "https://collegealgebra.xyz" },
