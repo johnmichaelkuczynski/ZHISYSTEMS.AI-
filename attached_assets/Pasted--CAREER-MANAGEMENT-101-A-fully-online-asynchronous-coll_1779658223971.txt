@@ -1,0 +1,40 @@
+💼 CAREER MANAGEMENT 101
+
+A fully online, asynchronous college-level course on the full arc of career management — from self-assessment and resumes through networking, interviews, negotiation, professionalism, performance management, transitions, and long-term planning.
+🧩 Overview
+
+Career Management 101 is a 14-module written course built around a hard line: every word a student turns in must be their own. The course covers the practical mechanics of building and managing a career — self-assessment, career exploration, the resume, cover letters, networking, the interview, job-search strategy, salary negotiation, workplace professionalism, performance management, career transitions, long-term planning, and a two-stage term paper — and it pairs that content with a two-layer academic-integrity stack that is unusual in an undergraduate course.
+
+Unlike a typical online course that grades final products and assumes the student wrote them, Career Management 101 is built on the assumption that AI is freely available and that integrity has to be verified, not trusted. Every submission is checked for AI-generated text in real time, and the student's own writing process is fingerprinted across submissions so that ghostwriting and last-minute paste-ins surface as anomalies. The system is explicit when something looks wrong, and it never silently degrades.
+👥 Who It's For
+
+    Undergraduates entering the job market -- need a structured walk through every stage of career management, from first self-assessment through long-term planning, with assignments that produce real artifacts they can actually use.
+    Career changers and re-entrants -- need to rebuild their resume, cover letter, networking script, and interview answers around a specific target role, not generic templates.
+    Adult learners working full time -- need a fully asynchronous course they can complete on their own schedule, with sequential gating that keeps the work in order.
+    Instructors and institutions concerned about AI cheating -- need a course where AI use is detected at submission time, where the writing process is monitored, and where the integrity stack is auditable rather than aspirational.
+    Anyone who wants the actual craft, not platitudes -- prompts demand a specific real job posting, a specific real person to network with, a specific real negotiation conversation, and grade the answer on whether it would actually work.
+
+⚙️ Core Capabilities
+
+    14-Module Written Curriculum -- Six discussions, five essays, one long-term planning discussion, a term paper outline, and a full term paper. Total 800 points. Every assignment targets a concrete real-world artifact (a real bullet for a real posting, a real outreach message to a real person, a real negotiation script for a real offer).
+    Sequential Gating -- Modules unlock in curriculum order on the server. The student cannot submit module N until every prior module has a submission on record. The check is enforced at the route handler, not the UI, so it cannot be bypassed by hand-crafted requests.
+    Draft Workshop (One-Shot AI Feedback) -- Students can submit a single draft per module and receive structured formative feedback (does it answer the prompt, is the structure clear, where is reasoning weak, what is missing, what to revise first). The draft locks after one round to prevent the AI from being used as a ghostwriter.
+    Integrity Canvas -- The final-submission editor logs keystrokes, blocks paste events, and runs the text through GPTZero in real time as the student writes. Sentence-level highlighting and a cumulative-red warning surface any AI-flagged material before the student hits submit.
+    Two-Layer AI Detection -- Every submission gets a synchronic check (GPTZero AI-detection score and class) and a diachronic check (process-forensics analyzer that compares the writing process against the student's own baseline, which freezes after their second submission).
+    Process-Forensics Analyzer -- Eleven features extracted from the keystroke stream (typing rate, burstiness, pause distribution, deletion ratio, paste density, etc.) produce a per-submission score and a class (human, likelyAI, mixed). Anomalies relative to the student's frozen baseline are flagged separately from synchronic AI-detection hits.
+    Sequential Submission Pipeline -- Submissions are stored with a cm: prefix in a shared submissions table so that a student's Career Management work is fully isolated from any other course they take on the same platform. Progress queries filter by prefix.
+    Live System Diagnostic -- One-click self-check that verifies the database, the curriculum, the Anthropic and GPTZero API keys, a live Anthropic round-trip, a live GPTZero scoring call, the written submission pipeline, the progress filter, and cleanup. Color-coded pass/fail with per-check timing and detail.
+    End-to-End Functional Check -- A second one-click button drives the live API over loopback HTTP, creating a synthetic bot+…@diagnostic.test student, walking the real student flow (sign in, list modules, sequential-gating probe that must return 403, submit module 1, module GET round-trip, progress recompute, logout), then deleting the student so Postgres FK-cascades every row the walk created. Runs in roughly two seconds on a warm server.
+    Admin Panel -- Instructor view of every submission with AI score, AI class, process-forensics score, process-forensics class, flags, and the original keystroke log. Designed for audit, not just grading.
+
+🚀 What Makes It Different
+
+    Integrity is verified, not trusted -- Most online courses grade the final artifact and assume the student wrote it. This one assumes they had AI sitting next to them the whole time, and is built to detect when they used it.
+    Two independent detectors, not one -- GPTZero catches text that reads as AI. Process forensics catches text that was pasted in, written too fast, or written too clean relative to that student's own baseline. A submission has to clear both layers.
+    Per-student baseline, not a global threshold -- The process-forensics analyzer freezes a baseline from each student's first two submissions, then compares everything after to that baseline. A fast typist isn't penalized for being a fast typist; a student who suddenly types four times faster than they did in week one is flagged.
+    The draft workshop won't write the assignment -- Draft feedback is explicitly structural ("the second paragraph doesn't address the prompt") and never includes rewrites or suggested phrasings. The system has a copy of the reference standard but is instructed not to quote, paraphrase, or compare against it directly.
+    Sequential gating that actually gates -- The lock is in the POST handler, so out-of-order submission attempts return HTTP 403 from the server, not a disabled button on the client. This is verified on every diagnostic run.
+    Diagnostics that exercise the real stack -- The end-to-end check uses Node's fetch() against 127.0.0.1:$PORT so every step goes through the real Express middleware chain — cookies, sessions, validation, route handlers, DB writes, response serialization. No mocking. No in-process shortcuts. A regression in any layer breaks the corresponding step.
+    Real cleanup, real FK cascade -- The synthetic diagnostic student is deleted at the end of every functional run, and Postgres cascades every row they created. The diagnostic reports the actual cascaded row count, not a fabricated one. A previous run that crashed before cleanup is swept on the next run.
+    Written-only by design -- No audio modules, no multiple-choice bubbles, no shortcuts. Every grade in the course is a graded piece of writing, and every piece of writing goes through the full two-layer integrity stack.
+    Built to be cloned -- The integrity stack, the diagnostics, and the gating logic are course-agnostic. Cloning this app for another course is a curriculum swap, not a rebuild — and the cloned course inherits the entire integrity-and-diagnostics chassis on day one.
