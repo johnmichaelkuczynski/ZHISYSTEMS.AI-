@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "Food & Beverage Cost Control": {
+    emoji: "🍳",
+    tagline:
+      "A College-Level Online Course in the Daily Operational Discipline of Restaurant and Hospitality Cost Control",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "Food & Beverage Cost Control is a fully online, asynchronous college-level course (CUL/HOSP) delivered as a 15-module web app. Students work through the operational discipline of food and beverage cost control -- the cost-control mindset, food cost percentage and menu pricing, standardized recipes and yield, purchasing/receiving/storage controls, inventory valuation and turnover, labor cost control and scheduling, beverage cost control and pour standards, theft and waste and theoretical-vs-actual variance, menu engineering, break-even and contribution margin, budgeting and forecasting, POS data and the modern control environment, and the ethics of cost control -- culminating in a two-stage term paper (proposal + final).\n\nUnlike generic LMS shells that hide content behind clicks and bury feedback in rubric grids, this course is built around a strict operating principle: every reading is on-page and complete, every assignment specifies exactly what is expected, and every submission gets immediate, formative AI feedback in the voice of the instructor of record. No padding, no preamble, no \"please see the syllabus.\"",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Culinary and hospitality students** -- need a rigorous, transferable grounding in the numbers side of running a kitchen or beverage program before they hit a real P&L.\n\n**Working line cooks, bartenders, and sous chefs** -- need to understand the math behind food cost, pour cost, labor cost, and variance so they can move into a chef or manager seat.\n\n**New restaurant managers and owner-operators** -- need a structured walk through purchasing, inventory, labor, menu engineering, and break-even without buying a $200 textbook.\n\n**Hospitality program instructors** -- need a fully built, Quality Matters-aligned course shell they can adopt or adapt, with model responses already written.\n\n**Career-changers entering food service operations** -- need to know what an actually competent F&B operator thinks about every day, not a flattering summary of the field.",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**15-Module Verbatim Curriculum** -- Eight discussions, six essays, and a term paper (proposal + final), every word of reading, assignment, and model response delivered on-page. Sequential unlock: students cannot skip ahead until the previous module is submitted.\n\n**AI Tutor in the Instructor's Voice** -- Per-module Socratic tutor (Anthropic Claude Sonnet 4.5) that asks questions, probes reasoning, and gives formative feedback without ever writing the assignment for the student. Refuses ghost-writing requests by design.\n\n**General Tutor** -- A course-wide conversational tutor for cross-cutting questions about cost control, the discipline, or how the modules fit together -- distinct from the per-module tutor that stays narrowly on the current assignment.\n\n**AI Grader with Rubric-Aligned Feedback** -- Submissions are auto-graded against the per-assignment rubric and return structured formative feedback (strengths, gaps, revision suggestions). Final grade is reserved for the instructor; AI output is feedback, not a verdict.\n\n**GPTZero AI-Writing Detection** -- Every submission is scored for AI-generated content before grading. Results are surfaced to the student and stored for the instructor's review, so academic integrity is handled in the same pipeline as the work itself.\n\n**Draft Autosave** -- Every keystroke in an assignment editor is autosaved server-side. Students can close the tab mid-essay and resume on another device without losing a word.\n\n**Progress Gating & Unlocks** -- Completed modules are tracked per student; the next module unlocks only on submission of the previous one. Admin override is available for instructor previews.\n\n**Term Paper Workflow** -- Two-stage capstone: a structured proposal module followed by the full term paper, each with its own rubric, tutor, and grader. Modeled on graduate-style writing supervision rather than a single end-of-course dump.\n\n**Assessments Dashboard** -- One screen showing every module, its rubric weight, submission status, AI score, and instructor status -- for both students tracking themselves and instructors auditing a cohort.\n\n**System Diagnostic** -- One-click self-check that exercises the database, curriculum loader, AI grader, draft autosave, submission pipeline, progress recompute, and tutor. Returns a pass/warn/fail report with downloadable detail.\n\n**Quality Matters-Aligned Course Shell** -- Built to the Quality Matters Higher Ed Rubric (7th ed.). Alignment between objectives, readings, assignments, and rubrics is explicit and surfaced on the syllabus page, not hidden in a course-design document.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**The reading is on the page** -- Every module's reading is delivered in full on-screen, not linked out to a PDF or a publisher portal. Students never have to leave the course to do the work.\n\n**Model responses are written, not promised** -- Every assignment ships with a full instructor-quality model response and an explanation of why it is a model response. Students see the target, not just a rubric.\n\n**The AI tutor will not write your paper** -- The Socratic tutor is explicitly constrained from generating submittable prose. It asks, probes, and reflects; it does not produce. Academic integrity is enforced at the prompt layer, not just by detection.\n\n**AI feedback is immediate, the grade is not** -- Submissions return formative AI feedback in seconds so the student can revise; the human instructor retains the grading authority. The platform refuses to pretend that AI grading is the same thing as instructor judgment.\n\n**One shared API server, multiple courses** -- The same hardened backend (auth, drafts, submissions, grader, tutor, GPTZero, diagnostic) serves every course on the platform. Adding a new course is a curriculum file and a frontend shell, not a new system.\n\n**Built to the Quality Matters standard** -- Objectives, readings, assignments, and rubrics are aligned 1:1 and the alignment is visible to the student. The course passes the Higher Ed rubric on the surface -- not on a hidden design map.\n\n**No fake content** -- No lorem ipsum, no \"Module 1 content coming soon,\" no placeholder rubrics. Every byte of curriculum is real, instructor-authored material.",
+      },
+    ],
+  },
   "Business Ethics": {
     emoji: "🎓",
     tagline:
@@ -983,6 +1014,7 @@ export default function Courses() {
     { title: "U.S. History I", url: "https://ushistory101.xyz" },
     { title: "U.S. History II", url: "https://ushistory102.xyz" },
     { title: "Business Ethics", url: "https://businessethics101.xyz" },
+    { title: "Food & Beverage Cost Control", url: "https://foodcost101.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },

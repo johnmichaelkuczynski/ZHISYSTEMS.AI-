@@ -1,0 +1,99 @@
+🍳 FOOD & BEVERAGE COST CONTROL
+
+A College-Level Online Course in the Daily Operational Discipline of Restaurant and Hospitality Cost Control
+🧩 Overview
+
+Food & Beverage Cost Control is a fully online, asynchronous college-level course (CUL/HOSP) delivered as a 15-module web app. Students work through the operational discipline of food and beverage cost control — the cost-control mindset, food cost percentage and menu pricing, standardized recipes and yield, purchasing/receiving/storage controls, inventory valuation and turnover, labor cost control and scheduling, beverage cost control and pour standards, theft and waste and theoretical-vs-actual variance, menu engineering, break-even and contribution margin, budgeting and forecasting, POS data and the modern control environment, and the ethics of cost control. The course culminates in a structured term paper on a contested question in the field.
+
+Unlike generic LMS shells that hide content behind clicks and bury feedback in rubric grids, this course is built around a strict operating principle: every reading is on-page and complete, every assignment specifies exactly what is expected, and every submission gets immediate, formative AI feedback in the voice of the instructor of record. No padding, no preamble, no "please see the syllabus."
+👥 Who It's For
+
+    Culinary and hospitality students -- need a rigorous, transferable grounding in the numbers side of running a kitchen or beverage program before they hit a real P&L.
+    Working line cooks, bartenders, and sous chefs -- need to understand the math behind food cost, pour cost, labor cost, and variance so they can move into a chef or manager seat.
+    New restaurant managers and owner-operators -- need a structured walk through purchasing, inventory, labor, menu engineering, and break-even without buying a $200 textbook.
+    Hospitality program instructors -- need a fully built, Quality Matters-aligned course shell they can adopt or adapt, with model responses already written.
+    Career-changers entering food service operations -- need to know what an actually competent F&B operator thinks about every day, not a flattering summary of the field.
+
+⚙️ Core Capabilities
+
+    15-Module Verbatim Curriculum -- Eight discussions, six essays, and a term paper (proposal + final), every word of reading, assignment, and model response delivered on-page. Sequential unlock: students cannot skip ahead until the previous module is submitted.
+
+    AI Tutor in the Instructor's Voice -- Per-module Socratic tutor (Anthropic Claude Sonnet 4.5) that asks questions, probes reasoning, and gives formative feedback without ever writing the assignment for the student. Refuses ghost-writing requests by design.
+
+    General Tutor -- A course-wide conversational tutor for cross-cutting questions about cost control, the discipline, or how the modules fit together — distinct from the per-module tutor that stays narrowly on the current assignment.
+
+    AI Grader with Rubric-Aligned Feedback -- Submissions are auto-graded against the per-assignment rubric and return structured formative feedback (strengths, gaps, revision suggestions). Final grade is reserved for the instructor; AI output is feedback, not a verdict.
+
+    GPTZero AI-Writing Detection -- Every submission is scored for AI-generated content before grading. Results are surfaced to the student and stored for the instructor's review, so academic integrity is handled in the same pipeline as the work itself.
+
+    Draft Autosave -- Every keystroke in an assignment editor is autosaved server-side. Students can close the tab mid-essay and resume on another device without losing a word.
+
+    Progress Gating & Unlocks -- Completed modules are tracked per student; the next module unlocks only on submission of the previous one. Admin override is available for instructor previews.
+
+    Term Paper Workflow -- Two-stage capstone: a structured proposal module followed by the full term paper, each with its own rubric, tutor, and grader. Modeled on graduate-style writing supervision rather than a single end-of-course dump.
+
+    Assessments Dashboard -- One screen showing every module, its rubric weight, submission status, AI score, and instructor status — for both students tracking themselves and instructors auditing a cohort.
+
+    System Diagnostic -- One-click self-check that exercises the database, curriculum loader, AI grader, draft autosave, submission pipeline, progress recompute, and tutor. Returns a pass/warn/fail report with downloadable detail.
+
+    Quality Matters-Aligned Course Shell -- Built to the Quality Matters Higher Ed Rubric (7th ed.). Alignment between objectives, readings, assignments, and rubrics is explicit and surfaced on the syllabus page, not hidden in a course-design document.
+
+🚀 What Makes It Different
+
+    The reading is on the page -- Every module's reading is delivered in full on-screen, not linked out to a PDF or a publisher portal. Students never have to leave the course to do the work.
+
+    Model responses are written, not promised -- Every assignment ships with a full instructor-quality model response and an explanation of why it is a model response. Students see the target, not just a rubric.
+
+    The AI tutor will not write your paper -- The Socratic tutor is explicitly constrained from generating submittable prose. It asks, probes, and reflects; it does not produce. Academic integrity is enforced at the prompt layer, not just by detection.
+
+    AI feedback is immediate, the grade is not -- Submissions return formative AI feedback in seconds so the student can revise; the human instructor retains the grading authority. The platform refuses to pretend that AI grading is the same thing as instructor judgment.
+
+    One shared API server, multiple courses -- The same hardened backend (auth, drafts, submissions, grader, tutor, GPTZero, diagnostic) serves every course on the platform. Adding a new course is a curriculum file and a frontend shell, not a new system.
+
+    Built to the Quality Matters standard -- Objectives, readings, assignments, and rubrics are aligned 1:1 and the alignment is visible to the student. The course passes the Higher Ed rubric on the surface — not on a hidden design map.
+
+    No fake content -- No lorem ipsum, no "Module 1 content coming soon," no placeholder rubrics. Every byte of curriculum is real, instructor-authored material.
+
+🛠️ Technical Architecture
+
+    Frontend -- React 18 + Vite, Wouter routing, TanStack Query, Tailwind CSS, shadcn/ui components. Served under /food-bev-101/ from the workspace preview proxy.
+
+    Backend -- Shared @workspace/api-server (Fastify + TypeScript) serving all courses on the platform. Course-aware curriculum, tutor, grader, drafts, and submissions routes scoped by course slug.
+
+    Database -- Neon PostgreSQL via Drizzle ORM. Tables for users, drafts, submissions, progress, and AI artifacts. Migrations checked into the repo.
+
+    AI Providers -- Anthropic Claude Sonnet 4.5 for the per-module and general tutors and for the rubric-aligned grader. GPTZero for AI-writing detection on every submission.
+
+    Auth -- Session-based authentication with sign-in/sign-up gates on all student-facing pages. Admin override available for instructor previews.
+
+    Monorepo -- pnpm workspace alongside sibling course artifacts (phil-101, algebra-101) and the shared API server. Each course is an independent artifact with its own port and preview path; the API server is shared.
+
+📚 Course Map
+#	Type	Title	Points
+1	Discussion	The Cost-Control Mindset	50
+2	Essay	Food Cost Percentage and Menu Pricing	50
+3	Discussion	Standardized Recipes and Yield	50
+4	Essay	Purchasing, Receiving, and Storage Controls	50
+5	Discussion	Inventory Valuation and Turnover	50
+6	Essay	Labor Cost Control and Scheduling	50
+7	Discussion	Beverage Cost Control and Pour Standards	50
+8	Essay	Theft, Waste, and Theoretical-vs-Actual Variance	50
+9	Discussion	Menu Engineering	50
+10	Essay	Break-Even and Contribution Margin	50
+11	Discussion	Budgeting and Forecasting	50
+12	Essay	POS Data and the Modern Control Environment	50
+13	Discussion	The Ethics of Cost Control	50
+14	Term Paper	Proposal	100
+15	Term Paper	Final Paper	200
+🧪 Running Locally
+
+This artifact is part of the pnpm monorepo. From the repo root:
+
+pnpm install
+pnpm --filter @workspace/api-server run dev      # shared API
+pnpm --filter @workspace/food-bev-101 run dev    # this course
+
+The preview is served at /food-bev-101/ on the workspace proxy.
+✅ Credits
+
+Course shell built to the Quality Matters Higher Ed Rubric (7th ed.). Curriculum authored by the instructor of record; AI tutor and grader powered by Anthropic Claude Sonnet 4.5; AI-writing detection powered by GPTZero.
