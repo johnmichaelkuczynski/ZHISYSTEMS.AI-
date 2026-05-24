@@ -1,0 +1,70 @@
+💻 INTRODUCTION TO INFORMATION TECHNOLOGY
+
+An AI-Tutored, College-Level Survey of the IT Stack, Networks, Cloud, Cybersecurity, and Modern Software Practice (CIS 1001)
+🧩 Overview
+
+Introduction to Information Technology is a fully online, asynchronous college-level course platform built around 14 sequenced modules — six discussion posts, five analytical essays, two term-paper milestones, and one careers retrospective. It pairs an open-source course text with a built-in AI Tutor (Anthropic Claude Sonnet 4.5) that speaks in the voice of the instructor of record, Dr. Lawrence Dodge, asks Socratic questions, and gives formative feedback on student work.
+
+Unlike a generic LMS that simply hosts PDFs and a quiz engine, this platform enforces sequential progress, autosaves drafts, screens every submission for AI authorship with GPTZero, and runs a one-click end-to-end self-diagnostic that verifies the database, the AI grader, and the full student flow are working before a single student logs in. Every module has a verbatim background reading, an explicit assignment prompt, and a model response — no placeholder content, no hedging, no editorializing.
+👥 Who It's For
+
+    Undergraduate students -- need a structured, self-paced introduction to information technology that covers the full IT stack rather than a single tool or vendor
+    Adult learners and career-changers -- need a credit-bearing IT survey they can complete asynchronously around work, with feedback that actually engages with their writing
+    Community college and university instructors -- need a turnkey CIS 1001 course shell built to the Quality Matters Higher Ed Rubric (7th ed.) that they can adopt or fork
+    Bootcamp and corporate training programs -- need a rigorous foundations course to sit underneath role-specific technical training
+    Self-directed learners -- need a Socratic tutor, not an answer key, and want to be pushed to defend their own architectural and operational reasoning
+    Anyone -- who wants to understand how hardware, operating systems, networks, databases, the cloud, cybersecurity, and AI actually fit together in a real IT environment
+
+⚙️ Core Capabilities
+
+    14-Module Sequential Curriculum -- Six discussions, five essays, a term-paper outline, and a full term paper, covering the IT stack, operating systems, TCP/IP, cloud (IaaS/PaaS/SaaS), databases (relational vs. NoSQL), cybersecurity, programming-language trade-offs, the SDLC, web architecture, AI in IT, ITSM, and the future of IT careers. Each module unlocks only after the previous one is submitted.
+
+    AI Tutor in the Instructor's Voice -- Anthropic Claude Sonnet 4.5 is configured to teach in the voice and Socratic style of Dr. Lawrence Dodge. Per-module conversations are persisted, so the tutor remembers what the student has already worked through. The tutor asks questions and gives formative feedback — it never writes the assignment.
+
+    General Tutor -- A separate course-wide tutor conversation for cross-cutting questions that don't belong to any single module ("how do operating systems and networks relate?", "what should I pick for my term paper?").
+
+    Verbatim Background Readings -- Every module ships with the full course-book reading, the exact assignment prompt, and a model response, all extracted verbatim from the source course book. No "lorem ipsum," no AI-written filler.
+
+    Autosaved Drafts -- Student work-in-progress is upserted to the server on every save, so a closed tab, dropped Wi-Fi, or browser crash never costs work.
+
+    Sequential Gating -- The submissions API enforces module order at the server, not just the client. Out-of-order submission attempts are rejected with HTTP 403, so students cannot accidentally skip ahead.
+
+    GPTZero AI-Authorship Screening -- Every submission is fire-and-forget scored by GPTZero in the background, surfacing an AI-likelihood score alongside the instructor's view. Honest engagement with AI use, not blanket prohibition.
+
+    Process-Forensics Baseline -- The platform captures a lightweight per-student writing-process baseline so unusually anomalous submissions can be flagged for review.
+
+    Integrity Acknowledgement -- Before submitting any work, students must explicitly acknowledge the course's AI and academic-integrity policy, with the acknowledgement timestamped to the user record.
+
+    Accommodations Flag -- A per-student accommodation flag is recorded in the database and respected throughout the grading pipeline, with no awkward second login.
+
+    Assessments Dashboard -- A single screen lists every submission across every module with status, score, AI-detector verdict, and timestamp — no clicking through 14 separate pages to see where a student stands.
+
+    Printable Syllabus -- The full syllabus (course description, learning outcomes, grading breakdown, support, accessibility, integrity policy) renders to a clean, printable page for institutional records.
+
+    Accessibility-First UI -- Built to conform with WCAG 2.1 Level AA: keyboard navigation, semantic HTML, sufficient color contrast, and screen-reader-friendly landmarks throughout.
+
+    One-Click System Diagnostic -- A dedicated /diagnostic page runs 13 system checks (Postgres reachability, curriculum integrity, Anthropic key + live ping, GPTZero key + live AI-detector call, submission round-trip, draft round-trip, progress recompute, tutor critique generation, full teardown) in roughly 5 seconds. Color-coded pass/fail with the raw detail of every failure.
+
+    End-to-End Functional Walk -- A second diagnostic mode actually drives the live API as a synthetic student over loopback HTTP: sign in → integrity ack → open tutor → autosave draft → sequential-gating probe (must 403) → submit module 1 → module-detail round-trip → assessments list → cleanup. Exercises the real Express middleware stack — cookies, sessions, validation, route handlers, DB writes, response serialization.
+
+    Self-Cleaning Diagnostics -- Both diagnostic runs use a synthetic diagnostic@beta.local / bot+…@diagnostic.test student and delete everything they inserted via FK cascade at the end. No real student data is touched.
+
+🚀 What Makes It Different
+
+    It is a course, not a course shell -- Every module has real, verbatim reading content, a real assignment, and a real model response. The platform ships ready to teach on day one, not as an empty template waiting to be filled.
+
+    The AI Tutor refuses to do the work -- The tutor is explicitly configured to ask Socratic questions and give formative feedback, not to write the discussion post or the essay for the student. Honest pedagogy, not assignment-laundering.
+
+    Sequential gating is enforced server-side -- Most online courses gate progression in the UI, which is trivially bypassable. Here the submissions endpoint itself rejects out-of-order writes with HTTP 403, and the diagnostic verifies that on every run.
+
+    AI-authorship screening is built in, not bolted on -- Every submission is automatically scored by GPTZero in the background, without slowing the student's submit flow. The result is stored alongside the grade.
+
+    The diagnostic is comprehensive and downloadable -- One click verifies the database, both AI providers (Anthropic + GPTZero) with live calls, the curriculum, and the entire student workflow end-to-end. Results are color-coded pass/warn/fail and the raw JSON is exportable for support tickets.
+
+    Workload-driven IT reasoning -- The course consistently asks students to reason from actual workload requirements (a real application, a real threat, a real project) rather than from vendor marketing or fashion. The learning outcomes are written the same way.
+
+    Built to a recognized standard -- The course shell is designed to the Quality Matters Higher Ed Rubric (7th ed.) and the user interface conforms to WCAG 2.1 Level AA, so institutional adoption does not require a separate accessibility or pedagogy audit.
+
+    Open-source course text, transparent voice -- The instructor of record (Dr. Lawrence Dodge) is named, the AI model powering the tutor (Anthropic Claude Sonnet 4.5) is named, and the course book is open-source. No anonymous "experts," no black-box grading.
+
+    Three independent artifacts, one deployment -- The repository is a pnpm monorepo: the IT course web app, a sibling Pre-Algebra 100 web app, and a shared Express API server with its own diagnostic. The same architecture supports adding additional courses without rewriting the backend.
