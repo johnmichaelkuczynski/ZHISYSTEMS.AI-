@@ -32,7 +32,7 @@ function Router() {
         <PasswordGate><Podcasts /></PasswordGate>
       </Route>
       <Route path="/office-use">
-        <PasswordGate><OfficeUse /></PasswordGate>
+        <PasswordGate storageKey="office-use-access"><OfficeUse /></PasswordGate>
       </Route>
       <Route component={NotFound} />
     </Switch>

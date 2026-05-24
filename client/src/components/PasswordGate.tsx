@@ -1,10 +1,16 @@
 import { useState, useEffect, type ReactNode } from "react";
 import { Link } from "wouter";
 
-const STORAGE_KEY = "investor-access";
 const ACCESS_PASSWORD = "1234";
 
-export default function PasswordGate({ children }: { children: ReactNode }) {
+export default function PasswordGate({
+  children,
+  storageKey = "investor-access",
+}: {
+  children: ReactNode;
+  storageKey?: string;
+}) {
+  const STORAGE_KEY = storageKey;
   const [unlocked, setUnlocked] = useState(false);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
