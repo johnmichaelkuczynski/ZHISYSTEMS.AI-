@@ -1055,6 +1055,12 @@ export default function Courses() {
               >
                 Investor Briefings
               </a>
+              <a
+                href="/office-use"
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Office Use
+              </a>
             </div>
           </div>
         </div>
