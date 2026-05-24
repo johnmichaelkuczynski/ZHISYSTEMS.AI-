@@ -484,6 +484,37 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "Business Ethics": {
+    emoji: "🎓",
+    tagline:
+      "An Online, Socratic, AI-Tutored College Course in Applied Business Ethics",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "Business Ethics 101 is a fully online, asynchronous college-level course that walks students through the central questions of contemporary business ethics -- from the three foundational frameworks (consequentialism, deontology, virtue ethics) through whistleblowing, advertising, workplace rights, corruption, environmental responsibility, insider trading, executive compensation, discrimination, and the ethics of AI and automation. The course is 14 modules totalling 800 points, culminating in a term paper outline and final term paper.\n\nUnlike a typical LMS module that hands students a PDF and a discussion board, Business Ethics 101 is built around an embedded AI Tutor that teaches in the instructor's Socratic voice. The tutor asks probing questions, pushes back on weak reasoning, and offers counterarguments -- but it is system-prompted to refuse to write the student's work. Every submission is composed in a monitored canvas with live AI-likelihood scoring, so academic integrity is built in rather than bolted on.",
+      },
+      {
+        emoji: "👥",
+        title: "Who It's For",
+        body:
+          "**Undergraduate students** -- need a rigorous, fully online introduction to business ethics that does not assume prior coursework in ethics or business\n\n**Working professionals and MBA candidates** -- need a self-paced refresher in the ethical frameworks behind real-world business decisions\n\n**Instructors and course designers** -- need a Quality-Matters-aligned reference implementation of an AI-tutored, integrity-monitored online course\n\n**Compliance and HR teams** -- need structured, primary-source-driven ethics training that goes deeper than a click-through module\n\n**Anyone** -- who wants to think clearly about the ethical questions that arise in commerce, employment, and corporate life",
+      },
+      {
+        emoji: "⚙️",
+        title: "Core Capabilities",
+        body:
+          "**Socratic AI Tutor** -- Anthropic Claude Sonnet 4.5 teaches in the instructor's voice. Asks probing questions, pushes back on shallow answers, supplies counterarguments. System-prompted to refuse to write the student's assignment, regardless of how the request is phrased.\n\n**Per-Module Context Injection** -- Every tutor conversation is loaded with the full module: objectives, verbatim reading, assignment prompt, and an instructor reference standard the tutor uses for calibration but never quotes to the student.\n\n**Draft Workshop with One-Round Formative Feedback** -- Students draft in an open workspace, request one round of structured Markdown feedback (five fixed H2 sections), and then move to the monitored submission canvas. Drafts lock after feedback to prevent endless polish cycles.\n\n**Monitored Submission Canvas** -- Final submissions are typed into a paste-disabled canvas. Cut/copy/rearrange of self-typed text is allowed. The complete keystroke history is logged for instructor replay.\n\n**Live GPTZero Scoring** -- A traffic-light bar shows the current AI-likelihood score as the student writes. Flagged submissions are not blocked, but the flag is sent to the instructor with the submission and stored alongside the keystroke log.\n\n**AI Action Suite (per module)** -- One-click generation of: a concise study guide, a step-by-step tutorial, a 2-3 minute audio podcast script, a clarity-rewrite of the reading, and a Socratic \"read my draft\" critique. Each action uses a purpose-built system prompt.\n\n**Critique-the-Mediocre-Answer Exercise** -- The tutor can generate a deliberately B-/C+ answer to any assignment for the student to critique, training the student to recognize unsupported claims, conflated frameworks, and missing counterarguments.\n\n**Sequential Module Unlock** -- Modules unlock as the previous one is submitted. Admin override (?admin=true) is available for instructor preview.\n\n**Progress and Assessments Tracking** -- Students see what they've submitted, what's locked, and their running point total against the 800-point scale.\n\n**Self-Paced, No Late Penalty** -- Open-enrollment / self-paced design with resubmission allowed. Most-recent submission counts.\n\n**Quality Matters-Aligned Course Shell** -- Built to the Quality Matters Higher Ed Rubric (7th ed.): explicit syllabus, learning outcomes, technical requirements, netiquette, accessibility, academic integrity, and support pages.\n\n**Accessibility-First UI** -- WCAG 2.1 AA target. Radix UI primitives, semantic HTML, full keyboard navigability, visible focus rings, screen-reader tested in NVDA / JAWS / VoiceOver. Reflows to 320 px.\n\n**One-Click System Diagnostic** -- A single unauthenticated endpoint runs 13 checks across database connectivity, curriculum integrity (14 modules / 800 pts), Anthropic and GPTZero live pings, and full draft / submission / tutor round-trips. Pass/fail with timing.",
+      },
+      {
+        emoji: "🚀",
+        title: "What Makes It Different",
+        body:
+          "**The tutor will not write your paper** -- Most \"AI-tutored\" courses are thin wrappers around a chatbot that will happily do the assignment. This one is system-prompted to refuse, and pivots to Socratic questions if asked.\n\n**Integrity is structural, not policy-only** -- Paste-disabled canvas, live AI-likelihood scoring, and full keystroke replay are built into the submission flow. There is nothing for the student to read, agree to, and ignore.\n\n**Reading, assignment, and reference standard are all in the prompt** -- The tutor isn't guessing what the module is about. It has the verbatim reading, the verbatim assignment, and an instructor reference standard for calibration on every turn.\n\n**One round of formative feedback, then commit** -- Students get exactly one structured critique on a draft, then move to the monitored canvas. No endless feedback loops, no \"rewrite this for me\" exploits.\n\n**Course content is open and verbatim** -- All readings are open educational resources authored by the instructor and embedded directly in each module. No textbook to purchase, no paywall, no third-party reading platform.\n\n**Frameworks before slogans** -- Every module is anchored in consequentialism, deontology, or virtue ethics (or a deliberate combination), not in vague appeals to \"doing the right thing.\"\n\n**Self-paced without being shapeless** -- Modules unlock sequentially, the term paper is broken into an Outline assignment and a final Paper assignment, and the AI Tutor surfaces what's next at every turn.\n\n**One diagnostic tells you if it's healthy** -- A single endpoint exercises the database, the curriculum, the AI provider, the AI-detection provider, and the full submission and tutor pipelines end-to-end.",
+      },
+    ],
+  },
   "U.S. History II": {
     emoji: "🇺🇸",
     tagline:
@@ -951,6 +982,7 @@ export default function Courses() {
     { title: "Public Speaking", url: "https://publicspeaking101.xyz" },
     { title: "U.S. History I", url: "https://ushistory101.xyz" },
     { title: "U.S. History II", url: "https://ushistory102.xyz" },
+    { title: "Business Ethics", url: "https://businessethics101.xyz" },
     { title: "Systems Science 101", url: "https://systemsscience.xyz" },
     { title: "Statistics 101", url: "https://statistics101.xyz" },
     { title: "English Composition", url: "https://englishcomposition.xyz" },
