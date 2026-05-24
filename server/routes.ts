@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import fs from "fs";
 import { storage } from "./storage";
-import { insertJournalIssueSchema } from "@shared/schema";
+import { insertJournalIssueSchema, insertOfficeDocumentSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
 import type { TextProcessingRequest, TestResult } from "@shared/ai-services";
 import { 
@@ -251,6 +251,66 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error generating suggested readings:", error);
       res.status(500).json({ error: "Failed to generate suggested readings" });
+    }
+  });
+
+  // Office documents
+  app.get("/api/office", async (_req, res) => {
+    try {
+      const docs = await storage.getAllOfficeDocuments();
+      res.json(docs);
+    } catch (error) {
+      console.error("Error fetching office documents:", error);
+      res.status(500).json({ error: "Failed to fetch office documents" });
+    }
+  });
+
+  app.get("/api/office/:id", async (req, res) => {
+    try {
+      const doc = await storage.getOfficeDocument(req.params.id);
+      if (!doc) return res.status(404).json({ error: "Not found" });
+      res.json(doc);
+    } catch (error) {
+      console.error("Error fetching office document:", error);
+      res.status(500).json({ error: "Failed to fetch office document" });
+    }
+  });
+
+  app.post("/api/office", async (req, res) => {
+    try {
+      const result = insertOfficeDocumentSchema.safeParse(req.body);
+      if (!result.success) {
+        return res.status(400).json({ error: "Validation failed", details: fromZodError(result.error).toString() });
+      }
+      const doc = await storage.createOfficeDocument(result.data);
+      res.status(201).json(doc);
+    } catch (error) {
+      console.error("Error creating office document:", error);
+      res.status(500).json({ error: "Failed to create office document" });
+    }
+  });
+
+  app.put("/api/office/:id", async (req, res) => {
+    try {
+      const result = insertOfficeDocumentSchema.partial().safeParse(req.body);
+      if (!result.success) {
+        return res.status(400).json({ error: "Validation failed", details: fromZodError(result.error).toString() });
+      }
+      const doc = await storage.updateOfficeDocument(req.params.id, result.data);
+      res.json(doc);
+    } catch (error) {
+      console.error("Error updating office document:", error);
+      res.status(500).json({ error: "Failed to update office document" });
+    }
+  });
+
+  app.delete("/api/office/:id", async (req, res) => {
+    try {
+      await storage.deleteOfficeDocument(req.params.id);
+      res.status(204).send();
+    } catch (error) {
+      console.error("Error deleting office document:", error);
+      res.status(500).json({ error: "Failed to delete office document" });
     }
   });
 

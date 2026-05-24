@@ -9,6 +9,7 @@ import JournalIssue from "@/pages/journal-issue";
 import JournalAdmin from "@/pages/journal-admin";
 import Podcasts from "@/pages/podcasts";
 import Courses from "@/pages/courses";
+import OfficeUse from "@/pages/office-use";
 import NotFound from "@/pages/not-found";
 import PasswordGate from "@/components/PasswordGate";
 
@@ -29,6 +30,9 @@ function Router() {
       </Route>
       <Route path="/podcasts">
         <PasswordGate><Podcasts /></PasswordGate>
+      </Route>
+      <Route path="/office-use">
+        <PasswordGate><OfficeUse /></PasswordGate>
       </Route>
       <Route component={NotFound} />
     </Switch>

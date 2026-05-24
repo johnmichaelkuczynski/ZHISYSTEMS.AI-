@@ -21,6 +21,22 @@ export const journalIssues = pgTable("journal_issues", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
+export const officeDocuments = pgTable("office_documents", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  title: text("title").notNull(),
+  body: text("body").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const insertOfficeDocumentSchema = createInsertSchema(officeDocuments).pick({
+  title: true,
+  body: true,
+});
+
+export type InsertOfficeDocument = z.infer<typeof insertOfficeDocumentSchema>;
+export type OfficeDocument = typeof officeDocuments.$inferSelect;
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,

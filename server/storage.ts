@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type JournalIssue, type InsertJournalIssue, users, journalIssues } from "@shared/schema";
+import { type User, type InsertUser, type JournalIssue, type InsertJournalIssue, type OfficeDocument, type InsertOfficeDocument, users, journalIssues, officeDocuments } from "@shared/schema";
 import { db } from "./db";
 import { eq, desc, sql, or, ilike } from "drizzle-orm";
 
@@ -17,6 +17,13 @@ export interface IStorage {
   updateJournalIssue(id: string, issue: Partial<InsertJournalIssue>): Promise<JournalIssue>;
   deleteJournalIssue(id: string): Promise<void>;
   searchJournalIssues(keyword: string): Promise<JournalIssue[]>;
+
+  // Office documents
+  getAllOfficeDocuments(): Promise<OfficeDocument[]>;
+  getOfficeDocument(id: string): Promise<OfficeDocument | undefined>;
+  createOfficeDocument(doc: InsertOfficeDocument): Promise<OfficeDocument>;
+  updateOfficeDocument(id: string, doc: Partial<InsertOfficeDocument>): Promise<OfficeDocument>;
+  deleteOfficeDocument(id: string): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -85,6 +92,33 @@ export class DatabaseStorage implements IStorage {
         )
       )
       .orderBy(desc(journalIssues.createdAt));
+  }
+
+  async getAllOfficeDocuments(): Promise<OfficeDocument[]> {
+    return await db.select().from(officeDocuments).orderBy(desc(officeDocuments.createdAt));
+  }
+
+  async getOfficeDocument(id: string): Promise<OfficeDocument | undefined> {
+    const [doc] = await db.select().from(officeDocuments).where(eq(officeDocuments.id, id));
+    return doc || undefined;
+  }
+
+  async createOfficeDocument(insertDoc: InsertOfficeDocument): Promise<OfficeDocument> {
+    const [doc] = await db.insert(officeDocuments).values(insertDoc).returning();
+    return doc;
+  }
+
+  async updateOfficeDocument(id: string, updateData: Partial<InsertOfficeDocument>): Promise<OfficeDocument> {
+    const [doc] = await db
+      .update(officeDocuments)
+      .set({ ...updateData, updatedAt: new Date() })
+      .where(eq(officeDocuments.id, id))
+      .returning();
+    return doc;
+  }
+
+  async deleteOfficeDocument(id: string): Promise<void> {
+    await db.delete(officeDocuments).where(eq(officeDocuments.id, id));
   }
 }
 
