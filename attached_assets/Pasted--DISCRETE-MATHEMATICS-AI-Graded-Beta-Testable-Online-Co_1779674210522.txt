@@ -1,0 +1,64 @@
+🧮 DISCRETE MATHEMATICS
+
+AI-Graded, Beta-Testable Online Course in Sets, Logic, Proof, Combinatorics, and Graphs
+🧩 Overview
+
+Discrete Mathematics is a self-contained online course that takes a student from the foundations of set theory through propositional and predicate logic, proof technique, combinatorics, and graph theory — 14 items, 800 points total — with every submission graded by an AI tutor against a faculty-authored rubric and a model response. The course is built around the same operating principle that powers the rest of the series: every grade is explicit, every piece of feedback is specific, and every submission is screened for AI authorship before it lands in the gradebook.
+
+Unlike a consumer tutoring chatbot that returns hedged, generic encouragement, Discrete Mathematics returns a precise score against a published rubric, a paragraph of targeted feedback tied to the actual logical moves in the student's response, and an originality score from a second independent detector. The course ships ready to teach on day one — verbatim background readings, exact assignment prompts, and faculty-authored model responses for all 14 items — and ready to beta-test from minute one through a one-click diagnostic that proves the whole stack works end-to-end before a single student logs in.
+👥 Who It's For
+
+    Undergraduate CS and math students — need a rigorous discrete-math course that grades free-response proof writing, not multiple-choice symbol matching
+    Self-taught programmers — need to fill the formal-foundations gap (set notation, predicate logic, induction, combinatorics, graphs) that every senior engineering role assumes
+    Community college and four-year instructors — need a turnkey 800-point discrete-math course with rubric-graded essays, a term paper, and admin-side visibility into every submission
+    Adult learners and career-changers — need a self-paced course that meets them where they are and gives real feedback on the gap between their reasoning and a model proof
+    Course coordinators piloting AI-assisted grading — need a transparent, auditable grading pipeline with a one-click self-diagnostic that proves the AI grader is alive and accurate before launch
+    Anyone — who wants to actually learn discrete mathematics by writing proofs, not by clicking the correct radio button
+
+⚙️ Core Capabilities
+
+    14-Item Sequential Curriculum — Seven discussion prompts (sets, functions, relations, propositional and predicate logic, counting, graphs), five analytical essays, a term-paper outline, and a full term paper. 800 points total. Items unlock in order and progress is tracked server-side.
+
+    AI-Graded Free-Response Submissions — Every one of the 14 items is graded by Anthropic Claude Sonnet 4.5 against a faculty-authored rubric and a model response. Returns a numeric score and paragraph-length feedback that cites the student's actual definitions, quantifier choices, or proof moves — never a generic "good effort, try again."
+
+    Two-Stage Term Paper Workflow — A 100-point outline followed by a 250-point full paper, graded with extra rigor because together they are the capstone of the course.
+
+    Verbatim Background Readings — Every item ships with the full background reading, the exact assignment prompt, a faculty model response, and a written rationale explaining why the model response is a good one. All extracted verbatim from the source course book. No "lorem ipsum," no AI-written filler.
+
+    Discrete-Math Symbol Palette — A one-click insertion bar for ∈ ∉ ⊆ ⊂ ∪ ∩ ∅ ℕ ℤ ℚ ℝ ∧ ∨ ¬ → ↔ ∀ ∃ ≡ ≢ ≤ ≥ ≠ ∑ ∏ ∞ sits directly above the response editor, so a student can write real set and logic notation in plain English prose without hunting for unicode codepoints or learning a math-keyboard.
+
+    GPTZero AI-Authorship Screening — Every submission is scored by GPTZero alongside the Claude grade. AI-likelihood percentage and classifier verdict (ai / mixed / human) are stored with the submission and shown to the student under their best-graded attempt. Honest engagement with AI use, not blanket prohibition.
+
+    Best-Effort Grading Pipeline — If Claude is briefly down, the submission is recorded with gradingStatus: "failed" and the student is told to retry — never silently lost. If GPTZero is down, the grade still lands; only the originality score is marked unavailable.
+
+    Student Progress Dashboard — Live progress bar showing earned points / total points, items completed, and best score per item. Pulls from a server-side aggregate that always reflects the latest submission, not stale client cache.
+
+    Admin Submissions Console — Full visibility into every submission across every student with score, feedback, originality score, and grading status. Student-facing endpoints never leak admin columns.
+
+    One-Click System Diagnostic — A dedicated /diagnostic page runs 13 system checks in roughly 10 seconds: Postgres reachability, curriculum integrity (14 items, 800 points), Anthropic key + live claude-sonnet-4-5 round-trip, GPTZero key + live AI-detector call, full submit-grade-detect cycle on a dedicated diagnostic account. Color-coded pass/fail with the raw error string of every failure.
+
+    End-to-End Functional Walk — A second diagnostic mode drives the live API as a synthetic student over loopback HTTP: sign in → list items → invalid-submission probe (must 400) → real submit → grade → GPTZero round-trip → progress endpoint reflects it → logout → tear down. Exercises the real Express stack — cookies, sessions, validation, route handlers, DB writes, response serialization — not just the underlying functions.
+
+    Self-Cleaning Diagnostics — Both diagnostic runs use a synthetic bot+<ts>-<uuid>@dm-diagnostic.test student and delete every row they created via FK cascade in a finally block. Zero rows left behind on success or failure.
+
+    Public-Beta Diagnostic Tab — During beta the diagnostic page is reachable from a prominent Diagnostic tab in the top navigation on every screen, without requiring a login, so beta-testers can verify the app is healthy before they sign up. Protected against abuse by a per-IP rate limit on the underlying endpoints.
+
+    Beta-Ready Auth — Email + name sign-in creates the student record on first use. No password to remember during beta; the same email returns the same student across sessions. The auth surface is deliberately minimal so the focus stays on the course, not the onboarding.
+
+🚀 What Makes It Different
+
+    It actually grades proof writing, not symbol matching — Free-response discrete math. The student writes the proof in prose and notation, and the AI grades the reasoning — whether the quantifiers are right, whether the cases cover the domain, whether the induction step actually uses the hypothesis — not whether the final symbol matches a key.
+
+    Originality is a first-class signal, not a manual review — Every submission carries a GPTZero score and classifier verdict the moment it is graded. The student sees their own score under their best attempt; admins see it in the console. No screenshots, no copy-paste into external tools.
+
+    The diagnostic is honest — /diagnostic runs a live Anthropic call, a live GPTZero call, and a full submit-and-grade round-trip end-to-end. If anything is broken — bad key, dead DB, broken grader, GPTZero outage — it fails loudly with the actual error string, not a generic "something went wrong."
+
+    The functional check exercises the contract, not the functions — The end-to-end walk fires real HTTP at the live process over loopback so it catches regressions anywhere in the stack: cookie handling, session middleware, JSON parsing, response serialization, FK cascade behavior. A direct function call would skip all of that.
+
+    Feedback is specific, not hedged — The grader is prompted to be "kind but rigorous." It cites the student's actual choice of universe, the specific clause of the rubric they missed, the exact step of the proof that doesn't follow. No "nice attempt, keep going."
+
+    Symbols are one click away, but never required — The course accepts ∀, \forall, "for all", and any combination thereof. The palette is a convenience, not a gate — a student who would rather type LaTeX shortcuts can submit a pure-ASCII response and be graded just as fairly.
+
+    No persistent test pollution — The functional walk creates its own synthetic student, drives the entire flow against it, and deletes the student (cascading every submission) in a finally block. Run it as many times as you want; the live student table is never touched.
+
+    Three courses, one chassis — Discrete Mathematics is the third course in the series, sharing a Postgres database, a session layer, and an admin model with Pre-Algebra 100 and Business Ethics 101 — but with its own isolated tables (discrete_math_items, discrete_math_submissions) so a curriculum change here can never affect a grade there. The same monorepo supports adding the next course without rewriting any of it.
