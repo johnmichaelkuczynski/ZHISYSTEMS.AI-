@@ -2626,12 +2626,6 @@ export default function Home() {
             </a>
             <div className="flex items-center gap-6">
               <a
-                href="/courses"
-                className="text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Living Courses
-              </a>
-              <a
                 href="/journal"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
@@ -2677,11 +2671,6 @@ export default function Home() {
               applications for writing, psychological research, financial
               forecasting, and specialized utilities (such as GPTByPass and
               Audio Transcriber).
-            </p>
-            <p className="text-gray-700 text-sm leading-relaxed">
-              We are also the leading creator of autonomous AI-powered Living
-              Courses -- complete with embedded real-time tutors and designed
-              to meet the strictest accreditation and integrity standards.
             </p>
             <p className="text-gray-700 text-sm leading-relaxed">
               We work with clients of all sizes and are extremely flexible. Our

@@ -8,7 +8,6 @@ import Journal from "@/pages/journal";
 import JournalIssue from "@/pages/journal-issue";
 import JournalAdmin from "@/pages/journal-admin";
 import Podcasts from "@/pages/podcasts";
-import Courses from "@/pages/courses";
 import OfficeUse from "@/pages/office-use";
 import NotFound from "@/pages/not-found";
 import PasswordGate from "@/components/PasswordGate";
@@ -17,7 +16,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/courses" component={Courses} />
       <Route path="/journal/admin" component={JournalAdmin} />
       <Route path="/journal">
         <PasswordGate><Journal /></PasswordGate>
