@@ -2626,6 +2626,12 @@ export default function Home() {
             </a>
             <div className="flex items-center gap-6">
               <a
+                href="/courses"
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Living Courses
+              </a>
+              <a
                 href="/journal"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >

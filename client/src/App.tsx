@@ -9,6 +9,7 @@ import JournalIssue from "@/pages/journal-issue";
 import JournalAdmin from "@/pages/journal-admin";
 import Podcasts from "@/pages/podcasts";
 import OfficeUse from "@/pages/office-use";
+import Courses from "@/pages/courses";
 import NotFound from "@/pages/not-found";
 import PasswordGate from "@/components/PasswordGate";
 
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/office-use">
         <PasswordGate storageKey="office-use-access"><OfficeUse /></PasswordGate>
       </Route>
+      <Route path="/courses" component={Courses} />
       <Route component={NotFound} />
     </Switch>
   );
