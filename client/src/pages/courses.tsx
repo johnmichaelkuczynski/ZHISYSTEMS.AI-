@@ -54,6 +54,43 @@ const courseDescriptions: Record<string, CourseDescription> = {
       },
     ],
   },
+  "Teach Yourself Math Notation": {
+    emoji: "🔣",
+    tagline:
+      "Teach Yourself Mathematical Notation -- A Four-Week Course on the Symbols of Mathematics, Science, and Engineering",
+    sections: [
+      {
+        emoji: "🧩",
+        title: "Overview",
+        body:
+          "Teach Yourself Mathematical Notation is a self-paced, single-user web course whose subject is the symbols themselves: =, ≠, ≈, ≡, ±, ∝, Σ, Π, Δ, ∂, ∫, μ, σ, P(A ∣ B), ∀, ∃, ∈, ⊆, ℕ, ℝ, ℂ, and the rest.\n\nIt is a content reskin of the QuantReason Quantitative Reasoning app. The full QuantReason runtime -- lectures with Short / Medium / Long depth, section-scoped AI tutor, adaptive practice, AI-graded homework / tests / midterm / final, two-layer AI-authorship detection, and one-click diagnostics -- is preserved unchanged. The purpose of this build is to put the on-screen math keyboard through its paces: every micro-lecture targets one symbol or symbol-subset and every assignment problem requires the student to type that symbol in their answer.\n\nIf a symbol on the keyboard cannot be inserted, rendered, graded, or detected cleanly, this course will surface it.",
+      },
+      {
+        emoji: "🧠",
+        title: "What It Does",
+        body:
+          "**Four-Week Curriculum of 28 Micro-Lectures** -- One symbol family per lecture, organized by week:\n\n**Week 1 -- Foundations.** Equality family (=, ≠, ≈, ≡); inequalities (<, >, ≤, ≥); ± and ∝; exponents (xⁿ); roots (√, ³√); |x| and n!; subscripts (x₀, xₜ, vᵧ).\n\n**Week 2 -- Calculus and change.** Σ; Π; Δ and δ; lim, →, ∞; d/dx and ∂/∂x; ∫, ∬, ∮; e, ln, log.\n\n**Week 3 -- Probability and statistics.** μ, σ, σ²; x̄, p̂, s; P(A), P(A∣B); E(X), Var(X); X ∼ N(μ, σ²); z, t, χ²; α, β.\n\n**Week 4 -- Logic, sets, and foundations.** ∈, ∉; ⊂, ⊆; ∪, ∩, ∅, Aᶜ; ∀, ∃, ∄; ∧, ∨, ¬; →, ↔; ℕ, ℤ, ℚ, ℝ, ℂ.\n\n**One Real Science Example per Lecture** -- Every micro-lecture grounds its symbol in an actual scientific equation: ΔS ≥ 0 for the second law, N(t) = N₀e^(−λt) for radioactive decay, χ² for Mendelian goodness-of-fit, p̂ for clinical-trial efficacy, ψ : ℝ⁴ → ℂ for the quantum wavefunction.\n\n**One Symbol-Use Question per Lecture** -- Every homework / test / midterm / final problem demands the student write the symbol in their answer, not just describe it in English. The math keyboard is the only practical way to do this.\n\n**Three-Depth Lectures, Section-Scoped Tutor, Adaptive Practice, AI Grading, Two-Layer Detection, Operator Diagnostics** -- All inherited unchanged from the QuantReason runtime.",
+      },
+      {
+        emoji: "⚙️",
+        title: "Technical Features",
+        body:
+          "**Math Keyboard Beta Harness** -- Every problem prompt is structured so that the only way to type the model answer is with the keys on the floating math keyboard. This makes the course a stress test of: tab discoverability, symbol insertion at the cursor, keystroke / paste detection on submitted answers, LaTeX-aware grading, and the KaTeX renderer for both the lecture and the student's answer.\n\n**Static AI Detection (GPTZero)** -- Every submitted answer is sent to GPTZero's predict/text endpoint; the per-document AI probability is blended 0.85 x GPTZero + 0.15 x structural-heuristic for the final score. If GPTZero is unavailable, the system silently falls back to an LLM scorer plus heuristic -- submissions never block.\n\n**Diachronic Keystroke Detection** -- The student textarea captures keystroke count, erase count, bulk-insert events, longest bulk insert, rewrite segments, and total duration. A scorer penalizes paste-then-reword behavior, low keystroke-to-output ratios, and impossibly sustained typing speeds.\n\n**System Diagnostic (/diagnostics/system)** -- Environment, database round-trip, course-seed integrity (≥28 topics), OpenAI chat completion, OpenAI JSON mode, detection pipeline, AI-positive control sample, and GPTZero connectivity. Each step returns pass/fail, timing, and a raw error string.\n\n**Synthetic-Student Diagnostic (/diagnostics/synthetic-run)** -- End-to-end stack proof: a fake student takes a practice session, takes a full assignment attempt, submits, and verifies grading + detection + analytics all reflect the run.\n\n**Auto-Reseed on Curriculum Change** -- A single content swap propagates cleanly when the seed file changes: the system compares the set of topic slugs in the database to the expected curriculum and, if they differ, wipes and re-seeds in dependency order.\n\n**Contract-First API** -- Single OpenAPI document; React Query hooks for the UI and Zod validators for the server are generated from it.\n\n**Streaming AI Tutor** -- Token-by-token Server-Sent-Event streaming with a section-scoped system prompt grounded in the active lecture.\n\n**Adaptive Practice Engine** -- Per-session difficulty (1-4) adjusts after each attempt; problems are generated on demand.",
+      },
+      {
+        emoji: "🎓",
+        title: "Designed For",
+        body:
+          "**The Maintainer of QuantReason and Its Clones** -- A pure stress test of the math-notation stack (keyboard, LaTeX rendering, grading, and AI detection) without the noise of a different curriculum to debug at the same time.\n\n**Anyone Who Has Ever Squinted at a Math Paper** -- A short, focused course that explains what the symbols mean, with one science example for each.",
+      },
+      {
+        emoji: "💡",
+        title: "Core Idea",
+        body:
+          "A formula is the most compressed piece of writing a scientist ever produces. Every symbol does work -- and the cost of misreading one is that the whole sentence flips its meaning.\n\nThis course teaches notation by using notation: read the symbol, see it in a real scientific equation, then type it back in an answer of your own. The math keyboard is the gym; the symbols are the weights; the science examples are the reason any of it matters.\n\nTeach Yourself Mathematical Notation -- read the symbol, type the symbol, mean the symbol.",
+      },
+    ],
+  },
   "Business Ethics": {
     emoji: "🎓",
     tagline:
@@ -104,6 +141,7 @@ export default function Courses() {
   const courses: Course[] = [
     { title: "Quantitative Reasoning", url: "https://quantitativereasoning101.xyz" },
     { title: "Business Ethics", url: "https://businessethics101.xyz" },
+    { title: "Teach Yourself Math Notation", url: "https://mathnotation.xyz" },
   ];
 
   const sortedCourses = [...courses].sort((a, b) =>
